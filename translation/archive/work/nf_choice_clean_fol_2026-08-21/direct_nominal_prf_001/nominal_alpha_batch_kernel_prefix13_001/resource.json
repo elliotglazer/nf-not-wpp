@@ -1,0 +1,51 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-first-use-kernel-prefix-successor-v1",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_13",
+  "parent": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_001/resource.json",
+    "resourceSha256": "523596F208B3418EE318979FC8417FD9D0C237D8764E857A80364665B2D49344",
+    "endOrdinal": 12
+  },
+  "sourceBoundary": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_source_003/resource.json",
+    "resourceSha256": "8EDBCC3FC57E074AB7F43E4B25291A41ECC107DA4FB57925E959CE8EE732BFBF",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+  },
+  "settings": {
+    "trust": 0,
+    "threads": 1,
+    "maxHeartbeats": 5000000
+  },
+  "newLeaf": {
+    "ordinal": 13,
+    "label": "df-xpk",
+    "module": "NominalAlphaRepairedBase001013Xpk",
+    "import": "NominalAlphaRepairedBase001013Xpk",
+    "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_xpk",
+    "source": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/generated_nominal_alpha_batch_003/NominalAlphaRepairedBase001013Xpk.lean",
+    "sourceSha256": "E41B5DE444FE66FA441AE031D9C09EF69EEA80C9514631E6ECBB2D529726B826",
+    "sourceBytes": 30554,
+    "olean": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_001/NominalAlphaRepairedBase001013Xpk.olean",
+    "oleanSha256": "F136DC65F00EA308FCD400F68CBB2A32978E1508DE172E7DE196D972F55D63E6",
+    "oleanBytes": 303088,
+    "auditSourceSha256": "5437B2512928AB022A1B74BDBE31A3FA541C4CD09A15ACAE24AFDD9720EB7408",
+    "auditOleanSha256": "03F4397AC34531A8A7F8B6432B9B3B70DE1A98E143B68650A3538EC740E14928",
+    "reportedAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "exactAllowedThree": true,
+    "forbiddenSourceMatches": []
+  },
+  "firstUsePrefix": {
+    "startOrdinal": 1,
+    "endOrdinal": 13,
+    "coveredCount": 13
+  },
+  "nextExactFirstUse": {
+    "ordinal": 14,
+    "label": "df-cnvk",
+    "module": "NominalAlphaRepairedBase001014Cnvk"
+  }
+}

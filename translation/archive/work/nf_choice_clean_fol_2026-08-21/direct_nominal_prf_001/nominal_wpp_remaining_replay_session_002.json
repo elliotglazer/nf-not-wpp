@@ -1,0 +1,142 @@
+{
+  "schema": "nf-wpp-remaining-replay-source-session-v3",
+  "status": "PASS_SOURCE_ONLY_REMAINING_REPLAY_REGENERATED_V1_PREFIX_V3_SUFFIX_ALPHA97_ACCEPTED_KERNEL_VERIFICATION_SEPARATE",
+  "leanStartedByRunner": false,
+  "plan": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_wpp_remaining_replay_staging_001\\plan.json",
+  "planSha256": "F60772608E3074F98822234D8A541E2C952764EB8D5566B08B159EBB864AB628",
+  "planner": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\build_nominal_wpp_remaining_replay_plan_v1.py",
+  "plannerSha256": "98E3E87E97F9B67E5501BC207B8CF1CC284EB96E1B7303C767C5CC2A60C1D2C9",
+  "alphaFrontierResource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha97_capture_safe_hardened_replay_adapter_001\\resource.json",
+  "alphaFrontierResourceSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+  "alphaFrontierEndOrdinal": 97,
+  "captureSafeKernelResource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\h5g097coalesce3k001\\resource.json",
+  "captureSafeKernelResourceSha256": "6A5C3920E7A1098E45DCF50661BCA62477EC58F62966EF17D0B73C406A7FEFB9",
+  "preflight": {
+    "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_wpp_remaining_replay_alpha97_preflight_001\\resource.json",
+    "resourceSha256": "0858AD96C5510F99A13DA048AF6AB99DAE8DB88DA8326623326789F40B60EA7F",
+    "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1.py",
+    "translatorSha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94"
+  },
+  "supersededV2Session": {
+    "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_wpp_remaining_replay_session_001.json",
+    "resourceSha256": "44A06AAF07B09E86E9C06F41BCE0E7856137C05749A9307B55632720B28AB665",
+    "runner": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\run_nominal_wpp_remaining_replay_translation_v5.py",
+    "runnerSha256": "A8768CF97776222CD68A128327FCD380222787CD4D2369C1FB29D5BF1D134D21",
+    "disposition": "superseded-after-C17-part012-kernel-rewrite-failure"
+  },
+  "translationBoundary": {
+    "v1EndTheoremOrdinal": 4004,
+    "v3StartTheoremOrdinal": 4005,
+    "v1Translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1.py",
+    "v1TranslatorSha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94",
+    "v2Translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v2.py",
+    "v2TranslatorSha256": "52ED85A33329D1D4CE0E9D05622F74917E1CD9662959AAD7D7B6175244F34615",
+    "v3Translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v3.py",
+    "v3TranslatorSha256": "DECC5089EAB55B95806EB74742FD47A1EB127502B243811DD882737FCB98475F",
+    "semanticChanges": [
+      "identity-key definition-expansion cache inherited from v2",
+      "exact duplicate applied root-FV rewrite emitted once"
+    ],
+    "metamathPlanChanged": false,
+    "generatedLeanLanguageChanged": true
+  },
+  "chunks": [
+    {
+      "chunkId": "012B",
+      "startTheoremOrdinal": 2867,
+      "endTheoremOrdinal": 3004,
+      "module": "NominalWPPReplayChunk012BCompact001",
+      "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1_chunk012b_compact_001\\resource.json",
+      "resourceSha256": "50C94A164BE05C21911E457DF1CC7C2C04C2AEB025532FB5B85D434525763DB3",
+      "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1.py",
+      "translatorSha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94",
+      "publicationState": "accepted-existing-v1-prefix"
+    },
+    {
+      "chunkId": "013",
+      "startTheoremOrdinal": 3005,
+      "endTheoremOrdinal": 3254,
+      "module": "NominalWPPReplayChunk013Compact001",
+      "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1_chunk013_compact_001\\resource.json",
+      "resourceSha256": "9C9FB1FFCA87B04CE4C02BBCCA1C8CBBA955EA3F5A510D9A3B9E418BB66FDC38",
+      "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1.py",
+      "translatorSha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94",
+      "publicationState": "accepted-existing-v1-prefix"
+    },
+    {
+      "chunkId": "014",
+      "startTheoremOrdinal": 3255,
+      "endTheoremOrdinal": 3504,
+      "module": "NominalWPPReplayChunk014Compact001",
+      "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1_chunk014_compact_001\\resource.json",
+      "resourceSha256": "A0A593C020477CD31D38B60C2160E5DAB4524A9ED6E64F099633F3970615633C",
+      "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1.py",
+      "translatorSha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94",
+      "publicationState": "accepted-existing-v1-prefix"
+    },
+    {
+      "chunkId": "015",
+      "startTheoremOrdinal": 3505,
+      "endTheoremOrdinal": 3754,
+      "module": "NominalWPPReplayChunk015Compact001",
+      "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1_chunk015_compact_001\\resource.json",
+      "resourceSha256": "F6D1AB293F9194F6A0B1AB663E09D7C375EFB1C05680E35A49E59796C6864C54",
+      "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1.py",
+      "translatorSha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94",
+      "publicationState": "accepted-existing-v1-prefix"
+    },
+    {
+      "chunkId": "016",
+      "startTheoremOrdinal": 3755,
+      "endTheoremOrdinal": 4004,
+      "module": "NominalWPPReplayChunk016Compact001",
+      "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1_chunk016_compact_001\\resource.json",
+      "resourceSha256": "231765097D145BF982A014B361E1126E76CCFCFF821A4690E45F5C1B297D0D96",
+      "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v1.py",
+      "translatorSha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94",
+      "publicationState": "accepted-existing-v1-prefix"
+    },
+    {
+      "chunkId": "017",
+      "startTheoremOrdinal": 4005,
+      "endTheoremOrdinal": 4254,
+      "module": "NominalWPPReplayChunk017Compact001",
+      "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v3_chunk017_compact_001\\resource.json",
+      "resourceSha256": "86C7314D0BEB6A78F72DAE5BB871362883C5099492314F3DC8915E4E545EE3AD",
+      "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v3.py",
+      "translatorSha256": "DECC5089EAB55B95806EB74742FD47A1EB127502B243811DD882737FCB98475F",
+      "publicationState": "new-v3-successor",
+      "translatorStdout": "{\n  \"status\": \"PASS_SOURCE_ONLY_EMITTED_STRUCTURAL\",\n  \"output\": \"C:\\\\Users\\\\glaze\\\\Documents\\\\Codex\\\\2026-08-16\\\\study-the-contents-of-this-and\\\\work\\\\nf_choice_clean_fol_2026-08-21\\\\direct_nominal_prf_001\\\\reusable_nominal_mm_translator_v3_chunk017_compact_001\",\n  \"resource\": \"C:\\\\Users\\\\glaze\\\\Documents\\\\Codex\\\\2026-08-16\\\\study-the-contents-of-this-and\\\\work\\\\nf_choice_clean_fol_2026-08-21\\\\direct_nominal_prf_001\\\\reusable_nominal_mm_translator_v3_chunk017_compact_001\\\\resource.json\",\n  \"resourceSha256\": \"86C7314D0BEB6A78F72DAE5BB871362883C5099492314F3DC8915E4E545EE3AD\",\n  \"leanStarted\": false\n}\n"
+    },
+    {
+      "chunkId": "018",
+      "startTheoremOrdinal": 4255,
+      "endTheoremOrdinal": 4321,
+      "module": "NominalWPPReplayChunk018Compact001",
+      "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v3_chunk018_compact_001\\resource.json",
+      "resourceSha256": "44CCEF5B0AB6594EFDC867BF8E59A7B3A7EA37D5BD3235DECB3293AC52F80D75",
+      "translator": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v3.py",
+      "translatorSha256": "DECC5089EAB55B95806EB74742FD47A1EB127502B243811DD882737FCB98475F",
+      "publicationState": "new-v3-successor",
+      "translatorStdout": "{\n  \"status\": \"PASS_SOURCE_ONLY_EMITTED_STRUCTURAL\",\n  \"output\": \"C:\\\\Users\\\\glaze\\\\Documents\\\\Codex\\\\2026-08-16\\\\study-the-contents-of-this-and\\\\work\\\\nf_choice_clean_fol_2026-08-21\\\\direct_nominal_prf_001\\\\reusable_nominal_mm_translator_v3_chunk018_compact_001\",\n  \"resource\": \"C:\\\\Users\\\\glaze\\\\Documents\\\\Codex\\\\2026-08-16\\\\study-the-contents-of-this-and\\\\work\\\\nf_choice_clean_fol_2026-08-21\\\\direct_nominal_prf_001\\\\reusable_nominal_mm_translator_v3_chunk018_compact_001\\\\resource.json\",\n  \"resourceSha256\": \"44CCEF5B0AB6594EFDC867BF8E59A7B3A7EA37D5BD3235DECB3293AC52F80D75\",\n  \"leanStarted\": false\n}\n"
+    }
+  ],
+  "final": {
+    "endTheoremOrdinal": 4321,
+    "label": "wppfiniteblocknotwppndv",
+    "ast": "(wn wwpp)",
+    "module": "NominalWPPReplayChunk018Compact001",
+    "sourceResource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\reusable_nominal_mm_translator_v3_chunk018_compact_001\\resource.json",
+    "sourceResourceSha256": "44CCEF5B0AB6594EFDC867BF8E59A7B3A7EA37D5BD3235DECB3293AC52F80D75"
+  },
+  "launcherProvenance": {
+    "schema": "nf-wpp-remaining-replay-resume-launcher-v2",
+    "sourceOnly": true,
+    "leanInvokedByLauncher": false,
+    "runner": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\run_nominal_wpp_remaining_replay_translation_v6.py",
+    "runnerSha256": "0461A3CD01DA65854FA71636B74CCEAC0E23AB46F15A159617C34B15201F95DF",
+    "predecessorRunner": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\run_nominal_wpp_remaining_replay_translation_v5.py",
+    "predecessorRunnerSha256": "A8768CF97776222CD68A128327FCD380222787CD4D2369C1FB29D5BF1D134D21"
+  },
+  "kernelVerificationSeparate": true
+}

@@ -42,6 +42,7 @@ sources:
     id: "provenance/metamath/accepted-translator-input.mm"
     location: "theorem wppfiniteblocknotwppndv, semantic theorem ordinal 4321"
     relationship: "formalizes"
+    license: "Apache-2.0"
     note: >-
       The packaged 9,945,323-byte source is exactly the accepted translator
       input (SHA-256 868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F).
@@ -51,6 +52,21 @@ sources:
       proof-only rebuilds, is in provenance/METAMATH_PROVENANCE.md and
       provenance/provenance.json. This is a source-based port of that exact
       formal proof; the repository makes no claim that the result is novel.
+  - title: "New Foundations Refutes the Weak Partition Principle"
+    authors: ["Elliot Glazer"]
+    id: "archive/paper/NF_Refutes_WPP_Unconditional_Proof.pdf"
+    type: "paper"
+    location: "Unpublished manuscript, August 2026, 12 pages"
+    relationship: "formalizes"
+    note: >-
+      This is the exact informal manuscript named by the retained
+      manuscript-to-Metamath contract ledger. The repository includes both
+      its TeX source and rendered PDF; the ledger maps its proof blocks to
+      wppfiniteblocknotwppndv. The PDF SHA-256 is
+      9B3BD8EB7AE23AD9C55029C262DE3DADADF9DA329D55E42C597C0A95860571B3.
+      The manuscript is project-authored and covered by the repository's
+      Apache-2.0 licence.
+    license: "Apache-2.0"
   - title: "The Axiom of Choice in Quine's New Foundations for Mathematical Logic"
     authors: ["Ernst P. Specker"]
     id: "https://doi.org/10.1073/pnas.39.9.972"
@@ -98,6 +114,16 @@ status:
 
 automation:
   methods:
+    - method: "deterministic proof translation"
+      framework: "Project Metamath-to-Lean translator"
+      tool_setup: >-
+        A standard-library-only CPython 3.12 translator parses and verifies
+        the accepted Metamath proof stack, maps its syntax and primitive proof
+        steps to the frozen Flypitch/nominal constructor profile, and emits
+        deterministic Lean source. The repository preserves the historical
+        implementations, their textual receipts, and a portable launcher;
+        the translator does not invoke Lean and is outside the trusted proof
+        checker.
     - method: "agent"
       models: ["OpenAI Codex (GPT-5)"]
       framework: "OpenAI Codex"

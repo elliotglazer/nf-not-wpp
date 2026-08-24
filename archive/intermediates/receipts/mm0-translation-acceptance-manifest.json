@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "audit_status": "PROPOSED_OVERLAY_NOT_YET_IMPORTED",
+  "publication": {
+    "path": "output/metamath/NF_Refutes_WPP_Formalized_no_comments.mm",
+    "bytes": 9037362,
+    "sha256": "8BE8C92D49838B719BA65B226CCC923BD4511FB8CFE388684F6C062A964E56F0",
+    "comment_count": 0,
+    "include_count": 0
+  },
+  "commented_translation_source": {
+    "path": "work/formalization_continue/cumulative_finite_block/common_ambient_hartogs_graph/flattening_audit/wppfiniteblocknotwpp_flattened_test.mm",
+    "bytes": 10591102,
+    "sha256": "DD1E4E778EB2B023827AF2AFFB35E043482B538118CFFB1932BFA7642C00C751",
+    "comment_count": 8696,
+    "include_count_after_comment_removal": 0
+  },
+  "token_identity": {
+    "normalization": "remove Metamath comments, trim, split on whitespace, join tokens with LF",
+    "token_count": 838534,
+    "sha256": "FC39C23CB7154F754B6D65C427BB9BDDB35F2BFBC2FF7048967CB981E9777D93",
+    "status": "PASS"
+  },
+  "metamath_baseline": {
+    "proof_count": 7973,
+    "statement_count": 16074,
+    "endpoint_label": "wppfiniteblocknotwppndv",
+    "endpoint_expression": "|- -. WPP",
+    "endpoint_essential_hypotheses": 0,
+    "endpoint_mandatory_dv_pairs": 0
+  },
+  "existing_j_metadata": {
+    "comment_blocks": 18,
+    "has_bound": false,
+    "has_free_var": false,
+    "has_free_var_in": false,
+    "from_mm_relevant_present": [
+      "syntax",
+      "equality"
+    ],
+    "from_mm_relevant_missing": [
+      "bound",
+      "free_var",
+      "free_var_in"
+    ]
+  },
+  "proposed_overlay": {
+    "path": "work/mm0_conversion_2026-08-20/metadata_audit/proposed_binding_overlay.mm.inc",
+    "bound_sorts": [
+      "setvar"
+    ],
+    "free_var": {
+      "wnf": ["x"],
+      "cv": ["x"],
+      "wsb": ["y"],
+      "wnfc": ["x"],
+      "cpwqtarget": ["r"],
+      "chncodepredinputs": ["v"],
+      "chncodepredends": ["v"],
+      "cwppfrecprefixeq": ["k"]
+    },
+    "free_var_in": [
+      {"syntax": "wsb", "var": "y", "binder": "x"},
+      {"syntax": "wsbc", "var": "A", "binder": "x"},
+      {"syntax": "csb", "var": "A", "binder": "x"}
+    ],
+    "default_full_scope_binders": {
+      "wal": ["x"],
+      "wex": ["x"],
+      "weu": ["x"],
+      "wmo": ["x"],
+      "cab": ["x"],
+      "wral": ["x"],
+      "wrex": ["x"],
+      "wreu": ["x"],
+      "wrmo": ["x"],
+      "crab": ["x"],
+      "ciun": ["x"],
+      "ciin": ["x"],
+      "cio": ["x"],
+      "copab": ["x", "y"],
+      "coprab": ["x", "y", "z"],
+      "cmpt": ["x"],
+      "cmpt2": ["x", "y"]
+    },
+    "setvar_targeting_syntax_constructors": [],
+    "setvar_bearing_assertions_total": 29,
+    "setvar_bearing_syntax_constructors_a": 27,
+    "setvar_bearing_proof_syntax_derivations_p": ["weq", "wel"]
+  },
+  "acceptance_gates": [
+    {"id": "G1", "name": "pinned_source_and_token_identity", "status": "PASS"},
+    {"id": "G2", "name": "dual_metamath_baseline_and_endpoint", "status": "PASS"},
+    {"id": "G3", "name": "binding_metadata_census_lint", "status": "STATIC_PASS_IMPORTER_PENDING"},
+    {"id": "G4", "name": "pinned_official_mm0_hs_from_mm_import", "status": "BLOCKED"},
+    {"id": "G5", "name": "generated_spec_assertion_and_axiom_origin_map", "status": "PENDING"},
+    {"id": "G6", "name": "dependency_and_dv_unbundling_equivalence", "status": "PENDING"},
+    {"id": "G7", "name": "endpoint_ast_and_zero_dependency_transcription", "status": "PENDING"},
+    {"id": "G8", "name": "mm0_hs_and_parser_enabled_mm0_c_verification", "status": "PENDING"},
+    {"id": "G9", "name": "endpoint_axiom_dependency_fingerprint", "status": "PENDING"}
+  ],
+  "hard_failure_conditions": [
+    "any generated axiom or opaque definition without a source logical $a origin",
+    "any source $p promoted to an axiom",
+    "weq or wel translated as a primitive constructor or axiom instead of a verified/expanded syntax derivation",
+    "endpoint translated as an axiom, with hypotheses, parameters, or open dependencies",
+    "generated endpoint AST differs from the transcription of |- -. WPP",
+    "binding dependency differs from the 29-constructor census",
+    "unmapped theorem splitting or unbundling",
+    "importer warning, dropped assertion, parse recovery, or unsupported directive",
+    "proof checked with an mm0-c NO_PARSER build"
+  ],
+  "blockers": [
+    "mm0-hs, mm0-rs, and mm0-c are absent from PATH; mm0-hs from-mm has not been run",
+    "toolchain commit and executable hashes are not pinned",
+    "generated MM0 spec, proof, and source-origin map do not yet exist",
+    "MMB format and resource limits have not been exercised on this source"
+  ]
+}

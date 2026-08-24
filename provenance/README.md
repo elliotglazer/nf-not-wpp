@@ -4,6 +4,13 @@ This directory keeps the content-addressed evidence needed to audit how the
 packaged Lean proof relates to its Metamath source. None of these files is a
 Lean build input.
 
+The complete material research archive is indexed by
+[`../archive/README.md`](../archive/README.md): it includes the informal paper,
+all accepted Metamath/MM0 intermediates, and reconstruction tooling. The
+portable and historical translator release is documented in
+[`../translation/README.md`](../translation/README.md). This directory remains
+the compact proof-closure and accepted-input boundary used by the Lean package.
+
 - `METAMATH_PROVENANCE.md` is the human-readable source, repair, translation,
   and evidence-boundary account. SHA-256:
   `A38E44DA5451D2261D87643FF60F7624D9850CC5EDF8BCB94A8E802F93B1DED1`.

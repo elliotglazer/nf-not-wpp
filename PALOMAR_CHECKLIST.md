@@ -33,11 +33,18 @@ requires a human decision.
 - [x] Add the publication provenance bundle with the full 19-stage
       repair/normalization chain, translator/profile revisions, exact accepted
       Metamath input, sanitized closure manifest, and retained audit hashes.
+- [x] Include the exact informal manuscript in TeX and PDF, its contract
+      ledger, every material successful-path Metamath state, the complete MM0
+      successful run, and the retained reconstruction builders and receipts.
+- [x] Include and document the historical translator stack, frozen profile,
+      textual compiled-evidence contract, and portable CPython 3.12 launcher;
+      an exact C18 replay emits all five packaged Lean files byte-for-byte.
 - [x] Complete the final whole-tree scan for absolute paths, local executable
       or package overrides, compiled artifacts, caches, and experiment output.
-      The sole expected path exception is 122 documented, inert comments in
-      the byte-exact accepted Metamath input; the portable closure inventory is
-      sanitized and no build input consumes those labels.
+      No forbidden compiled Lean/native artifact remains. Historical archive
+      receipts retain documented workstation labels, including 122 inert
+      comments in the accepted Metamath input; the portable translator rebases
+      its receipt paths, and no Lean build input consumes those labels.
 
 ## 3. Lake package
 
@@ -103,15 +110,20 @@ requires a human decision.
       Challenge+Solution took 24.5 s, and a warm default build took 3.9 s. The
       source-build observations above are not a clean benchmark because no raw
       timing log was retained.
+- [x] Reproduce C18 with the portable source-only translator and confirm that
+      all five emitted `.lean` files are byte-identical to the historical and
+      packaged copies. The translator itself does not invoke Lean.
 - [ ] Measure the full Comparator/export/NanoDa path on representative hardware
       and fit the ordinary Palomar allowance or arrange a larger worker.
 - [ ] If measurements require it, coalesce generated modules without changing
       declarations or proof terms, then repeat every trust check.
-- [x] The copied proof payload is 97,305,006 bytes and the staged candidate is
-      about 102.75 MiB, comfortably below the 500 MiB repository cap.
+- [x] The copied proof payload is 97,305,006 bytes. The complete intended Git
+      snapshot, including the paper and research archive, has 1,868 files and
+      373,627,855 bytes (356.319 MiB), below the 500 MiB repository cap. Its
+      largest file is the 27,647,028-byte MM0 `.mmu` artifact.
 - [x] Scan the staged tree for Git LFS pointers, submodules, forbidden compiled
-      artifacts, secrets, credentials, and machine-local paths; no unexpected
-      findings remain.
+      artifacts, secrets, credentials, and operative machine-local paths; no
+      unexpected findings remain.
 
 ## 7. Metadata and editorial review
 
@@ -122,6 +134,8 @@ requires a human decision.
 - [x] Retain a content-addressed provenance account for every source repair,
       translator/profile revision, proof-only rebuild, and translation
       divergence; final human review remains part of the publication gate.
+- [x] Content-address the paper, all retained intermediates, reconstruction
+      materials, and frozen translator archive in `archive/MANIFEST.sha256`.
 - [x] Report zero Solution/proof sorries, excluding only the one deliberate
       Challenge statement hole as Palomar directs.
 - [x] Supply an accurate, non-promotional human/agent automation and cost

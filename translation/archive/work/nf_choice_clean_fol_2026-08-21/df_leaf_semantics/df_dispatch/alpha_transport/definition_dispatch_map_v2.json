@@ -1,0 +1,3754 @@
+{
+  "status": "PASS",
+  "supersedes": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\df_leaf_semantics\\df_dispatch\\definition_dispatch_map.json",
+  "superseded_map_sha256": "CBE182822FBD3AD9B2F2B37AB5220A57132AAF7E99189FD89DCE878DC115DD11",
+  "source_nf_mm_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "entry_count": 140,
+  "alpha_transport_entry_count": 73,
+  "normalization": "current generic Expander output is retained globally",
+  "stack_compatibility": "alpha helpers prove exactly the normalized_result stored and later consumed as an essential",
+  "generic_alpha_module": "AlphaTransport",
+  "entries": [
+    {
+      "label": "df-bi",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-or",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-an",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-3or",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-3an",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-nan",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-tru",
+      "category": "special_semantic_lemma",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_df_tru",
+      "helper_arguments": [
+        "S := S",
+        "normalize(substitution['ph'])"
+      ],
+      "expected_normalized_shape": "Wff.biimp (Wff.imp Wff.falsum Wff.falsum) (Wff.biimp ph ph)",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "normalization_policy": "ordinary Expander df-tru closed-tautology choice"
+    },
+    {
+      "label": "df-ex",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-nf",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-sb",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-eu",
+      "category": "alpha_biimp",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_biimp_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.biimp alpha_left alpha_right",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-mo",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-clab",
+      "category": "semantic_boundary",
+      "hExt": "NFChoice.ReplaySupport.extensional_of_literal_model hNF",
+      "normalization_policy": "ordinary Expander normalization",
+      "helper": "NFChoice.DefinitionLeaves.SemanticBoundary.valid_df_clab",
+      "helper_arguments": [
+        "S := S",
+        "hExt",
+        "substitution['x']",
+        "substitution['y']",
+        "normalize(substitution['ph'])"
+      ],
+      "helper_dv_arguments": [],
+      "leaf_essential_arguments_consumed": [],
+      "expected_normalized_shape": "Wff.biimp (classMem (cv x) (cab y ph)) (sbDefiniens x y ph)"
+    },
+    {
+      "label": "df-cleq",
+      "category": "semantic_boundary",
+      "hExt": "NFChoice.ReplaySupport.extensional_of_literal_model hNF",
+      "normalization_policy": "ordinary Expander normalization",
+      "helper": "NFChoice.DefinitionLeaves.SemanticBoundary.valid_df_cleq",
+      "helper_arguments": [
+        "S := S",
+        "hExt",
+        "substitution['x']",
+        "normalize(substitution['A'])",
+        "normalize(substitution['B'])",
+        "fun hx => dv_x_A (Class.mem_vars_of_mem_fv substitution['A'] hx)",
+        "fun hx => dv_x_B (Class.mem_vars_of_mem_fv substitution['B'] hx)"
+      ],
+      "helper_dv_arguments": [
+        "x notin A.fv",
+        "x notin B.fv"
+      ],
+      "source_dv_inputs": [
+        "dv_x_A : x notin A.vars",
+        "dv_x_B : x notin B.vars"
+      ],
+      "leaf_essential_arguments_consumed": [],
+      "ignored_leaf_essentials": [
+        {
+          "label": "df-cleq.1",
+          "reason": "literal NF model already supplies ax-ext, hence hExt"
+        }
+      ],
+      "expected_normalized_shape": "Wff.biimp (classEq A B) (all x (Wff.biimp (classMem (cv x) A) (classMem (cv x) B)))"
+    },
+    {
+      "label": "df-clel",
+      "category": "semantic_boundary",
+      "hExt": "NFChoice.ReplaySupport.extensional_of_literal_model hNF",
+      "normalization_policy": "ordinary Expander normalization",
+      "helper": "NFChoice.DefinitionLeaves.SemanticBoundary.valid_df_clel",
+      "helper_arguments": [
+        "S := S",
+        "hExt",
+        "substitution['x']",
+        "normalize(substitution['A'])",
+        "normalize(substitution['B'])",
+        "fun hx => dv_x_A (Class.mem_vars_of_mem_fv substitution['A'] hx)",
+        "fun hx => dv_x_B (Class.mem_vars_of_mem_fv substitution['B'] hx)"
+      ],
+      "helper_dv_arguments": [
+        "x notin A.fv",
+        "x notin B.fv"
+      ],
+      "source_dv_inputs": [
+        "dv_x_A : x notin A.vars",
+        "dv_x_B : x notin B.vars"
+      ],
+      "leaf_essential_arguments_consumed": [],
+      "expected_normalized_shape": "Wff.biimp (classMem A B) (ex x (conj (classEq (cv x) A) (classMem (cv x) B)))"
+    },
+    {
+      "label": "df-nfc",
+      "category": "alpha_biimp",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_biimp_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.biimp alpha_left alpha_right",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ne",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-ral",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-rex",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-reu",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-rmo",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-rab",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-v",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-sbc",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-csb",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-nin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-compl",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-in",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-un",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-dif",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-symdif",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-ss",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-pss",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-nul",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-if",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-pw",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-sn",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-pr",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-tp",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-uni",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-int",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-iun",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-opk",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-1c",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-pw1",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-uni1",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-xpk",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-cnvk",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ins2k",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "t"
+        },
+        {
+          "sort": "setvar",
+          "name": "u"
+        },
+        {
+          "sort": "setvar",
+          "name": "v"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ins3k",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "t"
+        },
+        {
+          "sort": "setvar",
+          "name": "u"
+        },
+        {
+          "sort": "setvar",
+          "name": "v"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-imak",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-cok",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-p6",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-sik",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "t"
+        },
+        {
+          "sort": "setvar",
+          "name": "u"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ssetk",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-imagek",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-idk",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-iota",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-0c",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-addc",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-nnc",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "b"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-fin",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-lefin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "w"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ltfin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "m"
+        },
+        {
+          "sort": "setvar",
+          "name": "n"
+        },
+        {
+          "sort": "setvar",
+          "name": "p"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ncfin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-tfin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "n"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-evenfin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "n"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-oddfin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "n"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-sfin",
+      "category": "alpha_biimp",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_biimp_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.biimp alpha_left alpha_right",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-spfin",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-phi",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-op",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-proj1",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-proj2",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-opab",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-br",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-1st",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-swap",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "w"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-sset",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-co",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ima",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-si",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "w"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-id",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-xp",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-cnv",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-rn",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-dm",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-res",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-fun",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-fn",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-f",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-f1",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-fo",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-f1o",
+      "category": "exact_biimp",
+      "helper": "NFChoice.DefinitionLeaves.Wff.valid_biimp_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.biimp normalized_payload normalized_payload",
+      "payload_sort": "Wff",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-fv",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-2nd",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ov",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-oprab",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "w"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-mpt",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-mpt2",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-txp",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-fix",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-cup",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-disj",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-addcfn",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-compose",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ins2",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-ins3",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-image",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-ins4",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-si3",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-funs",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "f"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-fns",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "f"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-pw1fn",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-fullfun",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-clos1",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-trans",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "r"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ref",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "r"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-antisym",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "r"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-partial",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-connex",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "r"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-strict",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-found",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "r"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        },
+        {
+          "sort": "setvar",
+          "name": "z"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-we",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-sym",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "r"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-er",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-ec",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-qs",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-map",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "f"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-en",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "f"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ncs",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-lec",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "b"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-ltc",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-nc",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-tc",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "b"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-2c",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-3c",
+      "category": "exact_classEq",
+      "helper": "NFChoice.DefinitionLeaves.Class.valid_classEq_refl",
+      "helper_arguments": [
+        "S := S",
+        "normalized_payload"
+      ],
+      "expected_normalized_shape": "Wff.classEq normalized_payload normalized_payload",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [],
+      "normalization_policy": "ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true
+    },
+    {
+      "label": "df-ce",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "a"
+        },
+        {
+          "sort": "setvar",
+          "name": "b"
+        },
+        {
+          "sort": "setvar",
+          "name": "g"
+        },
+        {
+          "sort": "setvar",
+          "name": "m"
+        },
+        {
+          "sort": "setvar",
+          "name": "n"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-tcfn",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "x"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    },
+    {
+      "label": "df-spac",
+      "category": "alpha_classEq",
+      "helper": "NFChoice.DefinitionLeaves.AlphaTransport.valid_classEq_of_alpha",
+      "helper_arguments": [
+        "S := S",
+        "generated structural AlphaWff/AlphaClass certificate for the two current normalized sides"
+      ],
+      "expected_normalized_shape": "Wff.classEq alpha_left alpha_right",
+      "payload_sort": "Class",
+      "leaf_essential_arguments_consumed": [],
+      "helper_dv_arguments": [],
+      "source_dv_policy": "retain and discharge every Statement.dv obligation normally",
+      "source_dummy_variables": [
+        {
+          "sort": "setvar",
+          "name": "m"
+        },
+        {
+          "sort": "setvar",
+          "name": "x"
+        },
+        {
+          "sort": "setvar",
+          "name": "y"
+        }
+      ],
+      "normalization_policy": "unchanged ordinary Expander normalization",
+      "directly_matches_current_generic_Expander_pair": true,
+      "reason": "semantic alpha transport proves the current synthetic-dummy/source-dummy pair without changing proof-stack formula identity",
+      "alpha_certificate_policy": {
+        "different_binders": "emit AlphaWff.all / AlphaClass.cab and extend paired binder environment",
+        "bound_occurrences": "emit AlphaVar.here or AlphaVar.there",
+        "identical_large_subtrees": "emit AlphaWff.refl_of_fresh / AlphaClass.refl_of_fresh; discharge EnvFresh from source DV plus canonical freshVar facts",
+        "free_occurrences": "emit AlphaVar.free and discharge non-capture mechanically",
+        "logical_nodes": "emit the matching AlphaWff constructor recursively"
+      }
+    }
+  ]
+}

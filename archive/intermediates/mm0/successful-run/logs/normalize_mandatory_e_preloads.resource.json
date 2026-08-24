@@ -1,0 +1,29 @@
+{
+  "name": "normalize_mandatory_e_preloads",
+  "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+  "arguments": [
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\normalize_compressed_preloads_for_mm0.py",
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm"
+  ],
+  "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\normalize_compressed_preloads_for_mm0.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\"",
+  "standard_input": "",
+  "started": "2026-08-20T22:39:46.8585283-07:00",
+  "elapsed_seconds": 6.703,
+  "limit_bytes": 1610612736,
+  "limit_mib": 1536,
+  "peak_working_set_bytes": 120709120,
+  "peak_working_set_mib": 115.117,
+  "peak_private_bytes": 112218112,
+  "peak_private_mib": 107.02,
+  "guard_killed": false,
+  "exit_code": 0,
+  "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalize_mandatory_e_preloads.stdout.txt",
+  "stdout_bytes": 2076,
+  "stdout_sha256": "68E449BD7C5081643083C9A07EB751C68C968F85E47756A4AF1888B5B19B4F01",
+  "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalize_mandatory_e_preloads.stderr.txt",
+  "stderr_bytes": 0,
+  "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "metamath_executable_invoked": false
+}

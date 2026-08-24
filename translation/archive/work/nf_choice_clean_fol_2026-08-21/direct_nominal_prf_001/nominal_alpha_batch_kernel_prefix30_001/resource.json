@@ -1,0 +1,71 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-first-use-kernel-prefix-batch-successor-v2",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_30",
+  "parent": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix28_001/resource.json",
+    "resourceSha256": "0F7D524136C8FB24D2CD9DF4274C3932CD83716890E0513B274440BA1E2F060A",
+    "endOrdinal": 28
+  },
+  "sourceBoundary": {
+    "resourceSha256": "8EDBCC3FC57E074AB7F43E4B25291A41ECC107DA4FB57925E959CE8EE732BFBF",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+  },
+  "settings": {
+    "trust": 0,
+    "threads": 1,
+    "maxHeartbeats": 5000000
+  },
+  "compiles": [
+    {
+      "ordinal": 29,
+      "label": "df-evenfin",
+      "module": "NominalAlphaRepairedBase001029Evenfin",
+      "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_evenfin",
+      "sourcePath": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/generated_nominal_alpha_batch_003/NominalAlphaRepairedBase001029Evenfin.lean",
+      "sourceSha256": "2A2B7BEA521EA84A34E48C863D642FEE280FE7B035A784073DA38A65581D236D",
+      "sourceBytes": 50574,
+      "exitCode": 0,
+      "outputPath": "work/nf_choice_clean_fol_2026-08-21/a2935k1/NominalAlphaRepairedBase001029Evenfin.olean",
+      "outputSha256": "58DBD46B782E5F026A67A3F891E30C8FB8B33350147A4B83F6D280F66C3A08EC",
+      "outputBytes": 337288,
+      "forbiddenSourceMatches": []
+    },
+    {
+      "ordinal": 30,
+      "label": "df-oddfin",
+      "module": "NominalAlphaRepairedBase001030Oddfin",
+      "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_oddfin",
+      "sourcePath": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/generated_nominal_alpha_batch_003/NominalAlphaRepairedBase001030Oddfin.lean",
+      "sourceSha256": "4B87BF2ECC49D9E6C94641DE381C8283971FBD628E4F95A4A84D533E6FED4BF9",
+      "sourceBytes": 75422,
+      "exitCode": 0,
+      "outputPath": "work/nf_choice_clean_fol_2026-08-21/a2935k1/NominalAlphaRepairedBase001030Oddfin.olean",
+      "outputSha256": "49A419EBA6AD34FD0F20F1A14D746812B0305BCD27AC947CE9F93FF307705731",
+      "outputBytes": 493768,
+      "forbiddenSourceMatches": []
+    }
+  ],
+  "audit": {
+    "sourcePath": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix30_001/NominalAlphaPrefix30Audit.lean",
+    "sourceSha256": "B01F0248BA05B010244243B3D387BC849A3CBFA8887A868829CCB8DA4D301EAD",
+    "outputPath": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix30_001/NominalAlphaPrefix30Audit.olean",
+    "outputSha256": "3B57CEEB9A55B15F0DADD69257EF955FF79627A0F8B351AF806415F8B89869BD",
+    "exitCode": 0,
+    "reportedAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "exactAllowedThree": true
+  },
+  "firstUsePrefix": {
+    "startOrdinal": 1,
+    "endOrdinal": 30,
+    "coveredCount": 30
+  },
+  "nextExactFirstUse": {
+    "ordinal": 31,
+    "label": "df-sfin",
+    "module": "NominalAlphaRepairedBase001031Sfin"
+  }
+}

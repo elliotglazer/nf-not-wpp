@@ -1,0 +1,34 @@
+{
+  "schema": "hnwcut-strict-quotient-stage-audit-v1",
+  "parent": "work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\quotient_proxy_imp_class_stage2_checkpoint.mm",
+  "parent_sha256": "24A5D458B22747CFBD172326293548BD4EF56BC08DD11908AC91E6A8AB57335A",
+  "frozen_checkpoint": "work\\mm0_conversion_2026-08-20\\toolchain\\hnwcut_strict_quotient_stage3\\strict_quotient_imp_frozen_checkpoint.mm",
+  "frozen_checkpoint_sha256": "BE2D112F89516EED24DCB972EA1B2792A95590547D2E9823903C73312C3DFBB1",
+  "parent_free_suffix": "work\\mm0_conversion_2026-08-20\\toolchain\\hnwcut_strict_quotient_stage3\\strict_quotient_imp_parent_free_suffix.mm",
+  "parent_free_suffix_sha256": "3532E9683FFB6184DEDF1C32AC6B01D1BF4D8112E5CC1894D4D9FB64A7AFD8D2",
+  "new_theorem": "hncodecmpquotstrictbrproxyimpclndv",
+  "new_theorem_essentials": [
+    "|- A e. _V"
+  ],
+  "new_theorem_public_dv": [
+    [
+      "A",
+      "r"
+    ]
+  ],
+  "mathematical_verification": {
+    "primary": "OK 4332 proofs, trusted 0",
+    "secondary": "OK 4332 proofs, 12437 statements"
+  },
+  "strict_scope_verification": {
+    "new_theorem_scope_clean": true,
+    "global_status": "one unchanged rejection",
+    "unchanged_rejected_theorem": "hnwcutambstrictsegresisomralias0ndv",
+    "verified_scope_clean_proofs": 4331
+  },
+  "delta_audit": {
+    "parent_noncomment_tokens_unchanged_outside_insert": true,
+    "inserted_proof_complete": true,
+    "inserted_block_sha256": "0BA134272AE21F544D14C9E4C0CD1E8A42B6ADDC63D522D2F29703339A0EC9FE"
+  }
+}

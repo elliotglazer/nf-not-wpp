@@ -1,0 +1,34 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaFvFocusedSplit001",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "FF9E2C4B7F1A6B39A5B3F3E881D151D1A11AA266EEF9876DDA53A288700A6A5E",
+  "records": [
+    {
+      "label": "df-fv",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fv",
+      "floating": [
+        "x",
+        "A",
+        "F"
+      ],
+      "dv": [
+        [
+          "A",
+          "x"
+        ],
+        [
+          "F",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 1427,
+      "opaque_refl_subtrees": 0,
+      "fresh_facts": 64,
+      "split_alpha_haves": 2
+    }
+  ]
+}

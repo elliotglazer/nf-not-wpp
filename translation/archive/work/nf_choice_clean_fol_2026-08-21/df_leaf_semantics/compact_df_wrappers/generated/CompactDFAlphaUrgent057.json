@@ -1,0 +1,46 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaUrgent057",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "CE46CCF50A58D2E05B9860ABEF05F21944670934FB2AAA463830DF683F3D3DBC",
+  "records": [
+    {
+      "label": "df-qs",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_qs",
+      "floating": [
+        "x",
+        "y",
+        "A",
+        "R"
+      ],
+      "dv": [
+        [
+          "A",
+          "x"
+        ],
+        [
+          "A",
+          "y"
+        ],
+        [
+          "R",
+          "x"
+        ],
+        [
+          "R",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 571,
+      "opaque_refl_subtrees": 28,
+      "fresh_facts": 44
+    }
+  ]
+}

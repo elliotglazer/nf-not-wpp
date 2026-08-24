@@ -1,0 +1,668 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-reflected-suffix-kernel-continuation-v3",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_48_EXACT_THREE",
+  "trust": 0,
+  "settings": {
+    "threads": 1,
+    "maxHeartbeats": 5000000,
+    "maxRecDepth": 30000,
+    "wallLimitSecondsPerCompile": 300,
+    "rssLimitBytes": 4294967296
+  },
+  "continuationParent": {
+    "runner": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\run_kernel_audit_continuation_002.ps1",
+    "runnerSha256": "E24EF0438B273A24774C5D9E83FEC63962C5B5E2856826590B19C45ADE061BAF",
+    "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\kernel_audit_continuation_002\\resource.json",
+    "resourceSha256": "13935F9C6137B730DA7A5EB2A0B41843A252E0B97F0034FF0D37037198B31BDA",
+    "schema": "nf-wpp-direct-nominal-alpha-reflected-suffix-kernel-continuation-v2",
+    "status": "FAIL_CLOSED_AT_FIRST_MODULE_FAILURE",
+    "failedOrdinal": 38,
+    "failureStage": "ORDINAL_38_KERNEL",
+    "failureStderrSha256": "CD4E98E07A9052F5A8320DDE78091D2FBEFF1C87C39970CEBDE37DDF779448B6",
+    "failureClass": "OLEAN_OUTPUT_PATH_LENGTH",
+    "previousOutputRoot": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\kernel_audit_continuation_002",
+    "previousOleanPathChars": 253,
+    "shortOutputRoot": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1",
+    "shortOleanPathChars": 195,
+    "onlyOperationalChange": "outputRoot"
+  },
+  "parent": {
+    "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_kernel_prefix37_reflected_001\\kernel_audit_001\\resource.json",
+    "resourceSha256": "F24E39CE16DF8B7F9D56556E7FF29910390AA9A22785EFABAC14903C0D114A2F",
+    "prefix37AuditOlean": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_kernel_prefix37_reflected_001\\kernel_audit_001\\NominalAlphaKernelPrefix37Reflected001AxiomAudit.olean",
+    "prefix37AuditOleanSha256": "5B5A86BE329C7AFECCE02977BCBE8FBFF873B0B8221A7DC41D385163A1132E2D",
+    "endOrdinal": 37
+  },
+  "pinnedBoundaries": {
+    "parentRunner": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\run_kernel_audit_continuation_002.ps1",
+    "parentRunnerSha256": "E24EF0438B273A24774C5D9E83FEC63962C5B5E2856826590B19C45ADE061BAF",
+    "parentResource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\kernel_audit_continuation_002\\resource.json",
+    "parentResourceSha256": "13935F9C6137B730DA7A5EB2A0B41843A252E0B97F0034FF0D37037198B31BDA",
+    "manifest": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaReflectedSuffix035048001.json",
+    "manifestSha256": "07B0FA37277F3469CDDD3F327AE17E88900FEF71E375627F80A70FC0E0E4D007",
+    "sourceAudit": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\source_audit_001\\resource.json",
+    "sourceAuditSha256": "591E88BC6B65B94A580346DC09225F735A7FE646BE52033F2F17A9A8A290E281",
+    "initialFailure": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\kernel_audit_001\\resource.json",
+    "initialFailureSha256": "12256D5BFB9EFD268C24E316F7F528448FF33135F6392461315C2FB709BA6ABC",
+    "prefix34Resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_batch_kernel_prefix34_reflected_001\\resource.json",
+    "prefix34ResourceSha256": "55E2CDB5166D01080AA1619DEB28A46F81768A0650AD964FDBA21C05F83F272E",
+    "ordinal37KernelResource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_opab_opaque_reflon_def_004\\kernel_audit_001\\resource.json",
+    "ordinal37KernelResourceSha256": "8BF3FC7E2AEFDA4C69D16D05AC3259A05F8B56228D06748D91635227B8FDF648",
+    "prefix37Preflight": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_kernel_prefix37_reflected_001\\preflight_001\\resource.json",
+    "prefix37PreflightSha256": "CE5DA91650A4C02370211BC159F9BD91CDFE1C94DFEBBD96AD1B971AC506B284",
+    "dispatcherCore": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_dispatch_core_v2.py",
+    "dispatcherCoreSha256": "78AB2C0DACCB170D121D811B082C8256DE3531369E687ACDE6C46C6675F82FB3",
+    "dispatcherPrefix37Audit": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_dispatch_prefix37_v2_audit_001\\resource.json",
+    "dispatcherPrefix37AuditSha256": "136E4BBDAEC4FA2DAD6E3887EDE672414F25CFC838FB4D493BC3BD3F3B120B02"
+  },
+  "sourceChecks": [
+    {
+      "ordinal": 38,
+      "label": "df-1st",
+      "module": "NominalAlphaRepairedBase001038Leaf1stReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_1st",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001038Leaf1stReflected001.lean",
+      "sourceSha256": "5E900254ED7AEA7EC7631DA014B46D428DD270FEB9828F0300A0929711769568",
+      "sourceBytes": 194583,
+      "tReflOnOccurrenceCount": 14,
+      "reflOfReflOnOccurrenceCount": 23,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 39,
+      "label": "df-swap",
+      "module": "NominalAlphaRepairedBase001039SwapReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_swap",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001039SwapReflected001.lean",
+      "sourceSha256": "5B3452325B718C463D9595F57FC0AD10D9966655878EF4BDE1733A53E9DB19A0",
+      "sourceBytes": 293684,
+      "tReflOnOccurrenceCount": 21,
+      "reflOfReflOnOccurrenceCount": 33,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 40,
+      "label": "df-sset",
+      "module": "NominalAlphaRepairedBase001040SsetReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_sset",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001040SsetReflected001.lean",
+      "sourceSha256": "C457D911B83AC22C310C38EE9CAC3C40B617CD9F82FCD542D20C2B1482EBEC69",
+      "sourceBytes": 105998,
+      "tReflOnOccurrenceCount": 7,
+      "reflOfReflOnOccurrenceCount": 13,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 41,
+      "label": "df-co",
+      "module": "NominalAlphaRepairedBase001041CoReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_co",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001041CoReflected001.lean",
+      "sourceSha256": "FFFD2C0E1C5D0D721EBA58A403A7FB77E6848EFE194DAADF70BDB4E3BCDF022A",
+      "sourceBytes": 293592,
+      "tReflOnOccurrenceCount": 23,
+      "reflOfReflOnOccurrenceCount": 35,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 42,
+      "label": "df-ima",
+      "module": "NominalAlphaRepairedBase001042ImaReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_ima",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001042ImaReflected001.lean",
+      "sourceSha256": "BDA5B7D9BC6B22BF9091D09892D10D552DF1E9DBED2B24BA11A37BEF8908E95C",
+      "sourceBytes": 98801,
+      "tReflOnOccurrenceCount": 9,
+      "reflOfReflOnOccurrenceCount": 15,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 43,
+      "label": "df-si",
+      "module": "NominalAlphaRepairedBase001043SiReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_si",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001043SiReflected001.lean",
+      "sourceSha256": "D0ADE6EC628D995E01BD4FD472D6211A066FA347A4568A1654FA46C7F00D2118",
+      "sourceBytes": 208804,
+      "tReflOnOccurrenceCount": 15,
+      "reflOfReflOnOccurrenceCount": 24,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 44,
+      "label": "df-id",
+      "module": "NominalAlphaRepairedBase001044IdReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_id",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001044IdReflected001.lean",
+      "sourceSha256": "4AB1B38E3FE69817832B2644DFCB852036ADFDEF529C80C8BDD427A10F9655F2",
+      "sourceBytes": 101657,
+      "tReflOnOccurrenceCount": 7,
+      "reflOfReflOnOccurrenceCount": 13,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 45,
+      "label": "df-xp",
+      "module": "NominalAlphaRepairedBase001045XpReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_xp",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001045XpReflected001.lean",
+      "sourceSha256": "1E40A0BEE9BDEAFB5950CE0802F564A0E0EFF8FB43C89C96204A5F12EC8BD8A3",
+      "sourceBytes": 107934,
+      "tReflOnOccurrenceCount": 9,
+      "reflOfReflOnOccurrenceCount": 15,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 46,
+      "label": "df-cnv",
+      "module": "NominalAlphaRepairedBase001046CnvReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_cnv",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001046CnvReflected001.lean",
+      "sourceSha256": "F63FC4D6849AF09E83E5D036F131AC31BF07C8E9FB6EA029B9A209BF000DDC36",
+      "sourceBytes": 196983,
+      "tReflOnOccurrenceCount": 15,
+      "reflOfReflOnOccurrenceCount": 27,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 47,
+      "label": "df-fv",
+      "module": "NominalAlphaRepairedBase001047FvReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_fv",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001047FvReflected001.lean",
+      "sourceSha256": "370A87DDB755ABCC138E5683CB7ED167C37DCD78AB6587457DB86D4537884E15",
+      "sourceBytes": 119248,
+      "tReflOnOccurrenceCount": 9,
+      "reflOfReflOnOccurrenceCount": 12,
+      "forbiddenSourceTokens": []
+    },
+    {
+      "ordinal": 48,
+      "label": "df-2nd",
+      "module": "NominalAlphaRepairedBase001048Leaf2ndReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_2nd",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001048Leaf2ndReflected001.lean",
+      "sourceSha256": "8D4F721F9A959D2B7254AE81854F82473DB0D0794B975DFF85F2132F28EA471F",
+      "sourceBytes": 195466,
+      "tReflOnOccurrenceCount": 14,
+      "reflOfReflOnOccurrenceCount": 23,
+      "forbiddenSourceTokens": []
+    }
+  ],
+  "compiles": [
+    {
+      "ordinal": 38,
+      "label": "df-1st",
+      "module": "NominalAlphaRepairedBase001038Leaf1stReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_1st",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001038Leaf1stReflected001.lean",
+      "sourceSha256": "5E900254ED7AEA7EC7631DA014B46D428DD270FEB9828F0300A0929711769568",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 45.1668034,
+      "peakRssBytes": 1641189376,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001038Leaf1stReflected001.stdout.txt",
+      "stdoutSha256": "99909EC2E1777F59A5B6B15547C3235D4570E5259773CE6681A62854DCDD98C5",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001038Leaf1stReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001038Leaf1stReflected001.olean",
+      "outputSha256": "FEFE47FB5D39622B989E523189072C0534DFE34E3BA58C820F974DCC56B99C9F",
+      "outputBytes": 1219424
+    },
+    {
+      "ordinal": 39,
+      "label": "df-swap",
+      "module": "NominalAlphaRepairedBase001039SwapReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_swap",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001039SwapReflected001.lean",
+      "sourceSha256": "5B3452325B718C463D9595F57FC0AD10D9966655878EF4BDE1733A53E9DB19A0",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 75.0011426,
+      "peakRssBytes": 2036846592,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001039SwapReflected001.stdout.txt",
+      "stdoutSha256": "1C38CE14D47E5490671FF9AF810FA09A8DC10C9D79B3762BBB6F25BAFBAA643E",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001039SwapReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001039SwapReflected001.olean",
+      "outputSha256": "7CE618DC950D17C43915BF54128F2B3E9786E5AF010F405A6E69F62000A6CABF",
+      "outputBytes": 1934976
+    },
+    {
+      "ordinal": 40,
+      "label": "df-sset",
+      "module": "NominalAlphaRepairedBase001040SsetReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_sset",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001040SsetReflected001.lean",
+      "sourceSha256": "C457D911B83AC22C310C38EE9CAC3C40B617CD9F82FCD542D20C2B1482EBEC69",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 21.2682396,
+      "peakRssBytes": 1380777984,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001040SsetReflected001.stdout.txt",
+      "stdoutSha256": "DB240145BA1811EAAED2DA9B5ECB38971DAAEF093A63AAA6696F80B4538F4BF5",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001040SsetReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001040SsetReflected001.olean",
+      "outputSha256": "9B2E9957B4E8B4D70651E3C06D7D5D0CBCCDCED54E6F044F020E113C9821B0E1",
+      "outputBytes": 791664
+    },
+    {
+      "ordinal": 41,
+      "label": "df-co",
+      "module": "NominalAlphaRepairedBase001041CoReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_co",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001041CoReflected001.lean",
+      "sourceSha256": "FFFD2C0E1C5D0D721EBA58A403A7FB77E6848EFE194DAADF70BDB4E3BCDF022A",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 76.0900034,
+      "peakRssBytes": 2023272448,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001041CoReflected001.stdout.txt",
+      "stdoutSha256": "EBEB602B2A218CCB1B0C6B0E8E47DBF197B91178017DE12AF4BD337AB5EF4186",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001041CoReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001041CoReflected001.olean",
+      "outputSha256": "5272DAD29A79DAB33D3CFA5FEB884080211F30C4F3B5B641F6877FD0CBEF878F",
+      "outputBytes": 2161720
+    },
+    {
+      "ordinal": 42,
+      "label": "df-ima",
+      "module": "NominalAlphaRepairedBase001042ImaReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_ima",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001042ImaReflected001.lean",
+      "sourceSha256": "BDA5B7D9BC6B22BF9091D09892D10D552DF1E9DBED2B24BA11A37BEF8908E95C",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 23.901707,
+      "peakRssBytes": 1368031232,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001042ImaReflected001.stdout.txt",
+      "stdoutSha256": "1E4B1C7254B63C9034826191325D4C4EE09AC9646AA3CF13FCDCBE6CB6D7E144",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001042ImaReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001042ImaReflected001.olean",
+      "outputSha256": "F465FB3161ABFC1C99186904A2301B57574FF6D9353C265DF50BFCEBAF705285",
+      "outputBytes": 818032
+    },
+    {
+      "ordinal": 43,
+      "label": "df-si",
+      "module": "NominalAlphaRepairedBase001043SiReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_si",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001043SiReflected001.lean",
+      "sourceSha256": "D0ADE6EC628D995E01BD4FD472D6211A066FA347A4568A1654FA46C7F00D2118",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 50.2825491,
+      "peakRssBytes": 1688326144,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001043SiReflected001.stdout.txt",
+      "stdoutSha256": "738FAF12A0D30C0EA8D8BADFB6A5FFEA229F56FF57D8F4054872717A44155F6E",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001043SiReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001043SiReflected001.olean",
+      "outputSha256": "BBB072157EE3B5A97306466CD9AC513FEF91ED5F58AFA281CE11E267A9F749A8",
+      "outputBytes": 1445376
+    },
+    {
+      "ordinal": 44,
+      "label": "df-id",
+      "module": "NominalAlphaRepairedBase001044IdReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_id",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001044IdReflected001.lean",
+      "sourceSha256": "4AB1B38E3FE69817832B2644DFCB852036ADFDEF529C80C8BDD427A10F9655F2",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 22.9949823,
+      "peakRssBytes": 1373364224,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001044IdReflected001.stdout.txt",
+      "stdoutSha256": "50247D8AA2017225BEC2A361CEEE00C07707F5533ECCDDCDD31C1A7729F1A60D",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001044IdReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001044IdReflected001.olean",
+      "outputSha256": "723C03AD4F2E2FD6A652891052897D76A5FACF15CB5344CCC60A67F4B7FA8EED",
+      "outputBytes": 769352
+    },
+    {
+      "ordinal": 45,
+      "label": "df-xp",
+      "module": "NominalAlphaRepairedBase001045XpReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_xp",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001045XpReflected001.lean",
+      "sourceSha256": "1E40A0BEE9BDEAFB5950CE0802F564A0E0EFF8FB43C89C96204A5F12EC8BD8A3",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 21.5321862,
+      "peakRssBytes": 1387593728,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001045XpReflected001.stdout.txt",
+      "stdoutSha256": "1FBCB7205C60B04DB0BA17207B0E9865E538C09FF788EE4521A1912609D81520",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001045XpReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001045XpReflected001.olean",
+      "outputSha256": "CA73CDCA944B2239BCD9868A91F0B5E378E98F2CA0D872370136291DAC19629C",
+      "outputBytes": 915520
+    },
+    {
+      "ordinal": 46,
+      "label": "df-cnv",
+      "module": "NominalAlphaRepairedBase001046CnvReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_cnv",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001046CnvReflected001.lean",
+      "sourceSha256": "F63FC4D6849AF09E83E5D036F131AC31BF07C8E9FB6EA029B9A209BF000DDC36",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 38.8144223,
+      "peakRssBytes": 1637216256,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001046CnvReflected001.stdout.txt",
+      "stdoutSha256": "B57EEBF8D4D83EFC02F7C219EAAD48D3F8DAE0F196884DCCE1AF62BD6B50A9C0",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001046CnvReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001046CnvReflected001.olean",
+      "outputSha256": "89F0E8DAB76C3BA69405AE9495DC5DE607101DD5AF25990B0389410163A04F56",
+      "outputBytes": 1543688
+    },
+    {
+      "ordinal": 47,
+      "label": "df-fv",
+      "module": "NominalAlphaRepairedBase001047FvReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_fv",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001047FvReflected001.lean",
+      "sourceSha256": "370A87DDB755ABCC138E5683CB7ED167C37DCD78AB6587457DB86D4537884E15",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 23.1161722,
+      "peakRssBytes": 1412083712,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001047FvReflected001.stdout.txt",
+      "stdoutSha256": "6E8E19F113031A9477ADB03B57C42321C66BD023BD07F80850A4A248256E725A",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001047FvReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001047FvReflected001.olean",
+      "outputSha256": "E15269C66DD70821A1F51BDCEC3483D33D3B1D03BFDE4F8FFB285417DEA4D5F0",
+      "outputBytes": 1027416
+    },
+    {
+      "ordinal": 48,
+      "label": "df-2nd",
+      "module": "NominalAlphaRepairedBase001048Leaf2ndReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_2nd",
+      "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaRepairedBase001048Leaf2ndReflected001.lean",
+      "sourceSha256": "8D4F721F9A959D2B7254AE81854F82473DB0D0794B975DFF85F2132F28EA471F",
+      "exitCode": 0,
+      "killed": false,
+      "killReason": null,
+      "elapsedSeconds": 39.9904354,
+      "peakRssBytes": 1644224512,
+      "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001048Leaf2ndReflected001.stdout.txt",
+      "stdoutSha256": "F72FB23BD25418A7FC06B447C259642D9B8AD121E1047BE93D25044ABCC6AE74",
+      "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001048Leaf2ndReflected001.stderr.txt",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "emptyStderr": true,
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001048Leaf2ndReflected001.olean",
+      "outputSha256": "5508482F01A6AA863BC4B134A568CAFA8A2593C7718BA24107D28D6232B596D5",
+      "outputBytes": 1454408
+    }
+  ],
+  "audit": {
+    "module": "NominalAlphaKernelPrefix48Reflected001AxiomAudit",
+    "sourcePath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_kernel_prefix37_reflected_001\\NominalAlphaKernelPrefix48Reflected001AxiomAudit.lean",
+    "sourceSha256": "9D7E798A904D41998C321564F39C54E8801E0343855DFA18AAF4B446B40D4B85",
+    "exitCode": 0,
+    "killed": false,
+    "killReason": null,
+    "elapsedSeconds": 9.4820586,
+    "peakRssBytes": 1199992832,
+    "stdoutPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaKernelPrefix48Reflected001AxiomAudit.stdout.txt",
+    "stdoutSha256": "3B67A72CFCDC82FC0DC203F271AEB1D76D8650C7AE31A8914F9B443F42A01FCE",
+    "stderrPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaKernelPrefix48Reflected001AxiomAudit.stderr.txt",
+    "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "emptyStderr": true,
+    "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaKernelPrefix48Reflected001AxiomAudit.olean",
+    "outputSha256": "E1BB20BFFA251707DE5B94B22F14ED7A7CA833C100B253AF358A64938338B39E",
+    "outputBytes": 3176,
+    "axiomReports": [
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_proj1",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_proj2",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_opab",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_1st",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_swap",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_sset",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_co",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_ima",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_si",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_id",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_xp",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_cnv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_fv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_2nd",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "reportCount": 14,
+    "expectedReportCount": 14,
+    "exactAllowedThreeAll": true,
+    "forbiddenAxiomMatches": []
+  },
+  "moduleOverrides": [
+    {
+      "ordinal": 34,
+      "module": "NominalAlphaRepairedBase001034OpReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_batch_kernel_prefix34_reflected_001\\NominalAlphaRepairedBase001034OpReflected001.olean",
+      "outputSha256": "C0F09DB957291911BF41CBD3B3FDC58270C5D6FAF0637F5C69D577266361C399"
+    },
+    {
+      "ordinal": 35,
+      "module": "NominalAlphaRepairedBase001035Proj1Reflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\kernel_audit_001\\NominalAlphaRepairedBase001035Proj1Reflected001.olean",
+      "outputSha256": "715979F353716CD8597F379E78E877B01A7B660516885B5B5B09C0C79118B621"
+    },
+    {
+      "ordinal": 36,
+      "module": "NominalAlphaRepairedBase001036Proj2Reflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\kernel_audit_001\\NominalAlphaRepairedBase001036Proj2Reflected001.olean",
+      "outputSha256": "A96F48558C68F215766BD4E97B6BF68F41E98C5BE2E059ED8798CECA462228D0"
+    },
+    {
+      "ordinal": 37,
+      "module": "NominalAlphaRepairedBase001037OpabOpaqueHoisted004",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_opab_opaque_reflon_def_004\\kernel_audit_001\\NominalAlphaRepairedBase001037OpabOpaqueHoisted004.olean",
+      "outputSha256": "C323073EA63A652CFCD37DC44BCF29871FA6A9DC3E18803CA7956759FE0BD7B9"
+    },
+    {
+      "ordinal": 38,
+      "module": "NominalAlphaRepairedBase001038Leaf1stReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001038Leaf1stReflected001.olean",
+      "outputSha256": "FEFE47FB5D39622B989E523189072C0534DFE34E3BA58C820F974DCC56B99C9F"
+    },
+    {
+      "ordinal": 39,
+      "module": "NominalAlphaRepairedBase001039SwapReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001039SwapReflected001.olean",
+      "outputSha256": "7CE618DC950D17C43915BF54128F2B3E9786E5AF010F405A6E69F62000A6CABF"
+    },
+    {
+      "ordinal": 40,
+      "module": "NominalAlphaRepairedBase001040SsetReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001040SsetReflected001.olean",
+      "outputSha256": "9B2E9957B4E8B4D70651E3C06D7D5D0CBCCDCED54E6F044F020E113C9821B0E1"
+    },
+    {
+      "ordinal": 41,
+      "module": "NominalAlphaRepairedBase001041CoReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001041CoReflected001.olean",
+      "outputSha256": "5272DAD29A79DAB33D3CFA5FEB884080211F30C4F3B5B641F6877FD0CBEF878F"
+    },
+    {
+      "ordinal": 42,
+      "module": "NominalAlphaRepairedBase001042ImaReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001042ImaReflected001.olean",
+      "outputSha256": "F465FB3161ABFC1C99186904A2301B57574FF6D9353C265DF50BFCEBAF705285"
+    },
+    {
+      "ordinal": 43,
+      "module": "NominalAlphaRepairedBase001043SiReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001043SiReflected001.olean",
+      "outputSha256": "BBB072157EE3B5A97306466CD9AC513FEF91ED5F58AFA281CE11E267A9F749A8"
+    },
+    {
+      "ordinal": 44,
+      "module": "NominalAlphaRepairedBase001044IdReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001044IdReflected001.olean",
+      "outputSha256": "723C03AD4F2E2FD6A652891052897D76A5FACF15CB5344CCC60A67F4B7FA8EED"
+    },
+    {
+      "ordinal": 45,
+      "module": "NominalAlphaRepairedBase001045XpReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001045XpReflected001.olean",
+      "outputSha256": "CA73CDCA944B2239BCD9868A91F0B5E378E98F2CA0D872370136291DAC19629C"
+    },
+    {
+      "ordinal": 46,
+      "module": "NominalAlphaRepairedBase001046CnvReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001046CnvReflected001.olean",
+      "outputSha256": "89F0E8DAB76C3BA69405AE9495DC5DE607101DD5AF25990B0389410163A04F56"
+    },
+    {
+      "ordinal": 47,
+      "module": "NominalAlphaRepairedBase001047FvReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001047FvReflected001.olean",
+      "outputSha256": "E15269C66DD70821A1F51BDCEC3483D33D3B1D03BFDE4F8FFB285417DEA4D5F0"
+    },
+    {
+      "ordinal": 48,
+      "module": "NominalAlphaRepairedBase001048Leaf2ndReflected001",
+      "outputPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\NominalAlphaRepairedBase001048Leaf2ndReflected001.olean",
+      "outputSha256": "5508482F01A6AA863BC4B134A568CAFA8A2593C7718BA24107D28D6232B596D5"
+    }
+  ],
+  "continuationProgress": {
+    "startOrdinal": 38,
+    "lastSuccessfulOrdinal": 48,
+    "successfulCount": 11
+  },
+  "firstUsePrefix": {
+    "startOrdinal": 1,
+    "endOrdinal": 48,
+    "coveredCount": 48,
+    "nextOrdinal": 49
+  },
+  "exactAllowedThreeAll14": true,
+  "failure": null,
+  "runnerPath": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\run_kernel_audit_continuation_003.ps1",
+  "runnerSha256": "B8A6970363F982FAFAF629E8C8C7BC9A06700D61906EAAE9934552EA4AE44909"
+}

@@ -1,0 +1,749 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "count": 67,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "B2BD1A51F94BB7C12AD234AD3A119469FE029D982F1F6AEA1C7368D4178198BE",
+  "calls": [
+    {
+      "label": "df-bi",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_bi",
+      "floating": [
+        "ph",
+        "ps"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-or",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_or",
+      "floating": [
+        "ph",
+        "ps"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-an",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_an",
+      "floating": [
+        "ph",
+        "ps"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-3or",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_3or",
+      "floating": [
+        "ph",
+        "ps",
+        "ch"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-3an",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_3an",
+      "floating": [
+        "ph",
+        "ps",
+        "ch"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-nan",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_nan",
+      "floating": [
+        "ph",
+        "ps"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-tru",
+      "category": "special_semantic_lemma",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_tru",
+      "floating": [
+        "ph"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ex",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ex",
+      "floating": [
+        "ph",
+        "x"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-nf",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_nf",
+      "floating": [
+        "ph",
+        "x"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-sb",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_sb",
+      "floating": [
+        "ph",
+        "x",
+        "y"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-mo",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_mo",
+      "floating": [
+        "ph",
+        "x"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-clab",
+      "category": "semantic_boundary",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_clab",
+      "floating": [
+        "ph",
+        "x",
+        "y"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-cleq",
+      "category": "semantic_boundary",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_cleq",
+      "floating": [
+        "x",
+        "y",
+        "z",
+        "A",
+        "B"
+      ],
+      "dv": [
+        [
+          "A",
+          "x"
+        ],
+        [
+          "B",
+          "x"
+        ],
+        [
+          "x",
+          "y"
+        ],
+        [
+          "x",
+          "z"
+        ],
+        [
+          "y",
+          "z"
+        ]
+      ],
+      "essential": [
+        "df-cleq.1"
+      ]
+    },
+    {
+      "label": "df-clel",
+      "category": "semantic_boundary",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_clel",
+      "floating": [
+        "x",
+        "A",
+        "B"
+      ],
+      "dv": [
+        [
+          "A",
+          "x"
+        ],
+        [
+          "B",
+          "x"
+        ]
+      ],
+      "essential": []
+    },
+    {
+      "label": "df-ne",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ne",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ral",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ral",
+      "floating": [
+        "ph",
+        "x",
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-rex",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_rex",
+      "floating": [
+        "ph",
+        "x",
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-reu",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_reu",
+      "floating": [
+        "ph",
+        "x",
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-rmo",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_rmo",
+      "floating": [
+        "ph",
+        "x",
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-rab",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_rab",
+      "floating": [
+        "ph",
+        "x",
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-sbc",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_sbc",
+      "floating": [
+        "ph",
+        "x",
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-compl",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_compl",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-in",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_in",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-un",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_un",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-dif",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_dif",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-symdif",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_symdif",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ss",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ss",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-pss",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_pss",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-nul",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_nul",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-pr",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_pr",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-tp",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_tp",
+      "floating": [
+        "A",
+        "B",
+        "C"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-opk",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_opk",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-pw1",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_pw1",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-uni1",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_uni1",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-cok",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_cok",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-imagek",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_imagek",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-0c",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_0c",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-fin",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fin",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-br",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_br",
+      "floating": [
+        "A",
+        "B",
+        "R"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-rn",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_rn",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-dm",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_dm",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-res",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_res",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-fun",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fun",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-fn",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fn",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-f",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_f",
+      "floating": [
+        "A",
+        "B",
+        "F"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-f1",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_f1",
+      "floating": [
+        "A",
+        "B",
+        "F"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-fo",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fo",
+      "floating": [
+        "A",
+        "B",
+        "F"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-f1o",
+      "category": "exact_biimp",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_f1o",
+      "floating": [
+        "A",
+        "B",
+        "F"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ov",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ov",
+      "floating": [
+        "A",
+        "B",
+        "F"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-txp",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_txp",
+      "floating": [
+        "A",
+        "B"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-fix",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fix",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ins2",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ins2",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ins3",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ins3",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-image",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_image",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ins4",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ins4",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-si3",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_si3",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-fullfun",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fullfun",
+      "floating": [
+        "F"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-partial",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_partial",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-strict",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_strict",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-we",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_we",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-er",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_er",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ec",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ec",
+      "floating": [
+        "A",
+        "R"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ncs",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ncs",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-ltc",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ltc",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-nc",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_nc",
+      "floating": [
+        "A"
+      ],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-2c",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_2c",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    },
+    {
+      "label": "df-3c",
+      "category": "exact_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_3c",
+      "floating": [],
+      "dv": [],
+      "essential": []
+    }
+  ]
+}

@@ -1,0 +1,978 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[shortlabels]{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,
+  citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\hypersetup{
+  pdftitle={New Foundations Refutes the Weak Partition Principle},
+  pdfauthor={Elliot Glazer},
+  pdfsubject={Weak choice, Hartogs numbers, and finite typed blocks in New Foundations},
+  pdfkeywords={New Foundations, weak partition principle, Hartogs number,
+    first differences, finite typed replay}
+}
+\setlength{\emergencystretch}{2em}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\numberwithin{equation}{section}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\NF}{\mathsf{NF}}
+\newcommand{\WPP}{\mathsf{WPP}}
+\newcommand{\PP}{\mathsf{PP}}
+\newcommand{\Pow}{\mathcal P}
+\newcommand{\Ord}{\mathrm{Ord}}
+\newcommand{\inj}{\hookrightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\otp}{\operatorname{otp}}
+\newcommand{\im}{\operatorname{im}}
+
+\title{New Foundations Refutes\\the Weak Partition Principle}
+\author{Elliot Glazer}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that New Foundations refutes the weak partition principle.  The
+proof uses one carrier-coded first-difference construction, one explicitly
+shifted WPP padding map, and one canonical comparison of Hartogs quotient
+codes in a common ambient base.  This supplies the homogeneous inequality
+needed by a finite-orbit contradiction.  Every type displacement is shown:
+the source and target of the decisive injection are raised to the same
+level before any iterate of the cardinal type operator is cancelled.
+Pointwise WPP witnesses are used only to prove image coverage; the final
+map is a witness-independent quotient graph, so no choice of a family of
+witnesses occurs.  The argument is a direct finite typed replay in NF.  It
+uses no direct-limit model, satisfaction predicate, interpretation of
+bounded Zermelo set theory, forcing, Replacement, or Axiom of Counting.
+\end{abstract}
+
+\section{Introduction}
+
+The weak partition principle is the assertion that a surjection does not
+exist in the direction opposite to a strict cardinal inequality.  We use
+the following local form:
+\begin{equation}
+ X\leq^*Y\ \wedge\ Y\leq X
+ \quad\Longrightarrow\quad X\leq Y,
+ \label{eq:wpp-local}
+\end{equation}
+where $X\leq Y$ means that $X$ injects into $Y$, and $X\leq^*Y$
+means that $X=\varnothing$ or $Y$ surjects onto $X$.
+
+\begin{theorem}[Weak choice fails in NF]\label{thm:main}
+\[
+ \NF\vdash\neg\WPP.
+\]
+\end{theorem}
+
+The proof has three parts.  First, assume for contradiction that
+$\aleph(\Pow^2\aleph(X))$ is a proper initial segment of
+$\aleph(\Pow X)$.  Apply first differences to that one initial segment.
+Weak choice embeds the resulting well-ordered first-difference carrier
+into $X^2\times\omega$; two direct-image maps then embed the original
+initial segment into $\Pow^2\aleph(X)$, contradicting the defining
+property of $\aleph(\Pow^2\aleph(X))$.  Second, an explicit finite typed replay turns
+the pointwise constructions into one witness-independent Hartogs quotient
+graph.  The exact homogeneous inequality is
+\begin{equation}
+ h(ea)\leq h\bigl(e^2(ha)\bigr).
+ \label{eq:intro-homogeneous}
+\end{equation}
+Finally, specializing $a$ along the universal $T$-chain produces a
+cardinal $\alpha$ with
+\[
+ T\alpha<\alpha<F(T\alpha),
+ \qquad F(\beta)=h\bigl(h(e^2\beta)\bigr),
+\]
+and a least-orbit argument gives an impossible equation on a natural
+number.
+
+The finite-block step is included explicitly because it is where an
+informal phrase such as ``after the stratification dust settles'' can hide
+an invalid one-sided cancellation of $T$.  Our translation raises the two
+endpoints to one common level before lowering the injection graph.  Every
+later cancellation therefore removes the same iterate of $T$ from both
+sides.
+
+\section{Hartogs numbers and the type operator}
+
+For a set $X$, define its Hartogs number by
+\[
+ \aleph(X)=\min\{\alpha\in\Ord:\alpha\not\leq X\}.
+\]
+It is obtained from the quotient set of well-orders on subsets of $X$ by
+isomorphism, in a fixed finite power-set neighborhood of $X$.  Although
+Lindenbaum numbers are useful in a more global presentation of the
+argument, the one-witness proof below never forms one.
+
+Let $T$ be the usual type-raising operation on NF-cardinals.  If
+$a=|A|$, let $e(a)$ and $h(a)$ be the homogeneous exponential and
+Hartogs operations, normalized by
+\begin{equation}
+ |\Pow A|=T(ea),
+ \qquad
+ |\mathbf H(A)|=T^2(ha),
+ \label{eq:normalization}
+\end{equation}
+where $\mathbf H(A)$ is the standard typed Hartogs quotient object.
+The operations $e$ and $h$ commute with $T$ wherever defined.
+
+We use the following standard facts of the Specker cardinal calculus
+\cite{Specker,Forster,HolmesBook}.
+
+\begin{lemma}[Basic $T$-calculus]\label{lem:t-calculus}
+In NF:
+\begin{enumerate}[(i)]
+\item $T$ is an order embedding on cardinals.  On well-orderable
+      cardinals, the range of each fixed finite iterate $T^r$ is initial.
+\item The restriction of $T$ to the natural numbers is onto, preserves
+      order and arithmetic, and preserves parity.
+\item If $G$ is a homogeneous partial operation, finite iteration is
+      homogeneous:
+      \[
+       T(G^m(\beta))=G^{Tm}(T\beta)
+      \]
+      whenever either side is defined.
+\item The double-singleton comparison gives $\beta\leq e^2\beta$ on
+      well-orderable cardinals in the common domain.
+\end{enumerate}
+\end{lemma}
+
+\section{Finite typed supports and local maps}
+
+This section gives the finite typed bookkeeping used in the proof.  We do
+not construct a one-sorted limit model and do not define a satisfaction
+relation.  Every set below is obtained by a displayed stratified
+comprehension in NF.
+
+Two pair codes must be distinguished.  Write
+$\langle x,y\rangle_0$ for the standard type-level Quine--Rosser pair used
+in function graphs, and $\langle\!\langle x,y\rangle\!\rangle$ for the
+Kuratowski pair.  The former preserves the common type of its coordinates;
+the latter raises it by two.  Write $A\times_KB$ for the Kuratowski product.
+The type-level pair is a conservative definitional extension of NF
+\cite{Forster,HolmesBook}.  Keeping these pair codes separate is what makes
+the shift ledger below exact.
+
+For that diagram, the adjacent type-copy operations are defined externally
+and only on the displayed supports.  Put $s(x)=\{x\}$ and recursively
+define $s^{r+1}(x)=\{s^r(x)\}$.  For a displayed carrier $A$, put
+\[
+ s^rA=\{s^r(x):x\in A\}.
+\]
+Thus $x\in A$ iff $s^r(x)\in s^rA$.  Each image of a displayed set
+exists by one stratified comprehension instance; no global graph
+$x\mapsto s^r(x)$ is asserted to be a set.  For two coordinate levels the
+pairing transport is the metasyntactic map
+\[
+ \langle x,y\rangle\longmapsto
+ \langle s^i(x),s^j(y)\rangle,
+\]
+expanded into the fixed pair code at the assigned types.  Its inverse on
+the supported product is coordinatewise and unique.
+
+Two qualifications are essential.  First, products are transported by a
+typed pairing isomorphism: for Kuratowski pairs one does \emph{not} have
+$\langle\{x\},\{y\}\rangle=\{\langle x,y\rangle\}$.  Second, forward
+naturality of well-order codes is not enough; every supported raised code
+and every isomorphism witness used below must lower as well.
+
+\begin{lemma}[Supported local lowering]
+\label{lem:local-lowering}
+At any fixed compatible assignment of types, the following hold.
+\begin{enumerate}[(i)]
+\item A subset of an elementwise-shifted displayed carrier lowers uniquely
+      by bounded comprehension.
+\item A relation between two possibly differently shifted carriers lowers
+      uniquely after conjugation by the coordinatewise typed pairing
+      isomorphism.  Function, injection, surjection, and bijection are
+      preserved and reflected.
+\item A well-order on a supported carrier lowers to a well-order; an
+      isomorphism between two supported well-order codes lowers; and the
+      induced map on the corresponding Hartogs quotient classes is onto as
+      well as one-to-one and order preserving.
+\end{enumerate}
+The assertions remain true after any further common shift.
+\end{lemma}
+
+\begin{proof}
+For (i), a subset $B$ of the raised support of $X$ lowers to
+\[
+ \{x\in X:s(x)\in B\}.
+\]
+At the fixed assigned levels this is stratified comprehension, and raising
+the result recovers $B$.  For (ii), transport the pair code by
+$\langle x,y\rangle\mapsto\langle s_i(x),s_j(y)\rangle$ and apply (i) to
+the supported product.  The four graph properties then transfer
+pointwise.
+
+For (iii), every subset of the raised well-order carrier lowers by (i).
+Thus a subset witnessing failure of well-foundedness would lower, and
+well-foundedness is reflected.  Relation codes and isomorphism graphs lower
+by (ii).  Finally every well-order code on a supported raised subset lowers,
+so the map on isomorphism classes has reverse coverage, not merely forward
+naturality.  Strict-segment order is defined by the same supported graph
+formulas and is therefore preserved and reflected.
+\end{proof}
+
+Iterating part (iii) gives a natural order isomorphism
+\begin{equation}
+ \theta_C^r:s^r\mathbf H(C)\longrightarrow\mathbf H(s^rC).
+ \label{eq:hartogs-support-naturality}
+\end{equation}
+If $A\subseteq C$, retaining a well-order code while enlarging its ambient
+base gives a set-coded injection
+\begin{equation}
+ \iota_A^C:\mathbf H(A)\longrightarrow\mathbf H(C).
+ \label{eq:hartogs-inclusion}
+\end{equation}
+Concretely, its graph consists of the pairs
+$\langle[u]_A,[u]_C\rangle_0$.  It is well defined and injective because
+isomorphism of codes depends only on their carriers and relations, not on
+the unused part of the ambient base.
+
+\begin{lemma}[Common-ambient quotient graph]
+\label{lem:common-ambient-quotient-graph}
+Let $A,B\subseteq C$ be displayed carriers at one level.  If
+\[
+ \iota_A^C\,``\,\mathbf H(A)
+ \subseteq
+ \iota_B^C\,``\,\mathbf H(B),
+\]
+then
+\[
+ G_{A,B;C}=(\iota_B^C)^{-1}\circ\iota_A^C
+\]
+is a set-coded injection $\mathbf H(A)\inj\mathbf H(B)$.
+\end{lemma}
+
+\begin{proof}
+The range inclusion makes the composite total.  Both inclusion maps are
+one-to-one, so the inverse relation is functional on the relevant range
+and the composite is one-to-one.  The graph mentions no witness used to
+prove the range inclusion.
+\end{proof}
+
+The complete carrier ledger is as follows.  Type-level function graphs do
+not change the carrier level of their aligned endpoints; the occurrences
+of $\times_K$ are exactly the places where two levels are added.
+\begin{table}[ht]
+\centering
+\caption{Occurrence-level certificate for the finite replay.}
+\label{tab:intrinsic-certificate}
+\begin{tabular}{@{}cl@{}}
+\toprule
+relative level & displayed carriers \\
+\midrule
+$0$ & $X,\ \Omega$ \\
+$1$ & $\Pow X,\ I,\ r_x,\ D,\ q_x,\ R,\ R\mathbin{\upharpoonright}D$ \\
+$2$ & $U=X\times_KX,\ V=sD,\ \mathbf H(X),\ \Pow D,\ C_A,\ s^2\Omega$ \\
+$3$ & $\Pow^2D,\ \mathbf H(\Pow X),\ s^2I$ \\
+$4$ & $P=U\times_Ks^2\Omega,\ s^3D,\ s^3I,\ s(\Pow^2D),$
+       $\Pow^2(sD),\ \Pow^2\mathbf H(X)$ \\
+$6$ & $s^2P,\ Q,\ \mathbf H(P),\ s^4\mathbf H(X),\ s^5D,$
+       $s^3\mathbf H(\Pow X)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+Adding a common external offset makes all levels nonnegative.  The row,
+first-difference, column, parity, tagging, and least-preimage formulas have
+the displayed stratifications; thus each set in the table is an ordinary
+NF comprehension instance.
+
+\begin{lemma}[Typed WPP padding]
+\label{lem:typed-wpp-padding}
+Let $g:U\surj V$, where $U$ and $V$ have a common carrier level $d$, and
+let $\Omega_d$ be the Peano carrier at that level.  Under WPP there is an
+injection
+\begin{equation}
+ s^2V\inj U\times_K\Omega_d.
+ \label{eq:typed-padding}
+\end{equation}
+The conclusion is also valid when $V=\varnothing$.
+\end{lemma}
+
+\begin{proof}
+The empty case is immediate.  Put
+\[
+ P=U\times_K\Omega_d,\qquad V_2=s^2V,\qquad P_2=s^2P.
+\]
+Thus $P,V_2$ lie at level $d+2$ and $P_2$ lies at level $d+4$.
+Using two tags at level $d+2$, form the Kuratowski-tagged coproduct
+\[
+Q=(P\times_K\{0\})\cup(V_2\times_K\{1\}),
+\]
+also at level $d+4$.  Even and odd elements of the typed Peano carrier
+give a surjection $P_2\surj Q$.  In coordinates, for
+$p=\langle\!\langle u,m\rangle\!\rangle\in P$, send
+$s^2\langle\!\langle u,2m\rangle\!\rangle$ to the left-tagged copy of
+$p$, and send
+$s^2\langle\!\langle u,2m+1\rangle\!\rangle$ to the right-tagged copy of
+$s^2g(u)$.  Surjectivity of $g$ makes the odd branch cover $V_2$.
+Left tagging gives $P_2\inj Q$.  WPP therefore gives $Q\inj P_2$.
+
+Restrict to the right summand.  Pairing naturality identifies it with
+$s^2V_2=s^4V$, so the restriction is $s^4V\inj s^2P$.  Both endpoints
+carry a common twofold support.  Lemma~\ref{lem:local-lowering} lowers the
+restricted graph twice and gives \eqref{eq:typed-padding}.  The arbitrary
+WPP witness is lowered only after both endpoints have been restricted to
+named supports.
+\end{proof}
+
+\begin{lemma}[Typed Hartogs product]
+\label{lem:typed-hartogs-product}
+For displayed carriers $A,E$ at one level, suppose the larger of their
+typed Hartogs orders is above the typed Peano order.  Then the ordinary
+projection argument gives
+\begin{equation}
+ \mathbf H(A\times_KE)
+ \inj
+ \max_{\rm wo}\{s^2\mathbf H(A),s^2\mathbf H(E)\}.
+ \label{eq:typed-hartogs-product}
+\end{equation}
+In particular, if the typed Hartogs order of $X$ is above the typed Peano
+order and
+\[
+ P=(X\times_KX)\times_Ks^2\Omega,
+\]
+then
+\begin{equation}
+ \mathbf H(P)\inj s^4\mathbf H(X).
+ \label{eq:typed-hartogs-special}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $W$ well-order a subset $S$ of $A\times_KE$.  The supported coordinate
+maps send $\langle\!\langle a,e\rangle\!\rangle$ to $s^2a$ and $s^2e$.
+Order each coordinate image by $W$-least preimage.  No choice is used.
+The coordinate map embeds $S$ into the type-level product of the two
+well-ordered images.  If at least one image is infinite, the product of
+their well-ordered cardinals is their maximum.  If both images are finite,
+their product is finite and hence lies below the assumed infinite larger
+Hartogs order.  Thus the transported code lies below the larger of
+$\mathbf H(s^2A)$ and $\mathbf H(s^2E)$,
+which are $s^2\mathbf H(A)$ and $s^2\mathbf H(E)$ by
+\eqref{eq:hartogs-support-naturality}.
+
+This proves pointwise coverage of source Hartogs codes.  Put the product
+base and the selected supported base into their union and apply
+Lemma~\ref{lem:common-ambient-quotient-graph}; its canonical graph proves
+\eqref{eq:typed-hartogs-product} without selecting all pointwise maps at
+once.  Apply the result first to $X,X$ and then to
+$X\times_KX,s^2\Omega$.  The diagonal
+$s^2X\inj X\times_KX$ shows that the second application also satisfies
+the infinitude hypothesis.  Raising the first product comparison twice
+gives
+\[
+ s^2\mathbf H(X\times_KX)\inj s^4\mathbf H(X).
+\]
+Moreover, the threshold assumption says that the typed Peano order lies
+below $\mathbf H(X)$; equivalently, the typed Peano carrier injects into
+$X$, and Hartogs monotonicity gives
+$\mathbf H(\Omega)\inj\mathbf H(X)$.  Support naturality identifies
+$s^2\mathbf H(s^2\Omega)$ with $s^4\mathbf H(\Omega)$, which therefore
+embeds into $s^4\mathbf H(X)$.  Thus both coordinates of
+the second maximum embed into $s^4\mathbf H(X)$, proving
+\eqref{eq:typed-hartogs-special}.
+\end{proof}
+
+\begin{lemma}[Supported first-difference envelope]
+\label{lem:supported-first-difference-envelope}
+Assume WPP and that the typed Hartogs order of $X$ is above the typed
+Peano order.  If $D$ is well ordered and
+\[
+ X\times_KX\surj sD,
+\]
+then
+\begin{equation}
+ sD\inj\mathbf H(X).
+ \label{eq:supported-fd-envelope}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Lemma~\ref{lem:typed-wpp-padding}, with
+$U=X\times_KX$, $V=sD$, and $\Omega_2=s^2\Omega$, gives
+\[
+ s^3D\inj P=(X\times_KX)\times_Ks^2\Omega.
+\]
+Transport the well-order of $s^3D$ to its range.  The native typed
+Hartogs initial-segment map has domain $s^5D=s^4(sD)$, and therefore gives
+\[
+ s^5D\inj\mathbf H(P)\inj s^4\mathbf H(X),
+\]
+where the second map is \eqref{eq:typed-hartogs-special}.  The two
+endpoints have a common fourfold support.  Lowering them together proves
+\eqref{eq:supported-fd-envelope}.  No iterate is removed from only one
+side.
+\end{proof}
+
+\section{The bounded first-difference calculation}
+\label{sec:bounded-calculation}
+
+The calculation in this section records the ordinary carrier mathematics
+which the explicit typed maps of Section~3 realize.  No collapse to von
+Neumann ordinals and no simultaneous choice of witnesses is used.
+
+\begin{lemma}[Countable padding]\label{lem:padding}
+Assume WPP.  If $U\surj V$, then
+\begin{equation}
+ V\inj U\times\omega.
+ \label{eq:padding}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The empty case is immediate.  Otherwise, using
+\(\omega\cong(\omega\times\{0\})\sqcup(\omega\times\{1\})\), construct a
+surjection
+\[
+ U\times\omega\surj (U\times\omega)\sqcup V.
+\]
+The left summand injects into this disjoint union.  Apply
+\eqref{eq:wpp-local}; the resulting injection restricts to $V$.
+\end{proof}
+
+\begin{lemma}[Carrier first-difference compression]
+\label{lem:first-difference}
+Let $(\mathcal A,\prec)$ be a well-ordered set of distinct subsets of
+$X$.  There is a well-ordered set $D\subseteq\mathcal A$ and an injection
+\begin{equation}
+ \mathcal A\inj\Pow^2D.
+ \label{eq:first-difference}
+\end{equation}
+If $D\neq\varnothing$, there is also a surjection $X^2\surj D$.  If
+$D=\varnothing$, then $\mathcal A\subseteq\{\varnothing,X\}$.  Every
+set and graph in the construction is obtained by bounded separation from
+a displayed finite product or power set.
+\end{lemma}
+
+\begin{proof}
+For $x\in X$, put
+\[
+ r_x=\{A\in\mathcal A:x\in A\}.
+\]
+Let
+\[
+ D=\{\text{the $\prec$-least member of }
+       r_x\mathbin\triangle r_y: r_x\neq r_y\}
+ \subseteq\mathcal A.
+\]
+The set $D$ inherits the well-order $\prec$.  If $D\neq\varnothing$,
+send $(x,y)$ to the least difference when $r_x\neq r_y$, and to the
+fixed $\prec$-least member of $D$ otherwise.  This is a surjection
+$X^2\surj D$.
+
+Put
+\[
+ q_x=r_x\cap D.
+\]
+First differences ensure
+\begin{equation}
+ q_x=q_y\quad\Longrightarrow\quad r_x=r_y.
+ \label{eq:row-separation}
+\end{equation}
+For $A\in\mathcal A$, define
+\[
+ C_A=\{q_x:x\in A\}\in\Pow^2D.
+\]
+The map $A\mapsto C_A$ is injective.  Indeed, equality of two columns and
+\eqref{eq:row-separation} first gives inclusion of the corresponding
+members of $\mathcal A$ and then, by symmetry, equality.  If $D$ is
+empty, all rows are equal, so each member of $\mathcal A$ is either
+$\varnothing$ or $X$; the same column map still embeds $\mathcal A$ into
+$\Pow^2D$.  No transitive collapse, Replacement, or simultaneous
+selection of witnesses is used.
+\end{proof}
+
+\begin{lemma}[Hartogs products]\label{lem:products}
+If $U,V$ are infinite, then
+\[
+ \aleph(U\times V)=\max\{\aleph(U),\aleph(V)\}.
+\]
+In particular, if $\aleph(X)>\omega$, then
+\begin{equation}
+ \aleph(X^2\times\omega)=\aleph(X).
+ \label{eq:product-special}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The lower bound follows by fixing an element in each factor.  Conversely,
+if an ordinal $\gamma$ injects into $U\times V$, order each projection
+of the range by least preimage.  Their order types are some
+\(\alpha<\aleph(U)\) and $\beta<\aleph(V)$, and
+\(\gamma\inj\alpha\times\beta\).  Multiplication of infinite
+well-ordered cardinals gives the upper bound.  If
+$\aleph(X)>\omega$, then $X$ is infinite and, since Hartogs numbers are
+initial ordinals, the countable factor contributes no larger Hartogs
+number.  Applying the result twice gives \eqref{eq:product-special}.
+\end{proof}
+
+\begin{proposition}[The single stabilized Hartogs injection]
+\label{prop:stabilized}
+Assume WPP.  If $\aleph(X)>\omega$, then
+\begin{equation}
+ \aleph(\Pow X)
+ \leq
+ \aleph\bigl(\Pow^2(\aleph(X))\bigr).
+ \label{eq:stabilized}
+\end{equation}
+Moreover, the witnessing injection uses only the finite carriers and maps
+displayed in Sections~3 and~4.
+\end{proposition}
+
+\begin{proof}
+Both sides of \eqref{eq:stabilized} are ordinals, so they are linearly
+comparable.  Suppose the desired injection fails.  Then
+\[
+ \lambda:=\aleph\bigl(\Pow^2(\aleph(X))\bigr)
+ <\aleph(\Pow X),
+\]
+and hence there is an injection $j:\lambda\inj\Pow X$.  Well-order the
+range $\mathcal A=\im(j)$ by least preimage and apply
+Lemma~\ref{lem:first-difference}.  It gives a well-ordered carrier $D$ and
+an injection $\lambda\inj\mathcal A\inj\Pow^2D$.
+
+If $D\neq\varnothing$, Lemma~\ref{lem:padding} applied to the displayed
+surjection $X^2\surj D$ gives $D\inj X^2\times\omega$.
+Lemma~\ref{lem:products} and $\aleph(X)>\omega$ give
+\[
+ \aleph(X^2\times\omega)=\aleph(X).
+\]
+Because $D$ is well ordered, $D\inj\aleph(X)$.  The same conclusion is
+immediate when $D=\varnothing$.  Double direct image now
+gives
+\[
+ \lambda\inj\Pow^2D
+       \inj\Pow^2\bigl(\aleph(X)\bigr),
+\]
+contrary to the definition of $\lambda$.  This proves
+\eqref{eq:stabilized}.  The proof fixes only the one ordinal $\lambda$;
+it never collects a family of first-difference witnesses.
+\end{proof}
+
+\section{The common-block pullback to NF}
+\label{sec:pullback}
+
+\begin{theorem}[Unconditional fixed-block replay]
+\label{thm:unconditional-fixed-block-replay}
+Assume NF+WPP, and suppose the typed Hartogs order of $X$ is above the
+typed Peano order.  Then there is a set-coded injection
+\begin{equation}
+ s^3\mathbf H(\Pow X)
+ \inj
+ \mathbf H\bigl(\Pow^2(\mathbf H(X))\bigr).
+ \label{eq:common-block-injection}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Put
+\[
+ A_0=s^3(\Pow X),\qquad
+ B=\Pow^2(\mathbf H(X)),\qquad C=A_0\cup B.
+\]
+All three bases lie at relative level $4$, while
+$\mathbf H(A_0)$, $\mathbf H(B)$, and $\mathbf H(C)$ lie at level $6$.
+Consider the set relation
+\begin{equation}
+ F=(\iota_B^C)^{-1}\circ\iota_{A_0}^C\circ\theta_{\Pow X}^3.
+ \label{eq:canonical-final-graph}
+\end{equation}
+We prove that it is total; its definition already contains no choices.
+
+Fix $x\in s^3\mathbf H(\Pow X)$.  Reverse coverage in
+\eqref{eq:hartogs-support-naturality} supplies a well-order code on a
+supported carrier $s^3I\subseteq A_0$, where $I\subseteq\Pow X$.
+Lower its relation along the support isomorphism.  Apply the formulas in
+Lemma~\ref{lem:first-difference} with the levels in
+Table~\ref{tab:intrinsic-certificate}.  They give a well-ordered
+$D\subseteq I$ and the typed maps
+\begin{equation}
+ X\times_KX\surj sD,
+ \qquad
+ s^2I\inj\Pow^2D,
+ \label{eq:typed-first-difference-maps}
+\end{equation}
+when $D\neq\varnothing$; when $D=\varnothing$ the second map remains and
+the first is unnecessary.
+
+Lemma~\ref{lem:supported-first-difference-envelope}, or the empty map in
+the empty case, gives $k:sD\inj\mathbf H(X)$.  Raise the column map once,
+use power naturality, and take two direct images under $k$:
+\begin{equation}
+ s^3I
+ \inj s(\Pow^2D)
+ \cong\Pow^2(sD)
+ \inj\Pow^2(\mathbf H(X))=B.
+ \label{eq:typed-column-composite}
+\end{equation}
+Push the supported well-order forward along this injection to its range in
+$B$, and let $y\in\mathbf H(B)$ be the resulting quotient class.  In the
+common ambient base $C$, the original code and the transported code are
+isomorphic.  Hence
+\[
+ \iota_{A_0}^C\bigl(\theta_{\Pow X}^3(x)\bigr)=\iota_B^C(y).
+\]
+This proves
+\(\iota_{A_0}^C``\mathbf H(A_0)
+  \subseteq\iota_B^C``\mathbf H(B)\)
+pointwise.  Lemma~\ref{lem:common-ambient-quotient-graph} now says that
+\eqref{eq:canonical-final-graph} is a total injection with the endpoints
+in \eqref{eq:common-block-injection}.
+
+The first-difference injection, the padding witness, and the transported
+code were used only to prove range coverage.  None occurs in the definition
+of $F$, so no family of witnesses is chosen.
+\end{proof}
+
+\begin{lemma}[Homogeneous stabilized inequality]\label{lem:homogeneous}
+Assume NF together with WPP.  Let $A$ be a typed set, write $a=|A|$, and
+suppose the corresponding Hartogs number is above the typed natural-number
+cardinal.  Then
+\begin{equation}
+ h(ea)\leq h\bigl(e^2(ha)\bigr).
+ \label{eq:homogeneous}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Apply Theorem~\ref{thm:unconditional-fixed-block-replay}.  The endpoint
+objects and their typed cardinals are as follows.
+\begin{table}[ht]
+\centering
+\caption{Typed representatives and relative depths for the stabilized injection.}
+\label{tab:ledger}
+\begin{tabular}{@{}lcl@{}}
+\toprule
+typed carrier & relative depth & cardinal \\
+\midrule
+$A$ & $0$ & $a$ \\
+$\Pow A$ & $1$ & $T(ea)$ \\
+$\mathbf H(A)$ & $2$ & $T^2(ha)$ \\
+$\mathbf H(\Pow A)$ & $3$ & $T^3h(ea)$ \\
+$\Pow(\mathbf H(A))$ & $3$ & $T^3e(ha)$ \\
+$\Pow^2(\mathbf H(A))$ & $4$ & $T^4e^2(ha)$ \\
+$s^3(\mathbf H(\Pow A))$ & $6$ & $T^6h(ea)$ \\
+$\mathbf H(\Pow^2(\mathbf H(A)))$ & $6$ & $T^6h(e^2(ha))$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The last two rows are the aligned endpoints of the actual set graph
+\eqref{eq:canonical-final-graph}.  If expansion into a chosen primitive
+pair code adds $r$ levels, it adds the same $r$ to both endpoints and gives
+\[
+ T^{6+r}h(ea)\leq T^{6+r}h(e^2(ha)).
+\]
+Since $T$ reflects cardinal comparison, cancelling the common iterate
+$T^{6+r}$ proves \eqref{eq:homogeneous}.  No comparison of the form
+$TK\leq K$, and no inverse to $T$, is used.
+\end{proof}
+
+\begin{remark}
+The common-level step is essential.  If one normalizes the source and
+target separately and then drops a $T$ from only one side, one obtains a
+stronger predecessor inequality which does not follow from the product
+calculation.  Lemma~\ref{lem:homogeneous} avoids that error by lowering the
+actual final injection graph only after its endpoints have been aligned.
+\end{remark}
+
+\section{The finite-orbit contradiction}
+
+Let $U=|V|$, the cardinality of the universal set.  Since
+\(\Pow V=V\), the homogeneous exponential satisfies
+\begin{equation}
+ e(T^{n+1}U)=T^nU
+ \qquad(n\text{ a concrete natural number}).
+ \label{eq:universal-chain}
+\end{equation}
+Cantor's theorem gives $T^{n+1}U<T^nU$.
+
+Define, wherever the displayed terms exist,
+\begin{equation}
+ F(\beta)=h\bigl(h(e^2\beta)\bigr).
+ \label{eq:def-F}
+\end{equation}
+This operation is homogeneous and nondecreasing.  For every well-orderable
+\(\beta\) in its domain,
+\begin{equation}
+ \beta<h(e^2\beta)<h\bigl(h(e^2\beta)\bigr)=F(\beta),
+ \label{eq:F-strict}
+\end{equation}
+so $F(\beta)>\beta$.  Indeed, the double-singleton map gives
+$\beta\leq e^2\beta$; because $\beta$ is well orderable, the defining
+Hartogs property gives the first strict inequality.  The inner Hartogs
+value is itself well orderable, giving the second.
+
+\begin{lemma}[Domain width]\label{lem:domain-width}
+There is a concrete natural number $w$ such that
+\begin{equation}
+ \operatorname{ran}(T^w)\cap\mathrm{WCard}
+ \subseteq\operatorname{dom}F,
+ \label{eq:F-domain-width}
+\end{equation}
+and $F$ commutes with $T$ on that domain.
+\end{lemma}
+
+\begin{proof}
+Choose the fixed typed definitions of the two power-set and two Hartogs
+constructions in \eqref{eq:def-F}, and let $w$ exceed the largest relative
+type displacement among their input and output carriers.  A well-orderable
+cardinal in $\operatorname{ran}(T^w)$ then has a representative at the
+input level of this fixed diagram.  Power-set naturality and the two-way
+Hartogs-code naturality proved in Lemma~\ref{lem:local-lowering} construct
+each successive value and prove the commutation law.  This is a structural
+induction on the four displayed constructors, not an inverse use of $T$.
+\end{proof}
+
+We first isolate the orbit argument.
+
+\begin{lemma}[Least-orbit obstruction]\label{lem:orbit}
+Let $F$ be a homogeneous nondecreasing partial operation on
+well-orderable cardinals.  Suppose $F$ is defined on the initial segment
+through $\alpha$, $F(\beta)>\beta$ there, and
+\begin{equation}
+ T\alpha<\alpha<F(T\alpha).
+ \label{eq:sandwich}
+\end{equation}
+If no Cantorian well-orderable cardinal $\beta=T\beta$ satisfies
+$\beta\geq\alpha$, then NF proves a contradiction.
+\end{lemma}
+
+\begin{proof}
+For $a\leq\alpha$, let $\Gamma(a)$ be the least well-orderable
+cardinal $\delta\leq a$ whose finite forward $F$-orbit reaches $a$.
+The candidate set is nonempty because $a$ qualifies at time zero.
+Candidate transport is two-sided.  Shifting a start and its hitting time
+gives a candidate for $Ta$.  Conversely, if $\delta\leq Ta$ is a candidate
+for $Ta$, initiality of $\operatorname{ran}T$ supplies
+$\delta=T\epsilon$ with $\epsilon\leq a$.  If $m$ is a hitting-time
+witness, surjectivity of $T$ on the naturals gives $m=Tn$.  Homogeneity and
+order reflection then give
+\[
+ T(F^n(\epsilon))=F^{Tn}(T\epsilon)=F^m(\delta)\geq Ta,
+ \qquad F^n(\epsilon)\geq a.
+\]
+Thus $\epsilon$ is a candidate for $a$.  Leastness in both directions
+gives, whenever $a\leq\alpha$ and $Ta\leq\alpha$,
+\begin{equation}
+ T\Gamma(a)=\Gamma(Ta).
+ \label{eq:gamma-shift}
+\end{equation}
+
+An orbit reaches $T\alpha$ if it reaches $\alpha$, because
+$T\alpha<\alpha$.  Conversely, after first reaching a value
+$y\geq T\alpha$ below $\alpha$, its next value satisfies
+\[
+ F(y)\geq F(T\alpha)>\alpha.
+\]
+Thus reaching the two thresholds is equivalent.  Also $T\alpha$ reaches
+$\alpha$ in one step, so the least start for $\alpha$ is at most
+$T\alpha$.  The different upper bounds in the two definitions therefore
+do not change the least candidate:
+\[
+ \Gamma(T\alpha)=\Gamma(\alpha).
+\]
+Put $\gamma=\Gamma(\alpha)$.  Equation~\eqref{eq:gamma-shift} gives
+\begin{equation}
+ T\gamma=\gamma.
+ \label{eq:gamma-fixed}
+\end{equation}
+
+Let $m$ be the least natural number such that
+\(F^m(\gamma)\geq\alpha\), and let $k$ be the least time at which the
+same orbit reaches $T\alpha$.  We claim $k=Tm$.  Homogeneity and
+\eqref{eq:gamma-fixed} show that $Tm$ is a lower-threshold hit.  If
+$j<Tm$ were an earlier one, write $j=Tq$ by surjectivity of $T$ on the
+naturals.  Order reflection gives $q<m$, whereas
+\[
+ T(F^q(\gamma))=F^{Tq}(T\gamma)=F^j(\gamma)\geq T\alpha
+\]
+would imply $F^q(\gamma)\geq\alpha$, contradicting minimality of $m$.
+Thus $k=Tm$.
+
+Since the upper threshold is larger, $k\leq m$.  At time $k$ the orbit is
+at least $T\alpha$; if it is still below $\alpha$, one further application
+of $F$ passes $\alpha$, and if not, none is needed.  Hence
+\[
+ Tm=k\leq m\leq k+1=Tm+1.
+\]
+Discreteness of the natural-number order gives
+$m=Tm$ or $m=Tm+1$.
+
+In the first case, $\beta=F^m(\gamma)$ satisfies
+\[
+ T\beta=F^{Tm}(T\gamma)=F^m(\gamma)=\beta
+\]
+and $\beta\geq\alpha$, contradicting the hypothesis about Cantorian
+well-orderable cardinals.  The second case is impossible because $m$ and
+$Tm$ have the same parity.  The argument does not require $m$ to be a
+standard natural number.
+\end{proof}
+
+\begin{lemma}[Universal-chain threshold]\label{lem:threshold}
+Assume NF together with WPP.  For a sufficiently large concrete $n$,
+the cardinal
+\begin{equation}
+ \alpha=h(T^nU)
+ \label{eq:def-alpha}
+\end{equation}
+satisfies all hypotheses of Lemma~\ref{lem:orbit} for the operation
+\eqref{eq:def-F}.
+\end{lemma}
+
+\begin{proof}
+We first justify the domain.  Let $w$ be supplied by
+Lemma~\ref{lem:domain-width}, and put
+\[
+ D=|\mathbf H(V)|=h(T^2U),
+\]
+which is the cardinal of an actual typed Hartogs object.  For $n\geq2$,
+shift coherence gives
+\begin{equation}
+ h(T^nU)=T^{n-2}D.
+ \label{eq:alpha-depth}
+\end{equation}
+Choose $n$ so large that $n-2\geq w$.  Then
+$\alpha=T^{n-2}D$ lies in $\operatorname{ran}(T^w)$; initiality of that
+range on well-orderable cardinals and \eqref{eq:F-domain-width} give
+\[
+ [0,\alpha]\cap\mathrm{WCard}
+ \subseteq\operatorname{ran}(T^w)
+ \subseteq\operatorname{dom}F.
+\]
+This replaces the meaningless shorthand $h(U)$ sometimes used in informal
+versions of the argument.
+
+Take a typed representative $A$ of cardinal $T^{n+1}U$.  At this
+fixed concrete height a typed copy of the natural numbers injects into
+$A$, so the Hartogs number corresponding to $A$ is above the natural
+cardinal.  Lemma~\ref{lem:homogeneous} applies with $a=T^{n+1}U$.
+Using \eqref{eq:universal-chain} and commutation with $T$,
+\[
+ \alpha
+ =h(e(T^{n+1}U))
+ \leq h(e^2(h(T^{n+1}U)))
+ =h(e^2(T\alpha))
+ <F(T\alpha).
+\]
+
+Monotonicity and $T^{n+1}U<T^nU$ give
+\[
+ T\alpha=h(T^{n+1}U)\leq h(T^nU)=\alpha.
+\]
+If a well-orderable cardinal $\beta$ is Cantorian, then
+\[
+ \beta=T^n\beta\leq T^nU,
+\]
+and the defining property of $h(T^nU)=\alpha$ yields
+\(\beta<\alpha\).  Thus no Cantorian well-orderable cardinal is at least
+$\alpha$; in particular, the preceding inequality is strict.  Hence
+\[
+ T\alpha<\alpha<F(T\alpha),
+\]
+and all hypotheses of Lemma~\ref{lem:orbit} hold.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Assume NF+WPP.  The carrier first-difference construction and the finite
+typed replay in Theorem~\ref{thm:unconditional-fixed-block-replay} give
+Lemma~\ref{lem:homogeneous}.  The universal-chain specialization in
+Lemma~\ref{lem:threshold} then meets the hypotheses of
+Lemma~\ref{lem:orbit}, a contradiction.  Therefore
+\(\NF\vdash\neg\WPP\).
+\end{proof}
+
+\begin{corollary}
+NF refutes every choice principle that implies WPP; in particular, it
+refutes the usual partition principle and the full axiom of choice.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:main} and the stated implications.
+\end{proof}
+
+\section{What the proof uses}
+
+The reduction uses an ordinary bounded carrier calculation only as a
+finite derivation template.  Its typed content consists of:
+\begin{enumerate}[(1)]
+\item one countable-padding graph;
+\item one well-ordered first-difference carrier and one column injection;
+\item finitely many power-set monotonicity maps;
+\item one Hartogs-product comparison;
+\item one final injection between two Hartogs quotient objects.
+\end{enumerate}
+Lemma~\ref{lem:local-lowering} realizes each local support-lowering step;
+Lemmas~\ref{lem:typed-wpp-padding}--\ref{lem:supported-first-difference-envelope}
+assemble the padding and product maps; and the common-ambient graph
+\eqref{eq:canonical-final-graph} supplies the aligned final injection.
+Thus the proof requires neither coded formulas and satisfaction nor a
+direct-limit membership relation.  It is a finite collection of ordinary
+stratified NF constructions, with every temporary witness eliminated
+before the final graph is formed.
+
+This economy also makes the type ledger auditable.  The only cancellation
+in the homogeneous pullback is
+\[
+ T^{6+r}h(ea)\leq T^{6+r}h(e^2ha)
+ \quad\Longrightarrow\quad
+ h(ea)\leq h(e^2ha),
+\]
+with the same exponent on both sides.  This is the mathematical reason for
+using the explicit finite-block route rather than the shorter direct
+product argument.
+
+\section*{Acknowledgments}
+I thank M. Randall Holmes for the finite-orbit formulation of the final
+argument and for discussions of typed realizations of NF.
+
+\begin{thebibliography}{99}
+
+\bibitem{Forster}
+Thomas E. Forster,
+\emph{Set Theory with a Universal Set}, second edition,
+Oxford Logic Guides, Oxford University Press, 1995.
+
+\bibitem{HolmesTangled}
+M. Randall Holmes,
+The equivalence of NF-style set theories with ``tangled'' type theories;
+the construction of omega-models of predicative NF (and more),
+\emph{Journal of Symbolic Logic} \textbf{60} (1995), 178--189.
+
+\bibitem{HolmesBook}
+M. Randall Holmes,
+\emph{Elementary Set Theory with a Universal Set},
+revised online edition, 2012.
+
+\bibitem{HolmesWilshaw}
+M. Randall Holmes and Sky Wilshaw,
+\emph{NF is Consistent}, arXiv:1503.01406v23, 2025.
+
+\bibitem{Specker}
+E. P. Specker,
+The axiom of choice in Quine's ``New Foundations for Mathematical Logic'',
+\emph{Proceedings of the National Academy of Sciences USA}
+\textbf{39} (1953), 972--975.
+
+\end{thebibliography}
+
+\end{document}

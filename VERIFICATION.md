@@ -46,6 +46,8 @@ Observed timing results on 2026-08-24:
   should be treated as a clean benchmark;
 - `lake build Challenge Solution` from the completed proof tree: 24.5 s;
 - final post-metadata warm `lake build Challenge Solution`: 6.8 s;
+- post-archive packaging `lake build Challenge Solution`: 91.2 s, successfully
+  replaying all 2,585 reported jobs after the local cache state had changed;
 - warm default `lake build`: 3.9 s;
 - direct `--trust=0 --threads=1` Challenge recompilation: 15.3 s;
 - direct `--trust=0 --threads=1` Solution recompilation: 35.6 s.
@@ -61,17 +63,63 @@ Lexical and declaration audits found no Solution/proof `sorry`, `admit`,
 `sorryAx`, custom `axiom`, `opaque`, `unsafe`, `partial`, `native_decide`, or
 `Lean.ofReduceBool`. Challenge contains exactly its deliberate theorem hole.
 
+## Translator reproduction
+
+The Palomar-compliant portable translator was tested in a relocated fixture
+containing 174 files (12.57 MB) and exactly zero `.olean` files. With CPython
+3.12, this command completed in approximately 111 seconds:
+
+```text
+python -B translation/reproduce_c18.py out/c18
+```
+
+The result regenerated all five C18 `.lean` files byte-for-byte against both
+the historical outputs and `Proof/`. The portable v2 wrapper SHA-256 is
+`100FB1C07DB0450FDE10194B826609A711D8CC144159F6943C72580E9FEB4B9B`;
+the relocated run's output `resource.json` SHA-256 was
+`561790BB3826959FB817E1E21A45BE89A6BB4D4B7039FF9457BF5A4AE076E288`.
+The same public command then passed from the final candidate's long Windows
+checkout in 123.8 seconds; that path-specific `resource.json` SHA-256 was
+`60E9B948D3ACE14C95A3F32210C43848C2A2FBBDAB99FA7358C8CA3649F726B3`.
+
+`translation/archive/compiled_lean_evidence.json` replaces no proof source. It
+records the paths, sizes, SHA-256 values, and hash-pinned JSON authorities for
+77 historical alpha certificates and two profile certificates (21,417,512
+historical bytes). Its SHA-256 is
+`17532DD6BEBD20E3C45F110EE7CACAA1A69CFCB9784DB6E40CF0C30C40D224BD`,
+and its ordered contract-set SHA-256 is
+`859A4B86E3FEA2FCA57AB4EFA09B74ED06C04CBFEBB0D6D8D5AB055F42972AE4`.
+All 79 original payloads were rehashed before exclusion from Git. The wrapper
+rejects attempted binary reads and the resulting Lean source remains subject
+to the independent kernel/Comparator checks.
+
 ## Source and repository integrity
 
 - All 1,527 closure-manifest rows exist in `Proof/` and match their recorded
   SHA-256 values.
 - The proof payload is 97,305,006 bytes and 699,761 physical source lines.
+- The exact 12-page manuscript is present in TeX and PDF; the PDF is 357,483
+  bytes with SHA-256
+  `9B3BD8EB7AE23AD9C55029C262DE3DADADF9DA329D55E42C597C0A95860571B3`.
+- The accepted intermediate archive contains every material Metamath state,
+  the complete 44-file successful MM0 run (including all 37 logs), and 63
+  retained reconstruction payload files.
+- `scripts/verify-archive.py` rehashed 306 retained files totalling
+  265,762,469 bytes with zero missing, extra, or mismatched entries.
+  `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
+  `0ACA7BBB08D4D5A62AC61DFAF03C1EDA84AD7463A89E3F968531E89B81FFE3A8`.
+- The intended Git snapshot contains 1,868 files and 373,627,855 bytes
+  (356.319 MiB); the largest is the 27,647,028-byte MM0 `.mmu`. Its forbidden
+  compiled-suffix scan found zero files. Seventy-nine local `.olean` recovery
+  copies remain ignored and are not part of the submitted snapshot.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and
   full lowercase 40-character revisions.
 - Static scans found no LFS pointer, submodule, symlink/reparse point,
-  compiled artifact outside `.lake`, credential, or unexpected machine-local
-  path. The sole path exception is the documented set of 122 inert comments in
-  the byte-exact retained Metamath input.
+  forbidden compiled Lean/native artifact outside `.lake`, credential, or
+  operative machine-local dependency. Historical receipts deliberately retain
+  their original workstation labels, including 122 inert comments in the
+  byte-exact Metamath input; the portable translator rebases those labels and
+  the Lean build does not consume them.
 - The three shell entry points are recorded as executable and their syntax and
   Landrun-wrapper regression pass under Git Bash.
 - `formalization.yaml` contains no operative publication placeholder. Its

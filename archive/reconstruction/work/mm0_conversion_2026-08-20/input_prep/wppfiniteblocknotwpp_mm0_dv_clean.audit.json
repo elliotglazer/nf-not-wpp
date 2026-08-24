@@ -1,0 +1,18 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\cumulative_finite_block\\common_ambient_hartogs_graph\\flattening_audit\\wppfiniteblocknotwpp_flattened_test.mm",
+  "source_bytes": 10591102,
+  "source_sha256": "DD1E4E778EB2B023827AF2AFFB35E043482B538118CFFB1932BFA7642C00C751",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_dv_clean.mm",
+  "output_bytes": 10641794,
+  "output_sha256": "E39E2B6B7ADF36CE2127ABE7C31F940C6887A4676B50D34294F17FFEFD0236E0",
+  "transformation": [
+    "scope $d c e R A $. through wppstrictleastbridge",
+    "scope $d v A $. through hncodecutreledgeihwcn",
+    "restore old global DV environments privately on every later non-syntax assertion"
+  ],
+  "assertions_privately_scoped_for_c_e_R_A": 2098,
+  "assertions_privately_scoped_for_v_A": 377,
+  "assertion_or_proof_tokens_rewritten": 0,
+  "j_metadata_blocks_before": 18,
+  "j_metadata_blocks_after": 18
+}

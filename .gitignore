@@ -4,7 +4,7 @@
 /lake-packages/
 /**/lake-packages/
 
-# Lean build artifacts must never enter the submitted source tree.
+# Lean/native build artifacts must never enter the submitted source tree.
 *.olean
 *.ilean
 *.a

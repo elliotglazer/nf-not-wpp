@@ -1,0 +1,2105 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "WPPCompactSourceSyntax",
+  "namespace": "NFChoice.Compiler.CompactSourceSyntax",
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+  "source_sha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+  "endpoint": "wppfiniteblocknotwppndv",
+  "choice_manifest": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\compiler\\generated\\compact_source_syntax_manifest.json",
+  "choice_manifest_sha256": "099B07A6849ABFA8F3FC052AC02D21EEE2BD99D8F1ABCEC83EFA14CAFFAD94D4",
+  "wpp_rule_count": 275,
+  "common_rule_count": 132,
+  "new_definition_count": 143,
+  "new_dummy_count": 53,
+  "dummy_policy": "freshVar above union of all explicit setvars and argument .fv supports",
+  "definitions": [
+    {
+      "label": "df-iso",
+      "head": "wiso",
+      "sort": "wff",
+      "arguments": [
+        {
+          "name": "H",
+          "sort": "class"
+        },
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "S",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-pprod",
+      "head": "cpprod",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-cross",
+      "head": "ccross",
+      "sort": "class",
+      "arguments": [],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-domfn",
+      "head": "cdomfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-ranfn",
+      "head": "cranfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-muc",
+      "head": "cmuc",
+      "sort": "class",
+      "arguments": [],
+      "dummies": [
+        {
+          "name": "a",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "b",
+          "sort": "setvar",
+          "offset": 1
+        },
+        {
+          "name": "g",
+          "sort": "setvar",
+          "offset": 2
+        },
+        {
+          "name": "m",
+          "sort": "setvar",
+          "offset": 3
+        },
+        {
+          "name": "n",
+          "sort": "setvar",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "label": "df-frec",
+      "head": "cfrec",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "I",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-wpp",
+      "head": "wwpp",
+      "sort": "wff",
+      "arguments": [],
+      "dummies": [
+        {
+          "name": "f",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "g",
+          "sort": "setvar",
+          "offset": 1
+        },
+        {
+          "name": "h",
+          "sort": "setvar",
+          "offset": 2
+        },
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 3
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "label": "df-qkrel",
+      "head": "cqkrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 1
+        },
+        {
+          "name": "z",
+          "sort": "setvar",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "label": "df-fdmem",
+      "head": "cfdmem",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-fdprj0",
+      "head": "cfdprj0",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-fdprj1",
+      "head": "cfdprj1",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-fddom",
+      "head": "cfddom",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fde0",
+      "head": "cfde0",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fde1",
+      "head": "cfde1",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdsep",
+      "head": "cfdsep",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdlift",
+      "head": "cfdlift",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdnonmin",
+      "head": "cfdnonmin",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdminsep",
+      "head": "cfdminsep",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-sep2",
+      "head": "csep2",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "z",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-kqrel",
+      "head": "ckqrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-fdminvalp",
+      "head": "cfdminvalp",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdminq",
+      "head": "cfdminq",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdpivmap2",
+      "head": "cfdpivmap2",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "p",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-fdpivrange2",
+      "head": "cfdpivrange2",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fpiv",
+      "head": "cfpiv",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "b",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "c",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-fdif",
+      "head": "cfdif",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "d",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 1
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "label": "df-fdrow",
+      "head": "cfdrow",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "d",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-fdcode",
+      "head": "cfdcode",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "q",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-fdrowrel",
+      "head": "cfdrowrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdrowfib",
+      "head": "cfdrowfib",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "d",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-fdcodemap2",
+      "head": "cfdcodemap2",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "u",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-fdpointrel",
+      "head": "cfdpointrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-fdglobalrowmap",
+      "head": "cfdglobalrowmap",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "u",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-fdcolcodemap",
+      "head": "cfdcolcodemap",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hwcodes",
+      "head": "chwcodes",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hwiso",
+      "head": "chwiso",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "h",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "u",
+          "sort": "setvar",
+          "offset": 1
+        },
+        {
+          "name": "v",
+          "sort": "setvar",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "label": "df-hwrels",
+      "head": "chwrels",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hwbij",
+      "head": "chwbij",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hwtrn",
+      "head": "chwtrn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hwgen",
+      "head": "chwgen",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hwcn",
+      "head": "chwcn",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hwniso",
+      "head": "chwniso",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnord",
+      "head": "chnord",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hncard",
+      "head": "chncard",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hwbases",
+      "head": "chwbases",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hwcards",
+      "head": "chwcards",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnwcutcode",
+      "head": "chnwcutcode",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnwcutmap",
+      "head": "chnwcutmap",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "p",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-hnqmap1",
+      "head": "chnqmap1",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-lntp",
+      "head": "clntp",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lntpc",
+      "head": "clntpc",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-lnker",
+      "head": "clnker",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-lnquo",
+      "head": "clnquo",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphit",
+      "head": "cwpphit",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "I",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnwsegfn",
+      "head": "chnwsegfn",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnwcodefn",
+      "head": "chnwcodefn",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnwcutfn",
+      "head": "chnwcutfn",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnwcutrel",
+      "head": "chnwcutrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-lnqrel",
+      "head": "clnqrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "a",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "b",
+          "sort": "setvar",
+          "offset": 1
+        },
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 2
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 3
+        }
+      ]
+    },
+    {
+      "label": "df-lnqord",
+      "head": "clnqord",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwc",
+      "head": "clnpwc",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "d",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "r",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-frecteq",
+      "head": "cfrecteq",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "G",
+          "sort": "class"
+        },
+        {
+          "name": "I",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnqinc",
+      "head": "chnqinc",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "D",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-lndifop",
+      "head": "clndifop",
+      "sort": "class",
+      "arguments": [],
+      "dummies": [
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "y",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-lnpwasymfn",
+      "head": "clnpwasymfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-fdord",
+      "head": "cfdord",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "B",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-tcnn",
+      "head": "ctcnn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-pwpull",
+      "head": "cpwpull",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "R",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwkerfn",
+      "head": "clnpwkerfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lninterop",
+      "head": "clninterop",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnimagecrossfn",
+      "head": "clnimagecrossfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnimageresfn",
+      "head": "clnimageresfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnimageop",
+      "head": "clnimageop",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwcnvkerfn",
+      "head": "clnpwcnvkerfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwclasspairfn",
+      "head": "clnpwclasspairfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwclassfn",
+      "head": "clnpwclassfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwpw1secondfn",
+      "head": "clnpwpw1secondfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwquoinputfn",
+      "head": "clnpwquoinputfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwquofn",
+      "head": "clnpwquofn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpairraisefn",
+      "head": "clnpairraisefn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnsifn",
+      "head": "clnsifn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-lnpwsirelfn",
+      "head": "clnpwsirelfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppreach",
+      "head": "cwppreach",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppcand",
+      "head": "cwppcand",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppredfam",
+      "head": "cwpppredfam",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppostcomp",
+      "head": "cwpppostcomp",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppupperpreop",
+      "head": "cwppupperpreop",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppowlayerseq",
+      "head": "cwpppowlayerseq",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphitfam",
+      "head": "cwpphitfam",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppredmemrel",
+      "head": "cwpppredmemrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphitmemrel",
+      "head": "cwpphitmemrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppreachincb",
+      "head": "cwppreachincb",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppimageat",
+      "head": "cwppimageat",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppowateq",
+      "head": "cwpppowateq",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppprecomp",
+      "head": "cwppprecomp",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppowcommeq",
+      "head": "cwpppowcommeq",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wecutiso",
+      "head": "cwecutiso",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        },
+        {
+          "name": "S",
+          "sort": "class"
+        },
+        {
+          "name": "E",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "f",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "u",
+          "sort": "setvar",
+          "offset": 1
+        },
+        {
+          "name": "x",
+          "sort": "setvar",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "label": "df-wecutisogen",
+      "head": "cwecutisogen",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        },
+        {
+          "name": "S",
+          "sort": "class"
+        },
+        {
+          "name": "E",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wecutcardfn",
+      "head": "cwecutcardfn",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "q",
+          "sort": "setvar",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "label": "df-wecutcardfactor",
+      "head": "cwecutcardfactor",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "R",
+          "sort": "class"
+        },
+        {
+          "name": "D",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppgamma",
+      "head": "cwppgamma",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": [
+        {
+          "name": "k",
+          "sort": "setvar",
+          "offset": 0
+        },
+        {
+          "name": "m",
+          "sort": "setvar",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "label": "df-wppcardtfn",
+      "head": "cwppcardtfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppcardt2fn",
+      "head": "cwppcardt2fn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hnbaseresfn",
+      "head": "chnbaseresfn",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodetrnfn",
+      "head": "chncodetrnfn",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppcardt4fn",
+      "head": "cwppcardt4fn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppowsetfn",
+      "head": "cwpppowsetfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphwcnsetfn",
+      "head": "cwpphwcnsetfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphwgendomfn",
+      "head": "cwpphwgendomfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphwgencnvfn",
+      "head": "cwpphwgencnvfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphwnisosetfn",
+      "head": "cwpphwnisosetfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphnpairfn",
+      "head": "cwpphnpairfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpphninputfn",
+      "head": "cwpphninputfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppqkrelkernel",
+      "head": "cwppqkrelkernel",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpplitphnordpointfn",
+      "head": "cwpplitphnordpointfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wpppowset2fn",
+      "head": "cwpppowset2fn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppfamilyrep2fn",
+      "head": "cwppfamilyrep2fn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppdirecte2famfn",
+      "head": "cwppdirecte2famfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppdirecth1famfn",
+      "head": "cwppdirecth1famfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppdirecth2famfn",
+      "head": "cwppdirecth2famfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppconcrete6codefn",
+      "head": "cwppconcrete6codefn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppcardt6fn",
+      "head": "cwppcardt6fn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-wppconcrete6fn",
+      "head": "cwppconcrete6fn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hnsicodeliftfn",
+      "head": "chnsicodeliftfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hnsicodemap",
+      "head": "chnsicodemap",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hnsiquomap",
+      "head": "chnsiquomap",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodestrictfn",
+      "head": "chncodestrictfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodepredfn",
+      "head": "chncodepredfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodecarrierfn",
+      "head": "chncodecarrierfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodesquarefn",
+      "head": "chncodesquarefn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hncoderelfn",
+      "head": "chncoderelfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodecutfn",
+      "head": "chncodecutfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodecutpairfn",
+      "head": "chncodecutpairfn",
+      "sort": "class",
+      "arguments": [],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodecutinputs",
+      "head": "chncodecutinputs",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodecutrel",
+      "head": "chncodecutrel",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodecmpset",
+      "head": "chncodecmpset",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodepredinputs",
+      "head": "chncodepredinputs",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "X",
+          "sort": "class"
+        },
+        {
+          "name": "v",
+          "sort": "setvar"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-hncodepredends",
+      "head": "chncodepredends",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "A",
+          "sort": "class"
+        },
+        {
+          "name": "X",
+          "sort": "class"
+        },
+        {
+          "name": "v",
+          "sort": "setvar"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppstopact",
+      "head": "cwppstopact",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppstopstep",
+      "head": "cwppstopstep",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "C",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppfreceq",
+      "head": "cwppfreceq",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "G",
+          "sort": "class"
+        },
+        {
+          "name": "I",
+          "sort": "class"
+        }
+      ],
+      "dummies": []
+    },
+    {
+      "label": "df-wppfrecprefixeq",
+      "head": "cwppfrecprefixeq",
+      "sort": "class",
+      "arguments": [
+        {
+          "name": "F",
+          "sort": "class"
+        },
+        {
+          "name": "G",
+          "sort": "class"
+        },
+        {
+          "name": "I",
+          "sort": "class"
+        },
+        {
+          "name": "k",
+          "sort": "setvar"
+        }
+      ],
+      "dummies": []
+    }
+  ],
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_wpp_clean_fol_2026-08-21\\definition_leaves\\generated\\WPPCompactSourceSyntax.lean",
+  "output_bytes": 23872,
+  "output_sha256": "EED1484C89AF7BA7186B2D022C4D6BE5CB1156EA07B9423CD22D6D714A219CE1"
+}

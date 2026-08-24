@@ -1,0 +1,28 @@
+{
+  "name": "normalized_secondary",
+  "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+  "arguments": [
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\release_final_2026-08-17\\formalization_continue\\reconstruct\\mmverify_simple.py",
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm"
+  ],
+  "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\release_final_2026-08-17\\formalization_continue\\reconstruct\\mmverify_simple.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\"",
+  "standard_input": "",
+  "started": "2026-08-20T22:39:58.3651473-07:00",
+  "elapsed_seconds": 3.98,
+  "limit_bytes": 1610612736,
+  "limit_mib": 1536,
+  "peak_working_set_bytes": 48721920,
+  "peak_working_set_mib": 46.465,
+  "peak_private_bytes": 42893312,
+  "peak_private_mib": 40.906,
+  "guard_killed": false,
+  "exit_code": 0,
+  "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_secondary.stdout.txt",
+  "stdout_bytes": 34,
+  "stdout_sha256": "4C78EA738C90FDFF3D9408E667BD15A07E60A11649CEB853D229C586912D635E",
+  "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_secondary.stderr.txt",
+  "stderr_bytes": 0,
+  "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "metamath_executable_invoked": false
+}

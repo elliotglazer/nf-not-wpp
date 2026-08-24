@@ -1,0 +1,16 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\endpoint_after_fdminvalp.mm",
+  "source_sha256": "B0018F209E8059E5B6D127D976A5021B92ADDF87F4E86560AA7876E7799F4E44",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\endpoint_after_fdminvalp_pointcover.mm",
+  "output_sha256": "B52CC7592B9FD3A4685EAC47D990F4A1C174E02BD8BAA1FAC8BBA53AEA45AA46",
+  "target": "cfbhnpw13pointcoverndv",
+  "target_assertion_unchanged": true,
+  "new_statements": 0,
+  "verified_proofs": 4329,
+  "trusted_proofs": 0,
+  "strict_status": "FAIL_INACTIVE_HYPOTHESIS_SCOPE",
+  "strict_rejected_proof_count": 5,
+  "strict_inactive_hypothesis_reference_count": 7,
+  "strict_inactive_f_reference_count": 0,
+  "published_file_modified": false
+}

@@ -1,0 +1,50 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaUrgent017",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "13EAA6E7DF4F3C7CFA89ECE8500E91C8B6EEF8ECA97956B385791B83CB801B0B",
+  "records": [
+    {
+      "label": "df-ltfin",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ltfin",
+      "floating": [
+        "x",
+        "m",
+        "n",
+        "p"
+      ],
+      "dv": [
+        [
+          "m",
+          "n"
+        ],
+        [
+          "m",
+          "p"
+        ],
+        [
+          "m",
+          "x"
+        ],
+        [
+          "n",
+          "p"
+        ],
+        [
+          "n",
+          "x"
+        ],
+        [
+          "p",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 249,
+      "opaque_refl_subtrees": 5,
+      "fresh_facts": 56
+    }
+  ]
+}

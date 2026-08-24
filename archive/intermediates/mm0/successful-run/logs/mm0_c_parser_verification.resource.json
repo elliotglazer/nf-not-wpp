@@ -1,0 +1,27 @@
+{
+  "name": "mm0_c_parser_verification",
+  "executable": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-c.exe",
+  "executable_sha256": "6E573D7AD05455C9B1B002A75744E0C7FDD359EF187A456E514CADBBD0C58288",
+  "arguments": [
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\proof.mmb"
+  ],
+  "exact_command": "& \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-c.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\proof.mmb\" < \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\direct.mm0\"",
+  "standard_input": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\direct.mm0",
+  "started": "2026-08-20T22:40:48.0530738-07:00",
+  "elapsed_seconds": 0.325,
+  "limit_bytes": 1610612736,
+  "limit_mib": 1536,
+  "peak_working_set_bytes": 315293696,
+  "peak_working_set_mib": 300.688,
+  "peak_private_bytes": 694251520,
+  "peak_private_mib": 662.09,
+  "guard_killed": false,
+  "exit_code": 0,
+  "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\mm0_c_parser_verification.stdout.txt",
+  "stdout_bytes": 0,
+  "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\mm0_c_parser_verification.stderr.txt",
+  "stderr_bytes": 0,
+  "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "metamath_executable_invoked": false
+}

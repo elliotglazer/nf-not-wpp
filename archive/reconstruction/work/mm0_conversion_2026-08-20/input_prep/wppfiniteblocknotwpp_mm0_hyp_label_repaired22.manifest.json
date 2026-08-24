@@ -1,0 +1,347 @@
+{
+  "status": "PASS",
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_input.mm",
+  "source_bytes": 9938176,
+  "source_sha256": "F7A8B4B332489EF4657DACFA8E633E581A7F4D99750F77EA5BA4D62157789036",
+  "strict_audit": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_input.ehyp_preload_audit.json",
+  "strict_audit_sha256": "22B69BD2A8AC5A0AEAA95B1DE767C80A3F8505F03F6C91B103AA9B9205465567",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_hyp_label_repaired22.mm",
+  "output_bytes": 9938212,
+  "output_sha256": "DFFA1C0775354E70F17DBB55B5438FCDA58CA203121D8C6C75B157DC46EC4865",
+  "replacement_count": 22,
+  "replacement_rule": "inactive explicit $e preload -> unique active $e with byte-identical formula tokens",
+  "assertion_tokens_changed": 0,
+  "compressed_proof_code_tokens_changed": 0,
+  "other_parenthesis_labels_changed": 0,
+  "replacements": [
+    {
+      "theorem": "sifvald",
+      "old_inactive_hypothesis_label": "sifvaldv.1",
+      "new_active_identical_formula_label": "sifvald.1",
+      "source_character_start": 3509805,
+      "source_character_end": 3509815,
+      "formula_tokens": [
+        "|-",
+        "F",
+        ":",
+        "A",
+        "-->",
+        "B"
+      ],
+      "formula_token_sha256": "1E285142412FC3E8B365BE12121785C74F6D320D522A3609EB7957EC0DE51DC4"
+    },
+    {
+      "theorem": "lnpwcheckfnval",
+      "old_inactive_hypothesis_label": "lnpwasymfnval.1",
+      "new_active_identical_formula_label": "lnpwcheckfnval.1",
+      "source_character_start": 3941339,
+      "source_character_end": 3941354,
+      "formula_tokens": [
+        "|-",
+        "R",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "5C39C02D46E55F4CC855B4DBEEC64A59F13B28332681F7825FFA09D92EC2A91E"
+    },
+    {
+      "theorem": "lnpwcheckfnval",
+      "old_inactive_hypothesis_label": "lnpwasymfnval.2",
+      "new_active_identical_formula_label": "lnpwcheckfnval.2",
+      "source_character_start": 3941355,
+      "source_character_end": 3941370,
+      "formula_tokens": [
+        "|-",
+        "D",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "AE702B394B135DD352423E06A81100A3FAB62064F7699A4AD2100257BAD6F7D1"
+    },
+    {
+      "theorem": "wecutnclecclndv",
+      "old_inactive_hypothesis_label": "wecutnclecndv.1",
+      "new_active_identical_formula_label": "wecutnclecclndv.1",
+      "source_character_start": 7467618,
+      "source_character_end": 7467633,
+      "formula_tokens": [
+        "|-",
+        "R",
+        "We",
+        "D"
+      ],
+      "formula_token_sha256": "C0204D8FB2D0708311D36DA1AC1E8936C6DD20D7661404ECC9C4882917F26847"
+    },
+    {
+      "theorem": "hncodetrnfnfnndv",
+      "old_inactive_hypothesis_label": "hnbaseresfnfnndv.1",
+      "new_active_identical_formula_label": "hncodetrnfnfnndv.1",
+      "source_character_start": 7773331,
+      "source_character_end": 7773349,
+      "formula_tokens": [
+        "|-",
+        "F",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "92AAAD52B85F73C7139143C48DBC852CA19A1C7A262CEBE23A4EF898F4F18D01"
+    },
+    {
+      "theorem": "wppconcrete6dmcovndv",
+      "old_inactive_hypothesis_label": "wppcardt6rancovndv.1",
+      "new_active_identical_formula_label": "wppconcrete6dmcovndv.1",
+      "source_character_start": 8078374,
+      "source_character_end": 8078394,
+      "formula_tokens": [
+        "|-",
+        "D",
+        "e.",
+        "NC"
+      ],
+      "formula_token_sha256": "CF917DB32047DABE4914FE2D0ACCC2A175C33809B3C6A99CE127442ECE6E1E18"
+    },
+    {
+      "theorem": "hnsiquomapvalndv",
+      "old_inactive_hypothesis_label": "hnsiquomapfnndv.1",
+      "new_active_identical_formula_label": "hnsiquomapvalndv.1",
+      "source_character_start": 8163569,
+      "source_character_end": 8163586,
+      "formula_tokens": [
+        "|-",
+        "A",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "69524DE9DD86965F30074313DD971F683C5F475F138DA8919CFFB492816D25CA"
+    },
+    {
+      "theorem": "wppstopstepexndv",
+      "old_inactive_hypothesis_label": "wppstopactexndv.1",
+      "new_active_identical_formula_label": "wppstopstepexndv.1",
+      "source_character_start": 8662094,
+      "source_character_end": 8662111,
+      "formula_tokens": [
+        "|-",
+        "F",
+        "e.",
+        "Funs"
+      ],
+      "formula_token_sha256": "93F396F6CF9E42330BCA8FB4F8F8414361AADE1923604F8CAB30BDF3DCEB2FC9"
+    },
+    {
+      "theorem": "wppconcrete10dmcovndv",
+      "old_inactive_hypothesis_label": "wppcardt10rancovndv.1",
+      "new_active_identical_formula_label": "wppconcrete10dmcovndv.1",
+      "source_character_start": 8874668,
+      "source_character_end": 8874689,
+      "formula_tokens": [
+        "|-",
+        "D",
+        "e.",
+        "NC"
+      ],
+      "formula_token_sha256": "CF917DB32047DABE4914FE2D0ACCC2A175C33809B3C6A99CE127442ECE6E1E18"
+    },
+    {
+      "theorem": "hnwcutambstrictsegresisomndv",
+      "old_inactive_hypothesis_label": "hnwcutambstrictsegisomndv.3",
+      "new_active_identical_formula_label": "hnwcutambstrictsegresisomndv.3",
+      "source_character_start": 9308482,
+      "source_character_end": 9308509,
+      "formula_tokens": [
+        "|-",
+        "u",
+        "e.",
+        "HWCN",
+        "A"
+      ],
+      "formula_token_sha256": "36EBBA46A348011ADB54BBA23D92295C5DFC4DC9B4B8BC24EDB60B4E0D4B52ED"
+    },
+    {
+      "theorem": "hnwcutambstrictsegresisomndv",
+      "old_inactive_hypothesis_label": "hnwcutambstrictsegisomndv.1",
+      "new_active_identical_formula_label": "hnwcutambstrictsegresisomndv.1",
+      "source_character_start": 9308546,
+      "source_character_end": 9308573,
+      "formula_tokens": [
+        "|-",
+        "A",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "69524DE9DD86965F30074313DD971F683C5F475F138DA8919CFFB492816D25CA"
+    },
+    {
+      "theorem": "hnwcutambstrictsegresisomndv",
+      "old_inactive_hypothesis_label": "hnwcutambstrictsegisomndv.2",
+      "new_active_identical_formula_label": "hnwcutambstrictsegresisomndv.2",
+      "source_character_start": 9308608,
+      "source_character_end": 9308635,
+      "formula_tokens": [
+        "|-",
+        "r",
+        "=",
+        "HNCodeCmpSet",
+        "A"
+      ],
+      "formula_token_sha256": "DDD71B12EE20783D82C629F5AE4DA7EB260FE10A68D0722959C0E10453761446"
+    },
+    {
+      "theorem": "hnwcutambstrictsegresisomdndv",
+      "old_inactive_hypothesis_label": "hnwcutambstrictsegisomndv.1",
+      "new_active_identical_formula_label": "hnwcutambstrictsegresisomdndv.1",
+      "source_character_start": 9342801,
+      "source_character_end": 9342828,
+      "formula_tokens": [
+        "|-",
+        "A",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "69524DE9DD86965F30074313DD971F683C5F475F138DA8919CFFB492816D25CA"
+    },
+    {
+      "theorem": "hnwcutambstrictsegresisomdndv",
+      "old_inactive_hypothesis_label": "hnwcutambstrictsegisomndv.2",
+      "new_active_identical_formula_label": "hnwcutambstrictsegresisomdndv.2",
+      "source_character_start": 9342863,
+      "source_character_end": 9342890,
+      "formula_tokens": [
+        "|-",
+        "r",
+        "=",
+        "HNCodeCmpSet",
+        "A"
+      ],
+      "formula_token_sha256": "DDD71B12EE20783D82C629F5AE4DA7EB260FE10A68D0722959C0E10453761446"
+    },
+    {
+      "theorem": "hnwcutambstrictsegresisomralias0ndv",
+      "old_inactive_hypothesis_label": "hnwcutambstrictsegisomndv.1",
+      "new_active_identical_formula_label": "hnwcutambstrictsegresisomralias0ndv.1",
+      "source_character_start": 9375045,
+      "source_character_end": 9375072,
+      "formula_tokens": [
+        "|-",
+        "A",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "69524DE9DD86965F30074313DD971F683C5F475F138DA8919CFFB492816D25CA"
+    },
+    {
+      "theorem": "hnreal8endpointdecoderndv",
+      "old_inactive_hypothesis_label": "hnwcutambstrictsegisomndv.1",
+      "new_active_identical_formula_label": "hnreal8endpointdecoderndv.1",
+      "source_character_start": 9487137,
+      "source_character_end": 9487164,
+      "formula_tokens": [
+        "|-",
+        "A",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "69524DE9DD86965F30074313DD971F683C5F475F138DA8919CFFB492816D25CA"
+    },
+    {
+      "theorem": "cfbhnpw13pointcoverndv",
+      "old_inactive_hypothesis_label": "cfbhnpw13codepointimndv.1",
+      "new_active_identical_formula_label": "cfbhnpw13pointcoverndv.1",
+      "source_character_start": 9892088,
+      "source_character_end": 9892113,
+      "formula_tokens": [
+        "|-",
+        "X",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "8C38B7DDD006939ACC86124DC7B36441630072A35136A3140D9A691E4E817C48"
+    },
+    {
+      "theorem": "cfbhnpw13pointcoverndv",
+      "old_inactive_hypothesis_label": "cfbhnpw13codepointimndv.3",
+      "new_active_identical_formula_label": "cfbhnpw13pointcoverndv.2",
+      "source_character_start": 9892193,
+      "source_character_end": 9892218,
+      "formula_tokens": [
+        "|-",
+        "HNCard",
+        "(",
+        "(",
+        "X",
+        "X._k",
+        "X",
+        ")",
+        "X.",
+        "Nn",
+        ")",
+        "<_c",
+        "T_c",
+        "T_c",
+        "HNCard",
+        "X"
+      ],
+      "formula_token_sha256": "48DEB74818FE2A33D03E23C7A70BDFB8FA82FBC2B4734DE250BEC0A0894D617A"
+    },
+    {
+      "theorem": "cfbthresholdnn2lencndv",
+      "old_inactive_hypothesis_label": "cfbthresholdtc2injndv.2",
+      "new_active_identical_formula_label": "cfbthresholdnn2lencndv.2",
+      "source_character_start": 9921997,
+      "source_character_end": 9922020,
+      "formula_tokens": [
+        "|-",
+        "Nc",
+        "Nn",
+        "<_c",
+        "Nc",
+        "X"
+      ],
+      "formula_token_sha256": "AAF18A0C1AF186F264A6A74F19927B80958383FB837902EBA74262230635038F"
+    },
+    {
+      "theorem": "cfbthresholdnn2lencndv",
+      "old_inactive_hypothesis_label": "cfbthresholdtc2injndv.1",
+      "new_active_identical_formula_label": "cfbthresholdnn2lencndv.1",
+      "source_character_start": 9922052,
+      "source_character_end": 9922075,
+      "formula_tokens": [
+        "|-",
+        "X",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "8C38B7DDD006939ACC86124DC7B36441630072A35136A3140D9A691E4E817C48"
+    },
+    {
+      "theorem": "cfbthresholdnn2injndv",
+      "old_inactive_hypothesis_label": "cfbthresholdtc2injndv.2",
+      "new_active_identical_formula_label": "cfbthresholdnn2injndv.2",
+      "source_character_start": 9922935,
+      "source_character_end": 9922958,
+      "formula_tokens": [
+        "|-",
+        "Nc",
+        "Nn",
+        "<_c",
+        "Nc",
+        "X"
+      ],
+      "formula_token_sha256": "AAF18A0C1AF186F264A6A74F19927B80958383FB837902EBA74262230635038F"
+    },
+    {
+      "theorem": "cfbthresholdnn2injndv",
+      "old_inactive_hypothesis_label": "cfbthresholdtc2injndv.1",
+      "new_active_identical_formula_label": "cfbthresholdnn2injndv.1",
+      "source_character_start": 9922990,
+      "source_character_end": 9923013,
+      "formula_tokens": [
+        "|-",
+        "X",
+        "e.",
+        "_V"
+      ],
+      "formula_token_sha256": "8C38B7DDD006939ACC86124DC7B36441630072A35136A3140D9A691E4E817C48"
+    }
+  ]
+}

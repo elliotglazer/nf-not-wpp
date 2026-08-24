@@ -1,0 +1,1824 @@
+delimiter $ ( $ $ ) $;
+
+provable sort wff;
+
+--| If ` ph ` is a wff, so is ` -. ph ` or "not ` ph ` ." Part of the recursive definition of a wff (well-formed formula). In classical logic (which is our logic), a wff is interpreted as either true or false. So if ` ph ` is true, then ` -. ph ` is false; if ` ph ` is false, then ` -. ph ` is true. Traditionally, Greek letters are used to represent wffs, and we follow this convention. In propositional calculus, we define only wffs built up from other wffs, i.e. there is no starting or "atomic" wff. Later, in predicate calculus, we will extend the basic wff definition by including atomic wffs ( ~ weq and ~ wel ).
+term wn (ph: wff): wff;
+
+--| If ` ph ` and ` ps ` are wff's, so is ` ( ph -> ps ) ` or " ` ph ` implies ` ps ` ." Part of the recursive definition of a wff. The resulting wff is (interpreted as) false when ` ph ` is true and ` ps ` is false; it is true otherwise. Think of the truth table for an OR gate with input ` ph ` connected through an inverter. After we define the axioms of propositional calculus ( ~ ax-1 , ~ ax-2 , ~ ax-3 , and ~ ax-mp ), the biconditional ( ~ df-bi ), the constant true ` T. ` ( ~ df-tru ), and the constant false ` F. ` ( ~ df-fal ), we will be able to prove these truth table values: ` ( ( T. -> T. ) <-> T. ) ` ( ~ truimtru ), ` ( ( T. -> F. ) <-> F. ) ` ( ~ truimfal ), ` ( ( F. -> T. ) <-> T. ) ` ( ~ falimtru ), and ` ( ( F. -> F. ) <-> T. ) ` ( ~ falimfal ). These have straightforward meanings, for example, ` ( ( T. -> T. ) <-> T. ) ` just means "the value of ` T. -> T. ` is ` T. ` ". The left-hand wff is called the antecedent, and the right-hand wff is called the consequent. In the case of ` ( ph -> ( ps -> ch ) ) ` , the middle ` ps ` may be informally called either an antecedent or part of the consequent depending on context. Contrast with ` <-> ` ( ~ df-bi ), ` /\ ` ( ~ df-an ), and ` \/ ` ( ~ df-or ). This is called "material implication" and the arrow is usually read as "implies." However, material implication is not identical to the meaning of "implies" in natural language. For example, the word "implies" may suggest a causal relationship in natural language. Material implication does not require any causal relationship. Also, note that in material implication, if the consequent is true then the wff is always true (even if the antecedent is false). Thus, if "implies" means material implication, it is true that "if the moon is made of green cheese that implies that 5=5" (because 5=5). Similarly, if the antecedent is false, the wff is always true. Thus, it is true that, "if the moon made of green cheese that implies that 5=7" (because the moon is not actually made of green cheese). A contradiction implies anything ( ~ pm2.21i ). In short, material implication has a very specific technical definition, and misunderstandings of it are sometimes called "paradoxes of logical implication."
+term wi (ph ps: wff): wff;
+
+--| Rule of Modus Ponens. The postulated inference rule of propositional calculus. See e.g. Rule 1 of [Hamilton] p. 73. The rule says, "if ` ph ` is true, and ` ph ` implies ` ps ` , then ` ps ` must also be true". This rule is sometimes called "detachment", since it detaches the minor premise from the major premise. "Modus ponens" is short for "modus ponendo ponens", a Latin phrase that means "the mode that by affirming affirms" - remark in [Sanford] p. 39. This rule is similar to the rule of modus tollens ~ mto . Note: In some web page displays such as the Statement List, the symbols " ` & ` " and " ` => ` " informally indicate the relationship between the hypotheses and the assertion (conclusion), abbreviating the English words "and" and "implies". They are not part of the formal language. (Contributed by NM, 30-Sep-1992.)
+axiom ax_mp (ph ps: wff):
+  $ ph $ >
+  $ wi ph ps $ >
+  $ ps $;
+
+--| Axiom _Simp_. Axiom A1 of [Margaris] p. 49. One of the 3 axioms of propositional calculus. The 3 axioms are also given as Definition 2.1 of [Hamilton] p. 28. This axiom is called _Simp_ or "the principle of simplification" in _Principia Mathematica_ (Theorem *2.02 of [WhiteheadRussell] p. 100) because "it enables us to pass from the joint assertion of ` ph ` and ` ps ` to the assertion of ` ph ` simply." (Contributed by NM, 5-Aug-1993.)
+axiom ax_1 (ph ps: wff):
+  $ wi ph (wi ps ph) $;
+
+--| Axiom _Frege_. Axiom A2 of [Margaris] p. 49. One of the 3 axioms of propositional calculus. It "distributes" an antecedent over two consequents. This axiom was part of Frege's original system and is known as _Frege_ in the literature. It is also proved as Theorem *2.77 of [WhiteheadRussell] p. 108. The other direction of this axiom also turns out to be true, as demonstrated by ~ pm5.41 . (Contributed by NM, 5-Aug-1993.)
+axiom ax_2 (ph ps ch: wff):
+  $ wi (wi ph (wi ps ch)) (wi (wi ph ps) (wi ph ch)) $;
+
+--| Axiom _Transp_. Axiom A3 of [Margaris] p. 49. One of the 3 axioms of propositional calculus. It swaps or "transposes" the order of the consequents when negation is removed. An informal example is that the statement "if there are no clouds in the sky, it is not raining" implies the statement "if it is raining, there are clouds in the sky." This axiom is called _Transp_ or "the principle of transposition" in _Principia Mathematica_ (Theorem *2.17 of [WhiteheadRussell] p. 103). We will also use the term "contraposition" for this principle, although the reader is advised that in the field of philosophical logic, "contraposition" has a different technical meaning. (Contributed by NM, 5-Aug-1993.)
+axiom ax_3 (ph ps: wff):
+  $ wi (wi (wn ph) (wn ps)) (wi ps ph) $;
+
+--| Extend our wff definition to include the biconditional connective.
+term wb (ph ps: wff): wff;
+
+--| Define the biconditional (logical 'iff'). Definition ~ df-bi in this section is our first definition, which introduces and defines the biconditional connective ` <-> ` . We define a wff of the form ` ( ph <-> ps ) ` as an abbreviation for ` -. ( ( ph -> ps ) -> -. ( ps -> ph ) ) ` . Unlike most traditional developments, we have chosen not to have a separate symbol such as "Df." to mean "is defined as." Instead, we will later use the biconditional connective for this purpose ( ~ df-or is its first use), as it allows us to use logic to manipulate definitions directly. This greatly simplifies many proofs since it eliminates the need for a separate mechanism for introducing and eliminating definitions. Of course, we cannot use this mechanism to define the biconditional itself, since it hasn't been introduced yet. Instead, we use a more general form of definition, described as follows. In its most general form, a definition is simply an assertion that introduces a new symbol (or a new combination of existing symbols, as in ~ df-3an ) that is eliminable and does not strengthen the existing language. The latter requirement means that the set of provable statements not containing the new symbol (or new combination) should remain exactly the same after the definition is introduced. Our definition of the biconditional may look unusual compared to most definitions, but it strictly satisfies these requirements. The justification for our definition is that if we mechanically replace ` ( ph <-> ps ) ` (the definiendum i.e. the thing being defined) with ` -. ( ( ph -> ps ) -> -. ( ps -> ph ) ) ` (the definiens i.e. the defining expression) in the definition, the definition becomes the previously proved theorem ~ bijust . It is impossible to use ~ df-bi to prove any statement expressed in the original language that can't be proved from the original axioms, because if we simply replace each instance of ~ df-bi in the proof with the corresponding ~ bijust instance, we will end up with a proof from the original axioms. Note that from Metamath's point of view, a definition is just another axiom - i.e. an assertion we claim to be true - but from our high level point of view, we are not strengthening the language. To indicate this fact, we prefix definition labels with "df-" instead of "ax-". (This prefixing is an informal convention that means nothing to the Metamath proof verifier; it is just a naming convention for human readability.) After we define the constant true ` T. ` ( ~ df-tru ) and the constant false ` F. ` ( ~ df-fal ), we will be able to prove these truth table values: ` ( ( T. <-> T. ) <-> T. ) ` ( ~ trubitru ), ` ( ( T. <-> F. ) <-> F. ) ` ( ~ trubifal ), ` ( ( F. <-> T. ) <-> F. ) ` ( ~ falbitru ), and ` ( ( F. <-> F. ) <-> T. ) ` ( ~ falbifal ). See ~ dfbi1 , ~ dfbi2 , and ~ dfbi3 for theorems suggesting typical textbook definitions of ` <-> ` , showing that our definition has the properties we expect. Theorem ~ dfbi1 is particularly useful if we want to eliminate ` <-> ` from an expression to convert it to primitives. Theorem ~ dfbi shows this definition rewritten in an abbreviated form after conjunction is introduced, for easier understanding. Contrast with ` \/ ` ( ~ df-or ), ` -> ` ( ~ wi ), ` -/\ ` ( ~ df-nan ), and ` \/_ ` ( ~ df-xor ) . In some sense ` <-> ` returns true if two truth values are equal; ` = ` ( ~ df-cleq ) returns true if two classes are equal. (Contributed by NM, 5-Aug-1993.)
+axiom df_bi (ph ps: wff):
+  $ wn (wi (wi (wb ph ps) (wn (wi (wi ph ps) (wn (wi ps ph))))) (wn (wi (wn (wi (wi ph ps) (wn (wi ps ph)))) (wb ph ps)))) $;
+
+--| Extend wff definition to include disjunction ('or').
+term wo (ph ps: wff): wff;
+
+--| Extend wff definition to include conjunction ('and').
+term wa (ph ps: wff): wff;
+
+--| Define disjunction (logical 'or'). Definition of [Margaris] p. 49. When the left operand, right operand, or both are true, the result is true; when both sides are false, the result is false. For example, it is true that (2 = 3 ` \/ ` 4 = 4) (see ex-or in set.mm). After we define the constant true ` T. ` ( ~ df-tru ) and the constant false ` F. ` ( ~ df-fal ), we will be able to prove these truth table values: ` ( ( T. \/ T. ) <-> T. ) ` ( ~ truortru ), ` ( ( T. \/ F. ) <-> T. ) ` ( ~ truorfal ), ` ( ( F. \/ T. ) <-> T. ) ` ( ~ falortru ), and ` ( ( F. \/ F. ) <-> F. ) ` ( ~ falorfal ). This is our first use of the biconditional connective in a definition; we use the biconditional connective in place of the traditional "<=def=>", which means the same thing, except that we can manipulate the biconditional connective directly in proofs rather than having to rely on an informal definition substitution rule. Note that if we mechanically substitute ` ( -. ph -> ps ) ` for ` ( ph \/ ps ) ` , we end up with an instance of previously proved theorem ~ biid . This is the justification for the definition, along with the fact that it introduces a new symbol ` \/ ` . Contrast with ` /\ ` ( ~ df-an ), ` -> ` ( ~ wi ), ` -/\ ` ( ~ df-nan ), and ` \/_ ` ( ~ df-xor ) . (Contributed by NM, 5-Aug-1993.)
+axiom df_or (ph ps: wff):
+  $ wb (wo ph ps) (wi (wn ph) ps) $;
+
+--| Define conjunction (logical 'and'). Definition of [Margaris] p. 49. When both the left and right operand are true, the result is true; when either is false, the result is false. For example, it is true that (2 = 2 ` /\ ` 3 = 3). After we define the constant true ` T. ` ( ~ df-tru ) and the constant false ` F. ` ( ~ df-fal ), we will be able to prove these truth table values: ` ( ( T. /\ T. ) <-> T. ) ` ( ~ truantru ), ` ( ( T. /\ F. ) <-> F. ) ` ( ~ truanfal ), ` ( ( F. /\ T. ) <-> F. ) ` ( ~ falantru ), and ` ( ( F. /\ F. ) <-> F. ) ` ( ~ falanfal ). Contrast with ` \/ ` ( ~ df-or ), ` -> ` ( ~ wi ), ` -/\ ` ( ~ df-nan ), and ` \/_ ` ( ~ df-xor ) . (Contributed by NM, 5-Aug-1993.)
+axiom df_an (ph ps: wff):
+  $ wb (wa ph ps) (wn (wi ph (wn ps))) $;
+
+--| Extend wff definition to include 3-way disjunction ('or').
+term w3o (ph ps ch: wff): wff;
+
+--| Extend wff definition to include 3-way conjunction ('and').
+term w3a (ph ps ch: wff): wff;
+
+--| Define disjunction ('or') of three wff's. Definition *2.33 of [WhiteheadRussell] p. 105. This abbreviation reduces the number of parentheses and emphasizes that the order of bracketing is not important by virtue of the associative law ~ orass . (Contributed by NM, 8-Apr-1994.)
+axiom df_3or (ph ps ch: wff):
+  $ wb (w3o ph ps ch) (wo (wo ph ps) ch) $;
+
+--| Define conjunction ('and') of three wff's. Definition *4.34 of [WhiteheadRussell] p. 118. This abbreviation reduces the number of parentheses and emphasizes that the order of bracketing is not important by virtue of the associative law ~ anass . (Contributed by NM, 8-Apr-1994.)
+axiom df_3an (ph ps ch: wff):
+  $ wb (w3a ph ps ch) (wa (wa ph ps) ch) $;
+
+--| Extend wff definition to include alternative denial ('nand').
+term wnan (ph ps: wff): wff;
+
+--| Define incompatibility, or alternative denial ('not-and' or 'nand'). This is also called the Sheffer stroke, represented by a vertical bar, but we use a different symbol to avoid ambiguity with other uses of the vertical bar. In the second edition of Principia Mathematica (1927), Russell and Whitehead used the Sheffer stroke and suggested it as a replacement for the "or" and "not" operations of the first edition. However, in practice, "or" and "not" are more widely used. After we define the constant true ` T. ` ( ~ df-tru ) and the constant false ` F. ` ( ~ df-fal ), we will be able to prove these truth table values: ` ( ( T. -/\ T. ) <-> F. ) ` ( ~ trunantru ), ` ( ( T. -/\ F. ) <-> T. ) ` ( ~ trunanfal ), ` ( ( F. -/\ T. ) <-> T. ) ` ( ~ falnantru ), and ` ( ( F. -/\ F. ) <-> T. ) ` ( ~ falnanfal ). Contrast with ` /\ ` ( ~ df-an ), ` \/ ` ( ~ df-or ), ` -> ` ( ~ wi ), and ` \/_ ` ( ~ df-xor ) . (Contributed by Jeff Hoffman, 19-Nov-2007.)
+axiom df_nan (ph ps: wff):
+  $ wb (wnan ph ps) (wn (wa ph ps)) $;
+
+--| ` T. ` is a wff.
+term wtru: wff;
+
+--| Definition of ` T. ` , a tautology. ` T. ` is a constant true. In this definition ~ biid is used as an antecedent, however, any true wff, such as an axiom, can be used in its place. (Contributed by Anthony Hart, 13-Oct-2010.)
+axiom df_tru (ph: wff):
+  $ wb wtru (wb ph ph) $;
+
+--| Theorem ~ meredith restated as an axiom. This will allow us to ensure that the rederivation of ~ ax1 , ~ ax2 , and ~ ax3 below depend only on Meredith's sole axiom and not accidentally on a previous theorem above. Outside of this section, we will not make use of this axiom. (Contributed by NM, 14-Dec-2002.) (New usage is discouraged.)
+axiom ax_meredith (ph ps ch th ta: wff):
+  $ wi (wi (wi (wi (wi ph ps) (wi (wn ch) (wn th))) ch) ta) (wi (wi ta ph) (wi th ph)) $;
+
+pure sort setvar;
+
+--| Extend wff definition to include the universal quantifier ('for all'). ` A. x ph ` is read " ` ph ` (phi) is true for all ` x ` ." Typically, in its final application ` ph ` would be replaced with a wff containing a (free) occurrence of the variable ` x ` , for example ` x = y ` . In a universe with a finite number of objects, "for all" is equivalent to a big conjunction (AND) with one wff for each possible case of ` x ` . When the universe is infinite (as with set theory), such a propositional-calculus equivalent is not possible because an infinitely long formula has no meaning, but conceptually the idea is the same.
+term wal (ph: wff) (x: setvar): wff;
+
+--| Extend wff definition to include the existential quantifier ("there exists").
+term wex (ph: wff) (x: setvar): wff;
+
+--| Define existential quantification. ` E. x ph ` means "there exists at least one set ` x ` such that ` ph ` is true." Definition of [Margaris] p. 49. (Contributed by NM, 5-Aug-1993.)
+axiom df_ex (ph: wff) (x: setvar):
+  $ wb (wex ph x) (wn (wal (wn ph) x)) $;
+
+--| Extend wff definition to include the not-free predicate.
+term wnf (ph: wff) (x: setvar): wff;
+
+--| Define the not-free predicate for wffs. This is read " ` x ` is not free in ` ph ` ". Not-free means that the value of ` x ` cannot affect the value of ` ph ` , e.g., any occurrence of ` x ` in ` ph ` is effectively bound by a "for all" or something that expands to one (such as "there exists"). In particular, substitution for a variable not free in a wff does not affect its value ( ~ sbf ). An example of where this is used is ~ stdpc5 . See ~ nf2 for an alternative definition which does not involve nested quantifiers on the same variable. Not-free is a commonly used constraint, so it is useful to have a notation for it. Surprisingly, there is no common formal notation for it, so here we devise one. Our definition lets us work with the not-free notion within the logic itself rather than as a metalogical side condition. To be precise, our definition really means "effectively not free," because it is slightly less restrictive than the usual textbook definition for not-free (which only considers syntactic freedom). For example, ` x ` is effectively not free in the bare expression ` x = x ` (see ~ nfequid ), even though ` x ` would be considered free in the usual textbook definition, because the value of ` x ` in the expression ` x = x ` cannot affect the truth of the expression (and thus substitution will not change the result). This predicate only applies to wffs. See ~ df-nfc for a not-free predicate for class variables. (Contributed by Mario Carneiro, 11-Aug-2016.)
+axiom df_nf (ph: wff) (x: setvar):
+  $ wb (wnf ph x) (wal (wi ph (wal ph x)) x) $;
+
+--| Rule of Generalization. The postulated inference rule of pure predicate calculus. See e.g. Rule 2 of [Hamilton] p. 74. This rule says that if something is unconditionally true, then it is true for all values of a variable. For example, if we have proved ` x = x ` , we can conclude ` A. x x = x ` or even ` A. y x = x ` . Theorem allt in set.mm shows the special case ` A. x T. ` . Theorem ~ spi shows we can go the other way also: in other words we can add or remove universal quantifiers from the beginning of any theorem as required. (Contributed by NM, 5-Aug-1993.)
+axiom ax_gen (ph: wff) (x: setvar):
+  $ ph $ >
+  $ wal ph x $;
+
+--| Axiom of Quantified Implication. Axiom C4 of [Monk2] p. 105. (Contributed by NM, 5-Aug-1993.)
+axiom ax_5 (ph ps: wff) (x: setvar):
+  $ wi (wal (wi ph ps) x) (wi (wal ph x) (wal ps x)) $;
+
+--| Axiom of Distinctness. This axiom quantifies a variable over a formula in which it does not occur. Axiom C5 in [Megill] p. 444 (p. 11 of the preprint). Also appears as Axiom B6 (p. 75) of system S2 of [Tarski] p. 77 and Axiom C5-1 of [Monk2] p. 113. (See comments in ~ ax17o about the logical redundancy of ~ ax-17 in the presence of our obsolete axioms.) This axiom essentially says that if ` x ` does not occur in ` ph ` , i.e. ` ph ` does not depend on ` x ` in any way, then we can add the quantifier ` A. x ` to ` ph ` with no further assumptions. By ~ sp , we can also remove the quantifier (unconditionally). (Contributed by NM, 5-Aug-1993.)
+axiom ax_17 (ph: wff) (x: setvar):
+  $ wi ph (wal ph x) $;
+
+sort class;
+
+--| This syntax construction states that a variable ` x ` , which has been declared to be a setvar variable by $f statement vx, is also a class expression. This can be justified informally as follows. We know that the class builder ` { y | y e. x } ` is a class by ~ cab . Since (when ` y ` is distinct from ` x ` ) we have ` x = { y | y e. x } ` by ~ cvjust , we can argue that the syntax " ` class x ` " can be viewed as an abbreviation for " ` class { y | y e. x } ` ". See the discussion under the definition of class in [Jech] p. 4 showing that "Every set can be considered to be a class." While it is tempting and perhaps occasionally useful to view ~ cv as a "type conversion" from a setvar variable to a class variable, keep in mind that ~ cv is intrinsically no different from any other class-building syntax such as ~ cab , ~ cun , or ~ c0 . For a general discussion of the theory of classes and the role of ~ cv , see ~ https://us.metamath.org/mpeuni/mmset.html#class . (The description above applies to set theory, not predicate calculus. The purpose of introducing ` class x ` here, and not in set theory where it belongs, is to allow us to express i.e. "prove" the ~ weq of predicate calculus from the ~ wceq of set theory, so that we don't "overload" the ` = ` connective with two syntax definitions. This is done to prevent ambiguity that would complicate some Metamath parsers.)
+term cv (x: setvar): class;
+
+--| Extend wff definition to include class equality. For a general discussion of the theory of classes, see ~ https://us.metamath.org/mpeuni/mmset.html#class . (The purpose of introducing ` wff A = B ` here, and not in set theory where it belongs, is to allow us to express i.e. "prove" the ~ weq of predicate calculus in terms of the ~ wceq of set theory, so that we don't "overload" the ` = ` connective with two syntax definitions. This is done to prevent ambiguity that would complicate some Metamath parsers. For example, some parsers - although not the Metamath program - stumble on the fact that the ` = ` in ` x = y ` could be the ` = ` of either ~ weq or ~ wceq , although mathematically it makes no difference. The class variables ` A ` and ` B ` are introduced temporarily for the purpose of this definition but otherwise not used in predicate calculus. See ~ df-cleq for more information on the set theory usage of ~ wceq .)
+term wceq (A B: class): wff;
+
+--| Extend wff definition to include proper substitution (read "the wff that results when ` y ` is properly substituted for ` x ` in wff ` ph ` "). (Contributed by NM, 24-Jan-2006.)
+term wsb (ph: wff) (x y: setvar): wff;
+
+--| Define proper substitution. Remark 9.1 in [Megill] p. 447 (p. 15 of the preprint). For our notation, we use ` [ y / x ] ph ` to mean "the wff that results from the proper substitution of ` y ` for ` x ` in the wff ` ph ` ." We can also use ` [ y / x ] ph ` in place of the "free for" side condition used in traditional predicate calculus; see, for example, ~ stdpc4 . Our notation was introduced in Haskell B. Curry's _Foundations of Mathematical Logic_ (1977), p. 316 and is frequently used in textbooks of lambda calculus and combinatory logic. This notation improves the common but ambiguous notation, " ` ph ( y ) ` is the wff that results when ` y ` is properly substituted for ` x ` in ` ph ( x ) ` ." For example, if the original ` ph ( x ) ` is ` x = y ` , then ` ph ( y ) ` is ` y = y ` , from which we obtain that ` ph ( x ) ` is ` x = x ` . So what exactly does ` ph ( x ) ` mean? Curry's notation solves this problem. In most books, proper substitution has a somewhat complicated recursive definition with multiple cases based on the occurrences of free and bound variables in the wff. Instead, we use a single formula that is exactly equivalent and gives us a direct definition. We later prove that our definition has the properties we expect of proper substitution (see Theorems ~ sbequ , ~ sbcom2 and ~ sbid2v ). Note that our definition is valid even when ` x ` and ` y ` are replaced with the same variable, as ~ sbid shows. We achieve this by having ` x ` free in the first conjunct and bound in the second. We can also achieve this by using a dummy variable, as the alternate definition ~ dfsb7 shows (which some logicians may prefer because it doesn't mix free and bound variables). Another version that mixes free and bound variables is ~ dfsb3 . When ` x ` and ` y ` are distinct, we can express proper substitution with the simpler expressions of ~ sb5 and ~ sb6 . There are no restrictions on any of the variables, including what variables may occur in wff ` ph ` . (Contributed by NM, 5-Aug-1993.)
+axiom df_sb (ph: wff) (x y: setvar):
+  $ wb (wsb ph x y) (wa (wi (wceq (cv x) (cv y)) ph) (wex (wa (wceq (cv x) (cv y)) ph) x)) $;
+
+--| Axiom of Existence. One of the equality and substitution axioms of predicate calculus with equality. This axiom tells us is that at least one thing exists. In this form (not requiring that ` x ` and ` y ` be distinct) it was used in an axiom system of Tarski (see Axiom B7' in footnote 1 of [KalishMontague] p. 81.) It is equivalent to axiom scheme C10' in [Megill] p. 448 (p. 16 of the preprint); the equivalence is established by ~ ax9o and ~ ax9from9o . A more convenient form of this axiom is ~ a9e , which has additional remarks. Raph Levien proved the independence of this axiom from the other logical axioms on 12-Apr-2005. See item 16 at ~ https://us.metamath.org/award2003.html . ~ ax-9 can be proved from the weaker version ~ ax9v requiring that the variables be distinct; see Theorem ~ ax9 . ~ ax-9 can also be proved from the Axiom of Separation (in the form that we use that axiom, where free variables are not universally quantified). See theorem ax9vsep in set.mm. Except by ~ ax9v , this axiom should not be referenced directly. Instead, use Theorem ~ ax9 . (Contributed by NM, 5-Aug-1993.) (New usage is discouraged.)
+axiom ax_9 (x y: setvar):
+  $ wn (wal (wn (wceq (cv x) (cv y))) x) $;
+
+--| Axiom of Equality. One of the equality and substitution axioms of predicate calculus with equality. This is similar to, but not quite, a transitive law for equality (proved later as ~ equtr ). This axiom scheme is a sub-scheme of Axiom Scheme B8 of system S2 of [Tarski], p. 75, whose general form cannot be represented with our notation. Also appears as Axiom C7 of [Monk2] p. 105 and Axiom Scheme C8' in [Megill] p. 448 (p. 16 of the preprint). The equality symbol was invented in 1527 by Robert Recorde. He chose a pair of parallel lines of the same length because "noe .2. thynges, can be moare equalle." Note that this axiom is still valid even when any two or all three of ` x ` , ` y ` , and ` z ` are replaced with the same variable since they do not have any distinct variable (Metamath's $d) restrictions. Because of this, we say that these three variables are "bundled" (a term coined by Raph Levien). (Contributed by NM, 5-Aug-1993.)
+axiom ax_8 (x y z: setvar):
+  $ wi (wceq (cv x) (cv y)) (wi (wceq (cv x) (cv z)) (wceq (cv y) (cv z))) $;
+
+--| Extend wff definition to include the membership connective between classes. For a general discussion of the theory of classes, see ~ https://us.metamath.org/mpeuni/mmset.html#class . (The purpose of introducing ` wff A e. B ` here is to allow us to express i.e. "prove" the ~ wel of predicate calculus in terms of the ~ wceq of set theory, so that we don't "overload" the ` e. ` connective with two syntax definitions. This is done to prevent ambiguity that would complicate some Metamath parsers. The class variables ` A ` and ` B ` are introduced temporarily for the purpose of this definition but otherwise not used in predicate calculus. See ~ df-clab for more information on the set theory usage of ~ wcel .)
+term wcel (A1 B1: class): wff;
+
+--| Axiom of Left Equality for Binary Predicate. One of the equality and substitution axioms for a non-logical predicate in our predicate calculus with equality. It substitutes equal variables into the left-hand side of an arbitrary binary predicate ` e. ` , which we will use for the set membership relation when set theory is introduced. This axiom scheme is a sub-scheme of Axiom Scheme B8 of system S2 of [Tarski], p. 75, whose general form cannot be represented with our notation. Also appears as Axiom scheme C12' in [Megill] p. 448 (p. 16 of the preprint). "Non-logical" means that the predicate is not a primitive of predicate calculus proper but instead is an extension to it. "Binary" means that the predicate has two arguments. In a system of predicate calculus with equality, like ours, equality is not usually considered to be a non-logical predicate. In systems of predicate calculus without equality, it typically would be. (Contributed by NM, 5-Aug-1993.)
+axiom ax_13 (x y z: setvar):
+  $ wi (wceq (cv x) (cv y)) (wi (wcel (cv x) (cv z)) (wcel (cv y) (cv z))) $;
+
+--| Axiom of Right Equality for Binary Predicate. One of the equality and substitution axioms for a non-logical predicate in our predicate calculus with equality. It substitutes equal variables into the right-hand side of an arbitrary binary predicate ` e. ` , which we will use for the set membership relation when set theory is introduced. This axiom scheme is a sub-scheme of Axiom Scheme B8 of system S2 of [Tarski], p. 75, whose general form cannot be represented with our notation. Also appears as Axiom scheme C13' in [Megill] p. 448 (p. 16 of the preprint). (Contributed by NM, 5-Aug-1993.)
+axiom ax_14 (x y z: setvar):
+  $ wi (wceq (cv x) (cv y)) (wi (wcel (cv z) (cv x)) (wcel (cv z) (cv y))) $;
+
+--| Axiom of Quantified Negation. Axiom C5-2 of [Monk2] p. 113. This axiom scheme is logically redundant (see ~ ax6w ) but is used as an auxiliary axiom to achieve metalogical completeness. (Contributed by NM, 5-Aug-1993.)
+axiom ax_6 (ph: wff) (x: setvar):
+  $ wi (wn (wal ph x)) (wal (wn (wal ph x)) x) $;
+
+--| Axiom of Quantifier Commutation. This axiom says universal quantifiers can be swapped. One of the 4 axioms of pure predicate calculus. Axiom scheme C6' in [Megill] p. 448 (p. 16 of the preprint). Also appears as Lemma 12 of [Monk2] p. 109 and Axiom C5-3 of [Monk2] p. 113. This axiom scheme is logically redundant (see ~ ax7w ) but is used as an auxiliary axiom to achieve metalogical completeness. (Contributed by NM, 5-Aug-1993.)
+axiom ax_7 (ph: wff) (x y: setvar):
+  $ wi (wal (wal ph y) x) (wal (wal ph x) y) $;
+
+--| Axiom of Substitution. One of the 5 equality axioms of predicate calculus. The final consequent ` A. x ( x = y -> ph ) ` is a way of expressing " ` y ` substituted for ` x ` in wff ` ph ` " (cf. ~ sb6 ). It is based on Lemma 16 of [Tarski] p. 70 and Axiom C8 of [Monk2] p. 105, from which it can be proved by cases. The original version of this axiom was ~ ax-11o ("o" for "old") and was replaced with this shorter ~ ax-11 in Jan. 2007. The old axiom is proved from this one as Theorem ~ ax11o . Conversely, this axiom is proved from ~ ax-11o as Theorem ~ ax11 . Juha Arpiainen proved the metalogical independence of this axiom (in the form of the older axiom ~ ax-11o ) from the others on 19-Jan-2006. See item 9a at ~ https://us.metamath.org/award2003.html . See ~ ax11v and ~ ax11v2 for other equivalents of this axiom that (unlike this axiom) have distinct variable restrictions. This axiom scheme is logically redundant (see ~ ax11w ) but is used as an auxiliary axiom to achieve metalogical completeness. (Contributed by NM, 22-Jan-2007.)
+axiom ax_11 (ph: wff) (x y: setvar):
+  $ wi (wceq (cv x) (cv y)) (wi (wal ph y) (wal (wi (wceq (cv x) (cv y)) ph) x)) $;
+
+--| Axiom of Quantified Equality. One of the equality and substitution axioms of predicate calculus with equality. An equivalent way to express this axiom that may be easier to understand is ` ( -. x = y -> ( -. x = z -> ( y = z -> A. x y = z ) ) ) ` (see ~ ax12b ). Recall that in the intended interpretation, our variables are metavariables ranging over the variables of predicate calculus (the object language). In order for the first antecedent ` -. x = y ` to hold, ` x ` and ` y ` must have different values and thus cannot be the same object-language variable. Similarly, ` x ` and ` z ` cannot be the same object-language variable. Therefore, ` x ` will not occur in the wff ` y = z ` when the first two antecedents hold, so analogous to ~ ax-17 , the conclusion ` ( y = z -> A. x y = z ) ` follows. The original version of this axiom was ~ ax-12o and was replaced with this shorter ~ ax-12 in December 2015. The old axiom is proved from this one as Theorem ~ ax12o . Conversely, this axiom is proved from ~ ax-12o as Theorem ~ ax12 . The primary purpose of this axiom is to provide a way to introduce the quantifier ` A. x ` on ` y = z ` even when ` x ` and ` y ` are substituted with the same variable. In this case, the first antecedent becomes ` -. x = x ` and the axiom still holds. Although this version is shorter, the original version ~ ax12o may be more practical to work with because of the "distinctor" form of its antecedents. A typical application of ~ ax12o is in ~ dvelimh which converts a distinct variable pair to the distinctor antecendent ` -. A. x x = y ` . This axiom can be weakened if desired by adding distinct variable restrictions on pairs ` x , z ` and ` y , z ` . To show that, we add these restrictions to Theorem ~ ax12v and use only ~ ax12v for further derivations. Thus, ~ ax12v should be the only theorem referencing this axiom. Other theorems can reference either ~ ax12v or ~ ax12o . This axiom scheme is logically redundant (see ~ ax12w ) but is used as an auxiliary axiom to achieve metalogical completeness. (Contributed by NM, 21-Dec-2015.) (New usage is discouraged.)
+axiom ax_12 (x y z: setvar):
+  $ wi (wn (wceq (cv x) (cv y))) (wi (wceq (cv y) (cv z)) (wal (wceq (cv y) (cv z)) x)) $;
+
+--| Extend wff definition to include existential uniqueness ("there exists a unique ` x ` such that ` ph ` ").
+term weu (ph: wff) (x: setvar): wff;
+
+--| Extend wff definition to include uniqueness ("there exists at most one ` x ` such that ` ph ` ").
+term wmo (ph: wff) (x: setvar): wff;
+
+--| Define existential uniqueness, i.e. "there exists exactly one ` x ` such that ` ph ` ." Definition 10.1 of [BellMachover] p. 97; also Definition *14.02 of [WhiteheadRussell] p. 175. Other possible definitions are given by ~ eu1 , ~ eu2 , ~ eu3 , and ~ eu5 (which in some cases we show with a hypothesis ` ph -> A. y ph ` in place of a distinct variable condition on ` y ` and ` ph ` ). Double uniqueness is tricky: ` E! x E! y ph ` does not mean "exactly one ` x ` and one ` y ` " (see ~ 2eu4 ). (Contributed by NM, 12-Aug-1993.)
+axiom df_eu (ph: wff) (x y: setvar):
+  $ wb (weu ph x) (wex (wal (wb ph (wceq (cv x) (cv y))) x) y) $;
+
+--| Define "there exists at most one ` x ` such that ` ph ` ." Here we define it in terms of existential uniqueness. Notation of [BellMachover] p. 460, whose definition we show as ~ mo3 . For other possible definitions see ~ mo2 and ~ mo4 . (Contributed by NM, 8-Mar-1995.)
+axiom df_mo (ph: wff) (x: setvar):
+  $ wb (wmo ph x) (wi (wex ph x) (weu ph x)) $;
+
+--| Axiom of Extensionality. An axiom of Zermelo-Fraenkel set theory. It states that two sets are identical if they contain the same elements. Axiom Ext of [BellMachover] p. 461. Set theory can also be formulated with a _single_ primitive predicate ` e. ` on top of traditional predicate calculus _without_ equality. In that case the Axiom of Extensionality becomes ` ( A. w ( w e. x <-> w e. y ) -> ( x e. z -> y e. z ) ) ` , and equality ` x = y ` is _defined_ as ` A. w ( w e. x <-> w e. y ) ` . All of the usual axioms of equality then become theorems of set theory. See, for example, Axiom 1 of [TakeutiZaring] p. 8. To use the above "equality-free" version of Extensionality with Metamath's logical axioms, we would rewrite ~ ax-8 through ~ ax-16 with equality expanded according to the above definition. Some of those axioms could be proved from set theory and would be redundant. Not all of them are redundant, since our axioms of predicate calculus make essential use of equality for the proper substitution that is a primitive notion in traditional predicate calculus. A study of such an axiomatization would be an interesting project for someone exploring the foundations of logic. _General remarks_: Our set theory axioms are presented using defined connectives ( ` <-> ` , ` E. ` , etc.) for convenience. However, it is implicitly understood that the actual axioms use only the primitive connectives ` -> ` , ` -. ` , ` A. ` , ` = ` , and ` e. ` . It is straightforward to establish the equivalence between the actual axioms and the ones we display, and we will not do so. It is important to understand that strictly speaking, all of our set theory axioms are really schemes that represent an infinite number of actual axioms. This is inherent in the design of Metamath ("metavariable math"), which manipulates only metavariables. For example, the metavariable ` x ` in ~ ax-ext can represent any actual variable _v1_, _v2_, _v3_,... . Distinct variable restrictions ($d) prevent us from substituting say _v1_ for both ` x ` and ` z ` . This is in contrast to typical textbook presentations that present actual axioms (except for ZFC Replacement ax-rep in set.mm, which involves a wff metavariable). In practice, though, the theorems and proofs are essentially the same. The $d restrictions make each of the infinite axioms generated by the ~ ax-ext scheme exactly logically equivalent to each other and in particular to the actual axiom of the textbook version. (Contributed by NM, 5-Aug-1993.)
+axiom ax_ext (x y z: setvar):
+  $ wi (wal (wb (wcel (cv z) (cv x)) (wcel (cv z) (cv y))) z) (wceq (cv x) (cv y)) $;
+
+--| Introduce the class builder or class abstraction notation ("the class of sets ` x ` such that ` ph ` is true"). Our class variables ` A ` , ` B ` , etc. range over class builders (implicitly in the case of defined class terms such as ~ df-nul ). Note that a setvar variable can be expressed as a class builder per Theorem ~ cvjust , justifying the assignment of setvar variables to class variables via the use of ~ cv .
+term cab (ph: wff) (x: setvar): class;
+
+--| Define class abstraction notation (so-called by Quine), also called a "class builder" in the literature. ` x ` and ` y ` need not be distinct. Definition 2.1 of [Quine] p. 16. Typically, ` ph ` will have ` y ` as a free variable, and " ` { y | ph } ` " is read "the class of all sets ` y ` such that ` ph ( y ) ` is true." We do not define ` { y | ph } ` in isolation but only as part of an expression that extends or "overloads" the ` e. ` relationship. This is our first use of the ` e. ` symbol to connect classes instead of sets. The syntax definition ~ wcel , which extends or "overloads" the ~ wel definition connecting setvar variables, requires that both sides of ` e. ` be a class. In ~ df-cleq and ~ df-clel , we introduce a new kind of variable (class variable) that can substituted with expressions such as ` { y | ph } ` . In the present definition, the ` x ` on the left-hand side is a setvar variable. Syntax definition ~ cv allows us to substitute a setvar variable ` x ` for a class variable: all sets are classes by ~ cvjust (but not necessarily vice-versa). For a full description of how classes are introduced and how to recover the primitive language, see the discussion in Quine (and under ~ eqabb for a quick overview). Because class variables can be substituted with compound expressions and setvar variables cannot, it is often useful to convert a theorem containing a free setvar variable to a more general version with a class variable. This is done with theorems such as ~ vtoclg which is used, for example, to convert elirrv in set.mm to elirr in set.mm. This is called the "axiom of class comprehension" by [Levy] p. 338, who treats the theory of classes as an extralogical extension to our logic and set theory axioms. He calls the construction ` { y | ph } ` a "class term". For a general discussion of the theory of classes, see ~ https://us.metamath.org/mpeuni/mmset.html#class . (Contributed by NM, 5-Aug-1993.)
+axiom df_clab (ph: wff) (x y: setvar):
+  $ wb (wcel (cv x) (cab ph y)) (wsb ph y x) $;
+
+--| Define the equality connective between classes. Definition 2.7 of [Quine] p. 18. Also Definition 4.5 of [TakeutiZaring] p. 13; Chapter 4 provides its justification and methods for eliminating it. Note that its elimination will not necessarily result in a single wff in the original language but possibly a "scheme" of wffs. This is an example of a somewhat "risky" definition, meaning that it has a more complex than usual soundness justification (outside of Metamath), because it "overloads" or reuses the existing equality symbol rather than introducing a new symbol. This allows us to make statements that may not hold for the original symbol. For example, it permits us to deduce ` y = z <-> A. x ( x e. y <-> x e. z ) ` , which is not a theorem of logic but rather presupposes the Axiom of Extensionality (see Theorem ~ axext4 ). We therefore include this axiom as a hypothesis, so that the use of Extensionality is properly indicated. We could avoid this complication by introducing a new symbol, say =_2, in place of ` = ` . This would also have the advantage of making elimination of the definition straightforward, so that we could eliminate Extensionality as a hypothesis. We would then also have the advantage of being able to identify in various proofs exactly where Extensionality truly comes into play rather than just being an artifact of a definition. One of our theorems would then be ` x ` =_2 ` y <-> x = y ` by invoking Extensionality. However, to conform to literature usage, we retain this overloaded definition. This also makes some proofs shorter and probably easier to read, without the constant switching between two kinds of equality. See also comments under ~ df-clab , ~ df-clel , and ~ eqabb . In the form of ~ dfcleq , this is called the "axiom of extensionality" by [Levy] p. 338, who treats the theory of classes as an extralogical extension to our logic and set theory axioms. For a general discussion of the theory of classes, see ~ https://us.metamath.org/mpeuni/mmset.html#class . (Contributed by NM, 15-Sep-1993.)
+axiom df_cleq (x y z: setvar) (A2 B2: class):
+  $ wi (wal (wb (wcel (cv x) (cv y)) (wcel (cv x) (cv z))) x) (wceq (cv y) (cv z)) $ >
+  $ wb (wceq A2 B2) (wal (wb (wcel (cv x) A2) (wcel (cv x) B2)) x) $;
+
+--| Define the membership connective between classes. Theorem 6.3 of [Quine] p. 41, or Proposition 4.6 of [TakeutiZaring] p. 13, which we adopt as a definition. See these references for its metalogical justification. Note that like ~ df-cleq it extends or "overloads" the use of the existing membership symbol, but unlike ~ df-cleq it does not strengthen the set of valid wffs of logic when the class variables are replaced with setvar variables (see ~ cleljust ), so we don't include any set theory axiom as a hypothesis. See also comments about the syntax under ~ df-clab . Alternate definitions of ` A e. B ` (but that require either ` A ` or ` B ` to be a set) are shown by ~ clel2 , ~ clel3 , and ~ clel4 . This is called the "axiom of membership" by [Levy] p. 338, who treats the theory of classes as an extralogical extension to our logic and set theory axioms. For a general discussion of the theory of classes, see ~ https://us.metamath.org/mpeuni/mmset.html#class . (Contributed by NM, 5-Aug-1993.)
+axiom df_clel (x: setvar) (A2 B2: class):
+  $ wb (wcel A2 B2) (wex (wa (wceq (cv x) A2) (wcel (cv x) B2)) x) $;
+
+--| Extend wff definition to include the not-free predicate for classes.
+term wnfc (x: setvar) (A2: class): wff;
+
+--| Define the not-free predicate for classes. This is read " ` x ` is not free in ` A ` ". Not-free means that the value of ` x ` cannot affect the value of ` A ` , e.g., any occurrence of ` x ` in ` A ` is effectively bound by a "for all" or something that expands to one (such as "there exists"). It is defined in terms of the not-free predicate ~ df-nf for wffs; see that definition for more information. (Contributed by Mario Carneiro, 11-Aug-2016.)
+axiom df_nfc (x y: setvar) (A2: class):
+  $ wb (wnfc x A2) (wal (wnf (wcel (cv y) A2) x) y) $;
+
+--| Extend wff notation to include inequality.
+term wne (A2 B2: class): wff;
+
+--| Define inequality. (Contributed by NM, 5-Aug-1993.)
+axiom df_ne (A2 B2: class):
+  $ wb (wne A2 B2) (wn (wceq A2 B2)) $;
+
+--| Extend wff notation to include restricted universal quantification.
+term wral (ph: wff) (x: setvar) (A2: class): wff;
+
+--| Extend wff notation to include restricted existential quantification.
+term wrex (ph: wff) (x: setvar) (A2: class): wff;
+
+--| Extend wff notation to include restricted existential uniqueness.
+term wreu (ph: wff) (x: setvar) (A2: class): wff;
+
+--| Extend wff notation to include restricted "at most one."
+term wrmo (ph: wff) (x: setvar) (A2: class): wff;
+
+--| Extend class notation to include the restricted class abstraction (class builder).
+term crab (ph: wff) (x: setvar) (A2: class): class;
+
+--| Define restricted universal quantification. Special case of Definition 4.15(3) of [TakeutiZaring] p. 22. (Contributed by NM, 19-Aug-1993.)
+axiom df_ral (ph: wff) (x: setvar) (A2: class):
+  $ wb (wral ph x A2) (wal (wi (wcel (cv x) A2) ph) x) $;
+
+--| Define restricted existential quantification. Special case of Definition 4.15(4) of [TakeutiZaring] p. 22. (Contributed by NM, 30-Aug-1993.)
+axiom df_rex (ph: wff) (x: setvar) (A2: class):
+  $ wb (wrex ph x A2) (wex (wa (wcel (cv x) A2) ph) x) $;
+
+--| Define restricted existential uniqueness. (Contributed by NM, 22-Nov-1994.)
+axiom df_reu (ph: wff) (x: setvar) (A2: class):
+  $ wb (wreu ph x A2) (weu (wa (wcel (cv x) A2) ph) x) $;
+
+--| Define restricted "at most one". (Contributed by NM, 16-Jun-2017.)
+axiom df_rmo (ph: wff) (x: setvar) (A2: class):
+  $ wb (wrmo ph x A2) (wmo (wa (wcel (cv x) A2) ph) x) $;
+
+--| Define a restricted class abstraction (class builder), which is the class of all ` x ` in ` A ` such that ` ph ` is true. Definition of [TakeutiZaring] p. 20. (Contributed by NM, 22-Nov-1994.)
+axiom df_rab (ph: wff) (x: setvar) (A2: class):
+  $ wceq (crab ph x A2) (cab (wa (wcel (cv x) A2) ph) x) $;
+
+--| Extend class notation to include the universal class symbol.
+term cvv: class;
+
+--| Define the universal class. Definition 5.20 of [TakeutiZaring] p. 21. Also Definition 2.9 of [Quine] p. 19. (Contributed by NM, 5-Aug-1993.)
+axiom df_v (x: setvar):
+  $ wceq cvv (cab (wceq (cv x) (cv x)) x) $;
+
+--| Extend wff notation to include the proper substitution of a class for a set. Read this notation as "the proper substitution of class ` A ` for setvar variable ` x ` in wff ` ph ` ."
+term wsbc (ph: wff) (x: setvar) (A2: class): wff;
+
+--| Define the proper substitution of a class for a set. When ` A ` is a proper class, our definition evaluates to false. This is somewhat arbitrary: we could have, instead, chosen the conclusion of ~ sbc6 for our definition, which always evaluates to true for proper classes. Our definition also does not produce the same results as discussed in the proof of Theorem 6.6 of [Quine] p. 42 (although Theorem 6.6 itself does hold, as shown by ~ dfsbcq below). For example, if ` A ` is a proper class, Quine's substitution of ` A ` for ` y ` in 0 ` e. y ` evaluates to 0 ` e. A ` rather than our falsehood. (This can be seen by substituting ` A ` , ` y ` , and 0 for alpha, beta, and gamma in Subcase 1 of Quine's discussion on p. 42.) Unfortunately, Quine's definition requires a recursive syntactical breakdown of ` ph ` , and it does not seem possible to express it with a single closed formula. If we did not want to commit to any specific proper class behavior, we could use this definition _only_ to prove Theorem ~ dfsbcq , which holds for both our definition and Quine's, and from which we can derive a weaker version of ~ df-sbc in the form of ~ sbc8g . However, the behavior of Quine's definition at proper classes is similarly arbitrary, and for practical reasons (to avoid having to prove sethood of ` A ` in every use of this definition) we allow direct reference to ~ df-sbc and assert that ` [. A / x ]. ph ` is always false when ` A ` is a proper class. Theorem ~ sbc2or shows the apparently "strongest" statement we can make regarding behavior at proper classes if we start from ~ dfsbcq . The related definition ~ df-csb defines proper substitution into a class variable (as opposed to a wff variable). (Contributed by NM, 14-Apr-1995.) (Revised by NM, 25-Dec-2016.)
+axiom df_sbc (ph: wff) (x: setvar) (A2: class):
+  $ wb (wsbc ph x A2) (wcel A2 (cab ph x)) $;
+
+--| Extend class notation to include the proper substitution of a class for a set into another class.
+term csb (x: setvar) (A2 B2: class): class;
+
+--| Define the proper substitution of a class for a set into another class. The underlined brackets distinguish it from the substitution into a wff, ~ wsbc , to prevent ambiguity. Theorem ~ sbcel1g shows an example of how ambiguity could arise if we didn't use distinguished brackets. Theorem ~ sbccsbg recreates substitution into a wff from this definition. (Contributed by NM, 10-Nov-2005.)
+axiom df_csb (x y: setvar) (A2 B2: class):
+  $ wceq (csb x A2 B2) (cab (wsbc (wcel (cv y) B2) x A2) y) $;
+
+--| Extend class notation to include anti-intersection (read: "the anti-intersection of ` A ` and ` B ` ").
+term cnin (A2 B2: class): class;
+
+--| Extend class notation to include complement. (read: "the complement of ` A ` " ).
+term ccompl (A2: class): class;
+
+--| Extend class notation to include class difference (read: " ` A ` minus ` B ` ").
+term cdif (A2 B2: class): class;
+
+--| Extend class notation to include union of two classes (read: " ` A ` union ` B ` ").
+term cun (A2 B2: class): class;
+
+--| Extend class notation to include the intersection of two classes (read: " ` A ` intersect ` B ` ").
+term cin (A2 B2: class): class;
+
+--| Extend class notation to include the symmetric difference of two classes.
+term csymdif (A2 B2: class): class;
+
+--| Define the anti-intersection of two classes. This operation is used implicitly after Axiom P1 of [Hailperin] p. 6, though there does not seem to be any notation for it in the literature. (Contributed by SF, 10-Jan-2015.)
+axiom df_nin (x: setvar) (A2 B2: class):
+  $ wceq (cnin A2 B2) (cab (wnan (wcel (cv x) A2) (wcel (cv x) B2)) x) $;
+
+--| Define the complement of a class. Compare ~ nic-dfneg . (Contributed by SF, 10-Jan-2015.)
+axiom df_compl (A2: class):
+  $ wceq (ccompl A2) (cnin A2 A2) $;
+
+--| Define the intersection of two classes. See ~ elin for membership. (Contributed by SF, 10-Jan-2015.)
+axiom df_in (A2 B2: class):
+  $ wceq (cin A2 B2) (ccompl (cnin A2 B2)) $;
+
+--| Define the union of two classes. See ~ elun for membership. (Contributed by SF, 10-Jan-2015.)
+axiom df_un (A2 B2: class):
+  $ wceq (cun A2 B2) (cnin (ccompl A2) (ccompl B2)) $;
+
+--| Define the difference of two classes. See ~ eldif for membership. (Contributed by SF, 10-Jan-2015.)
+axiom df_dif (A2 B2: class):
+  $ wceq (cdif A2 B2) (cin A2 (ccompl B2)) $;
+
+--| Define the symmetric difference of two classes. Definition IX.9.10, [Rosser] p. 238. (Contributed by SF, 10-Jan-2015.)
+axiom df_symdif (A2 B2: class):
+  $ wceq (csymdif A2 B2) (cun (cdif A2 B2) (cdif B2 A2)) $;
+
+--| Extend wff notation to include the subclass relation. This is read " ` A ` is a subclass of ` B ` " or " ` B ` includes ` A ` ." When ` A ` exists as a set, it is also read " ` A ` is a subset of ` B ` ."
+term wss (A2 B2: class): wff;
+
+--| Extend wff notation with proper subclass relation.
+term wpss (A2 B2: class): wff;
+
+--| Define the subclass relationship. Exercise 9 of [TakeutiZaring] p. 18. For example, ` { ` 1 , 2 ` } C_ { ` 1 , 2 , 3 ` } ` (ex-ss in set.mm). Note that ` A C_ A ` (proved in ~ ssid ). Contrast this relationship with the relationship ` A C. B ` (as will be defined in ~ df-pss ). For a more traditional definition, but requiring a dummy variable, see ~ dfss2 . Other possible definitions are given by ~ dfss3 , ~ dfss4 , ~ sspss , ~ ssequn1 , ~ ssequn2 , ~ sseqin2 , and ~ ssdif0 . (Contributed by NM, 27-Apr-1994.)
+axiom df_ss (A2 B2: class):
+  $ wb (wss A2 B2) (wceq (cin A2 B2) A2) $;
+
+--| Define proper subclass relationship between two classes. Definition 5.9 of [TakeutiZaring] p. 17. For example, ` { ` 1 , 2 ` } C. { ` 1 , 2 , 3 ` } ` (ex-pss in set.mm). Note that ` -. A C. A ` (proved in ~ pssirr ). Contrast this relationship with the relationship ` A C_ B ` (as defined in ~ df-ss ). Other possible definitions are given by ~ dfpss2 and ~ dfpss3 . (Contributed by NM, 7-Feb-1996.)
+axiom df_pss (A2 B2: class):
+  $ wb (wpss A2 B2) (wa (wss A2 B2) (wne A2 B2)) $;
+
+--| Extend class notation to include the empty set.
+term c0: class;
+
+--| Define the empty set. Special case of Exercise 4.10(o) of [Mendelson] p. 231. For a more traditional definition, but requiring a dummy variable, see ~ dfnul2 . (Contributed by NM, 5-Aug-1993.)
+axiom df_nul:
+  $ wceq c0 (cdif cvv cvv) $;
+
+--| Extend class notation to include the conditional operator. See ~ df-if for a description. (In older databases this was denoted "ded".)
+term cif (ph: wff) (A2 B2: class): class;
+
+--| Define the conditional operator. Read ` if ( ph , A , B ) ` as "if ` ph ` then ` A ` else ` B ` ." See ~ iftrue and ~ iffalse for its values. In mathematical literature, this operator is rarely defined formally but is implicit in informal definitions such as "let f(x)=0 if x=0 and 1/x otherwise." (In older versions of this database, this operator was denoted "ded" and called the "deduction class.") An important use for us is in conjunction with the weak deduction theorem, which converts a hypothesis into an antecedent. In that role, ` A ` is a class variable in the hypothesis and ` B ` is a class (usually a constant) that makes the hypothesis true when it is substituted for ` A ` . See ~ dedth for the main part of the weak deduction theorem, ~ elimhyp to eliminate a hypothesis, and ~ keephyp to keep a hypothesis. See the Deduction Theorem link on the Metamath Proof Explorer Home Page for a description of the weak deduction theorem. (Contributed by NM, 15-May-1999.)
+axiom df_if (ph: wff) (x: setvar) (A2 B2: class):
+  $ wceq (cif ph A2 B2) (cab (wo (wa (wcel (cv x) A2) ph) (wa (wcel (cv x) B2) (wn ph))) x) $;
+
+--| Extend class notation to include power class. (The tilde in the Metamath token is meant to suggest the calligraphic font of the P.)
+term cpw (A2: class): class;
+
+--| Define power class. Definition 5.10 of [TakeutiZaring] p. 17, but we also let it apply to proper classes, i.e. those that are not members of ` _V ` . When applied to a set, this produces its power set. A power set of S is the set of all subsets of S, including the empty set and S itself. For example, if ` A = { ` 3 , 5 , 7 ` } ` , then ` ~P A = { (/) , { ` 3 ` } , { ` 5 ` } , { ` 7 ` } , { ` 3 , 5 ` } , ` ` { ` 3 , 7 ` } , { ` 5 , 7 ` } , { ` 3 , 5 , 7 ` } } ` (ex-pw in set.mm). We will later introduce the Axiom of Power Sets ax-pow in set.mm, which can be expressed in class notation per ~ pwexg . Still later we will prove, in hashpw in set.mm, that the size of the power set of a finite set is 2 raised to the power of the size of the set. (Contributed by NM, 5-Aug-1993.)
+axiom df_pw (x: setvar) (A2: class):
+  $ wceq (cpw A2) (cab (wss (cv x) A2) x) $;
+
+--| Extend class notation to include singleton.
+term csn (A2: class): class;
+
+--| Extend class notation to include unordered pair.
+term cpr (A2 B2: class): class;
+
+--| Define the singleton of a class. Definition 7.1 of [Quine] p. 48. For convenience, it is well-defined for proper classes, i.e., those that are not elements of ` _V ` , although it is not very meaningful in this case. For an alternate definition see ~ dfsn2 . (Contributed by NM, 5-Aug-1993.)
+axiom df_sn (x: setvar) (A2: class):
+  $ wceq (csn A2) (cab (wceq (cv x) A2) x) $;
+
+--| Define unordered pair of classes. Definition 7.1 of [Quine] p. 48. For example, ` A e. { ` 1 , -u 1 ` } -> ( A ` ^ 2 ` ) = ` 1 (ex-pr in set.mm). They are unordered, so ` { A , B } = { B , A } ` as proven by ~ prcom . For a more traditional definition, but requiring a dummy variable, see ~ dfpr2 . (Contributed by NM, 5-Aug-1993.)
+axiom df_pr (A2 B2: class):
+  $ wceq (cpr A2 B2) (cun (csn A2) (csn B2)) $;
+
+--| Extend class notation to include the union of a class (read: 'union ` A ` ')
+term cuni (A2: class): class;
+
+--| Define the union of a class i.e. the collection of all members of the members of the class. Definition 5.5 of [TakeutiZaring] p. 16. For example, ` U. { { ` 1 , 3 ` } , { ` 1 , 8 ` } } = { ` 1 , 3 , 8 ` } ` (ex-uni in set.mm). This is similar to the union of two classes ~ df-un . (Contributed by NM, 23-Aug-1993.)
+axiom df_uni (x y: setvar) (A2: class):
+  $ wceq (cuni A2) (cab (wex (wa (wcel (cv x) (cv y)) (wcel (cv y) A2)) y) x) $;
+
+--| Extend class notation to include the intersection of a class (read: 'intersect ` A ` ').
+term cint (A2: class): class;
+
+--| Define the intersection of a class. Definition 7.35 of [TakeutiZaring] p. 44. For example, ` |^| { { ` 1 , 3 ` } , { ` 1 , 8 ` } } = { ` 1 ` } ` . Compare this with the intersection of two classes, ~ df-in . (Contributed by NM, 18-Aug-1993.)
+axiom df_int (x y: setvar) (A2: class):
+  $ wceq (cint A2) (cab (wal (wi (wcel (cv y) A2) (wcel (cv x) (cv y))) y) x) $;
+
+--| Extend class notation to include indexed union. Note: Historically (prior to 21-Oct-2005), set.mm used the notation ` U. x e. A B ` , with the same union symbol as ~ cuni . While that syntax was unambiguous, it did not allow for LALR parsing of the syntax constructions in set.mm. The new syntax uses as distinguished symbol ` U_ ` instead of ` U. ` and does allow LALR parsing. Thanks to Peter Backes for suggesting this change.
+term ciun (x: setvar) (A2 B2: class): class;
+
+--| Define indexed union. Definition indexed union in [Stoll] p. 45. In most applications, ` A ` is independent of ` x ` (although this is not required by the definition), and ` B ` depends on ` x ` i.e. can be read informally as ` B ( x ) ` . We call ` x ` the index, ` A ` the index set, and ` B ` the indexed set. In most books, ` x e. A ` is written as a subscript or underneath a union symbol ` U. ` . We use a special union symbol ` U_ ` to make it easier to distinguish from plain class union. In many theorems, you will see that ` x ` and ` A ` are in the same distinct variable group (meaning ` A ` cannot depend on ` x ` ) and that ` B ` and ` x ` do not share a distinct variable group (meaning that can be thought of as ` B ( x ) ` i.e. can be substituted with a class expression containing ` x ` ). An alternate definition tying indexed union to ordinary union is ~ dfiun2 . Theorem ~ uniiun provides a definition of ordinary union in terms of indexed union. Theorems ~ fniunfv and ~ funiunfv are useful when ` B ` is a function. (Contributed by NM, 27-Jun-1998.)
+axiom df_iun (x y: setvar) (A2 B2: class):
+  $ wceq (ciun x A2 B2) (cab (wrex (wcel (cv y) B2) x A2) y) $;
+
+--| Extend class notation to include Kuratowski ordered pair.
+term copk (A2 B2: class): class;
+
+--| Define the Kuratowski ordered pair. This ordered pair definition is standard for ZFC set theory, but we do not use it beyond establishing ~ df-op , since it is not type-level. We state this definition since it is a simple definition that can be used by the set construction axioms that follow this section. (Contributed by SF, 12-Jan-2015.)
+axiom df_opk (A2 B2: class):
+  $ wceq (copk A2 B2) (cpr (csn A2) (cpr A2 B2)) $;
+
+--| State the axiom of anti-intersection. Axiom P1 of [Hailperin] p. 6. This axiom sets up boolean operations on sets. Note on this and the following axioms: this axiom, ~ ax-xp , ~ ax-cnv , ~ ax-1c , ~ ax-sset , ~ ax-si , ~ ax-ins2 , ~ ax-ins3 , and ~ ax-typlower are from Hailperin and are designed to implement the Stratification Axiom of Quine. A well-formed formula using only propositional symbols, predicate symbols, and ` e. ` is "stratified" iff you can make a (metalogical) mapping from the variables to the natural numbers such that any formulas of the form ` x = y ` have the same number, and any formulas of the form ` x e. y ` have ` x ` as one less than ` y ` . Quine's stratification axiom states that there is a set corresponding to any stratified formula. Since we cannot state stratification from within the logic, we use Hailperin's axioms and prove existence of stratified sets using Hailperin's algorithm. (Contributed by SF, 12-Jan-2015.)
+axiom ax_nin (x y z w: setvar):
+  $ wex (wal (wb (wcel (cv w) (cv z)) (wnan (wcel (cv w) (cv x)) (wcel (cv w) (cv y)))) w) z $;
+
+--| State the axiom of cross product. This axiom guarantees the existence of the (Kuratowski) cross product of ` _V ` with ` x ` . Axiom P5 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_xp (x y z w t: setvar):
+  $ wex (wal (wb (wcel (cv z) (cv y)) (wex (wex (wa (wceq (cv z) (copk (cv w) (cv t))) (wcel (cv t) (cv x))) t) w)) z) y $;
+
+--| State the axiom of converse. This axiom guarantees the existence of the Kuratowski converse of ` x ` . Axiom P7 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_cnv (x y z w: setvar):
+  $ wex (wal (wal (wb (wcel (copk (cv z) (cv w)) (cv y)) (wcel (copk (cv w) (cv z)) (cv x))) w) z) y $;
+
+--| State the axiom of cardinal one. This axiom guarantees the existence of the set of all singletons, which will become cardinal one later in our development. Axiom P8 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_1c (x y z w: setvar):
+  $ wex (wal (wb (wcel (cv y) (cv x)) (wex (wal (wb (wcel (cv w) (cv y)) (wceq (cv w) (cv z))) w) z)) y) x $;
+
+--| State the axiom of the subset relationship. This axiom guarantees the existence of the Kuratowski relationship representing subset. Slight generalization of axiom P9 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_sset (x y z w: setvar):
+  $ wex (wal (wal (wb (wcel (copk (cv y) (cv z)) (cv x)) (wal (wi (wcel (cv w) (cv y)) (wcel (cv w) (cv z))) w)) z) y) x $;
+
+--| State the axiom of the singleton image. This axiom guarantees that guarantees the existence of a set that raises the "type" of another set when considered as a relationship. Axiom P2 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_si (x y z w: setvar):
+  $ wex (wal (wal (wb (wcel (copk (csn (cv z)) (csn (cv w))) (cv y)) (wcel (copk (cv z) (cv w)) (cv x))) w) z) y $;
+
+--| State the insertion two axiom. This axiom sets up a set that inserts an extra variable at the second place of the relationship described by ` x ` . Axiom P3 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_ins2 (x y z w t: setvar):
+  $ wex (wal (wal (wal (wb (wcel (copk (csn (csn (cv z))) (copk (cv w) (cv t))) (cv y)) (wcel (copk (cv z) (cv t)) (cv x))) t) w) z) y $;
+
+--| State the insertion three axiom. This axiom sets up a set that inserts an extra variable at the third place of the relationship described by ` x ` . Axiom P4 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_ins3 (x y z w t: setvar):
+  $ wex (wal (wal (wal (wb (wcel (copk (csn (csn (cv z))) (copk (cv w) (cv t))) (cv y)) (wcel (copk (cv z) (cv w)) (cv x))) t) w) z) y $;
+
+--| The type lowering axiom. This axiom eventually sets up both the existence of the sum set and the existence of the range of a relationship. Axiom P6 of [Hailperin] p. 10. (Contributed by SF, 12-Jan-2015.)
+axiom ax_typlower (x y z w: setvar):
+  $ wex (wal (wb (wcel (cv z) (cv y)) (wal (wcel (copk (cv w) (csn (cv z))) (cv x)) w)) z) y $;
+
+--| The singleton axiom. This axiom sets up the existence of a singleton set. This appears to have been an oversight on Hailperin's part, as it is needed to prove the properties of Kuratowski ordered pairs. (Contributed by SF, 12-Jan-2015.)
+axiom ax_sn (x y z: setvar):
+  $ wex (wal (wb (wcel (cv z) (cv y)) (wceq (cv z) (cv x))) z) y $;
+
+--| Extend class notation to include the unit union of a class (read: 'unit union ` A ` ')
+term cuni1 (A2: class): class;
+
+--| Extend the definition of a class to include cardinal one.
+term c1c: class;
+
+--| Extend class notation to include unit power class.
+term cpw1 (A2: class): class;
+
+--| Define cardinal one. This is the set of all singletons, or the set of all sets of size one. (Contributed by SF, 12-Jan-2015.)
+axiom df_1c (x y: setvar):
+  $ wceq c1c (cab (wex (wceq (cv x) (csn (cv y))) y) x) $;
+
+--| Define unit power class. Definition from [Rosser] p. 252. (Contributed by SF, 12-Jan-2015.)
+axiom df_pw1 (A2: class):
+  $ wceq (cpw1 A2) (cin (cpw A2) c1c) $;
+
+--| Define the unit union of a class. This operation is used implicitly in both Holmes and Hailperin to complete their stratification algorithms, although neither provide explicit notation for it. See ~ eluni1 for membership condition. (Contributed by SF, 12-Jan-2015.)
+axiom df_uni1 (A2: class):
+  $ wceq (cuni1 A2) (cuni (cin A2 c1c)) $;
+
+--| Extend the definition of a class to include the Kuratowski cross product.
+term cxpk (A2 B2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski converse of a class.
+term ccnvk (A2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski second insertion operator.
+term cins2k (A2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski third insertion operator.
+term cins3k (A2: class): class;
+
+--| Extend the definition of a class to include the P6 operator (the set guaranteed by ~ ax-typlower ).
+term cp6 (A2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski image of a class. (Read: The image of ` B ` under ` A ` .)
+term cimak (A2 B2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski composition of two classes. (Read: The composition of ` A ` and ` B ` .)
+term ccomk (A2 B2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski singleton image.
+term csik (A2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski image functor.
+term cimagek (A2: class): class;
+
+--| Extend the definition of a class to include the Kuratowski subset relationship.
+term cssetk: class;
+
+--| Extend the definition of a class to include the Kuratowski identity relationship.
+term cidk: class;
+
+--| Define the Kuratowski cross product. This definition through ~ df-idk set up the Kuratowski relationships. These are used mainly to prove the properties of ~ df-op , and are not used thereafter. (Contributed by SF, 12-Jan-2015.)
+axiom df_xpk (x y z: setvar) (A2 B2: class):
+  $ wceq (cxpk A2 B2) (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wa (wcel (cv y) A2) (wcel (cv z) B2))) z) y) x) $;
+
+--| Define the Kuratowski converse. (Contributed by SF, 12-Jan-2015.)
+axiom df_cnvk (x y z: setvar) (A2: class):
+  $ wceq (ccnvk A2) (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wcel (copk (cv z) (cv y)) A2)) z) y) x) $;
+
+--| Define the Kuratowski second insertion operator. (Contributed by SF, 12-Jan-2015.)
+axiom df_ins2k (x y z v u t: setvar) (A2: class):
+  $ wceq (cins2k A2) (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wex (wex (wex (w3a (wceq (cv y) (csn (csn (cv t)))) (wceq (cv z) (copk (cv u) (cv v))) (wcel (copk (cv t) (cv v)) A2)) v) u) t)) z) y) x) $;
+
+--| Define the Kuratowski third insertion operator. (Contributed by SF, 12-Jan-2015.)
+axiom df_ins3k (x y z v u t: setvar) (A2: class):
+  $ wceq (cins3k A2) (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wex (wex (wex (w3a (wceq (cv y) (csn (csn (cv t)))) (wceq (cv z) (copk (cv u) (cv v))) (wcel (copk (cv t) (cv u)) A2)) v) u) t)) z) y) x) $;
+
+--| Define the Kuratowski image operator. (Contributed by SF, 12-Jan-2015.)
+axiom df_imak (x y: setvar) (A2 B2: class):
+  $ wceq (cimak A2 B2) (cab (wrex (wcel (copk (cv y) (cv x)) A2) y B2) x) $;
+
+--| Define the Kuratowski composition operator. (Contributed by SF, 12-Jan-2015.)
+axiom df_cok (A2 B2: class):
+  $ wceq (ccomk A2 B2) (cimak (cin (cins2k A2) (cins3k (ccnvk B2))) cvv) $;
+
+--| Define the P6 operator. This is the set guaranteed by ~ ax-typlower . (Contributed by SF, 12-Jan-2015.)
+axiom df_p6 (x: setvar) (A2: class):
+  $ wceq (cp6 A2) (cab (wss (cxpk cvv (csn (csn (cv x)))) A2) x) $;
+
+--| Define the Kuratowski singleton image operation. (Contributed by SF, 12-Jan-2015.)
+axiom df_sik (x y z u t: setvar) (A2: class):
+  $ wceq (csik A2) (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wex (wex (w3a (wceq (cv y) (csn (cv t))) (wceq (cv z) (csn (cv u))) (wcel (copk (cv t) (cv u)) A2)) u) t)) z) y) x) $;
+
+--| Define the Kuratowski subset relationship. (Contributed by SF, 12-Jan-2015.)
+axiom df_ssetk (x y z: setvar):
+  $ wceq cssetk (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wss (cv y) (cv z))) z) y) x) $;
+
+--| Define the Kuratowski image function. See ~ opkelimagek for membership. (Contributed by SF, 12-Jan-2015.)
+axiom df_imagek (A2: class):
+  $ wceq (cimagek A2) (cdif (cxpk cvv cvv) (cimak (csymdif (cins2k cssetk) (cins3k (ccomk cssetk (ccnvk (csik A2))))) (cpw1 (cpw1 c1c)))) $;
+
+--| Define the Kuratowski identity relationship. (Contributed by SF, 12-Jan-2015.)
+axiom df_idk (x y z: setvar):
+  $ wceq cidk (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wceq (cv y) (cv z))) z) y) x) $;
+
+--| Extend class notation with Russell's definition description binder (inverted iota).
+term cio (ph: wff) (x: setvar): class;
+
+--| Define Russell's definition description binder, which can be read as "the unique ` x ` such that ` ph ` ," where ` ph ` ordinarily contains ` x ` as a free variable. Our definition is meaningful only when there is exactly one ` x ` such that ` ph ` is true (see ~ iotaval ); otherwise, it evaluates to the empty set (see ~ iotanul ). Russell used the inverted iota symbol ` iota ` to represent the binder. (Contributed by SF, 12-Jan-2015.)
+axiom df_iota (ph: wff) (x y: setvar):
+  $ wceq (cio ph x) (cuni (cab (wceq (cab ph x) (csn (cv y))) y)) $;
+
+--| Extend the definition of a class to include the set of finite cardinals.
+term cnnc: class;
+
+--| Extend the definition of a class to include cardinal zero.
+term c0c: class;
+
+--| Extend the definition of a class to include cardinal addition.
+term cplc (A2 B2: class): class;
+
+--| Extend the definition of a class to include the set of all finite sets.
+term cfin: class;
+
+--| Define cardinal zero. (Contributed by SF, 12-Jan-2015.)
+axiom df_0c:
+  $ wceq c0c (csn c0) $;
+
+--| Define cardinal addition. Definition from [Rosser] p. 275. (Contributed by SF, 12-Jan-2015.)
+axiom df_addc (x y z: setvar) (A2 B2: class):
+  $ wceq (cplc A2 B2) (cab (wrex (wrex (wa (wceq (cin (cv y) (cv z)) c0) (wceq (cv x) (cun (cv y) (cv z)))) z B2) y A2) x) $;
+
+--| Define the finite cardinals. Definition from [Rosser] p. 275. (Contributed by SF, 12-Jan-2015.)
+axiom df_nnc (y b: setvar):
+  $ wceq cnnc (cint (cab (wa (wcel c0c (cv b)) (wral (wcel (cplc (cv y) c1c) (cv b)) y (cv b))) b)) $;
+
+--| Define the set of all finite sets. Definition from [Rosser], p. 417. (Contributed by SF, 12-Jan-2015.)
+axiom df_fin:
+  $ wceq cfin (cuni cnnc) $;
+
+--| Extend class notation to include the less than or equal to relationship for finite cardinals.
+term clefin: class;
+
+--| Extend class notation to include the less than relationship for finite cardinals.
+term cltfin: class;
+
+--| Extend class notation to include the finite cardinal function.
+term cncfin (A2: class): class;
+
+--| Extend class notation to include the finite T operation.
+term ctfin (A2: class): class;
+
+--| Extend class notation to include the (temporary) set of all even numbers.
+term cevenfin: class;
+
+--| Extend class notation to include the (temporary) set of all odd numbers.
+term coddfin: class;
+
+--| Extend wff notation to include the finite S relationship.
+term wsfin (A2 B2: class): wff;
+
+--| Extend class notation to include the finite Sp set.
+term cspfin: class;
+
+--| Define the less than or equal to relationship for finite cardinals. Definition from Ex. X.1.4 of [Rosser] p. 279. (Contributed by SF, 12-Jan-2015.)
+axiom df_lefin (x y z w: setvar):
+  $ wceq clefin (cab (wex (wex (wa (wceq (cv x) (copk (cv y) (cv z))) (wrex (wceq (cv z) (cplc (cv y) (cv w))) w cnnc)) z) y) x) $;
+
+--| Define the less than relationship for finite cardinals. Definition from [Rosser] p. 527. (Contributed by SF, 12-Jan-2015.)
+axiom df_ltfin (x m n p: setvar):
+  $ wceq cltfin (cab (wex (wex (wa (wceq (cv x) (copk (cv m) (cv n))) (wa (wne (cv m) c0) (wrex (wceq (cv n) (cplc (cplc (cv m) (cv p)) c1c)) p cnnc))) n) m) x) $;
+
+--| Define the finite cardinal function. Definition from [Rosser] p. 527. (Contributed by SF, 12-Jan-2015.)
+axiom df_ncfin (x: setvar) (A2: class):
+  $ wceq (cncfin A2) (cio (wa (wcel (cv x) cnnc) (wcel A2 (cv x))) x) $;
+
+--| Define the finite T operator. Definition from [Rosser] p. 528. (Contributed by SF, 12-Jan-2015.)
+axiom df_tfin (n: setvar) (M: class) (a: setvar):
+  $ wceq (ctfin M) (cif (wceq M c0) c0 (cio (wa (wcel (cv n) cnnc) (wrex (wcel (cpw1 (cv a)) (cv n)) a M)) n)) $;
+
+--| Define the temporary set of all even numbers. This differs from the final definition due to the non-null condition. Definition from [Rosser] p. 529. (Contributed by SF, 12-Jan-2015.)
+axiom df_evenfin (x n: setvar):
+  $ wceq cevenfin (cab (wa (wrex (wceq (cv x) (cplc (cv n) (cv n))) n cnnc) (wne (cv x) c0)) x) $;
+
+--| Define the temporary set of all odd numbers. This differs from the final definition due to the non-null condition. Definition from [Rosser] p. 529. (Contributed by SF, 12-Jan-2015.)
+axiom df_oddfin (x n: setvar):
+  $ wceq coddfin (cab (wa (wrex (wceq (cv x) (cplc (cplc (cv n) (cv n)) c1c)) n cnnc) (wne (cv x) c0)) x) $;
+
+--| Define the finite S relationship. This relationship encapsulates the idea of ` M ` being a "smaller" number than ` N ` . Definition from [Rosser] p. 530. (Contributed by SF, 12-Jan-2015.)
+axiom df_sfin (M N: class) (a: setvar):
+  $ wb (wsfin M N) (w3a (wcel M cnnc) (wcel N cnnc) (wex (wa (wcel (cpw1 (cv a)) M) (wcel (cpw (cv a)) N)) a)) $;
+
+--| Define the finite Sp set. Definition from [Rosser] p. 533. (Contributed by SF, 12-Jan-2015.)
+axiom df_spfin (x z a: setvar):
+  $ wceq cspfin (cint (cab (wa (wcel (cncfin cvv) (cv a)) (wral (wal (wi (wsfin (cv z) (cv x)) (wcel (cv z) (cv a))) z) x (cv a))) a)) $;
+
+--| Declare the syntax for an ordered pair.
+term cop (A2 B2: class): class;
+
+--| Declare the syntax for the Phi operation.
+term cphi (A2: class): class;
+
+--| Declare the syntax for the first projection operation.
+term cproj1 (A2: class): class;
+
+--| Declare the syntax for the second projection operation.
+term cproj2 (A2: class): class;
+
+--| Define the phi operator. This operation increments all the naturals in ` A ` and leaves all its other members the same. (Contributed by SF, 3-Feb-2015.)
+axiom df_phi (x y: setvar) (A2: class):
+  $ wceq (cphi A2) (cab (wrex (wceq (cv y) (cif (wcel (cv x) cnnc) (cplc (cv x) c1c) (cv x))) x A2) y) $;
+
+--| Define the type-level ordered pair. Definition from [Rosser] p. 281. (Contributed by SF, 3-Feb-2015.)
+axiom df_op (x y: setvar) (A2 B2: class):
+  $ wceq (cop A2 B2) (cun (cab (wrex (wceq (cv x) (cphi (cv y))) y A2) x) (cab (wrex (wceq (cv x) (cun (cphi (cv y)) (csn c0c))) y B2) x)) $;
+
+--| Define the first projection operation. This operation recovers the first element of an ordered pair. Definition from [Rosser] p. 281. (Contributed by SF, 3-Feb-2015.)
+axiom df_proj1 (x: setvar) (A2: class):
+  $ wceq (cproj1 A2) (cab (wcel (cphi (cv x)) A2) x) $;
+
+--| Define the second projection operation. This operation recovers the second element of an ordered pair. Definition from [Rosser] p. 281. (Contributed by SF, 3-Feb-2015.)
+axiom df_proj2 (x: setvar) (A2: class):
+  $ wceq (cproj2 A2) (cab (wcel (cun (cphi (cv x)) (csn c0c)) A2) x) $;
+
+--| Extend class notation to include ordered-pair class abstraction (class builder).
+term copab (ph: wff) (x y: setvar): class;
+
+--| Define the class abstraction of a collection of ordered pairs. Definition 3.3 of [Monk1] p. 34. Usually ` x ` and ` y ` are distinct, although the definition doesn't strictly require it (see ~ dfid2 for a case where they are not distinct). The brace notation is called "class abstraction" by Quine; it is also (more commonly) called a "class builder" in the literature. (Contributed by SF, 12-Jan-2015.)
+axiom df_opab (ph: wff) (x y z: setvar):
+  $ wceq (copab ph x y) (cab (wex (wex (wa (wceq (cv z) (cop (cv x) (cv y))) ph) y) x) z) $;
+
+--| Extend wff notation to include the general binary relation predicate. Note that the syntax is simply three class symbols in a row. Since binary relations are the only possible wff expressions consisting of three class expressions in a row, the syntax is unambiguous.
+term wbr (A2 B2 R: class): wff;
+
+--| Define a general binary relation. Note that the syntax is simply three class symbols in a row. Definition 6.18 of [TakeutiZaring] p. 29 generalized to arbitrary classes. Class ` R ` normally denotes a relation that compares two classes ` A ` and ` B ` . This definition is well-defined, although not very meaningful, when classes ` A ` and/or ` B ` are proper classes (i.e. are not sets). On the other hand, we often find uses for this definition when ` R ` is a proper class. (Contributed by NM, 4-Jun-1995.)
+axiom df_br (A2 B2 R: class):
+  $ wb (wbr A2 B2 R) (wcel (cop A2 B2) R) $;
+
+--| Extend the definition of a class to include the first member an ordered pair function.
+term c1st: class;
+
+--| Extend the definition of a class to include the swap function.
+term cswap: class;
+
+--| Extend the definition of a class to include the subset relationship.
+term csset: class;
+
+--| Extend the definition of a class to include the singleton image.
+term csi (A2: class): class;
+
+--| Extend the definition of a class to include the composition of two classes.
+term ccom (A2 B2: class): class;
+
+--| Extend the definition of a class to include the image of one class under another.
+term cima (A2 B2: class): class;
+
+--| Define a function that extracts the first member, or abscissa, of an ordered pair. (Contributed by SF, 5-Jan-2015.)
+axiom df_1st (x y z: setvar):
+  $ wceq c1st (copab (wex (wceq (cv x) (cop (cv y) (cv z))) z) x y) $;
+
+--| Define a function that swaps the two elements of an ordered pair. (Contributed by SF, 5-Jan-2015.)
+axiom df_swap (x y z w: setvar):
+  $ wceq cswap (copab (wex (wex (wa (wceq (cv x) (cop (cv z) (cv w))) (wceq (cv y) (cop (cv w) (cv z)))) w) z) x y) $;
+
+--| Define a relationship that holds between subsets. (Contributed by SF, 5-Jan-2015.)
+axiom df_sset (x y: setvar):
+  $ wceq csset (copab (wss (cv x) (cv y)) x y) $;
+
+--| Define the composition of two classes. (Contributed by SF, 5-Jan-2015.)
+axiom df_co (x y z: setvar) (A2 B2: class):
+  $ wceq (ccom A2 B2) (copab (wex (wa (wbr (cv x) (cv z) B2) (wbr (cv z) (cv y) A2)) z) x y) $;
+
+--| Define the image of one class under another. (Contributed by SF, 5-Jan-2015.)
+axiom df_ima (x y: setvar) (A2 B2: class):
+  $ wceq (cima A2 B2) (cab (wrex (wbr (cv y) (cv x) A2) y B2) x) $;
+
+--| Define the singleton image of a class. (Contributed by SF, 5-Jan-2015.)
+axiom df_si (x y z w: setvar) (A2: class):
+  $ wceq (csi A2) (copab (wex (wex (w3a (wceq (cv x) (csn (cv z))) (wceq (cv y) (csn (cv w))) (wbr (cv z) (cv w) A2)) w) z) x y) $;
+
+--| Extend the definition of a class to include identity relation.
+term cid: class;
+
+--| Define the identity relation. Definition 9.15 of [Quine] p. 64. (Contributed by SF, 5-Jan-2015.)
+axiom df_id (x y: setvar):
+  $ wceq cid (copab (wceq (cv x) (cv y)) x y) $;
+
+--| Extend the definition of a class to include the cross product.
+term cxp (A2 B2: class): class;
+
+--| Extend the definition of a class to include the converse of a class.
+term ccnv (A2: class): class;
+
+--| Extend the definition of a class to include the domain of a class.
+term cdm (A2: class): class;
+
+--| Extend the definition of a class to include the range of a class.
+term crn (A2: class): class;
+
+--| Extend the definition of a class to include the restriction of a class. (Read: The restriction of ` A ` to ` B ` .)
+term cres (A2 B2: class): class;
+
+--| Extend the definition of a wff to include the function predicate. (Read: ` A ` is a function.)
+term wfun (A2: class): wff;
+
+--| Extend the definition of a wff to include the function predicate with a domain. (Read: ` A ` is a function on ` B ` .)
+term wfn (A2 B2: class): wff;
+
+--| Extend the definition of a wff to include the function predicate with domain and codomain. (Read: ` F ` maps ` A ` into ` B ` .)
+term wf (A2 B2 F: class): wff;
+
+--| Extend the definition of a wff to include one-to-one functions. (Read: ` F ` maps ` A ` one-to-one into ` B ` .) The notation ("1-1" above the arrow) is from Definition 6.15(5) of [TakeutiZaring] p. 27.
+term wf1 (A2 B2 F: class): wff;
+
+--| Extend the definition of a wff to include onto functions. (Read: ` F ` maps ` A ` onto ` B ` .) The notation ("onto" below the arrow) is from Definition 6.15(4) of [TakeutiZaring] p. 27.
+term wfo (A2 B2 F: class): wff;
+
+--| Extend the definition of a wff to include one-to-one onto functions. (Read: ` F ` maps ` A ` one-to-one onto ` B ` .) The notation ("1-1" above the arrow and "onto" below the arrow) is from Definition 6.15(6) of [TakeutiZaring] p. 27.
+term wf1o (A2 B2 F: class): wff;
+
+--| Extend the definition of a class to include the value of a function. (Read: The value of ` F ` at ` A ` , or " ` F ` of ` A ` .")
+term cfv (A2 F: class): class;
+
+--| Extend the definition of a wff to include the isomorphism property. (Read: ` H ` is an ` R ` , ` S ` isomorphism of ` A ` onto ` B ` .)
+term wiso (A2 B2 R S H: class): wff;
+
+--| Extend the definition of a class to include the second function.
+term c2nd: class;
+
+--| Define the cross product of two classes. Definition 9.11 of [Quine] p. 64. (Contributed by SF, 5-Jan-2015.)
+axiom df_xp (x y: setvar) (A2 B2: class):
+  $ wceq (cxp A2 B2) (copab (wa (wcel (cv x) A2) (wcel (cv y) B2)) x y) $;
+
+--| Define the converse of a class. Definition 9.12 of [Quine] p. 64. We use Quine's breve accent (smile) notation. Like Quine, we use it as a prefix, which eliminates the need for parentheses. Many authors use the postfix superscript "to the minus one." "Converse" is Quine's terminology; some authors call it "inverse," especially when the argument is a function. (Contributed by SF, 5-Jan-2015.)
+axiom df_cnv (x y: setvar) (A2: class):
+  $ wceq (ccnv A2) (copab (wbr (cv y) (cv x) A2) x y) $;
+
+--| Define the range of a class. The notation " ` ran ` " is used by Enderton; other authors sometimes use script R or script W. (Contributed by SF, 5-Jan-2015.)
+axiom df_rn (A2: class):
+  $ wceq (crn A2) (cima A2 cvv) $;
+
+--| Define the domain of a class. The notation " ` dom ` " is used by Enderton; other authors sometimes use script D. (Contributed by SF, 5-Jan-2015.)
+axiom df_dm (A2: class):
+  $ wceq (cdm A2) (crn (ccnv A2)) $;
+
+--| Define the restriction of a class. Definition 6.6(1) of [TakeutiZaring] p. 24. (Contributed by SF, 5-Jan-2015.)
+axiom df_res (A2 B2: class):
+  $ wceq (cres A2 B2) (cin A2 (cxp B2 cvv)) $;
+
+--| Define a function. Definition 10.1 of [Quine] p. 65. For alternate definitions, see ~ dffun2 , ~ dffun3 , ~ dffun4 , ~ dffun5 , ~ dffun6 , ~ dffun7 , ~ dffun8 , and ~ dffun9 . (Contributed by SF, 5-Jan-2015.) (Revised by Scott Fenton, 14-Apr-2021.)
+axiom df_fun (A2: class):
+  $ wb (wfun A2) (wss (ccom A2 (ccnv A2)) cid) $;
+
+--| Define a function with domain. Definition 6.15(1) of [TakeutiZaring] p. 27. For alternate definitions, see ~ dffn2 , ~ dffn3 , ~ dffn4 , and ~ dffn5 . (Contributed by SF, 5-Jan-2015.)
+axiom df_fn (A2 B2: class):
+  $ wb (wfn A2 B2) (wa (wfun A2) (wceq (cdm A2) B2)) $;
+
+--| Define a function (mapping) with domain and codomain. Definition 6.15(3) of [TakeutiZaring] p. 27. For alternate definitions, see ~ dff2 , ~ dff3 , and ~ dff4 . (Contributed by SF, 5-Jan-2015.)
+axiom df_f (A2 B2 F: class):
+  $ wb (wf A2 B2 F) (wa (wfn F A2) (wss (crn F) B2)) $;
+
+--| Define a one-to-one function. For equivalent definitions see ~ dff12 and ~ dff13 . Compare Definition 6.15(5) of [TakeutiZaring] p. 27. We use their notation ("1-1" above the arrow). (Contributed by SF, 5-Jan-2015.)
+axiom df_f1 (A2 B2 F: class):
+  $ wb (wf1 A2 B2 F) (wa (wf A2 B2 F) (wfun (ccnv F))) $;
+
+--| Define an onto function. Definition 6.15(4) of [TakeutiZaring] p. 27. We use their notation ("onto" under the arrow). For alternate definitions, see ~ dffo2 , ~ dffo3 , ~ dffo4 , and ~ dffo5 . (Contributed by SF, 5-Jan-2015.)
+axiom df_fo (A2 B2 F: class):
+  $ wb (wfo A2 B2 F) (wa (wfn F A2) (wceq (crn F) B2)) $;
+
+--| Define a one-to-one onto function. For equivalent definitions see ~ dff1o2 , ~ dff1o3 , ~ dff1o4 , and ~ dff1o5 . Compare Definition 6.15(6) of [TakeutiZaring] p. 27. We use their notation ("1-1" above the arrow and "onto" below the arrow). (Contributed by SF, 5-Jan-2015.)
+axiom df_f1o (A2 B2 F: class):
+  $ wb (wf1o A2 B2 F) (wa (wf1 A2 B2 F) (wfo A2 B2 F)) $;
+
+--| Define the value of a function. (Contributed by SF, 5-Jan-2015.)
+axiom df_fv (x: setvar) (A2 F: class):
+  $ wceq (cfv A2 F) (cio (wbr A2 (cv x) F) x) $;
+
+--| Define the isomorphism predicate. We read this as " ` H ` is an ` R ` , ` S ` isomorphism of ` A ` onto ` B ` ." Normally, ` R ` and ` S ` are ordering relations on ` A ` and ` B ` respectively. Definition 6.28 of [TakeutiZaring] p. 32, whose notation is the same as ours except that ` R ` and ` S ` are subscripts. (Contributed by SF, 5-Jan-2015.)
+axiom df_iso (x y: setvar) (A2 B2 R S H: class):
+  $ wb (wiso A2 B2 R S H) (wa (wf1o A2 B2 H) (wral (wral (wb (wbr (cv x) (cv y) R) (wbr (cfv (cv x) H) (cfv (cv y) H) S)) y A2) x A2)) $;
+
+--| Define the ` 2nd ` function. This function extracts the second member of an ordered pair. (Contributed by SF, 5-Jan-2015.)
+axiom df_2nd (x y z: setvar):
+  $ wceq c2nd (copab (wex (wceq (cv x) (cop (cv z) (cv y))) z) x y) $;
+
+--| Extend class notation to include the value of an operation ` F ` for two arguments ` A ` and ` B ` . Note that the syntax is simply three class symbols in a row surrounded by parentheses. Since operation values are the only possible class expressions consisting of three class expressions in a row surrounded by parentheses, the syntax is unambiguous.
+term co (A2 B2 F: class): class;
+
+--| Define the value of an operation. Definition of operation value in [Enderton] p. 79. Note that the syntax is simply three class expressions in a row bracketed by parentheses. There are no restrictions of any kind on what those class expressions may be, although only certain kinds of class expressions - a binary operation ` F ` and its arguments ` A ` and ` B ` - will be useful for proving meaningful theorems. This definition is well-defined, although not very meaningful, when classes ` A ` and/or ` B ` are proper classes (i.e. are not sets). On the other hand, we often find uses for this definition when ` F ` is a proper class. ` F ` is normally equal to a class of nested ordered pairs of the form defined by ~ df-oprab . (Contributed by SF, 5-Jan-2015.)
+axiom df_ov (A2 B2 F: class):
+  $ wceq (co A2 B2 F) (cfv (cop A2 B2) F) $;
+
+--| Extend class notation to include class abstraction (class builder) of nested ordered pairs.
+term coprab (ph: wff) (x y z: setvar): class;
+
+--| Define the class abstraction (class builder) of a collection of nested ordered pairs (for use in defining operations). This is a special case of Definition 4.16 of [TakeutiZaring] p. 14. Normally ` x ` , ` y ` , and ` z ` are distinct, although the definition doesn't strictly require it. See ~ df-ov for the value of an operation. The brace notation is called "class abstraction" by Quine; it is also called a "class builder" in the literature. The value of the most common operation class builder is given by ov2 in set.mm. (Contributed by SF, 5-Jan-2015.)
+axiom df_oprab (ph: wff) (x y z w: setvar):
+  $ wceq (coprab ph x y z) (cab (wex (wex (wex (wa (wceq (cv w) (cop (cop (cv x) (cv y)) (cv z))) ph) z) y) x) w) $;
+
+--| Extend the definition of a class to include maps-to notation for defining a function via a rule.
+term cmpt (x: setvar) (A2 B2: class): class;
+
+--| Define maps-to notation for defining a function via a rule. Read as "the function defined by the map from ` x ` (in ` A ` ) to ` B ( x ) ` ." The class expression ` B ` is the value of the function at ` x ` and normally contains the variable ` x ` . Similar to the definition of mapping in [ChoquetDD] p. 2. (Contributed by SF, 5-Jan-2015.)
+axiom df_mpt (x y: setvar) (A2 B2: class):
+  $ wceq (cmpt x A2 B2) (copab (wa (wcel (cv x) A2) (wceq (cv y) B2)) x y) $;
+
+--| Extend the definition of a class to include maps-to notation for defining an operation via a rule.
+term cmpt2 (x y: setvar) (A2 B2 C: class): class;
+
+--| Define maps-to notation for defining an operation via a rule. Read as "the operation defined by the map from ` x , y ` (in ` A X. B ` ) to ` B ( x , y ) ` ." An extension of ~ df-mpt for two arguments. (Contributed by SF, 5-Jan-2015.)
+axiom df_mpt2 (x y z: setvar) (A2 B2 C: class):
+  $ wceq (cmpt2 x y A2 B2 C) (coprab (wa (wa (wcel (cv x) A2) (wcel (cv y) B2)) (wceq (cv z) C)) x y z) $;
+
+--| Extend the definition of a class to include the tail cross product.
+term ctxp (A2 B2: class): class;
+
+--| Define the tail cross product of two classes. Definition from [Holmes] p. 40. See ~ brtxp for membership. (Contributed by SF, 9-Feb-2015.)
+axiom df_txp (A2 B2: class):
+  $ wceq (ctxp A2 B2) (cin (ccom (ccnv c1st) A2) (ccom (ccnv c2nd) B2)) $;
+
+--| Extend the definition of a class to include the parallel product operation.
+term cpprod (A2 B2: class): class;
+
+--| Define the parallel product operation. (Contributed by SF, 9-Feb-2015.)
+axiom df_pprod (A2 B2: class):
+  $ wceq (cpprod A2 B2) (ctxp (ccom A2 c1st) (ccom B2 c2nd)) $;
+
+--| Extend the definition of a class to include the fixed points of a relationship.
+term cfix (A2: class): class;
+
+--| Define the fixed points of a relationship. (Contributed by SF, 9-Feb-2015.)
+axiom df_fix (A2: class):
+  $ wceq (cfix A2) (crn (cin A2 cid)) $;
+
+--| Extend the definition of a class to include the cup function.
+term ccup: class;
+
+--| Define the cup function. (Contributed by SF, 9-Feb-2015.)
+axiom df_cup (x y: setvar):
+  $ wceq ccup (cmpt2 x y cvv cvv (cun (cv x) (cv y))) $;
+
+--| Extend the definition of a class to include the disjoint relationship.
+term cdisj: class;
+
+--| Define the relationship of all disjoint sets. (Contributed by SF, 9-Feb-2015.)
+axiom df_disj (x y: setvar):
+  $ wceq cdisj (copab (wceq (cin (cv x) (cv y)) c0) x y) $;
+
+--| Extend the definition of a class to include the cardinal sum function.
+term caddcfn: class;
+
+--| Define the function representing cardinal sum. (Contributed by SF, 9-Feb-2015.)
+axiom df_addcfn (x y: setvar):
+  $ wceq caddcfn (cmpt2 x y cvv cvv (cplc (cv x) (cv y))) $;
+
+--| Extend the definition of a class to include the compostion function.
+term ccompose: class;
+
+--| Define the composition function. (Contributed by Scott Fenton, 19-Apr-2021.)
+axiom df_compose (x y: setvar):
+  $ wceq ccompose (cmpt2 x y cvv cvv (ccom (cv x) (cv y))) $;
+
+--| Extend the definition of a class to include the second insertion operation.
+term cins2 (A2: class): class;
+
+--| Define the second insertion operation. (Contributed by SF, 9-Feb-2015.)
+axiom df_ins2 (A2: class):
+  $ wceq (cins2 A2) (ctxp cvv A2) $;
+
+--| Extend the definition of a class to include the third insertion operation.
+term cins3 (A2: class): class;
+
+--| Define the third insertion operation. (Contributed by SF, 9-Feb-2015.)
+axiom df_ins3 (A2: class):
+  $ wceq (cins3 A2) (ctxp A2 cvv) $;
+
+--| Extend the definition of a class to include the image function.
+term cimage (A2: class): class;
+
+--| Define the image function of a class. (Contributed by SF, 9-Feb-2015.) (Revised by Scott Fenton, 19-Apr-2021.)
+axiom df_image (A2: class):
+  $ wceq (cimage A2) (ccompl (cima (csymdif (cins2 csset) (cins3 (ccom csset (ccnv (csi A2))))) c1c)) $;
+
+--| Extend the definition of a class to include the fourth insertion operation.
+term cins4 (A2: class): class;
+
+--| Define the fourth insertion operation. (Contributed by SF, 9-Feb-2015.)
+axiom df_ins4 (A2: class):
+  $ wceq (cins4 A2) (cima (ccnv (ctxp c1st (ctxp (ccom c1st c2nd) (ccom (ccom c1st c2nd) c2nd)))) A2) $;
+
+--| Extend the definition of a class to include the triple singleton image.
+term csi3 (A2: class): class;
+
+--| Define the triple singleton image. (Contributed by SF, 9-Feb-2015.)
+axiom df_si3 (A2: class):
+  $ wceq (csi3 A2) (cima (ctxp (csi c1st) (ctxp (csi (ccom c1st c2nd)) (csi (ccom c2nd c2nd)))) (cpw1 A2)) $;
+
+--| Extend the definition of a class to include the set of all functions.
+term cfuns: class;
+
+--| Define the class of all functions. (Contributed by SF, 9-Feb-2015.)
+axiom df_funs (f: setvar):
+  $ wceq cfuns (cab (wfun (cv f)) f) $;
+
+--| Extend the definition of a class to include the function with domain relationship.
+term cfns: class;
+
+--| Define the function with domain relationship. (Contributed by SF, 9-Feb-2015.)
+axiom df_fns (f a: setvar):
+  $ wceq cfns (copab (wfn (cv f) (cv a)) f a) $;
+
+--| Extend the definition of a class to include the cross product function.
+term ccross: class;
+
+--| Define the cross product function. (Contributed by SF, 9-Feb-2015.)
+axiom df_cross (x y: setvar):
+  $ wceq ccross (cmpt2 x y cvv cvv (cxp (cv x) (cv y))) $;
+
+--| Extend the definition of a class to include the unit power class function.
+term cpw1fn: class;
+
+--| Define the function that takes a singleton to the unit power class of its member. This function is defined in such a way as to ensure stratification. (Contributed by SF, 9-Feb-2015.)
+axiom df_pw1fn (x: setvar):
+  $ wceq cpw1fn (cmpt x c1c (cpw1 (cuni (cv x)))) $;
+
+--| Extend the definition of a class to include the full function operation.
+term cfullfun (F: class): class;
+
+--| Define the full function operator. This is a function over ` _V ` that agrees with the function value of ` F ` at every point. (Contributed by SF, 9-Feb-2015.)
+axiom df_fullfun (F: class):
+  $ wceq (cfullfun F) (cun (cdif (ccom cid F) (ccom (ccompl cid) F)) (cxp (ccompl (cdm (cdif (ccom cid F) (ccom (ccompl cid) F)))) (csn c0))) $;
+
+--| Extend the definition of a class to include the domain function.
+term cdomfn: class;
+
+--| Define the domain function. This is a function wrapper for the domain operator. (Contributed by Scott Fenton, 9-Aug-2019.)
+axiom df_domfn (x: setvar):
+  $ wceq cdomfn (cmpt x cvv (cdm (cv x))) $;
+
+--| Extend the definition of a class to include the range function.
+term cranfn: class;
+
+--| Define the range function. This is a function wrapper for the range operator. (Contributed by Scott Fenton, 9-Aug-2019.)
+axiom df_ranfn (x: setvar):
+  $ wceq cranfn (cmpt x cvv (crn (cv x))) $;
+
+--| Extend the definition of a class to include the closure operation.
+term cclos1 (A2 R: class): class;
+
+--| Define the closure operation. A modified version of the definition from [Rosser] p. 245. (Contributed by SF, 11-Feb-2015.)
+axiom df_clos1 (R S: class) (a: setvar):
+  $ wceq (cclos1 S R) (cint (cab (wa (wss S (cv a)) (wss (cima R (cv a)) (cv a))) a)) $;
+
+--| Extend the definition of a class to include the set of all transitive relationships.
+term ctrans: class;
+
+--| Extend the definition of a class to include the set of all reflexive relationships.
+term cref: class;
+
+--| Extend the definition of a class to include the set of all antisymmetric relationships.
+term cantisym: class;
+
+--| Extend the definition of a class to include the set of all partial orderings.
+term cpartial: class;
+
+--| Extend the definition of a class to include the set of all connected relationships.
+term cconnex: class;
+
+--| Extend the definition of a class to include the set of all strict linear orderings.
+term cstrict: class;
+
+--| Extend the definition of a class to include the set of all founded relationships.
+term cfound: class;
+
+--| Extend the definition of a class to include the set of all well-ordered relationships.
+term cwe: class;
+
+--| Extend the definition of a class to include the symmetric relationships.
+term csym: class;
+
+--| Extend the definition of a class to include the equivalence relationships.
+term cer: class;
+
+--| Define the set of all transitive relationships over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_trans (x y z r a: setvar):
+  $ wceq ctrans (copab (wral (wral (wral (wi (wa (wbr (cv x) (cv y) (cv r)) (wbr (cv y) (cv z) (cv r))) (wbr (cv x) (cv z) (cv r))) z (cv a)) y (cv a)) x (cv a)) r a) $;
+
+--| Define the set of all reflexive relationships over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_ref (x r a: setvar):
+  $ wceq cref (copab (wral (wbr (cv x) (cv x) (cv r)) x (cv a)) r a) $;
+
+--| Define the set of all antisymmetric relationships over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_antisym (x y r a: setvar):
+  $ wceq cantisym (copab (wral (wral (wi (wa (wbr (cv x) (cv y) (cv r)) (wbr (cv y) (cv x) (cv r))) (wceq (cv x) (cv y))) y (cv a)) x (cv a)) r a) $;
+
+--| Define the set of all partial orderings over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_partial:
+  $ wceq cpartial (cin (cin cref ctrans) cantisym) $;
+
+--| Define the set of all connected relationships over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_connex (x y r a: setvar):
+  $ wceq cconnex (copab (wral (wral (wo (wbr (cv x) (cv y) (cv r)) (wbr (cv y) (cv x) (cv r))) y (cv a)) x (cv a)) r a) $;
+
+--| Define the set of all strict orderings over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_strict:
+  $ wceq cstrict (cin cpartial cconnex) $;
+
+--| Define the set of all founded relationships over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_found (x y z r a: setvar):
+  $ wceq cfound (copab (wal (wi (wa (wss (cv x) (cv a)) (wne (cv x) c0)) (wrex (wral (wi (wbr (cv y) (cv z) (cv r)) (wceq (cv y) (cv z))) y (cv x)) z (cv x))) x) r a) $;
+
+--| Define the set of all well orderings over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_we:
+  $ wceq cwe (cin cstrict cfound) $;
+
+--| Define the set of all symmetric relationships over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_sym (x y r a: setvar):
+  $ wceq csym (copab (wral (wral (wi (wbr (cv x) (cv y) (cv r)) (wbr (cv y) (cv x) (cv r))) y (cv a)) x (cv a)) r a) $;
+
+--| Define the set of all equivalence relationships over a base set. (Contributed by SF, 19-Feb-2015.)
+axiom df_er:
+  $ wceq cer (cin csym ctrans) $;
+
+--| Extend the definition of a class to include equivalence class.
+term cec (A2 R: class): class;
+
+--| Extend the definition of a class to include quotient set.
+term cqs (A2 R: class): class;
+
+--| Define the ` R ` -coset of ` A ` . Exercise 35 of [Enderton] p. 61. This is called the equivalence class of ` A ` modulo ` R ` when ` R ` is an equivalence relation. In this case, ` A ` is a representative (member) of the equivalence class ` [ A ] R ` , which contains all sets that are equivalent to ` A ` . Definition of [Enderton] p. 57 uses the notation ` [ A ] ` (subscript) ` R ` , although we simply follow the brackets by ` R ` since we don't have subscripted expressions. For an alternate definition, see ~ dfec2 . (Contributed by set.mm contributors, 22-Feb-2015.)
+axiom df_ec (A2 R: class):
+  $ wceq (cec A2 R) (cima R (csn A2)) $;
+
+--| Define quotient set. ` R ` is usually an equivalence relation. Definition of [Enderton] p. 58. (Contributed by set.mm contributors, 22-Feb-2015.)
+axiom df_qs (x y: setvar) (A2 R: class):
+  $ wceq (cqs A2 R) (cab (wrex (wceq (cv y) (cec (cv x) R)) x A2) y) $;
+
+--| Extend the definition of a class to include the mapping operation. (Read for ` A ^m B ` , "the set of all functions that map from ` B ` to ` A ` .)
+term cmap: class;
+
+--| Define the mapping operation or set exponentiation. The set of all functions that map from ` B ` to ` A ` is written ` ( A ^m B ) ` (see ~ mapval ). Many authors write ` A ` followed by ` B ` as a superscript for this operation and rely on context to avoid confusion other exponentiation operations (e.g. Definition 10.42 of [TakeutiZaring] p. 95). Other authors show ` B ` as a prefixed superscript, which is read " ` A ` pre ` B ` " (e.g. definition of [Enderton] p. 52). Definition 8.21 of [Eisenberg] p. 125 uses the notation Map( ` B ` , ` A ` ) for our ` ( A ^m B ) ` . The up-arrow is used by Donald Knuth for iterated exponentiation (_Science_ 194, 1235-1242, 1976). We adopt the first case of his notation (simple exponentiation) and subscript it with _m_ to distinguish it from other kinds of exponentiation. (Contributed by NM, 15-Nov-2007.)
+axiom df_map (x y f: setvar):
+  $ wceq cmap (cmpt2 x y cvv cvv (cab (wf (cv y) (cv x) (cv f)) f)) $;
+
+--| Extend class definition to include the equinumerosity relation ("approximately equals" symbol)
+term cen: class;
+
+--| Define the equinumerosity relation. Definition of [Enderton] p. 129. We define ` ~~ ` to be a binary relation rather than a connective, so its arguments must be sets to be meaningful. This is acceptable because we do not consider equinumerosity for proper classes. We derive the usual definition as ~ bren . (Contributed by NM, 28-Mar-1998.)
+axiom df_en (x y f: setvar):
+  $ wceq cen (copab (wex (wf1o (cv x) (cv y) (cv f)) f) x y) $;
+
+--| Extend the definition of a class to include the set of cardinal numbers.
+term cncs: class;
+
+--| Extend the definition of a class to include cardinal less than or equal.
+term clec: class;
+
+--| Extend the definition of a class to include cardinal strict less than.
+term cltc: class;
+
+--| Extend the definition of a class to include the cardinality operation.
+term cnc (A2: class): class;
+
+--| Extend the definition of a class to include cardinal multiplication.
+term cmuc: class;
+
+--| Extend the definition of a class to include cardinal type raising.
+term ctc (A2: class): class;
+
+--| Extend the definition of a class to include cardinal two.
+term c2c: class;
+
+--| Extend the definition of a class to include the stratified T-raising function.
+term ctcfn: class;
+
+--| Define the set of all cardinal numbers. We define them as equivalence classes of sets of the same size. Definition from [Rosser] p. 372. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_ncs:
+  $ wceq cncs (cqs cvv cen) $;
+
+--| Define cardinal less than or equal. Definition from [Rosser] p. 375. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_lec (x y a b: setvar):
+  $ wceq clec (copab (wrex (wrex (wss (cv x) (cv y)) y (cv b)) x (cv a)) a b) $;
+
+--| Define cardinal less than. Definition from [Rosser] p. 375. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_ltc:
+  $ wceq cltc (cdif clec cid) $;
+
+--| Define the cardinality operation. This is the unique cardinal number containing a given set. Definition from [Rosser] p. 371. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_nc (A2: class):
+  $ wceq (cnc A2) (cec A2 cen) $;
+
+--| Define cardinal multiplication. Definition from [Rosser] p. 378. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_muc (g m n a b: setvar):
+  $ wceq cmuc (cmpt2 m n cncs cncs (cab (wrex (wrex (wbr (cv a) (cxp (cv b) (cv g)) cen) g (cv n)) b (cv m)) a)) $;
+
+--| Define the type-raising operation on a cardinal number. This is the unique cardinal containing the unit power classes of the elements of the given cardinal. Definition adapted from [Rosser] p. 528. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_tc (x: setvar) (A2: class) (b: setvar):
+  $ wceq (ctc A2) (cio (wa (wcel (cv b) cncs) (wrex (wceq (cv b) (cnc (cpw1 (cv x)))) x A2)) b) $;
+
+--| Define cardinal two. This is the set of all sets with two unique elements. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_2c:
+  $ wceq c2c (cnc (cpr c0 cvv)) $;
+
+--| Define the stratified T-raising function. (Contributed by Scott Fenton, 24-Feb-2015.)
+axiom df_tcfn (x: setvar):
+  $ wceq ctcfn (cmpt x c1c (ctc (cuni (cv x)))) $;
+
+--| Extend the definition of a class to include the finite recursive function generator.
+term cfrec (F I: class): class;
+
+--| Define the finite recursive function generator. This is a function over ` Nn ` that obeys the standard recursion relationship. Definition adapted from theorem XI.3.24 of [Rosser] p. 412. (Contributed by Scott Fenton, 30-Jul-2019.)
+axiom df_frec (x: setvar) (F I: class):
+  $ wceq (cfrec F I) (cclos1 (csn (cop c0c I)) (cpprod (cmpt x cvv (cplc (cv x) c1c)) F)) $;
+
+term wwpp: wff;
+
+axiom df_wpp (x y f g h: setvar):
+  $ wb wwpp (wal (wal (wi (wa (wex (wfo (cv y) (cv x) (cv f)) f) (wex (wf1 (cv y) (cv x) (cv g)) g)) (wex (wf1 (cv x) (cv y) (cv h)) h)) y) x) $;
+
+term cqkrel (A2: class): class;
+
+term cfdmem: class;
+
+term cfdprj0: class;
+
+term cfdprj1: class;
+
+term cfddom (A2 B2: class): class;
+
+term cfde0 (A2 B2: class): class;
+
+term cfde1 (A2 B2: class): class;
+
+term cfdsep (A2 B2: class): class;
+
+term cfdlift (R: class): class;
+
+term cfdnonmin (A2 B2 R: class): class;
+
+term cfdminsep (A2 B2 R: class): class;
+
+axiom df_qkrel (x y z: setvar) (A2: class):
+  $ wceq (cqkrel A2) (cab (wex (wex (wa (wceq (cv z) (copk (cv x) (cv y))) (wcel (cop (cv x) (cv y)) A2)) y) x) z) $;
+
+--| The typed membership relation sends a singleton-coded column to the double-singleton code of each of its points.
+axiom df_fdmem:
+  $ wceq cfdmem (ccnvk (csik cssetk)) $;
+
+--| The insertion operators are the two homogeneous projections from a Quine--Rosser coded point pair.
+axiom df_fdprj0:
+  $ wceq cfdprj0 (cins3k cidk) $;
+
+axiom df_fdprj1:
+  $ wceq cfdprj1 (cins2k cidk) $;
+
+--| Restrict incidence to columns from A and point pairs from B.
+axiom df_fddom (A2 B2: class):
+  $ wceq (cfddom A2 B2) (cxpk (cpw1 A2) (cxpk B2 B2)) $;
+
+axiom df_fde0 (A2 B2: class):
+  $ wceq (cfde0 A2 B2) (cin (ccomk cfdprj0 cfdmem) (cfddom A2 B2)) $;
+
+axiom df_fde1 (A2 B2: class):
+  $ wceq (cfde1 A2 B2) (cin (ccomk cfdprj1 cfdmem) (cfddom A2 B2)) $;
+
+axiom df_fdsep (A2 B2: class):
+  $ wceq (cfdsep A2 B2) (csymdif (cfde0 A2 B2) (cfde1 A2 B2)) $;
+
+--| Coordinatewise singleton lift of the displayed ordinary-pair order relation, after converting it to Quine--Rosser pairs.
+axiom df_fdlift (R: class):
+  $ wceq (cfdlift R) (csik (cqkrel R)) $;
+
+--| A separator is nonminimal when a distinct earlier lifted column also separates the same point pair. The strict part is essential here: the project uses reflexive well-orders, so lifting R itself would make every separator witness its own nonminimality. This orientation matches opkelcok.
+axiom df_fdnonmin (A2 B2 R: class):
+  $ wceq (cfdnonmin A2 B2 R) (ccomk (cfdsep A2 B2) (ccnvk (cfdlift (cdif R cid)))) $;
+
+axiom df_fdminsep (A2 B2 R: class):
+  $ wceq (cfdminsep A2 B2 R) (cdif (cfdsep A2 B2) (cfdnonmin A2 B2 R)) $;
+
+term csep2 (A2 B2: class): class;
+
+axiom df_sep2 (z: setvar) (A2 B2: class):
+  $ wceq (csep2 A2 B2) (cab (wo (wa (wcel A2 (cv z)) (wn (wcel B2 (cv z)))) (wa (wcel B2 (cv z)) (wn (wcel A2 (cv z))))) z) $;
+
+term ckqrel (A2: class): class;
+
+term cfdminvalp (A2 B2 C R: class): class;
+
+term cfdminq (A2 B2 R: class): class;
+
+term cfdpivmap2 (A2 B2 R: class): class;
+
+term cfdpivrange2 (A2 B2 R: class): class;
+
+--| Convert a Quine--Rosser relation to the corresponding ordinary-pair relation.
+axiom df_kqrel (x y: setvar) (A2: class):
+  $ wceq (ckqrel A2) (copab (wcel (copk (cv x) (cv y)) A2) x y) $;
+
+--| The minimum-separator value at one Kuratowski-coded point pair.
+axiom df_fdminvalp (A2 B2 C R: class):
+  $ wceq (cfdminvalp A2 B2 C R) (cuni1 (cimak (ccnvk (cfdminsep A2 B2 R)) (csn C))) $;
+
+axiom df_fdminq (A2 B2 R: class):
+  $ wceq (cfdminq A2 B2 R) (ckqrel (cfdminsep A2 B2 R)) $;
+
+--| The normalized first-pivot map has Kuratowski square as domain.
+axiom df_fdpivmap2 (A2 B2 R: class) (p: setvar):
+  $ wceq (cfdpivmap2 A2 B2 R) (cmpt p (cxpk B2 B2) (cfdminvalp A2 B2 (cv p) R)) $;
+
+axiom df_fdpivrange2 (A2 B2 R: class):
+  $ wceq (cfdpivrange2 A2 B2 R) (crn (cfdpivmap2 A2 B2 R)) $;
+
+term cfpiv (A2 B2 C R: class): class;
+
+axiom df_fpiv (A2 B2 C R: class) (b c: setvar):
+  $ wceq (cfpiv A2 B2 C R) (crab (wa (wcel (cv b) (csep2 B2 C)) (wral (wi (wcel (cv c) (csep2 B2 C)) (wbr (cv b) (cv c) R)) c A2)) b A2) $;
+
+term cfdif (A2 B2 R: class): class;
+
+axiom df_fdif (x y: setvar) (A2 B2 R: class) (d: setvar):
+  $ wceq (cfdif A2 B2 R) (crab (wrex (wrex (wcel (cv d) (cfpiv A2 (cv x) (cv y) R)) y B2) x B2) d A2) $;
+
+term cfdrow (A2 B2 C R: class): class;
+
+axiom df_fdrow (A2 B2 C R: class) (d: setvar):
+  $ wceq (cfdrow A2 B2 C R) (crab (wcel C (cv d)) d (cfdif A2 B2 R)) $;
+
+term cfdcode (A2 B2 C R: class): class;
+
+axiom df_fdcode (x: setvar) (A2 B2 C R: class) (q: setvar):
+  $ wceq (cfdcode A2 B2 C R) (cab (wrex (wceq (cv q) (cfdrow A2 B2 (cv x) R)) x C) q) $;
+
+term cfdrowrel (A2 B2 R: class): class;
+
+axiom df_fdrowrel (A2 B2 R: class):
+  $ wceq (cfdrowrel A2 B2 R) (cres (ckqrel cfdmem) (cpw1 (cfdif A2 B2 R))) $;
+
+term cfdrowfib (A2 B2 C R: class): class;
+
+axiom df_fdrowfib (A2 B2 C R: class) (d: setvar):
+  $ wceq (cfdrowfib A2 B2 C R) (cab (wcel (cop (csn (cv d)) C) (cfdrowrel A2 B2 R)) d) $;
+
+term cfdcodemap2 (A2 B2 C R: class): class;
+
+axiom df_fdcodemap2 (u: setvar) (A2 B2 C R: class):
+  $ wceq (cfdcodemap2 A2 B2 C R) (cmpt u (cpw1 (cpw1 C)) (cfdrowfib A2 B2 (cv u) R)) $;
+
+term cfdpointrel (A2: class): class;
+
+axiom df_fdpointrel (A2: class):
+  $ wceq (cfdpointrel A2) (cin (ckqrel cfdmem) (cxp cvv (cpw1 (cpw1 (cuni A2))))) $;
+
+term cfdglobalrowmap (A2 B2 R: class): class;
+
+axiom df_fdglobalrowmap (u: setvar) (A2 B2 R: class):
+  $ wceq (cfdglobalrowmap A2 B2 R) (cif (wbr R A2 cwe) (cmpt u (cpw1 (cpw1 (cuni A2))) (cfdrowfib A2 B2 (cv u) R)) c0) $;
+
+term cfdcolcodemap (A2 B2 R: class): class;
+
+axiom df_fdcolcodemap (A2 B2 R: class):
+  $ wceq (cfdcolcodemap A2 B2 R) (cres (ccom (cimage (cfdglobalrowmap A2 B2 R)) (cimage (cfdpointrel A2))) (cpw1 (cpw1 A2))) $;
+
+term chwcodes (A2: class): class;
+
+axiom df_hwcodes (A2: class):
+  $ wceq (chwcodes A2) (cin cwe (cxp cvv (cpw A2))) $;
+
+term chwiso (A2: class): class;
+
+axiom df_hwiso (v u: setvar) (A2: class) (h: setvar):
+  $ wceq (chwiso A2) (copab (wa (wa (wcel (cv u) (chwcodes A2)) (wcel (cv v) (chwcodes A2))) (wex (wiso (cfv (cv u) c2nd) (cfv (cv v) c2nd) (cfv (cv u) c1st) (cfv (cv v) c1st) (cv h)) h)) u v) $;
+
+term chwrels: class;
+
+term chwbij: class;
+
+term chwtrn: class;
+
+term chwgen: class;
+
+term chwcn (A2: class): class;
+
+term chwniso (A2: class): class;
+
+term chnord (A2: class): class;
+
+axiom df_hwrels:
+  $ wceq chwrels (cima (ccnv (ctxp c1st (ccom ccross (ctxp c2nd c2nd)))) csset) $;
+
+axiom df_hwbij:
+  $ wceq chwbij (cin cfuns (cima (ccnv (cimage cswap)) cfuns)) $;
+
+axiom df_hwtrn:
+  $ wceq chwtrn (ccom ccompose (ctxp (ccom ccompose (ctxp c1st c2nd)) (ccom (cimage cswap) c1st))) $;
+
+axiom df_hwgen:
+  $ wceq chwgen (ctxp (ctxp c2nd (ccom cdomfn c1st)) (ctxp chwtrn (ccom cranfn c1st))) $;
+
+axiom df_hwcn (A2: class):
+  $ wceq (chwcn A2) (cin (chwcodes A2) chwrels) $;
+
+axiom df_hwniso (A2: class):
+  $ wceq (chwniso A2) (cin (cima chwgen (cxp chwbij cvv)) (cxp (chwcn A2) (chwcn A2))) $;
+
+axiom df_hnord (A2: class):
+  $ wceq (chnord A2) (cqs (chwcn A2) (chwniso A2)) $;
+
+term chncard (A2: class): class;
+
+term chwbases (A2: class): class;
+
+term chwcards (A2: class): class;
+
+axiom df_hncard (A2: class):
+  $ wceq (chncard A2) (cnc (chnord A2)) $;
+
+axiom df_hwbases (A2: class):
+  $ wceq (chwbases A2) (cima c2nd (chwcn A2)) $;
+
+axiom df_hwcards (A2: class):
+  $ wceq (chwcards A2) (cqs (chwbases A2) cen) $;
+
+term chnwcutcode (C D R: class): class;
+
+term chnwcutmap (D R: class): class;
+
+axiom df_hnwcutcode (C D R: class):
+  $ wceq (chnwcutcode C D R) (cop (cin R (cxp (cin D (cima (ccnv (cdif R cid)) (csn C))) (cin D (cima (ccnv (cdif R cid)) (csn C))))) (cin D (cima (ccnv (cdif R cid)) (csn C)))) $;
+
+axiom df_hnwcutmap (D R: class) (p: setvar):
+  $ wceq (chnwcutmap D R) (cmpt p (cpw1 (cpw1 D)) (cec (chnwcutcode (cuni (cuni (cv p))) D R) (chwniso D))) $;
+
+term chnqmap1 (A2: class): class;
+
+axiom df_hnqmap1 (A2: class):
+  $ wceq (chnqmap1 A2) (cres (cimage (chwniso A2)) (cpw1 (chwcn A2))) $;
+
+term clntp: class;
+
+term clntpc (A2: class): class;
+
+term clnker (R: class): class;
+
+term clnquo (A2 R: class): class;
+
+axiom df_lntp:
+  $ wceq clntp (cin (cin cref ctrans) cconnex) $;
+
+axiom df_lntpc (A2: class):
+  $ wceq (clntpc A2) (cin (cin clntp chwrels) (cxp cvv (csn A2))) $;
+
+axiom df_lnker (R: class):
+  $ wceq (clnker R) (cin R (ccnv R)) $;
+
+axiom df_lnquo (A2 R: class):
+  $ wceq (clnquo A2 R) (cqs A2 (clnker R)) $;
+
+term cwpphit (C F I: class): class;
+
+axiom df_wpphit (C F I: class):
+  $ wceq (cwpphit C F I) (cima (ccnv (cfrec F I)) (cima clec (csn C))) $;
+
+term chnwsegfn (D R: class): class;
+
+term chnwcodefn (R: class): class;
+
+term chnwcutfn (D R: class): class;
+
+axiom df_hnwsegfn (D R: class):
+  $ wceq (chnwsegfn D R) (ccom (cimage (cres cid D)) (cimage (ccnv (cdif R cid)))) $;
+
+axiom df_hnwcodefn (R: class):
+  $ wceq (chnwcodefn R) (ctxp (ccom (cimage (cres cid R)) (ccom ccross (ctxp cid cid))) cid) $;
+
+axiom df_hnwcutfn (D R: class):
+  $ wceq (chnwcutfn D R) (ccom (chnwcodefn R) (chnwsegfn D R)) $;
+
+term chnwcutrel (D R: class): class;
+
+axiom df_hnwcutrel (D R: class):
+  $ wceq (chnwcutrel D R) (cres (chnwcutfn D R) (cpw1 D)) $;
+
+term clnqrel (R: class): class;
+
+axiom df_lnqrel (x y: setvar) (R: class) (a b: setvar):
+  $ wceq (clnqrel R) (copab (wrex (wrex (wbr (cv x) (cv y) R) y (cv b)) x (cv a)) a b) $;
+
+term clnqord (C R: class): class;
+
+axiom df_lnqord (C R: class):
+  $ wceq (clnqord C R) (cin (clnqrel R) (cxp (clnquo C R) (clnquo C R))) $;
+
+term clnpwc (A2: class): class;
+
+axiom df_lnpwc (A2: class) (r d: setvar):
+  $ wceq (clnpwc A2) (cin (clntpc A2) (copab (wbr (cdif (cv r) (ccnv (cv r))) (cv d) cfound) r d)) $;
+
+term cfrecteq (F G I: class): class;
+
+axiom df_frecteq (F G I: class):
+  $ wceq (cfrecteq F G I) (cuni1 (cfix (ccom (ccnv (ccom ctcfn (csi (cfrec F I)))) (ccom (cfrec G (ctc I)) ctcfn)))) $;
+
+term chnqinc (A2 D: class): class;
+
+axiom df_hnqinc (A2 D: class):
+  $ wceq (chnqinc A2 D) (ccom (chnqmap1 A2) (ccnv (chnqmap1 D))) $;
+
+term clndifop: class;
+
+axiom df_lndifop (x y: setvar):
+  $ wceq clndifop (cmpt2 x y cvv cvv (cdif (cv x) (cv y))) $;
+
+term clnpwasymfn: class;
+
+axiom df_lnpwasymfn:
+  $ wceq clnpwasymfn (ccom clndifop (ctxp c1st (ccom (cimage cswap) c1st))) $;
+
+term cfdord (A2 B2 R: class): class;
+
+axiom df_fdord (A2 B2 R: class):
+  $ wceq (cfdord A2 B2 R) (cin R (cxp (cfdif A2 B2 R) (cfdif A2 B2 R))) $;
+
+term ctcnn: class;
+
+axiom df_tcnn:
+  $ wceq ctcnn (crn (cres ctcfn (cpw1 cnnc))) $;
+
+term cpwpull (R F: class): class;
+
+axiom df_pwpull (R F: class):
+  $ wceq (cpwpull R F) (ccom (ccom (ccnv F) R) F) $;
+
+term clnpwkerfn: class;
+
+axiom df_lnpwkerfn:
+  $ wceq clnpwkerfn (ccom clndifop (ctxp c1st clnpwasymfn)) $;
+
+term clninterop: class;
+
+term clnimagecrossfn: class;
+
+term clnimageresfn: class;
+
+term clnimageop: class;
+
+axiom df_lninterop:
+  $ wceq clninterop (ccom clndifop (ctxp c1st clndifop)) $;
+
+axiom df_lnimagecrossfn:
+  $ wceq clnimagecrossfn (ccom ccross (ctxp c2nd (cxp cvv (csn cvv)))) $;
+
+axiom df_lnimageresfn:
+  $ wceq clnimageresfn (ccom clninterop (ctxp c1st clnimagecrossfn)) $;
+
+axiom df_lnimageop:
+  $ wceq clnimageop (ccom cranfn clnimageresfn) $;
+
+term clnpwcnvkerfn: class;
+
+term clnpwclasspairfn: class;
+
+term clnpwclassfn: class;
+
+term clnpwpw1secondfn: class;
+
+term clnpwquoinputfn: class;
+
+axiom df_lnpwcnvkerfn:
+  $ wceq clnpwcnvkerfn (ccom (cimage cswap) clnpwkerfn) $;
+
+axiom df_lnpwclasspairfn:
+  $ wceq clnpwclasspairfn (ctxp (ccom clnpwcnvkerfn c1st) c2nd) $;
+
+axiom df_lnpwclassfn:
+  $ wceq clnpwclassfn (ccom clnimageop clnpwclasspairfn) $;
+
+axiom df_lnpwpw1secondfn:
+  $ wceq clnpwpw1secondfn (ccom (cfullfun cpw1fn) (cimage c2nd)) $;
+
+axiom df_lnpwquoinputfn:
+  $ wceq clnpwquoinputfn (ccom ccross (ctxp cid clnpwpw1secondfn)) $;
+
+term clnpwquofn: class;
+
+axiom df_lnpwquofn:
+  $ wceq clnpwquofn (ccom (cimage clnpwclassfn) clnpwquoinputfn) $;
+
+term clnpairraisefn: class;
+
+term clnsifn: class;
+
+axiom df_lnpairraisefn:
+  $ wceq clnpairraisefn (ctxp (cimage c1st) (cimage c2nd)) $;
+
+axiom df_lnsifn:
+  $ wceq clnsifn (ccom (cimage clnpairraisefn) (cfullfun cpw1fn)) $;
+
+term clnpwsirelfn: class;
+
+axiom df_lnpwsirelfn:
+  $ wceq clnpwsirelfn (ccom clnsifn (cimage c1st)) $;
+
+term cwppreach (C F: class): class;
+
+term cwppcand (C F: class): class;
+
+axiom df_wppreach (C F: class):
+  $ wceq (cwppreach C F) (cuni (crn (cfrec (cimage (ccnv F)) (cima clec (csn C))))) $;
+
+axiom df_wppcand (C F: class):
+  $ wceq (cwppcand C F) (cin (cin (chwcards cvv) (cima (ccnv clec) (csn C))) (cwppreach C F)) $;
+
+term cwpppredfam (C F: class): class;
+
+axiom df_wpppredfam (C F: class):
+  $ wceq (cwpppredfam C F) (ccom (cimage (ccnv (ccom (cfrec (cimage (ccnv F)) (cima clec (csn C))) ctcfn))) (cimage csset)) $;
+
+term cwpppostcomp (F: class): class;
+
+axiom df_wpppostcomp (F: class):
+  $ wceq (cwpppostcomp F) (ccom ccompose (ctxp (cxp cvv (csn F)) cid)) $;
+
+term cwppupperpreop (C: class): class;
+
+axiom df_wppupperpreop (C: class):
+  $ wceq (cwppupperpreop C) (ccom clnimageop (ctxp (cimage cswap) (cxp cvv (csn (cima clec (csn C)))))) $;
+
+term cwpppowlayerseq (C F: class): class;
+
+axiom df_wpppowlayerseq (C F: class):
+  $ wceq (cwpppowlayerseq C F) (ccom (cwppupperpreop C) (ccom (cfrec (cwpppostcomp F) cid) ctcfn)) $;
+
+term cwpphitfam (C F: class): class;
+
+axiom df_wpphitfam (C F: class):
+  $ wceq (cwpphitfam C F) (ccom (cimage (ccnv (cwpppowlayerseq C F))) (cimage csset)) $;
+
+term cwpppredmemrel (C F: class): class;
+
+term cwpphitmemrel (C F: class): class;
+
+axiom df_wpppredmemrel (C F: class):
+  $ wceq (cwpppredmemrel C F) (ccom (ccnv csset) (cwpppredfam C F)) $;
+
+axiom df_wpphitmemrel (C F: class):
+  $ wceq (cwpphitmemrel C F) (ccom (ccnv csset) (cwpphitfam C F)) $;
+
+term cwppreachincb (C F: class): class;
+
+axiom df_wppreachincb (C F: class):
+  $ wceq (cwppreachincb C F) (cuni1 (cuni1 (cdif (cpw1 (cpw1 cnnc)) (crn (cres (csymdif (cwpppredmemrel C F) (cwpphitmemrel C F)) (cpw1 (cpw1 (cdm F)))))))) $;
+
+term cwppimageat (D: class): class;
+
+axiom df_wppimageat (D: class):
+  $ wceq (cwppimageat D) (ccom clnimageop (ctxp cid (cxp cvv (csn (csn D))))) $;
+
+term cwpppowateq (D F: class): class;
+
+axiom df_wpppowateq (D F: class):
+  $ wceq (cwpppowateq D F) (cuni1 (cfix (ccom (ccnv (ccom (cwppimageat D) (ccom (cfrec (cwpppostcomp F) cid) ctcfn))) (csi (cfrec F D))))) $;
+
+term cwppprecomp (F: class): class;
+
+axiom df_wppprecomp (F: class):
+  $ wceq (cwppprecomp F) (ccom ccompose (ctxp cid (cxp cvv (csn F)))) $;
+
+term cwpppowcommeq (F: class): class;
+
+axiom df_wpppowcommeq (F: class):
+  $ wceq (cwpppowcommeq F) (cfix (ccom (ccnv (ccom (cwppprecomp F) (cfrec (cwpppostcomp F) cid))) (ccom (cwpppostcomp F) (cfrec (cwpppostcomp F) cid)))) $;
+
+term cwecutiso (D R S E: class): class;
+
+axiom df_wecutiso (x u: setvar) (D R S: class) (f: setvar) (E: class):
+  $ wceq (cwecutiso D R S E) (cab (wrex (wrex (wiso (cin D (cima (ccnv (cdif R cid)) (csn (cv x)))) (cin E (cima (ccnv (cdif S cid)) (csn (cv u)))) (cin R (cxp (cin D (cima (ccnv (cdif R cid)) (csn (cv x)))) (cin D (cima (ccnv (cdif R cid)) (csn (cv x)))))) (cin S (cxp (cin E (cima (ccnv (cdif S cid)) (csn (cv u)))) (cin E (cima (ccnv (cdif S cid)) (csn (cv u)))))) (cv f)) u E) x D) f) $;
+
+term cwecutisogen (D R S E: class): class;
+
+axiom df_wecutisogen (D R S E: class):
+  $ wceq (cwecutisogen D R S E) (cdm (cin (cxp chwbij cvv) (cima (ccnv chwgen) (cxp (crn (chnwcutrel D R)) (crn (chnwcutrel E S)))))) $;
+
+term cwecutcardfn (D R: class): class;
+
+term cwecutcardfactor (D R: class): class;
+
+axiom df_wecutcardfn (D R: class) (q: setvar):
+  $ wceq (cwecutcardfn D R) (cmpt q (cpw1 (cpw1 D)) (cnc (cin D (cima (ccnv (cdif R cid)) (csn (cuni (cuni (cv q)))))))) $;
+
+axiom df_wecutcardfactor (D R: class):
+  $ wceq (cwecutcardfactor D R) (ccom (cimage cen) (csi (ccom c2nd (chnwcutrel D R)))) $;
+
+term cwppgamma (C F: class): class;
+
+axiom df_wppgamma (C: class) (k m: setvar) (F: class):
+  $ wceq (cwppgamma C F) (cio (wa (wcel (cv m) (cwppcand C F)) (wral (wbr (cv m) (cv k) clec) k (cwppcand C F))) m) $;
+
+term cwppcardtfn: class;
+
+axiom df_wppcardtfn:
+  $ wceq cwppcardtfn (cres ctcfn (cpw1 cncs)) $;
+
+term cwppcardt2fn: class;
+
+axiom df_wppcardt2fn:
+  $ wceq cwppcardt2fn (ccom cwppcardtfn (csi cwppcardtfn)) $;
+
+term chnbaseresfn (F: class): class;
+
+term chncodetrnfn (F: class): class;
+
+axiom df_hnbaseresfn (F: class):
+  $ wceq (chnbaseresfn F) (ccom clnimageresfn (ctxp (cxp cvv (csn F)) c2nd)) $;
+
+axiom df_hncodetrnfn (F: class):
+  $ wceq (chncodetrnfn F) (ccom c2nd (ccom chwgen (ctxp (chnbaseresfn F) c1st))) $;
+
+term cwppcardt4fn: class;
+
+axiom df_wppcardt4fn:
+  $ wceq cwppcardt4fn (ccom cwppcardt2fn (csi (csi cwppcardt2fn))) $;
+
+term cwpppowsetfn: class;
+
+term cwpphwcnsetfn: class;
+
+term cwpphwgendomfn: class;
+
+term cwpphwgencnvfn: class;
+
+term cwpphwnisosetfn: class;
+
+term cwpphnpairfn: class;
+
+term cwpphninputfn: class;
+
+axiom df_wpppowsetfn:
+  $ wceq cwpppowsetfn (cimage (ccnv csset)) $;
+
+axiom df_wpphwcnsetfn:
+  $ wceq cwpphwcnsetfn (ccom (cimage cswap) (ccom clnimageresfn (ctxp (cxp cvv (csn (ccnv (chwcn cvv)))) cwpppowsetfn))) $;
+
+axiom df_wpphwgendomfn:
+  $ wceq cwpphwgendomfn (ccom clnimageresfn (ctxp (cxp cvv (csn (cima chwgen (cxp chwbij cvv)))) cwpphwcnsetfn)) $;
+
+axiom df_wpphwgencnvfn:
+  $ wceq cwpphwgencnvfn (ccom (cimage cswap) cwpphwgendomfn) $;
+
+axiom df_wpphwnisosetfn:
+  $ wceq cwpphwnisosetfn (ccom (cimage cswap) (ccom clnimageresfn (ctxp cwpphwgencnvfn cwpphwcnsetfn))) $;
+
+axiom df_wpphnpairfn:
+  $ wceq cwpphnpairfn (ctxp cwpphwnisosetfn cwpphwcnsetfn) $;
+
+axiom df_wpphninputfn:
+  $ wceq cwpphninputfn (csi cwpphnpairfn) $;
+
+term cwppqkrelkernel: class;
+
+axiom df_wppqkrelkernel:
+  $ wceq cwppqkrelkernel (cin (cxpk cvv (cxpk cvv cvv)) (ccompl (cimak (csymdif (cins3k (csik (csik cssetk))) (cins2k (cun (cins3k (ccomk cssetk (csik (ccnvk (cimagek (cun (cin (cimagek (cimak (cdif (cins3k (ccompl (cimak (cin (cins3k cssetk) (cins2k cssetk)) (cpw1 (cpw1 c1c))))) (cimak (csymdif (cins2k (cins2k cssetk)) (cun (cins2k (cins3k cssetk)) (cins3k (csik (csik cssetk))))) (cpw1 (cpw1 (cpw1 (cpw1 c1c)))))) (cpw1 (cpw1 c1c)))) (cxpk cnnc cvv)) (cin cidk (cxpk (ccompl cnnc) cvv)))))))) (cins2k (cimak (cin (cins2k cssetk) (cins3k (csik (ccompl (cimak (csymdif (cins2k cssetk) (cins3k (cun (ccomk (ccnvk (cimagek (cun (cin (cimagek (cimak (cdif (cins3k (ccompl (cimak (cin (cins3k cssetk) (cins2k cssetk)) (cpw1 (cpw1 c1c))))) (cimak (csymdif (cins2k (cins2k cssetk)) (cun (cins2k (cins3k cssetk)) (cins3k (csik (csik cssetk))))) (cpw1 (cpw1 (cpw1 (cpw1 c1c)))))) (cpw1 (cpw1 c1c)))) (cxpk cnnc cvv)) (cin cidk (cxpk (ccompl cnnc) cvv))))) cssetk) (cxpk (csn (csn c0c)) cvv)))) (cpw1 (cpw1 c1c))))))) (cpw1 (cpw1 c1c))))))) (cpw1 (cpw1 (cpw1 (cpw1 c1c))))))) $;
+
+term cwpplitphnordpointfn: class;
+
+axiom df_wpplitphnordpointfn:
+  $ wceq cwpplitphnordpointfn (ccom clnpwquofn cwpphninputfn) $;
+
+term cwpppowset2fn: class;
+
+axiom df_wpppowset2fn:
+  $ wceq cwpppowset2fn (ccom cwpppowsetfn (csi cwpppowsetfn)) $;
+
+term cwppfamilyrep2fn: class;
+
+axiom df_wppfamilyrep2fn:
+  $ wceq cwppfamilyrep2fn (cimage (cfdpointrel cvv)) $;
+
+term cwppdirecte2famfn: class;
+
+term cwppdirecth1famfn: class;
+
+term cwppdirecth2famfn: class;
+
+axiom df_wppdirecte2famfn:
+  $ wceq cwppdirecte2famfn (ccom (cimage cwpppowset2fn) cwppfamilyrep2fn) $;
+
+axiom df_wppdirecth1famfn:
+  $ wceq cwppdirecth1famfn (ccom (ccom (cimage cwpplitphnordpointfn) cwppfamilyrep2fn) (csi (csi cwppdirecte2famfn))) $;
+
+axiom df_wppdirecth2famfn:
+  $ wceq cwppdirecth2famfn (ccom (ccom (cimage cwpplitphnordpointfn) cwppfamilyrep2fn) (csi (csi cwppdirecth1famfn))) $;
+
+term cwppconcrete6codefn: class;
+
+axiom df_wppconcrete6codefn:
+  $ wceq cwppconcrete6codefn (ccom (cimage cen) cwppdirecth2famfn) $;
+
+term cwppcardt6fn: class;
+
+axiom df_wppcardt6fn:
+  $ wceq cwppcardt6fn (ccom cwppcardt2fn (csi (csi cwppcardt4fn))) $;
+
+term cwppconcrete6fn: class;
+
+axiom df_wppconcrete6fn:
+  $ wceq cwppconcrete6fn (ccom cwppconcrete6codefn (ccnv cwppcardt6fn)) $;
+
+term chnsicodeliftfn: class;
+
+axiom df_hnsicodeliftfn:
+  $ wceq chnsicodeliftfn (ctxp clnpwsirelfn clnpwpw1secondfn) $;
+
+term chnsicodemap (A2: class): class;
+
+axiom df_hnsicodemap (A2: class):
+  $ wceq (chnsicodemap A2) (cres chnsicodeliftfn (cpw1 (chwcn A2))) $;
+
+term chnsiquomap (A2: class): class;
+
+axiom df_hnsiquomap (A2: class):
+  $ wceq (chnsiquomap A2) (cres (ccom (cimage (chnsicodemap A2)) cpw1fn) (cpw1 (chnord A2))) $;
+
+term chncodestrictfn: class;
+
+term chncodepredfn: class;
+
+term chncodecarrierfn: class;
+
+term chncodesquarefn: class;
+
+term chncoderelfn: class;
+
+term chncodecutfn: class;
+
+term chncodecutpairfn: class;
+
+axiom df_hncodestrictfn:
+  $ wceq chncodestrictfn (ccom clndifop (ctxp (ccom c1st c1st) (cxp cvv (csn cid)))) $;
+
+axiom df_hncodepredfn:
+  $ wceq chncodepredfn (ccom clnimageop (ctxp (ccom (cimage cswap) chncodestrictfn) c2nd)) $;
+
+axiom df_hncodecarrierfn:
+  $ wceq chncodecarrierfn (ccom clninterop (ctxp (ccom c2nd c1st) chncodepredfn)) $;
+
+axiom df_hncodesquarefn:
+  $ wceq chncodesquarefn (ccom ccross (ctxp chncodecarrierfn chncodecarrierfn)) $;
+
+axiom df_hncoderelfn:
+  $ wceq chncoderelfn (ccom clninterop (ctxp (ccom c1st c1st) chncodesquarefn)) $;
+
+axiom df_hncodecutfn:
+  $ wceq chncodecutfn (ctxp chncoderelfn chncodecarrierfn) $;
+
+axiom df_hncodecutpairfn:
+  $ wceq chncodecutpairfn (ctxp chncodecutfn c1st) $;
+
+term chncodecutinputs (A2: class): class;
+
+term chncodecutrel (A2: class): class;
+
+term chncodecmpset (A2: class): class;
+
+axiom df_hncodecutinputs (A2: class):
+  $ wceq (chncodecutinputs A2) (cuni (cima clnpwquoinputfn (cpw1 (chwcn A2)))) $;
+
+axiom df_hncodecutrel (A2: class):
+  $ wceq (chncodecutrel A2) (cima chncodecutpairfn (chncodecutinputs A2)) $;
+
+axiom df_hncodecmpset (A2: class):
+  $ wceq (chncodecmpset A2) (cun (chwniso A2) (ccom (chncodecutrel A2) (chwniso A2))) $;
+
+term chncodepredinputs (v: setvar) (A2 X: class): class;
+
+axiom df_hncodepredinputs (v: setvar) (A2 X: class):
+  $ wceq (chncodepredinputs v A2 X) (cin (cxp (csn (cv v)) (cpw1 (cfv (cv v) c2nd))) (cima (ccnv chncodecutfn) (cima (chwniso A2) X))) $;
+
+term chncodepredends (v: setvar) (A2 X: class): class;
+
+axiom df_hncodepredends (v: setvar) (A2 X: class):
+  $ wceq (chncodepredends v A2 X) (cuni (cima c2nd (chncodepredinputs v A2 X))) $;
+
+term cwppstopact (C F: class): class;
+
+term cwppstopstep (C F: class): class;
+
+axiom df_wppstopact (C F: class):
+  $ wceq (cwppstopact C F) (cin (cdm F) (cin (chwcards cvv) (cima (ccnv clec) (csn C)))) $;
+
+axiom df_wppstopstep (C F: class):
+  $ wceq (cwppstopstep C F) (cun (cres F (cwppstopact C F)) (cres cid (cdif (chwcards cvv) (cwppstopact C F)))) $;
+
+term cwppfreceq (F G I: class): class;
+
+axiom df_wppfreceq (F G I: class):
+  $ wceq (cwppfreceq F G I) (cfix (ccom (ccnv (cfrec F I)) (cfrec G I))) $;
+
+term cwppfrecprefixeq (k: setvar) (F G I: class): class;
+
+axiom df_wppfrecprefixeq (k: setvar) (F G I: class):
+  $ wceq (cwppfrecprefixeq k F G I) (cun (cdif cnnc (cima (ccnv (ckqrel clefin)) (csn (cv k)))) (cwppfreceq F G I)) $;
+
+theorem wppfiniteblocknotwppndv:
+  $ wn wwpp $;
+

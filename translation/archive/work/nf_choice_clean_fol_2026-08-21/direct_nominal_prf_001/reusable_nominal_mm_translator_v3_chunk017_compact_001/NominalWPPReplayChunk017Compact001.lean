@@ -1,0 +1,7 @@
+import NominalWPPReplayChunk017Compact001Part095
+
+namespace NFChoice.DirectNominalPrf.WPPReplay
+
+#print axioms g_cfbwppfixedblockhnqgraphinjndv
+
+end NFChoice.DirectNominalPrf.WPPReplay

@@ -1,0 +1,83 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-first-use-kernel-prefix-batch-successor-v1",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_28",
+  "parent": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix25_001/resource.json",
+    "resourceSha256": "B8582C307C4AB7D279F76A3B410D4C142F27A5CF37400DC80A8AF08342DD20A4",
+    "endOrdinal": 25
+  },
+  "sourceBoundary": {
+    "resourceSha256": "8EDBCC3FC57E074AB7F43E4B25291A41ECC107DA4FB57925E959CE8EE732BFBF",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+  },
+  "runner": {
+    "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/run_nominal_alpha_direct_leaf_v1.ps1",
+    "sha256": "F07EF1E8925E667A2347534DC4769971B3E2CF5C35B5CFC588886823C9B2CB59"
+  },
+  "settings": { "trust": 0, "threads": 1, "maxHeartbeats": 5000000 },
+  "newLeaves": [
+    {
+      "ordinal": 26,
+      "label": "df-ltfin",
+      "module": "NominalAlphaRepairedBase001026Ltfin",
+      "import": "NominalAlphaRepairedBase001026Ltfin",
+      "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_ltfin",
+      "sourceSha256": "D46D260ED007E30B4D71469648E7F49BC76E4E71EF711D4EA5F5FFCF24F5625F",
+      "sourceBytes": 106467,
+      "oleanSha256": "C270A2FCCD54D476D2568C214647523DD96567DC245943F24C66A470C943B76C",
+      "oleanBytes": 716888,
+      "auditSourceSha256": "1122A816522457900F8756DF6A054E6AEBD9840B17D0609A636D3D55472339B7",
+      "auditOleanSha256": "FA9D2F4F0DA4C0BEDC6375F496B6BD2577642B415218BAC76EEC57E1D50E57C3",
+      "auditOleanBytes": 1272,
+      "reportedAxioms": ["propext", "Classical.choice", "Quot.sound"],
+      "exactAllowedThree": true,
+      "forbiddenSourceMatches": [],
+      "sourceCompileExitCode": 0,
+      "auditCompileExitCode": 0
+    },
+    {
+      "ordinal": 27,
+      "label": "df-ncfin",
+      "module": "NominalAlphaRepairedBase001027Ncfin",
+      "import": "NominalAlphaRepairedBase001027Ncfin",
+      "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_ncfin",
+      "sourceSha256": "2DE9D6D0F79878A9D3E4051A634C726B4C824F819C99C27F8D5A3A67FEBDDFEE",
+      "sourceBytes": 32441,
+      "oleanSha256": "4EA683CFDFF5D65391DEF0D1107CC5C7062A8A9354D290E0B5B2196A5351A0F4",
+      "oleanBytes": 325248,
+      "auditSourceSha256": "34BB7DE5DE86EF576CF3AFDCA2F995C051A30C393D5AC294E671D03F7F81EE03",
+      "auditOleanSha256": "73EBB96348B903584B451BF65EC0CAA50696286A69FD4F04CC2D1C59CFA657F5",
+      "auditOleanBytes": 1272,
+      "reportedAxioms": ["propext", "Classical.choice", "Quot.sound"],
+      "exactAllowedThree": true,
+      "forbiddenSourceMatches": [],
+      "sourceCompileExitCode": 0,
+      "auditCompileExitCode": 0
+    },
+    {
+      "ordinal": 28,
+      "label": "df-tfin",
+      "module": "NominalAlphaRepairedBase001028Tfin",
+      "import": "NominalAlphaRepairedBase001028Tfin",
+      "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_tfin",
+      "sourceSha256": "554EFB9DBC421147B72CB08D7F1FDD4E19B5366D6768723EF41EBB774011CFA9",
+      "sourceBytes": 59263,
+      "oleanSha256": "37EE48A4A580DC72DB5D837A5348CB2A137E7E71719A56361CF53233035E9AA1",
+      "oleanBytes": 627928,
+      "auditSourceSha256": "978ED273F81C47BD923BECC452070420E4231384B158DB1E4A8AB5587DBA5A2D",
+      "auditOleanSha256": "B2503A93166FB9B1A0627299183CAAA06944ACB973EE3ABD07A5195E67E6DF70",
+      "auditOleanBytes": 1272,
+      "reportedAxioms": ["propext", "Classical.choice", "Quot.sound"],
+      "exactAllowedThree": true,
+      "forbiddenSourceMatches": [],
+      "sourceCompileExitCode": 0,
+      "auditCompileExitCode": 0
+    }
+  ],
+  "firstUsePrefix": { "startOrdinal": 1, "endOrdinal": 28, "coveredCount": 28 },
+  "nextExactFirstUse": {
+    "ordinal": 29,
+    "label": "df-evenfin",
+    "module": "NominalAlphaRepairedBase001029Evenfin"
+  }
+}

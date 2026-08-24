@@ -1,0 +1,33 @@
+{
+  "name": "from_mm_textual_pair",
+  "executable": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe",
+  "executable_sha256": "64D73FD69F3123AE5D573B7B4B0817D9F403DD7B366107B9D1AA20E16058368B",
+  "arguments": [
+    "from-mm",
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm",
+    "-f",
+    "wppfiniteblocknotwppndv",
+    "-o",
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mm0",
+    "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mmu"
+  ],
+  "exact_command": "& \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe\" \"from-mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\" \"-f\" \"wppfiniteblocknotwppndv\" \"-o\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mm0\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mmu\"",
+  "standard_input": "",
+  "started": "2026-08-20T22:40:08.7417119-07:00",
+  "elapsed_seconds": 7.665,
+  "limit_bytes": 1610612736,
+  "limit_mib": 1536,
+  "peak_working_set_bytes": 350302208,
+  "peak_working_set_mib": 334.074,
+  "peak_private_bytes": 361361408,
+  "peak_private_mib": 344.621,
+  "guard_killed": false,
+  "exit_code": 0,
+  "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\from_mm_textual_pair.stdout.txt",
+  "stdout_bytes": 0,
+  "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\from_mm_textual_pair.stderr.txt",
+  "stderr_bytes": 0,
+  "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "metamath_executable_invoked": false
+}

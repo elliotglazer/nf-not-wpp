@@ -1,0 +1,28 @@
+{
+  "root": "work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_alias\\quotient_proxy_imp_stage1_checkpoint.mm",
+  "ok": true,
+  "verified": 4330,
+  "trusted": 0,
+  "last_verified": [
+    "cfbtargetledgerndv",
+    "cfbfixedblockledgercmpndv",
+    "cfbfixedblockledgercmpdndv",
+    "cfbfixedblockcancelleddndv",
+    "cfbfixedblockf6pointfromnclendv",
+    "cfbpw16oneexndv",
+    "cfbfixedblocksourceexndv",
+    "cfbfixedblocktargetexndv",
+    "cfbnclefrominjimpndv",
+    "cfbfixedblocknclefrominjndv",
+    "cfbfixedblockf6pointfrominjndv",
+    "cfbfixedblockf6pointfrominjnowendv",
+    "cfbfixedblocknotwppfrominjndv",
+    "cfbthresholdnn2lencndv",
+    "cfbliteralunivhncardboundndv",
+    "cfbliteralp17hncardboundndv",
+    "cfbliteralp16onehncardboundndv",
+    "cfbfixedblockhnqgraphexndv",
+    "cfbwppfixedblockhnqinjexndv",
+    "wppfiniteblocknotwppndv"
+  ]
+}

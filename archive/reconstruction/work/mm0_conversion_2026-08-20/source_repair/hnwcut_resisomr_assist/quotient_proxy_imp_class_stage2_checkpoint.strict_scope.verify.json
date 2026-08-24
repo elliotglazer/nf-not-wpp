@@ -1,0 +1,87 @@
+{
+  "schema": "strict-metamath-scope-verification-v1",
+  "root": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\quotient_proxy_imp_class_stage2_checkpoint.mm",
+  "root_bytes": 9885108,
+  "root_sha256": "24A5D458B22747CFBD172326293548BD4EF56BC08DD11908AC91E6A8AB57335A",
+  "strict_verifier": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\strict_scope\\local_mm_verify_compressed_strict_scope.py",
+  "strict_verifier_sha256": "29EE7F7C324F8F09A16FFB0104699674E25B6C84C691B68EE7FFBEE25AF9B497",
+  "source_verifier": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\root_integration\\local_mm_verify_compressed.py",
+  "source_verifier_expected_sha256": "4E0B837A73B736F6B6698840FDCA66057C01489CD09956ABA4573175D73E21D8",
+  "source_verifier_actual_sha256": "4E0B837A73B736F6B6698840FDCA66057C01489CD09956ABA4573175D73E21D8",
+  "source_verifier_unchanged": true,
+  "ok": false,
+  "status": "FAIL_INACTIVE_HYPOTHESIS_SCOPE",
+  "statements_seen": 34071,
+  "proofs_seen": 4331,
+  "verified_scope_clean_proofs": 4330,
+  "trusted_scope_clean_proofs": 0,
+  "rejected_proof_count": 1,
+  "rejected_proofs": [
+    "hnwcutambstrictsegresisomralias0ndv"
+  ],
+  "inactive_hypothesis_reference_count": 2,
+  "inactive_hypothesis_references": [
+    {
+      "theorem": "hnwcutambstrictsegresisomralias0ndv",
+      "theorem_file": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\quotient_proxy_imp_class_stage2_checkpoint.mm",
+      "proof_encoding": "compressed",
+      "location": "parenthesized_label_list",
+      "position_1_based": 36,
+      "referenced_label": "hnwcutambstrictsegisomndv.3",
+      "referenced_kind": "$e",
+      "referenced_expression": [
+        "|-",
+        "u",
+        "e.",
+        "HWCN",
+        "A"
+      ],
+      "referenced_file": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\quotient_proxy_imp_class_stage2_checkpoint.mm",
+      "executed_count": 4,
+      "active_same_kind_and_expression": []
+    },
+    {
+      "theorem": "hnwcutambstrictsegresisomralias0ndv",
+      "theorem_file": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\quotient_proxy_imp_class_stage2_checkpoint.mm",
+      "proof_encoding": "compressed",
+      "location": "parenthesized_label_list",
+      "position_1_based": 44,
+      "referenced_label": "hnwcutambstrictsegisomndv.2",
+      "referenced_kind": "$e",
+      "referenced_expression": [
+        "|-",
+        "r",
+        "=",
+        "HNCodeCmpSet",
+        "A"
+      ],
+      "referenced_file": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\quotient_proxy_imp_class_stage2_checkpoint.mm",
+      "executed_count": 2,
+      "active_same_kind_and_expression": []
+    }
+  ],
+  "mathematical_verification_complete": false,
+  "audit_caveat": "Rejected proofs were not executed; later clean proofs were checked using their assertions, so this failing run is a complete scope audit but not a complete mathematical verification.",
+  "last_verified": [
+    "cfbtargetledgerndv",
+    "cfbfixedblockledgercmpndv",
+    "cfbfixedblockledgercmpdndv",
+    "cfbfixedblockcancelleddndv",
+    "cfbfixedblockf6pointfromnclendv",
+    "cfbpw16oneexndv",
+    "cfbfixedblocksourceexndv",
+    "cfbfixedblocktargetexndv",
+    "cfbnclefrominjimpndv",
+    "cfbfixedblocknclefrominjndv",
+    "cfbfixedblockf6pointfrominjndv",
+    "cfbfixedblockf6pointfrominjnowendv",
+    "cfbfixedblocknotwppfrominjndv",
+    "cfbthresholdnn2lencndv",
+    "cfbliteralunivhncardboundndv",
+    "cfbliteralp17hncardboundndv",
+    "cfbliteralp16onehncardboundndv",
+    "cfbfixedblockhnqgraphexndv",
+    "cfbwppfixedblockhnqinjexndv",
+    "wppfiniteblocknotwppndv"
+  ]
+}

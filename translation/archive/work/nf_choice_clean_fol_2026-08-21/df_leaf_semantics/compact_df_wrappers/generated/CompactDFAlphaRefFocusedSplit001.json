@@ -1,0 +1,40 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaRefFocusedSplit001",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "35DBB34550AC77EE4B40666C0122847FB3C9120E773DD925B9EF3381F58D2B6D",
+  "records": [
+    {
+      "label": "df-ref",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ref",
+      "floating": [
+        "x",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "r",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 2841,
+      "opaque_refl_subtrees": 0,
+      "fresh_facts": 94,
+      "split_alpha_haves": 5,
+      "alpha_case_split": null,
+      "alpha_three_way_split": null
+    }
+  ]
+}

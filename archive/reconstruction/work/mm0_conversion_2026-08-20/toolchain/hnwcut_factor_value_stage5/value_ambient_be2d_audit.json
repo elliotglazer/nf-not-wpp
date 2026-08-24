@@ -1,0 +1,22 @@
+{
+  "schema": "hnwcut-value-ambient-be2d-audit-v1",
+  "parent": "work\\mm0_conversion_2026-08-20\\toolchain\\hnwcut_strict_quotient_stage3\\strict_quotient_imp_frozen_checkpoint.mm",
+  "parent_sha256": "BE2D112F89516EED24DCB972EA1B2792A95590547D2E9823903C73312C3DFBB1",
+  "checkpoint": "work\\mm0_conversion_2026-08-20\\toolchain\\hnwcut_factor_value_stage5\\value_ambient_be2d_frozen_checkpoint.mm",
+  "checkpoint_sha256": "2BBB76DD71F34B66F0CBE74EB49E64C3F691766B01F6D208E0FA00EF375A8314",
+  "parent_free_suffix": "work\\mm0_conversion_2026-08-20\\toolchain\\hnwcut_factor_value_stage5\\value_ambient_be2d_parent_free_suffix.mm",
+  "parent_free_suffix_sha256": "25002A349011550261938F5287F5AB0DDB0C3D97F349DA7D5027DF7A2A3E61D3",
+  "labels": [
+    "hnwcutrelambfnnoarndv",
+    "hnwcutambfactorvalnoarndv",
+    "hnwcutambfactorvalcodendv",
+    "hnwcuttxpeq1dndv",
+    "hnwcutimageeqdndv",
+    "hnwcutreleq12dndv",
+    "hnwcutcodeeq12clndv",
+    "hnwcutambfactorvalimpclndv",
+    "hnwcutambfactorvalimpndv",
+    "hnwcutambordbrproxyimpndv"
+  ],
+  "inserted_before_inherited_alias0": true
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "createdUtc": "2026-08-22T06:22:00.6586516Z",
+  "leanVersion": "Lean (version 4.30.0-rc2, x86_64-w64-windows-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "sourceMmSha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+  "syntaxManifestSha256": "D692CEB8ECB2ACC8FC0751ABB079D878451CB7260EFBAD914B6D58B6A563A4B0",
+  "fvManifestSha256": "C9F50E461223DCA894313EB229071E7C60AF1720C803DF4A6E4C0F12B46F8DDF",
+  "results": [
+    {
+      "module": "WPPCompactSourceSyntax",
+      "status": "PASS",
+      "trust": 0,
+      "threads": 1,
+      "maxHeartbeats": 5000000,
+      "maxRecDepth": 30000,
+      "hardRssLimitBytes": 2147483648,
+      "wallLimitSeconds": 600,
+      "peakRssBytes": 1219104768,
+      "elapsedSeconds": 12.106,
+      "exitCode": 0,
+      "killReason": null,
+      "sourceSha256": "EED1484C89AF7BA7186B2D022C4D6BE5CB1156EA07B9423CD22D6D714A219CE1",
+      "outputSha256": "F73CB574E37366290EF72A35FC4379D0504A3213D4DCDAB33CA7E941AC5CFC21",
+      "forbiddenSourceTokens": [],
+      "stdoutSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "module": "WPPCompactSyntaxFVExplicit",
+      "status": "PASS",
+      "trust": 0,
+      "threads": 1,
+      "maxHeartbeats": 5000000,
+      "maxRecDepth": 30000,
+      "hardRssLimitBytes": 2147483648,
+      "wallLimitSeconds": 600,
+      "peakRssBytes": 1321201664,
+      "elapsedSeconds": 41.612,
+      "exitCode": 0,
+      "killReason": null,
+      "sourceSha256": "E09FA6176086DFFA998C20DEF8A782252B9D50A0873181A32E1E2C887A6E65F4",
+      "outputSha256": "A06A5CCF7C0F45359C0D26D10ABD0C58887AD7FC59434136835FEAF6BF34F689",
+      "forbiddenSourceTokens": [],
+      "stdoutSha256": "8F9165FB8DD8BC4F6645B754CB56C62CAC7BA9DBC02F9758607482AACA580C6F",
+      "stderrSha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  ]
+}

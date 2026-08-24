@@ -1,0 +1,983 @@
+{
+  "schema": "nf-wpp-compiled-lean-textual-evidence-v1",
+  "status": "FROZEN_TEXTUAL_CERTIFICATE_LEDGER",
+  "description": "Historical compiled Lean evidence retained as path/size/SHA-256 contracts; each contract is cross-checked against one hash-bearing archived JSON authority.",
+  "binaryArtifactsRequiredAtTranslationTime": false,
+  "entryCount": 79,
+  "alphaCertificateCount": 77,
+  "wppProfileCertificateCount": 2,
+  "totalHistoricalBytes": 21417512,
+  "contractSetSha256": "859A4B86E3FEA2FCA57AB4EFA09B74ED06C04CBFEBB0D6D8D5AB055F42972AE4",
+  "entries": [
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a1520k1/NominalAlphaFirstUse015020Audit.olean",
+      "bytes": 1952,
+      "sha256": "D2DE440B625AF06E19C33A83D162E298DE5FD2D9B1A1A068FC9DE359079A6D81",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/a1520k1/resource.json",
+        "receiptSha256": "237A98E31D4C53348B7926A24A0B928F4B8B8973FDDCDE335C0F7CBCDE61E35A",
+        "pathPointer": "/audit/outputPath",
+        "sha256Pointer": "/audit/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a1520k1/NominalAlphaRepairedBase001015Ins2k.olean",
+      "bytes": 641144,
+      "sha256": "E8C79745B41A605BF2ACC3FE469C508B9F758E92D58A8764BA31F83A63B58482",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/a1520k1/resource.json",
+        "receiptSha256": "237A98E31D4C53348B7926A24A0B928F4B8B8973FDDCDE335C0F7CBCDE61E35A",
+        "pathPointer": "/compiles/0/outputPath",
+        "sha256Pointer": "/compiles/0/outputSha256",
+        "bytesPointer": "/compiles/0/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a1520k1/NominalAlphaRepairedBase001016Ins3k.olean",
+      "bytes": 641200,
+      "sha256": "FAB622EF559DA95707D3EAE1276D739F82FE97C5BAC81AC1485311FC10718589",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/a1520k1/resource.json",
+        "receiptSha256": "237A98E31D4C53348B7926A24A0B928F4B8B8973FDDCDE335C0F7CBCDE61E35A",
+        "pathPointer": "/compiles/1/outputPath",
+        "sha256Pointer": "/compiles/1/outputSha256",
+        "bytesPointer": "/compiles/1/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a1520k1/NominalAlphaRepairedBase001017Imak.olean",
+      "bytes": 283040,
+      "sha256": "D44D7456E0FCCF7E8873C8C5680B29BF9A69EF4101BBBF06BBF27CC1E9D925C1",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/a1520k1/resource.json",
+        "receiptSha256": "237A98E31D4C53348B7926A24A0B928F4B8B8973FDDCDE335C0F7CBCDE61E35A",
+        "pathPointer": "/compiles/2/outputPath",
+        "sha256Pointer": "/compiles/2/outputSha256",
+        "bytesPointer": "/compiles/2/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a1520k1/NominalAlphaRepairedBase001018P6.olean",
+      "bytes": 460744,
+      "sha256": "A5872372A61E02078A066CC365151E55CB81D02D1A4748463863A139C68654C0",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/a1520k1/resource.json",
+        "receiptSha256": "237A98E31D4C53348B7926A24A0B928F4B8B8973FDDCDE335C0F7CBCDE61E35A",
+        "pathPointer": "/compiles/3/outputPath",
+        "sha256Pointer": "/compiles/3/outputSha256",
+        "bytesPointer": "/compiles/3/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a1520k1/NominalAlphaRepairedBase001019Sik.olean",
+      "bytes": 493448,
+      "sha256": "8E1C21969200FC9155EB123002396E6736DC124FB65A70611FCBD39A7DC9704B",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/a1520k1/resource.json",
+        "receiptSha256": "237A98E31D4C53348B7926A24A0B928F4B8B8973FDDCDE335C0F7CBCDE61E35A",
+        "pathPointer": "/compiles/4/outputPath",
+        "sha256Pointer": "/compiles/4/outputSha256",
+        "bytesPointer": "/compiles/4/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a1520k1/NominalAlphaRepairedBase001020Ssetk.olean",
+      "bytes": 269608,
+      "sha256": "3BDC43B5E8E5E3C400A5C42DF59ACEB3E46C1D551772FBB70A04BA7EC67D0220",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/a1520k1/resource.json",
+        "receiptSha256": "237A98E31D4C53348B7926A24A0B928F4B8B8973FDDCDE335C0F7CBCDE61E35A",
+        "pathPointer": "/compiles/5/outputPath",
+        "sha256Pointer": "/compiles/5/outputSha256",
+        "bytesPointer": "/compiles/5/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a2935k1/NominalAlphaRepairedBase001029Evenfin.olean",
+      "bytes": 337288,
+      "sha256": "58DBD46B782E5F026A67A3F891E30C8FB8B33350147A4B83F6D280F66C3A08EC",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix30_001/resource.json",
+        "receiptSha256": "4E35CF5F570DE5D39A87AA9EF2FBC055FBDDFD5E4DE0E2D595C4C32CA1A3EF71",
+        "pathPointer": "/compiles/0/outputPath",
+        "sha256Pointer": "/compiles/0/outputSha256",
+        "bytesPointer": "/compiles/0/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/a2935k1/NominalAlphaRepairedBase001030Oddfin.olean",
+      "bytes": 493768,
+      "sha256": "49A419EBA6AD34FD0F20F1A14D746812B0305BCD27AC947CE9F93FF307705731",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix30_001/resource.json",
+        "receiptSha256": "4E35CF5F570DE5D39A87AA9EF2FBC055FBDDFD5E4DE0E2D595C4C32CA1A3EF71",
+        "pathPointer": "/compiles/1/outputPath",
+        "sha256Pointer": "/compiles/1/outputSha256",
+        "bytesPointer": "/compiles/1/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaKernelPrefix48Reflected001AxiomAudit.olean",
+      "bytes": 3176,
+      "sha256": "E1BB20BFFA251707DE5B94B22F14ED7A7CA833C100B253AF358A64938338B39E",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/audit/outputPath",
+        "sha256Pointer": "/audit/outputSha256",
+        "bytesPointer": "/audit/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001038Leaf1stReflected001.olean",
+      "bytes": 1219424,
+      "sha256": "FEFE47FB5D39622B989E523189072C0534DFE34E3BA58C820F974DCC56B99C9F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/0/outputPath",
+        "sha256Pointer": "/compiles/0/outputSha256",
+        "bytesPointer": "/compiles/0/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001039SwapReflected001.olean",
+      "bytes": 1934976,
+      "sha256": "7CE618DC950D17C43915BF54128F2B3E9786E5AF010F405A6E69F62000A6CABF",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/1/outputPath",
+        "sha256Pointer": "/compiles/1/outputSha256",
+        "bytesPointer": "/compiles/1/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001040SsetReflected001.olean",
+      "bytes": 791664,
+      "sha256": "9B2E9957B4E8B4D70651E3C06D7D5D0CBCCDCED54E6F044F020E113C9821B0E1",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/2/outputPath",
+        "sha256Pointer": "/compiles/2/outputSha256",
+        "bytesPointer": "/compiles/2/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001041CoReflected001.olean",
+      "bytes": 2161720,
+      "sha256": "5272DAD29A79DAB33D3CFA5FEB884080211F30C4F3B5B641F6877FD0CBEF878F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/3/outputPath",
+        "sha256Pointer": "/compiles/3/outputSha256",
+        "bytesPointer": "/compiles/3/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001042ImaReflected001.olean",
+      "bytes": 818032,
+      "sha256": "F465FB3161ABFC1C99186904A2301B57574FF6D9353C265DF50BFCEBAF705285",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/4/outputPath",
+        "sha256Pointer": "/compiles/4/outputSha256",
+        "bytesPointer": "/compiles/4/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001043SiReflected001.olean",
+      "bytes": 1445376,
+      "sha256": "BBB072157EE3B5A97306466CD9AC513FEF91ED5F58AFA281CE11E267A9F749A8",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/5/outputPath",
+        "sha256Pointer": "/compiles/5/outputSha256",
+        "bytesPointer": "/compiles/5/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001044IdReflected001.olean",
+      "bytes": 769352,
+      "sha256": "723C03AD4F2E2FD6A652891052897D76A5FACF15CB5344CCC60A67F4B7FA8EED",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/6/outputPath",
+        "sha256Pointer": "/compiles/6/outputSha256",
+        "bytesPointer": "/compiles/6/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001045XpReflected001.olean",
+      "bytes": 915520,
+      "sha256": "CA73CDCA944B2239BCD9868A91F0B5E378E98F2CA0D872370136291DAC19629C",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/7/outputPath",
+        "sha256Pointer": "/compiles/7/outputSha256",
+        "bytesPointer": "/compiles/7/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001046CnvReflected001.olean",
+      "bytes": 1543688,
+      "sha256": "89F0E8DAB76C3BA69405AE9495DC5DE607101DD5AF25990B0389410163A04F56",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/8/outputPath",
+        "sha256Pointer": "/compiles/8/outputSha256",
+        "bytesPointer": "/compiles/8/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001047FvReflected001.olean",
+      "bytes": 1027416,
+      "sha256": "E15269C66DD70821A1F51BDCEC3483D33D3B1D03BFDE4F8FFB285417DEA4D5F0",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/9/outputPath",
+        "sha256Pointer": "/compiles/9/outputSha256",
+        "bytesPointer": "/compiles/9/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/NominalAlphaRepairedBase001048Leaf2ndReflected001.olean",
+      "bytes": 1454408,
+      "sha256": "5508482F01A6AA863BC4B134A568CAFA8A2593C7718BA24107D28D6232B596D5",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/compiles/10/outputPath",
+        "sha256Pointer": "/compiles/10/outputSha256",
+        "bytesPointer": "/compiles/10/outputBytes"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a49op1p6/NominalAlphaRepairedBase001049OprabReflected001.olean",
+      "bytes": 10120,
+      "sha256": "4C5D196B3F9F601956CA2E41B642B4F72C0D8D3BF4AF49D56D1A0251B4E45EEE",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/0/outputPath",
+        "sha256Pointer": "/acceptedModules/0/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a50wn14dk001/NominalAlphaPrefix050WppNotmem014Data.olean",
+      "bytes": 1256,
+      "sha256": "F1466CAB61A41C3BB9E7A2AF9AB999EF13F63B7DF208367B6F1F51362EDE46F8",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/1/outputPath",
+        "sha256Pointer": "/acceptedModules/1/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/alpha_opab_opaque_reflon_def_004/kernel_audit_001/NominalAlphaRepairedBase001037OpabOpaqueHoisted004.olean",
+      "bytes": 9400,
+      "sha256": "C323073EA63A652CFCD37DC44BCF29871FA6A9DC3E18803CA7956759FE0BD7B9",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/moduleOverrides/3/outputPath",
+        "sha256Pointer": "/moduleOverrides/3/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/alpha_reflection_suffix_035_048_001/kernel_audit_001/NominalAlphaRepairedBase001035Proj1Reflected001.olean",
+      "bytes": 311696,
+      "sha256": "715979F353716CD8597F379E78E877B01A7B660516885B5B5B09C0C79118B621",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/moduleOverrides/1/outputPath",
+        "sha256Pointer": "/moduleOverrides/1/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/alpha_reflection_suffix_035_048_001/kernel_audit_001/NominalAlphaRepairedBase001036Proj2Reflected001.olean",
+      "bytes": 391424,
+      "sha256": "A96F48558C68F215766BD4E97B6BF68F41E98C5BE2E059ED8798CECA462228D0",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/moduleOverrides/2/outputPath",
+        "sha256Pointer": "/moduleOverrides/2/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/b51nmex14k001/NominalAlphaGlobal051ProofData001.olean",
+      "bytes": 1256,
+      "sha256": "AAC55CDADE11C115DBAFC1C0CF71BF4421E794970C8F7FBECF81018D12CDAEE9",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/2/outputPath",
+        "sha256Pointer": "/acceptedModules/2/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g088kprobe001/NominalAlphaHygieneV5Probe088.olean",
+      "bytes": 1256,
+      "sha256": "1948C764B452BC053E6C33FE9141C3A25FD2C31BF7DB05CB9B1E899B37899D5E",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/39/outputPath",
+        "sha256Pointer": "/acceptedModules/39/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g089kprobe001/NominalAlphaRelease004Coarse089.olean",
+      "bytes": 1256,
+      "sha256": "14B977A6E08EAEEE6432DF37DE465BF803D64DD7789F97B889C3416D4BE7988A",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/40/outputPath",
+        "sha256Pointer": "/acceptedModules/40/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g090kprobe001/NominalAlphaRelease004Coarse090.olean",
+      "bytes": 1256,
+      "sha256": "01E5E8887FFA57EBA4A4E6FEF3AC4E20CD832804DD5F2D9D805E256EF3395ABF",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/41/outputPath",
+        "sha256Pointer": "/acceptedModules/41/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g091coalesce3k001/NominalAlphaHygieneV5Coalesced091B.olean",
+      "bytes": 1256,
+      "sha256": "A29D58E42291267E8B96D33B41A14A6CDBB87A8559BD52B704AB5B4C2188A4D2",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/42/outputPath",
+        "sha256Pointer": "/acceptedModules/42/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g092coalesce3k001/NominalAlphaHygieneV5Coalesced092.olean",
+      "bytes": 1256,
+      "sha256": "CF368A9D3FECD68F4F8B2AF00CB5F8694793800594E2DDDDF02D866F694E4FC2",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/43/outputPath",
+        "sha256Pointer": "/acceptedModules/43/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g093coalesce3k001/NominalAlphaHygieneV5Coalesced093.olean",
+      "bytes": 1256,
+      "sha256": "E7064E8763CB4C25042D6C2B1EA024BDC0149B82382F099BD850B633CA26E9FB",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/44/outputPath",
+        "sha256Pointer": "/acceptedModules/44/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g094coalesce3k001/NominalAlphaHygieneV5Coalesced094.olean",
+      "bytes": 1256,
+      "sha256": "9F8712DFF1BBC76CC434287BCE5FC9E5ED567C731702CDEACD431DA19F09DE65",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/45/outputPath",
+        "sha256Pointer": "/acceptedModules/45/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g095coalesce3k001/NominalAlphaHygieneV5Coalesced095.olean",
+      "bytes": 1256,
+      "sha256": "2E3F0D6A32DC064A05CA2EB04459AB9FC5AB8F463B108AD1372010D494933F81",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/46/outputPath",
+        "sha256Pointer": "/acceptedModules/46/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g096coalesce3k001/NominalAlphaHygieneV5Coalesced096.olean",
+      "bytes": 1256,
+      "sha256": "3D6368E15984405AF12DD549CA09A21E0885410426083589FD8B6404BF74A368",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/47/outputPath",
+        "sha256Pointer": "/acceptedModules/47/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g097coalesce3k001/NominalAlphaHygieneV5Coalesced097.olean",
+      "bytes": 1256,
+      "sha256": "30B694C56CBB1C964E80016F57E6B590720DA877500D6F8D6E1626FAED1F64B8",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/48/outputPath",
+        "sha256Pointer": "/acceptedModules/48/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/h5g097coalesce3k001/NominalAlphaHygieneV5Coalesced097AxiomAudit.olean",
+      "bytes": 1272,
+      "sha256": "2ABB68A33E1F981137A9137E42ABB4738645C7D6EFA195AA87BD3F6FCE8C16CD",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/audit/upstreamAuditOutput",
+        "sha256Pointer": "/audit/upstreamAuditOutputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix30_001/NominalAlphaPrefix30Audit.olean",
+      "bytes": 1408,
+      "sha256": "3B57CEEB9A55B15F0DADD69257EF955FF79627A0F8B351AF806415F8B89869BD",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix30_001/resource.json",
+        "receiptSha256": "4E35CF5F570DE5D39A87AA9EF2FBC055FBDDFD5E4DE0E2D595C4C32CA1A3EF71",
+        "pathPointer": "/audit/outputPath",
+        "sha256Pointer": "/audit/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix34_reflected_001/NominalAlphaRepairedBase001034OpReflected001.olean",
+      "bytes": 730936,
+      "sha256": "C0F09DB957291911BF41CBD3B3FDC58270C5D6FAF0637F5C69D577266361C399",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/moduleOverrides/0/outputPath",
+        "sha256Pointer": "/moduleOverrides/0/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_kernel_prefix37_reflected_001/kernel_audit_001/NominalAlphaKernelPrefix37Reflected001AxiomAudit.olean",
+      "bytes": 1576,
+      "sha256": "5B5A86BE329C7AFECCE02977BCBE8FBFF873B0B8221A7DC41D385163A1132E2D",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a3848k1/resource.json",
+        "receiptSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+        "pathPointer": "/parent/prefix37AuditOlean",
+        "sha256Pointer": "/parent/prefix37AuditOleanSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c052k001/NominalAlphaRelease004Coarse052.olean",
+      "bytes": 1256,
+      "sha256": "9E9B1C9CF1143F05DA27F0B38B9B7DB4CF5B015F74D52B6AA918155075C5C027",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/3/outputPath",
+        "sha256Pointer": "/acceptedModules/3/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c053k001/NominalAlphaRelease004Coarse053.olean",
+      "bytes": 1256,
+      "sha256": "D99CB9E28D49072682842C80A557E267DEC858B9F448D0E9D61ABC6CA494206A",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/4/outputPath",
+        "sha256Pointer": "/acceptedModules/4/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c054k001/NominalAlphaRelease004Coarse054.olean",
+      "bytes": 1256,
+      "sha256": "49C65AF7ACD4B14ABEB218E50D4EB526C94C23B06766FA431F143B69BC1C5284",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/5/outputPath",
+        "sha256Pointer": "/acceptedModules/5/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c055k001/NominalAlphaRelease004Coarse055.olean",
+      "bytes": 1256,
+      "sha256": "B41E91CE3B984C0E6FE333B95A46442A881BF5F098C93B7085EB03709297BF30",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/6/outputPath",
+        "sha256Pointer": "/acceptedModules/6/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c056k001/NominalAlphaRelease004Coarse056.olean",
+      "bytes": 1256,
+      "sha256": "33A0FCDF517D4651B4B1AD8DAA6C3A5B766D24993CE5AD6D5CF1272A82FB7E3F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/7/outputPath",
+        "sha256Pointer": "/acceptedModules/7/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c057k001/NominalAlphaRelease004Coarse057.olean",
+      "bytes": 1256,
+      "sha256": "168B9A90C026169DA0E5E323280D258B63D5B3073B003340F1F9B5860610FA14",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/8/outputPath",
+        "sha256Pointer": "/acceptedModules/8/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c058k001/NominalAlphaRelease004Coarse058.olean",
+      "bytes": 1256,
+      "sha256": "FA9E3F744CAA1AFE01459A7B155B3A6EE794943C5A8B9888852CAF8AA8288270",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/9/outputPath",
+        "sha256Pointer": "/acceptedModules/9/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c072v9k001/NominalAlphaRelease004Coarse072.olean",
+      "bytes": 1256,
+      "sha256": "054AB8144B7840C35CED75950167D1B83065D053AF4F9635B914B18CF14BF43B",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/23/outputPath",
+        "sha256Pointer": "/acceptedModules/23/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g059_tx001/kernel_attempt001/NominalAlphaRelease004Coarse059.olean",
+      "bytes": 1256,
+      "sha256": "1599A728A6CAAF609F7AD1DE90A5FB59E812D6BF358DDD0B34C611BC03632405",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/10/outputPath",
+        "sha256Pointer": "/acceptedModules/10/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g060_tx001/kernel_attempt001/NominalAlphaRelease004Coarse060.olean",
+      "bytes": 1256,
+      "sha256": "ED28C95BAC199E4C5394EA9900C71DA641C6D193F121AAC4E18170A33F291911",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/11/outputPath",
+        "sha256Pointer": "/acceptedModules/11/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g061_tx001/kernel_attempt001/NominalAlphaRelease004Coarse061.olean",
+      "bytes": 1256,
+      "sha256": "D20B96B6464CB8C41B44F4FD61044E829CD9BD7B3C493535A74BBAEB1E718DD0",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/12/outputPath",
+        "sha256Pointer": "/acceptedModules/12/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g062_tx001/kernel_attempt001/NominalAlphaRelease004Coarse062.olean",
+      "bytes": 1256,
+      "sha256": "CD313675800EAC7AA6AFA4AF9ECE5AA65BD8E6243FC51EBFDAC28269D648D496",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/13/outputPath",
+        "sha256Pointer": "/acceptedModules/13/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g063_tx001/kernel_attempt001/NominalAlphaRelease004Coarse063.olean",
+      "bytes": 1256,
+      "sha256": "C75DC90AF17856AA2EF87BD4595B53C64CE4DA829BF6BA1250D349562A1E726F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/14/outputPath",
+        "sha256Pointer": "/acceptedModules/14/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g064_tx001/kernel_attempt001/NominalAlphaRelease004Coarse064.olean",
+      "bytes": 1256,
+      "sha256": "E796BB33822E449FEBBBCE19FE08ED844456CDE3880E2724E7FFC683F683C5C9",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/15/outputPath",
+        "sha256Pointer": "/acceptedModules/15/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g065_tx001/kernel_attempt001/NominalAlphaRelease004Coarse065.olean",
+      "bytes": 1256,
+      "sha256": "0B4F6C04A58DCAB855FB5908664F301082F70AC9AAE833A7C1E4E88AB035CDA9",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/16/outputPath",
+        "sha256Pointer": "/acceptedModules/16/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g066_tx001/kernel_attempt001/NominalAlphaRelease004Coarse066.olean",
+      "bytes": 1256,
+      "sha256": "453FAF1F217C6866418FBAD5B83E51885C98396611999B043E5D723C7C40284F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/17/outputPath",
+        "sha256Pointer": "/acceptedModules/17/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g067_tx001/kernel_attempt001/NominalAlphaRelease004Coarse067.olean",
+      "bytes": 1256,
+      "sha256": "9C9A2A3EDC6C993591C2CDEECA08506B8C372B2BA01E7D05111908CCD9F375B7",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/18/outputPath",
+        "sha256Pointer": "/acceptedModules/18/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g068_tx001/kernel_attempt001/NominalAlphaRelease004Coarse068.olean",
+      "bytes": 1256,
+      "sha256": "C4E31EE0D5BF6B2D9CB7CEB0588FFB7CCE3D50C341F4B91325E18D67A97C2923",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/19/outputPath",
+        "sha256Pointer": "/acceptedModules/19/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g069_tx001/kernel_attempt001/NominalAlphaRelease004Coarse069.olean",
+      "bytes": 1256,
+      "sha256": "5F9B3929F8F46FAF9F2E848EDF37C37B2320C106DD77129AFF203020F2969772",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/20/outputPath",
+        "sha256Pointer": "/acceptedModules/20/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g070_tx001/kernel_attempt001/NominalAlphaRelease004Coarse070.olean",
+      "bytes": 1256,
+      "sha256": "F2EA190B8E39AF0B7CEB29E1C564F1FFD826383132B466C04B3AF63A32DA0C19",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/21/outputPath",
+        "sha256Pointer": "/acceptedModules/21/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c5997batch001/g071_tx001/kernel_attempt001/NominalAlphaRelease004Coarse071.olean",
+      "bytes": 1256,
+      "sha256": "C7466A1E230E9F06F3F33EE532CD6DB864FC6BDB6A5529DE40A29A25C13D1C0F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/22/outputPath",
+        "sha256Pointer": "/acceptedModules/22/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g073_tx001/kernel_attempt001/NominalAlphaRelease004Coarse073.olean",
+      "bytes": 1256,
+      "sha256": "5A881C476BC9B12DD1D592FFC1A9E6A4839A43778D57BAB1DF8AF0638A1F5D1F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/24/outputPath",
+        "sha256Pointer": "/acceptedModules/24/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g074_tx001/kernel_attempt001/NominalAlphaRelease004Coarse074.olean",
+      "bytes": 1256,
+      "sha256": "8A8EF248353CCAAE3AA112CC908C1115B8587BF010FE70315B42CAC1D155F608",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/25/outputPath",
+        "sha256Pointer": "/acceptedModules/25/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g075_tx001/kernel_attempt001/NominalAlphaRelease004Coarse075.olean",
+      "bytes": 1256,
+      "sha256": "462A2DCBAE5C25177B4D60AE0389BFC1EA6BE8565690C38FF4F8B4F538545237",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/26/outputPath",
+        "sha256Pointer": "/acceptedModules/26/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g076_tx001/kernel_attempt001/NominalAlphaRelease004Coarse076.olean",
+      "bytes": 1256,
+      "sha256": "1AF102F7F87D46B03A74DD0760088AA5BAB38DA1E3D20779ECEB0CA3531EA1E5",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/27/outputPath",
+        "sha256Pointer": "/acceptedModules/27/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g077_tx001/kernel_attempt001/NominalAlphaRelease004Coarse077.olean",
+      "bytes": 1256,
+      "sha256": "D8DAB8B2724FB0D9BE74A9D27545ED90383D5F405E0B7324421A294B0D02E42F",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/28/outputPath",
+        "sha256Pointer": "/acceptedModules/28/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g078_tx001/kernel_attempt001/NominalAlphaRelease004Coarse078.olean",
+      "bytes": 1256,
+      "sha256": "9A208F8E5214CC596F462809679E25D80947EDA2653170A36BF9587FB4E79DDA",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/29/outputPath",
+        "sha256Pointer": "/acceptedModules/29/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g079_tx001/kernel_attempt001/NominalAlphaRelease004Coarse079.olean",
+      "bytes": 1256,
+      "sha256": "78CF9950EDDB2550EBC60C6781B6A2CD8CCE97A548CBE381352FD8AEF6C3146C",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/30/outputPath",
+        "sha256Pointer": "/acceptedModules/30/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g080_tx001/kernel_attempt001/NominalAlphaRelease004Coarse080.olean",
+      "bytes": 1256,
+      "sha256": "EB9ED1D38545C195BC214EEA444D12C652C8623FD1AC052533EAB618DA01BBAE",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/31/outputPath",
+        "sha256Pointer": "/acceptedModules/31/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g081_tx001/kernel_attempt001/NominalAlphaRelease004Coarse081.olean",
+      "bytes": 1256,
+      "sha256": "5BE67F659C03ECED83ABC6D68BFC374B8D2809C62E68B9AE5F8DE2FFFC397A26",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/32/outputPath",
+        "sha256Pointer": "/acceptedModules/32/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g082_tx001/kernel_attempt001/NominalAlphaRelease004Coarse082.olean",
+      "bytes": 1256,
+      "sha256": "FCF9CF879322080D3FA59FF63ED835A90703258954D0FB12F75F17E27664A492",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/33/outputPath",
+        "sha256Pointer": "/acceptedModules/33/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g083_tx001/kernel_attempt001/NominalAlphaRelease004Coarse083.olean",
+      "bytes": 1256,
+      "sha256": "A5FEC11546DA454E1C88672394352F647CD577D0B0CDA06831DEEEB7E2D2F168",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/34/outputPath",
+        "sha256Pointer": "/acceptedModules/34/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g084_tx001/kernel_attempt001/NominalAlphaRelease004Coarse084.olean",
+      "bytes": 1256,
+      "sha256": "2ECC87F9483376BC1202C8EE232BB72812ADD778B232D1545CF819354BB31D61",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/35/outputPath",
+        "sha256Pointer": "/acceptedModules/35/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g085_tx001/kernel_attempt001/NominalAlphaRelease004Coarse085.olean",
+      "bytes": 1256,
+      "sha256": "AEB74BF8571FD72686A45893AF0B53C8B601D58F4104C715BA9B27A3E4EAF086",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/36/outputPath",
+        "sha256Pointer": "/acceptedModules/36/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g086_tx001/kernel_attempt001/NominalAlphaRelease004Coarse086.olean",
+      "bytes": 1256,
+      "sha256": "94BF5D974B988B321D10704BD333BAF791CCC1DB44B34C936ECEDFC5E2AADBCD",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/37/outputPath",
+        "sha256Pointer": "/acceptedModules/37/outputSha256"
+      }
+    },
+    {
+      "category": "alpha-certificate",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/r4c7397v9batch001/g087_tx001/kernel_attempt001/NominalAlphaRelease004Coarse087.olean",
+      "bytes": 1256,
+      "sha256": "C3074A4003463612D0741F37065B8FB5EDE2A8F2DD98373C83BC73493C47085C",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha97_capture_safe_hardened_replay_adapter_001/resource.json",
+        "receiptSha256": "0734B024E79B16AF57BB4EB5265E6E22FF9F9F9598B6CB0210837E221EBE6353",
+        "pathPointer": "/acceptedModules/38/outputPath",
+        "sha256Pointer": "/acceptedModules/38/outputSha256"
+      }
+    },
+    {
+      "category": "wpp-profile-certificate",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/definition_leaves/audit_surface_002/WPPCompactSourceSyntax.olean",
+      "bytes": 545648,
+      "sha256": "F73CB574E37366290EF72A35FC4379D0504A3213D4DCDAB33CA7E941AC5CFC21",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/WPP_PROFILE_V2.json",
+        "receiptSha256": "96B6A85D4B5B60023000C49BB40CF4F7DCD679AAF4DB6C796880A684DBF12949",
+        "pathPointer": "/inputs/87/path",
+        "sha256Pointer": "/inputs/87/sha256",
+        "bytesPointer": "/inputs/87/bytes"
+      }
+    },
+    {
+      "category": "wpp-profile-certificate",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/definition_leaves/audit_surface_002/WPPCompactSyntaxFVExplicit.olean",
+      "bytes": 1646800,
+      "sha256": "A06A5CCF7C0F45359C0D26D10ABD0C58887AD7FC59434136835FEAF6BF34F689",
+      "authority": {
+        "receipt": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/WPP_PROFILE_V2.json",
+        "receiptSha256": "96B6A85D4B5B60023000C49BB40CF4F7DCD679AAF4DB6C796880A684DBF12949",
+        "pathPointer": "/inputs/89/path",
+        "sha256Pointer": "/inputs/89/sha256",
+        "bytesPointer": "/inputs/89/bytes"
+      }
+    }
+  ]
+}

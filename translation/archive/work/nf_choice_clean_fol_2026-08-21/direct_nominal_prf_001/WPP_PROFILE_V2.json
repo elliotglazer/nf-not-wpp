@@ -1,0 +1,1567 @@
+{
+  "schema": "nf-reusable-nominal-mm-translator-profile-v2",
+  "status": "FROZEN_STATIC_INPUT_CLOSURE_SOURCE_ONLY",
+  "profileId": "WPP_PROFILE_V2",
+  "profileVersion": 2,
+  "leanStartedByThisProducer": false,
+  "producer": {
+    "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/build_wpp_profile_v2_manifest.py",
+    "sha256": "781955423049D0CC93EB9DF36F931D415DCE2629AFDF10C5F5BFEF80CA7C6299"
+  },
+  "extends": {
+    "profileId": "WPP_PROFILE_V1",
+    "profileVersion": 1,
+    "manifestInputId": "profile:WPP_PROFILE_V1",
+    "manifestSha256": "2DC43D9E4C07BE4B712DF4858D4EEFD16FC8D9861B093E7CDDF02EDDFEB2D2D2",
+    "inputCount": 92,
+    "inputSetSha256": "09BCF6BF8A79D2E55D037777785A0D61D565F7A66B6A20DFA18FA46F3DE0650E",
+    "inheritedEntriesByteExact": true
+  },
+  "workspaceRoot": {
+    "id": "workspace",
+    "resolution": "Path(reusable_nominal_mm_translator_v1.__file__).resolve().parents[2]"
+  },
+  "scope": {
+    "theoryProfile": "accepted NF/WPP syntax, structural FV, primitive leaves, and global nominal-alpha B1..B71,W1 through ordinal 72",
+    "staticClosure": "all non-stdlib Python modules and fixed JSON/binary evidence imported or read by the source-only NF/WPP translator path",
+    "translatorEntrypointSelfPin": "recorded per output as producer.path/producer.sha256; excluded from this manifest to avoid a manifest/loader hash cycle",
+    "leanSupportSources": "excluded because the source-only translator names Lean modules but does not read their sources",
+    "runtimeInputs": "excluded here and independently hash-authorized by CLI arguments or recursive resource contracts",
+    "v2Extension": "pinned nominal_alpha_dispatch_core_v3 plus accepted a4972 source metadata; kernel frontier remains runtime-authorized"
+  },
+  "contracts": {
+    "canonicalWppSourceSha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+    "wppFvDefinitionCount": 143,
+    "alphaBaseEndOrdinal": 71,
+    "alphaCallManifestCount": 64,
+    "supportImports": [
+      "WPPCompactSourceSyntax",
+      "WPPCompactSyntaxFVExplicit",
+      "CompactSyntaxFV",
+      "CoreFVSimp",
+      "NominalSubstitutionLemmas",
+      "NominalDefinitionRefl",
+      "NominalNFLiteralBaseFour",
+      "NominalNFLiteralXpViaCompletenessDev003",
+      "NominalNFLiteralRemainingViaCompletenessDev001",
+      "NominalDefinitionLeafHandlersCanonical001",
+      "NominalDefinitionLeafHandlersObjExtCompat001",
+      "NominalRecanonTransportCompat001"
+    ],
+    "alphaGlobalEndOrdinal": 72,
+    "alphaGlobalBaseRecordCount": 71,
+    "alphaGlobalWppRecordCount": 1,
+    "globalAlphaPrefix72": {
+      "schema": "nf-wpp-nominal-alpha-global-record-prefix-v3",
+      "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47",
+      "globalEndOrdinal": 72,
+      "globalRecordCount": 72,
+      "baseRecordCount": 71,
+      "wppRecordCount": 1,
+      "recordOrderSha256": "0E5231014445B25C31737A520C4F4516101E27E9BAAEF5543B264DC7388FD0D5",
+      "sourceHashOrderSha256": "FCDCD473111EAD48A6089E2049C0F273C106733CB90DBE87722C586F65726FFA",
+      "acceptedBasePrefix48RecordOrderSha256": "8A88DF5DB2DCFD214FFB4835D481C601D66A2030F950E687D8DE42F8B75E95CD",
+      "acceptedBasePrefix48SourceHashOrderSha256": "5381495822D152AD1FC8127617563BFD0AD19FCB6CF95140DDEB990D3A9220F5",
+      "acceptedBasePrefix48ResourceSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+      "firstRecord": {
+        "globalOrdinal": 1,
+        "surface": "base",
+        "surfaceOrdinal": 1,
+        "label": "df-eu"
+      },
+      "lastRecord": {
+        "globalOrdinal": 72,
+        "surface": "wpp",
+        "surfaceOrdinal": 1,
+        "label": "df-iso"
+      }
+    },
+    "a4972SourceMetadata": {
+      "sourceManifestSha256": "8F55E7A661F33BD4E6ECAE257FCEB314CB7B31113D164681E3FAC192764F7FD5",
+      "sourceAuditSha256": "D5B29D8E5BF1B2072924A6B30D97B673CD218A03193C268701C45D2B9C3B5A08",
+      "independentJoinAuditSha256": "4A93CA905E684D3E1740D9834744E64B3742711876A3661583E6360A5251A875",
+      "successorSourceHashOrderSha256": "F5A3BAD8C928365ACB77E6C442AD7063DE80DDBC0D95B47DC83FA9980302C854",
+      "importChainSha256": "157CF0DDB86EBDA8C4EE88973F45616639B890BFAC6C1E8D56521DD268CA192E",
+      "w1": {
+        "globalOrdinal": 72,
+        "surface": "wpp",
+        "surfaceOrdinal": 1,
+        "label": "df-iso",
+        "module": "NominalAlphaRepairedWpp001001IsoStructural001",
+        "sourceSha256": "CF76E477A68EE513FDEDFC3F7AC502A0B321BBD8EEFC9666CBE9FF1E3618CB61"
+      }
+    }
+  },
+  "runtimeAuthorizedInputs": [
+    {
+      "name": "Metamath source",
+      "authorization": "--source plus --source-sha256; includes are rejected"
+    },
+    {
+      "name": "accepted alpha frontier, parent resources, and accepted oleans",
+      "authorization": "--alpha-frontier-resource plus SHA-256, exact-three trust-zero schema, and recursively embedded hashes"
+    },
+    {
+      "name": "optional predecessor source/kernel boundary",
+      "authorization": "--predecessor-resource plus SHA-256 and recursively checked source/olean hashes"
+    },
+    {
+      "name": "generated output directory",
+      "authorization": "append-only staging and byte rehash; not an input"
+    }
+  ],
+  "orderedInputSets": {
+    "choiceAlphaCallManifests": [
+      "data:choice-alpha-call-manifest-001",
+      "data:choice-alpha-call-manifest-002",
+      "data:choice-alpha-call-manifest-003",
+      "data:choice-alpha-call-manifest-004",
+      "data:choice-alpha-call-manifest-005",
+      "data:choice-alpha-call-manifest-006",
+      "data:choice-alpha-call-manifest-007",
+      "data:choice-alpha-call-manifest-008",
+      "data:choice-alpha-call-manifest-009",
+      "data:choice-alpha-call-manifest-010",
+      "data:choice-alpha-call-manifest-011",
+      "data:choice-alpha-call-manifest-012",
+      "data:choice-alpha-call-manifest-013",
+      "data:choice-alpha-call-manifest-014",
+      "data:choice-alpha-call-manifest-015",
+      "data:choice-alpha-call-manifest-016",
+      "data:choice-alpha-call-manifest-017",
+      "data:choice-alpha-call-manifest-018",
+      "data:choice-alpha-call-manifest-019",
+      "data:choice-alpha-call-manifest-020",
+      "data:choice-alpha-call-manifest-021",
+      "data:choice-alpha-call-manifest-022",
+      "data:choice-alpha-call-manifest-023",
+      "data:choice-alpha-call-manifest-024",
+      "data:choice-alpha-call-manifest-025",
+      "data:choice-alpha-call-manifest-026",
+      "data:choice-alpha-call-manifest-027",
+      "data:choice-alpha-call-manifest-028",
+      "data:choice-alpha-call-manifest-029",
+      "data:choice-alpha-call-manifest-030",
+      "data:choice-alpha-call-manifest-031",
+      "data:choice-alpha-call-manifest-032",
+      "data:choice-alpha-call-manifest-033",
+      "data:choice-alpha-call-manifest-034",
+      "data:choice-alpha-call-manifest-035",
+      "data:choice-alpha-call-manifest-036",
+      "data:choice-alpha-call-manifest-037",
+      "data:choice-alpha-call-manifest-038",
+      "data:choice-alpha-call-manifest-039",
+      "data:choice-alpha-call-manifest-040",
+      "data:choice-alpha-call-manifest-041",
+      "data:choice-alpha-call-manifest-042",
+      "data:choice-alpha-call-manifest-043",
+      "data:choice-alpha-call-manifest-044",
+      "data:choice-alpha-call-manifest-045",
+      "data:choice-alpha-call-manifest-046",
+      "data:choice-alpha-call-manifest-047",
+      "data:choice-alpha-call-manifest-048",
+      "data:choice-alpha-call-manifest-049",
+      "data:choice-alpha-call-manifest-050",
+      "data:choice-alpha-call-manifest-051",
+      "data:choice-alpha-call-manifest-052",
+      "data:choice-alpha-call-manifest-053",
+      "data:choice-alpha-call-manifest-054",
+      "data:choice-alpha-call-manifest-055",
+      "data:choice-alpha-call-manifest-056",
+      "data:choice-alpha-call-manifest-057",
+      "data:choice-alpha-call-manifest-058",
+      "data:choice-alpha-call-manifest-059",
+      "data:choice-alpha-call-manifest-060",
+      "data:choice-alpha-call-manifest-061",
+      "data:choice-alpha-call-manifest-062",
+      "data:choice-alpha-call-manifest-063",
+      "data:choice-alpha-call-manifest-064"
+    ]
+  },
+  "inputCount": 97,
+  "pythonModuleCount": 20,
+  "fixedDataCount": 77,
+  "inputSetSha256": "E2CEA5925FB6A69A00544A01138356AC66C15B0CF614CF824D954BDB26725FF5",
+  "inputs": [
+    {
+      "id": "python:compact_fv_normalize_mixin_v1",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/compact_fv_normalize_mixin_v1.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 8656,
+      "sha256": "CA7493053B75FC9B2EDC0F6C16AE31DE07C5F1A52119F15314BD09D3A165BDA4",
+      "module": "compact_fv_normalize_mixin_v1"
+    },
+    {
+      "id": "python:emit_nominal_replay",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/emit_nominal_replay.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 20834,
+      "sha256": "CF5545A1F1A7CE37657A1A10E963E08EE593B7479C4EE485A23A5801836330B9",
+      "module": "emit_nominal_replay"
+    },
+    {
+      "id": "python:nominal_alpha_dispatch_core_v2",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_dispatch_core_v2.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 6356,
+      "sha256": "78AB2C0DACCB170D121D811B082C8256DE3531369E687ACDE6C46C6675F82FB3",
+      "module": "nominal_alpha_dispatch_core_v2"
+    },
+    {
+      "id": "python:mm_parser",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/compiler/mm_parser.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 18574,
+      "sha256": "D657F2FCA96CDFFD8E61FA2845A324CFBCC18777A48A817B8D718280A005C4B7",
+      "module": "mm_parser"
+    },
+    {
+      "id": "python:ast_replay",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/compiler/ast_replay.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 8478,
+      "sha256": "BB7875EC606128B40307D42EE1919A341E31B88F57DD0AB032CCD2C849C22ADF",
+      "module": "ast_replay"
+    },
+    {
+      "id": "python:syntax",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/compiler/syntax.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 9700,
+      "sha256": "216445BC60A6B50906AB862BD2221F846B2B6D071A74A1280F62227CAEAC9618",
+      "module": "syntax"
+    },
+    {
+      "id": "python:definitions",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/compiler/definitions.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 9457,
+      "sha256": "6B438D6A4F5453E19097E8C5674104D76FF5D92FA6EB71CD892DA3448CA349AC",
+      "module": "definitions"
+    },
+    {
+      "id": "python:emit_source_native_smoke",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/compiler/emit_source_native_smoke.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 14219,
+      "sha256": "91D74DA5587CEFF65D0EB389B521E590A404EF702DA809A64BCE2600BF65BE70",
+      "module": "emit_source_native_smoke"
+    },
+    {
+      "id": "python:emit_full_compact_replay",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/compiler/emit_full_compact_replay.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 62328,
+      "sha256": "41B91995BA4B532DD66F28BFD49F70B497CD704D7A2BB9F6C696A4B9B3EC7A2E",
+      "module": "emit_full_compact_replay"
+    },
+    {
+      "id": "python:emit_recanonicalization_smoke",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/compact_replay_design/recanonicalization/emit_recanonicalization_smoke.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 9407,
+      "sha256": "942EA93D6159E7495B88CD184C9DA5195BD5AC72070669FDE3FE045B4DC9FB58",
+      "module": "emit_recanonicalization_smoke"
+    },
+    {
+      "id": "python:emit_compact_fv",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/symbolic_constructors/emit_compact_fv.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 11053,
+      "sha256": "B010A6E251A0C5B6A581300D1FE575A999B58B50E0721FAF1E2C000378203E60",
+      "module": "emit_compact_fv"
+    },
+    {
+      "id": "python:wpp_config",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/compiler/wpp_config.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 5897,
+      "sha256": "CC1C943BB5E7C07254B58C9BA85136D49D82999CDE051E06D57140379A10D984",
+      "module": "wpp_config"
+    },
+    {
+      "id": "python:emit_wpp_compact_replay",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/compiler/emit_wpp_compact_replay.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 20807,
+      "sha256": "6AB2BBAFD69F91F8985C8EB9F1CC6DA00A136CC3A0B88D0E7D3756BB67FC2AAA",
+      "module": "emit_wpp_compact_replay"
+    },
+    {
+      "id": "python:emit_wpp_compact_replay_fv_dispatch",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/compiler/emit_wpp_compact_replay_fv_dispatch.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 4858,
+      "sha256": "775B6606058B6406766570B561A82CB2A3969F8AF6BD4E3A128B042E1DA4CB93",
+      "module": "emit_wpp_compact_replay_fv_dispatch"
+    },
+    {
+      "id": "python:emit_wpp_compact_replay_fv_dispatch_v2",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/compiler/emit_wpp_compact_replay_fv_dispatch_v2.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 3320,
+      "sha256": "F1DB42AFD38C011275B3E78FF5250B829B16C99D6EE9C49F74948E0990AABECC",
+      "module": "emit_wpp_compact_replay_fv_dispatch_v2"
+    },
+    {
+      "id": "python:emit_wpp_compact_replay_fv_dispatch_v3",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/compiler/emit_wpp_compact_replay_fv_dispatch_v3.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 7771,
+      "sha256": "15E2084148E3A817ACEDCCA9FC990B0C07078B09155BFFD93EA140AC254C6F9B",
+      "module": "emit_wpp_compact_replay_fv_dispatch_v3"
+    },
+    {
+      "id": "python:emit_wpp_compact_replay_fv_dispatch_v4",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/compiler/emit_wpp_compact_replay_fv_dispatch_v4.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 2408,
+      "sha256": "60018492645BAFAD416B88020149B9D59AF3239924A5BBB931616742F9F89BEB",
+      "module": "emit_wpp_compact_replay_fv_dispatch_v4"
+    },
+    {
+      "id": "python:emit_wpp_compact_replay_fv_dispatch_v5",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/compiler/emit_wpp_compact_replay_fv_dispatch_v5.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "Python import graph"
+      ],
+      "bytes": 2270,
+      "sha256": "461A8919699BF0A590CA729CC589E740A278ABD936690323B004FAC21FFA11FC",
+      "module": "emit_wpp_compact_replay_fv_dispatch_v5"
+    },
+    {
+      "id": "python:nominal_alpha_dispatch_core_v1_pinned",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_dispatch_core_v1.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "nominal_alpha_dispatch_core_v2 dynamic import"
+      ],
+      "bytes": 5972,
+      "sha256": "9CE336D6AE0FD2545759F232455456B6ED2C8118097E1AB38CEEBF9C626A5D8C",
+      "module": "nominal_alpha_dispatch_core_v1_pinned"
+    },
+    {
+      "id": "data:nominal-alpha-global-call-map",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/generated_nominal_alpha_batch_003/NominalAlphaRepairedAll003.json",
+      "kind": "json-call-map",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "nominal_alpha_dispatch_core_v1 import-time call map"
+      ],
+      "bytes": 194493,
+      "sha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+    },
+    {
+      "id": "data:choice-definition-dispatch",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/df_dispatch/alpha_transport/definition_dispatch_map_v2.json",
+      "kind": "json-definition-dispatch",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.dispatch"
+      ],
+      "bytes": 164331,
+      "sha256": "D9DC0480BC892152FA1258CE20F98252EBB757A87D72974161FF02F1E3152AAF"
+    },
+    {
+      "id": "data:choice-exact-df-calls",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_exact_001/compact_df_exact_manifest.json",
+      "kind": "json-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 16694,
+      "sha256": "38028F560FD436A5F25AA428742BD64042D131BB628F4064EB4D784D68E172C6"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-001",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_chunk001_001/CompactDFAlpha001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 4771,
+      "sha256": "A06A826D0689F66A84531DB664F7DC514E8B0E6D61552DA8A2A2F2BFC7519798"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-002",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_iun_001/CompactDFAlphaUrgent002.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 805,
+      "sha256": "824D7DB87461CCA8B1400158AA10F53A8247C9636F40902660523DD6ACA0E52F"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-003",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_1c_001/CompactDFAlphaUrgent003.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 677,
+      "sha256": "705B5BC110785F1439F74C5F65B031F4F75DA8A9187DFCCEF601E96F33256895"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-004",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_xpk_001/CompactDFAlphaUrgent004.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1121,
+      "sha256": "8D0E377726C2CD54638F20FAD98C2FB9F209C3DE66AD52724D85BCC6B39C3515"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-005",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_cnvk_001/CompactDFAlphaUrgent005.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 960,
+      "sha256": "6873B5E9BB1EF415FEEDE6A1BBDB2AC34EA2E0AA427F2DF7F1412DADDA21CF99"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-006",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_ins2k_001/CompactDFAlphaUrgent006.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1751,
+      "sha256": "245A0C9B49582119BA63574B3288968C67706126ED79732AEB1232EB4BE12B4D"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-007",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_ins3k_001/CompactDFAlphaUrgent007.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1751,
+      "sha256": "97B7C074A01CD7001999B723295430D66CF024D0AA9AB47C0B67CD3DBE5754BA"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-008",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_imak_001/CompactDFAlphaUrgent008.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 910,
+      "sha256": "6CC26CBF54F3B748F27DA6BE1123A5A50861CA3B72DF2D56CCBD6DE13B0C8878"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-009",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_p6_001/CompactDFAlphaUrgent009.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 680,
+      "sha256": "08E118B70BF9C94C20E2B323FA6433029B1330AA47A08D029C6759EC39B9569D"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-010",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_sik_001/CompactDFAlphaUrgent010.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1434,
+      "sha256": "0B0462C090D0E4768B5F65BBA6E8005BFB27B721612EB9BFA75080F81D2A52BD"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-011",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_ssetk_001/CompactDFAlphaUrgent011.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 799,
+      "sha256": "9F4B15B9345ACCFE2C67936EF1AEA7D3434B43EFB8C963D6AF63A9C6DE78A4CB"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-012",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_idk_001/CompactDFAlphaUrgent012.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 795,
+      "sha256": "584CFD63EB12F9E28280BCCCAD22B9683628B25054D21937EFAD7344484A6811"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-013",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_iota_001/CompactDFAlphaUrgent013.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 746,
+      "sha256": "9DD2C9E560B7A5171523C27516ABB22D9368058A2482234F23A6968E61A235BD"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-014",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_addc_001/CompactDFAlphaUrgent014.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1122,
+      "sha256": "A9EA41CD4E8A043B189081046B59336DF19C0049BCAD2C454B93B2DF89C1F23B"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-015",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_nnc_001/CompactDFAlphaUrgent015.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 681,
+      "sha256": "D860975434D2BF46EC2EA427DDA8820D6ACB02C24AF7C8CF020BCD661AFF18F2"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-016",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_lefin_001/CompactDFAlphaUrgent016.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 962,
+      "sha256": "F6DC25C5700B277130670C8B3F8DFC371C5246AE5B576ADDD91EE649564A5FDD"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-017",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_ltfin_001/CompactDFAlphaUrgent017.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 962,
+      "sha256": "2E01E934F7541A8C2AA0740D4E9233148CD9774A88A0AF08A2080674232B0D10"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-018",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_ncfin_001/CompactDFAlphaUrgent018.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 684,
+      "sha256": "DA6275B94DA4B8B2B765641ECBC2795DC3D9BA212B8894327BD414336AA5E753"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-019",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_tfin_001/CompactDFAlphaUrgent019.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 797,
+      "sha256": "E9719F7611A1AB545561B1C3871FA27104EED99EC1BBDA5E76B6E3004D519161"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-020",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_evenfin_001/CompactDFAlphaUrgent020.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 689,
+      "sha256": "C7FA3BC1FD97DF60E0F51B86AF895B14F1B5766437F9A82A3EAD54E3BAB4F3FE"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-021",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_oddfin_001/CompactDFAlphaUrgent021.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 688,
+      "sha256": "5FAF62D6CD78901207B89F24FB3FC836E84B8776232DE772A61B9A422D65ED2F"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-022",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_sfin_001/CompactDFAlphaUrgent022.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 745,
+      "sha256": "AE0DDBCE1B3776356F283C0188A8E2DE5A7FA3BB566AE28A602C2E11DF09E41F"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-023",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_spfin_001/CompactDFAlphaUrgent023.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 799,
+      "sha256": "B97F4249B79F6AEE802E2B61FB6F0CED0A8B9E8D3F466441A450FE768BB9B26A"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-024",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_phi_001/CompactDFAlphaUrgent024.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 794,
+      "sha256": "8ABB811DB96D09310E9710935212ADD6D2D85ADFBB53B50830C0D7FF3579F77C"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-025",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_op_focused_001/CompactDFAlphaOpFocusedProbe005.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 915,
+      "sha256": "6D55E43CF1AEC50216B48347A0E02FF097E0FADA941F65703AEFC1C450822B7D"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-026",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_proj1_001/CompactDFAlphaUrgent026.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 685,
+      "sha256": "9A1510335D7E6062C6ABDFA7859E1E726F505E43DDA3BD30F6175DAAE2C777C0"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-027",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_proj2_001/CompactDFAlphaUrgent027.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 687,
+      "sha256": "D8E88B9702EF6F3B3D7AF2CDF13D41494D389E6B3CA55BB1E140719DB0992903"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-028",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_opab_001/CompactDFAlphaUrgent028.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 809,
+      "sha256": "A84B7CE512474ADD57079B987EA014BAC995B970C1F45BF6C2E4FC9D19640F2F"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-029",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_1st_focused_structural_001/CompactDFAlpha1stFocusedProd001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 804,
+      "sha256": "182009824F6AA6629DC11EF4CCC531F562B757211A7D1A4F37EFD7CC6FC08600"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-030",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_swap_focused_split_001/CompactDFAlphaSwapFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1002,
+      "sha256": "C590EB6CD955EAE9A98A89B881077A019354ECB028A34927E4FFDDC579F7FA08"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-031",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_sset_focused_split_001/CompactDFAlphaSsetFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 725,
+      "sha256": "49C48D20A7A934ADB8DFDB1C7376C98E45D3CEE7EB6EB580B28A50122EB8F8BB"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-032",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/audit_alpha_ima_focused_split_001/CompactDFAlphaImaFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 948,
+      "sha256": "167A71E95D8AAE36D9D60BA9E2C31AF923A87418278D868706F237011600FCB6"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-033",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaCoFocusedSplit003.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1160,
+      "sha256": "D98EACEBC031339FB3B98FF2C18D2ACC36399F6AE7EC19E8C75B931CB6E19153"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-034",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaSiFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1209,
+      "sha256": "660B8B4285652E2639BCE63B53C76557C6915914995B31657677F6CAB5F9FE6F"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-035",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaXpFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 945,
+      "sha256": "D5E8758DCC88508959E83FEAEDDE0C896F127E8DCEDCAFE4ADB4DBD2DB51ACD4"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-036",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlpha2ndFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 835,
+      "sha256": "158E00E0899DA13E793E3B91ECEDA88B865101905E7F6DC771921026A5845EEC"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-037",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaIdFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 719,
+      "sha256": "8FA1E0C26FD27B367EA45439A1776599F4DDBAB071BB1CA19B2AA065801F0531"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-038",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaCnvFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 835,
+      "sha256": "DEDAE7B27976D381A56612785DECE90EC3CB86AF5DD5A8377123C13F597299B0"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-039",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaFvFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 782,
+      "sha256": "098A20D30F6F01754627B27AC60DD8C6F00E8F4A96F70502D62AFA5B34CA006B"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-040",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaOprabFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1034,
+      "sha256": "380F80725A95F87D951CEC4E64CC07BB6323121541BB2BB9496E961756A40D60"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-041",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaMptFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 848,
+      "sha256": "DDBF1DED8BE2DC50CAEE17EC18739AD45F723B250742CEA3F42FAC646ABCD216"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-042",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaMpt2FocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1041,
+      "sha256": "AFCC3B19443724473CF6BD5B5E745F319773B8A8BE0E9990083386FD7B69947E"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-043",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaCupFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 723,
+      "sha256": "D9EBA862F60DDBE138EC61D3B0192914E372A9F7FF0603C794EA6B4B1E31220B"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-044",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaComposeFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 736,
+      "sha256": "6EC24D383A683BB61C39B628A5638260BA0577CDC0C2618541A549BAC11D37AE"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-045",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaDisjFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 725,
+      "sha256": "D0DCCBAD3BF799D4540BDBD3E95025D830BCEEAD605AD6E848ED014978A6BA20"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-046",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaAddcfnFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 732,
+      "sha256": "051001ADED2161B0B8DC3E05DAA03F163A97521CCBB5949F214F2459C05D55EC"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-047",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaUrgent047.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 649,
+      "sha256": "CE1ED4583850C5CBCA52932BF76A163CFC4C6C0C01EABF4A1088A53103BA6998"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-048",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaFnsFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 794,
+      "sha256": "7A166F85EB7C33876CC0CAC931B420F54A0870579CBA635C65CD7752F05EF0B5"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-049",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaPw1fnFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 728,
+      "sha256": "370D0B06175A44AAE9B1AD3E3CEFED1795BCC5A2A33C86BF6393C662A87D7CA9"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-050",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaClos1FocusedSplit002.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 860,
+      "sha256": "861626A4A3840C94F3050B09DAE8ABDE7204CE8458256BA21D7A9F32769815B5"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-051",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaTransFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1288,
+      "sha256": "86D04AC279C67043F25F27DECF7CF630A60C2909DB1B7815EA9B3D059E78053B"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-052",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaFoundFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1287,
+      "sha256": "604C1797006A8DBD27E265392A63B175F43D2413B78FF49BD0BD23E0209E681D"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-053",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaSymFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1068,
+      "sha256": "2A7466AB52660537C702D326A82F3F61A61AE44DBE944E3B096A2658113C5C01"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-054",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaRefFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 904,
+      "sha256": "95DC1480129196AC5BE4E7520FC4D7446733B18C5AFE5BDBAF9254A3D6AE1263"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-055",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaAntisymFocusedSplit001.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1080,
+      "sha256": "E3B07D3092DF871CDDFC58D950659563DA632F74FBFC948523B252815FC70D76"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-056",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaUrgent056.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 967,
+      "sha256": "DA6D78506CC4934A7140AA53594C9689AE6A042D8A9483E240B353A96A30E018"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-057",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaUrgent057.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 907,
+      "sha256": "52C23C5F998699E8324CBC525B4354267ACD1EE8D0A13EC2705954D6B9DBFF2D"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-058",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaUrgent058.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 800,
+      "sha256": "D5A870E6CDDDD7179A67F4B5FC1B8E0E0F03B1D55E348241D12B7BBA809337E1"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-059",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaUrgent059.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 799,
+      "sha256": "0AE2EFBFC2416C6D64C8B14CECD9E760A461F36ACE96D23D97295A15C4163EEC"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-060",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/df_leaf_semantics/compact_df_wrappers/generated/CompactDFAlphaUrgent060.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 959,
+      "sha256": "D65F7A66A69F0F2A1728288047F052B4AC01DF17CEC2307B967D26152FEEBA1B"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-061",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/replay_provenance_audit/alpha_suffix_queue_u056_u064_002/generated/CompactDFAlphaUrgent061.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 898,
+      "sha256": "46BF13A57D22896540280225C539C094CA20CC91AD9C087D466D5D286D2BFA88"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-062",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/replay_provenance_audit/alpha_suffix_queue_u056_u064_002/generated/CompactDFAlphaUrgent062.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 1274,
+      "sha256": "922285046813C7BF264FE8A21283C977878E21D13FDDB4D8A2391D8234A5E141"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-063",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/replay_provenance_audit/alpha_suffix_queue_u056_u064_002/generated/CompactDFAlphaUrgent063.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 720,
+      "sha256": "AE07163157A329628A6769C3A0AD7C7A8BEA89FF4AF3736F24E85509F8E06204"
+    },
+    {
+      "id": "data:choice-alpha-call-manifest-064",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/replay_provenance_audit/alpha_suffix_queue_u056_u064_002/generated/CompactDFAlphaUrgent064.json",
+      "kind": "json-alpha-definition-calls",
+      "phases": [
+        "emitter-construction"
+      ],
+      "readBy": [
+        "ParameterizedNominalStructuralEmitter.exact_df_calls"
+      ],
+      "bytes": 902,
+      "sha256": "A548C0DC09D7FD8FBB9AEED414C4B7F2222A3FAF7EC8549E45F0130AF5513D37"
+    },
+    {
+      "id": "data:wpp-surface-kernel-resource",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/definition_leaves/audit_surface_002/resource.json",
+      "kind": "json-accepted-evidence",
+      "phases": [
+        "surface-preflight"
+      ],
+      "readBy": [
+        "wpp_config.verify_surface_inputs"
+      ],
+      "bytes": 2049,
+      "sha256": "159FDCABBE2DF48B82EC04AE37C1E81F3ED2BF03616B43BD8B936AE02069BD38"
+    },
+    {
+      "id": "data:wpp-source-syntax-olean",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/definition_leaves/audit_surface_002/WPPCompactSourceSyntax.olean",
+      "kind": "binary-accepted-evidence",
+      "phases": [
+        "surface-preflight"
+      ],
+      "readBy": [
+        "wpp_config.verify_surface_inputs"
+      ],
+      "bytes": 545648,
+      "sha256": "F73CB574E37366290EF72A35FC4379D0504A3213D4DCDAB33CA7E941AC5CFC21"
+    },
+    {
+      "id": "data:wpp-source-syntax-manifest",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/definition_leaves/generated/wpp_compact_source_syntax_manifest.json",
+      "kind": "json-syntax-manifest",
+      "phases": [
+        "surface-preflight"
+      ],
+      "readBy": [
+        "wpp_config.verify_surface_inputs"
+      ],
+      "bytes": 39169,
+      "sha256": "D692CEB8ECB2ACC8FC0751ABB079D878451CB7260EFBAD914B6D58B6A563A4B0"
+    },
+    {
+      "id": "data:wpp-explicit-fv-olean",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/definition_leaves/audit_surface_002/WPPCompactSyntaxFVExplicit.olean",
+      "kind": "binary-accepted-evidence",
+      "phases": [
+        "surface-preflight"
+      ],
+      "readBy": [
+        "wpp_config.verify_surface_inputs"
+      ],
+      "bytes": 1646800,
+      "sha256": "A06A5CCF7C0F45359C0D26D10ABD0C58887AD7FC59434136835FEAF6BF34F689"
+    },
+    {
+      "id": "data:wpp-explicit-fv-manifest",
+      "root": "workspace",
+      "path": "work/nf_wpp_clean_fol_2026-08-21/definition_leaves/generated/wpp_compact_syntax_fv_explicit_manifest.json",
+      "kind": "json-fv-manifest",
+      "phases": [
+        "surface-preflight",
+        "emitter-construction"
+      ],
+      "readBy": [
+        "wpp_config.verify_surface_inputs",
+        "ParameterizedNominalStructuralEmitter.wpp_fv_lemma_by_head"
+      ],
+      "bytes": 20401,
+      "sha256": "C9F50E461223DCA894313EB229071E7C60AF1720C803DF4A6E4C0F12B46F8DDF"
+    },
+    {
+      "id": "data:wpp-authoritative-source-audit",
+      "root": "workspace",
+      "path": "work/mm0_conversion_2026-08-20/source_repair/hnwcut_resisomr_assist/endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.audit.json",
+      "kind": "json-accepted-evidence",
+      "phases": [
+        "source-preflight"
+      ],
+      "readBy": [
+        "translator accepted WPP source audit check"
+      ],
+      "bytes": 3906,
+      "sha256": "695E1D0E4D48ACDBC6BD72919E0D56E504AB2BFEF60530283FBAFF2CEA5DE57F"
+    },
+    {
+      "id": "profile:WPP_PROFILE_V1",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/WPP_PROFILE_V1.json",
+      "kind": "json-parent-profile-manifest",
+      "phases": [
+        "profile-preflight"
+      ],
+      "readBy": [
+        "WPP_PROFILE_V2 immutable-parent check"
+      ],
+      "bytes": 53245,
+      "sha256": "2DC43D9E4C07BE4B712DF4858D4EEFD16FC8D9861B093E7CDDF02EDDFEB2D2D2"
+    },
+    {
+      "id": "python:nominal_alpha_dispatch_core_v3",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_dispatch_core_v3.py",
+      "kind": "python-module-source",
+      "phases": [
+        "backend-import"
+      ],
+      "readBy": [
+        "global nominal-alpha v3 import"
+      ],
+      "bytes": 23337,
+      "sha256": "4B05500EEBD44F4605DF67E5CBEFF64DC92F28C3D6B3434E4A2FA6BCB04C6C58",
+      "module": "nominal_alpha_dispatch_core_v3"
+    },
+    {
+      "id": "data:a4972-global-prefix72-source-manifest",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a4972s1/NominalAlphaGlobalPrefix072Structural001.json",
+      "kind": "json-alpha-source-metadata",
+      "phases": [
+        "profile-preflight"
+      ],
+      "readBy": [
+        "WPP_PROFILE_V2 B49..B71,W1 source contract"
+      ],
+      "bytes": 101955,
+      "sha256": "8F55E7A661F33BD4E6ECAE257FCEB314CB7B31113D164681E3FAC192764F7FD5"
+    },
+    {
+      "id": "data:a4972-global-prefix72-source-audit",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/a4972s1a1/resource.json",
+      "kind": "json-alpha-source-audit",
+      "phases": [
+        "profile-preflight"
+      ],
+      "readBy": [
+        "WPP_PROFILE_V2 a4972 source authorization"
+      ],
+      "bytes": 26285,
+      "sha256": "D5B29D8E5BF1B2072924A6B30D97B673CD218A03193C268701C45D2B9C3B5A08"
+    },
+    {
+      "id": "data:a4972-global-prefix72-independent-join-audit",
+      "root": "workspace",
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_v3_a4972_join_source_audit_001/resource.json",
+      "kind": "json-alpha-source-audit",
+      "phases": [
+        "profile-preflight"
+      ],
+      "readBy": [
+        "WPP_PROFILE_V2 independent v3/a4972 join"
+      ],
+      "bytes": 25721,
+      "sha256": "4A93CA905E684D3E1740D9834744E64B3742711876A3661583E6360A5251A875"
+    }
+  ]
+}

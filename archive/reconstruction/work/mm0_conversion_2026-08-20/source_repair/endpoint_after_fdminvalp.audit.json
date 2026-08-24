@@ -1,0 +1,17 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_hyp_label_repaired22_endpoint_slice.mm",
+  "source_sha256": "CE9807628B970AA4904FC59EBC42CFDF5B0E99C52459900965753630A13D3F38",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\endpoint_after_fdminvalp.mm",
+  "output_sha256": "B0018F209E8059E5B6D127D976A5021B92ADDF87F4E86560AA7876E7799F4E44",
+  "verified_proofs": 4329,
+  "trusted_proofs": 0,
+  "new_essential": "fdminvalpbr.1 $e |- C e. _V $.",
+  "regenerated_proofs": [
+    "fdminvalpbr",
+    "fdpivmap2ex",
+    "fdpivrange2ex",
+    "fdminvalpss",
+    "elfdminvalp"
+  ],
+  "published_file_modified": false
+}

@@ -1,0 +1,156 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-first-use-kernel-prefix-v1",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_12",
+  "sourceBoundary": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_source_003/resource.json",
+    "resourceSha256": "8EDBCC3FC57E074AB7F43E4B25291A41ECC107DA4FB57925E959CE8EE732BFBF",
+    "manifest": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/generated_nominal_alpha_batch_003/NominalAlphaRepairedAll003.json",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+  },
+  "settings": {
+    "trust": 0,
+    "threads": 1,
+    "maxHeartbeats": 5000000
+  },
+  "allowedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "firstUsePrefix": {
+    "startOrdinal": 1,
+    "endOrdinal": 12,
+    "coveredLabels": [
+      "df-eu",
+      "df-nfc",
+      "df-v",
+      "df-csb",
+      "df-nin",
+      "df-if",
+      "df-pw",
+      "df-sn",
+      "df-uni",
+      "df-int",
+      "df-iun",
+      "df-1c"
+    ]
+  },
+  "separateAcceptedHandlers": [
+    {
+      "label": "df-eu",
+      "dispatch": "NFChoice.DirectNominalPrf.Nominal.dfEu",
+      "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/df_eu_compile_attempt_002/resource.json",
+      "resourceSha256": "CFCD05648AB5FEF51CAC8FF5758B5A3650B510BB7F2283A16A4EC78F2640676C"
+    },
+    {
+      "label": "df-nfc",
+      "dispatch": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_nfc",
+      "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_repaired_dfnfc_compile_attempt_004/resource.json",
+      "resourceSha256": "13287B350647DADDFEC095304F9F2EABBED730A9B1147D80FACF4E9B4328CFF6"
+    }
+  ],
+  "compiledBatchModules": [
+    {
+      "ordinal": 3,
+      "label": "df-v",
+      "module": "NominalAlphaRepairedBase001003V",
+      "sourceSha256": "7D1F8E8236487C4F5F9E15703C59FCA2107F8867D00DB5DC930CAEBFE26AE26C",
+      "oleanSha256": "625C1AA68D98918EA90428395C7A0B3ACF085345E580CF9344AE147F6B2B9D3D",
+      "auditSourceSha256": "A492921AD14F451DDFC05E84777AFE93AF04A468B7661F9B2367F073106BD188",
+      "auditOleanSha256": "731D0733032FE1BB8E2486D1BE44AA07D52751437991B2008D0BF3D0C4E39543"
+    },
+    {
+      "ordinal": 4,
+      "label": "df-csb",
+      "module": "NominalAlphaRepairedBase001004Csb",
+      "sourceSha256": "8212E124C8FAC20E39613ED721F187E764FF8B4B0B5C04AC13FB93D460DD85C1",
+      "oleanSha256": "4EE87F447AD2D2A49577C07584EEE5A3EB24EDCB8A930F3326C872BA27096E1F",
+      "auditSourceSha256": "F19FDC312052479ECF41617806410FD914A191C1577115CF19853CCFE507C48F",
+      "auditOleanSha256": "C3ADEDC755E439CA9756ED77750BD1AD3CA37CE96C2121434C40D096C9257563"
+    },
+    {
+      "ordinal": 5,
+      "label": "df-nin",
+      "module": "NominalAlphaRepairedBase001005Nin",
+      "sourceSha256": "FA6B5FE5C818F16BB05698D32EF4927A40DD1AE6211C708D81A673B56E9F27FC",
+      "oleanSha256": "99E9A691666AB209AEBF5C775FF4C8ADFE7A4F1C4810EC72BB97FD02B595B5FA",
+      "auditSourceSha256": "2D74D97A9D9A7494D4D5FB35C4E83E6CC9027F25D322CE7A833914B1D4147FFC",
+      "auditOleanSha256": "989F423BD2D97833F7B0F11884F0194A98F1CC5EF10BDF936936926DF0C43C72"
+    },
+    {
+      "ordinal": 6,
+      "label": "df-if",
+      "module": "NominalAlphaRepairedBase001006If",
+      "sourceSha256": "1792EBDBD2631146B97186DB3FEC9412C6A4723D6F8851B32CFB784BD292151A",
+      "oleanSha256": "4AED554DD4613F4C4F5E59A6EDFA0CD930059D2179B699871B6DE71B4D0458B8",
+      "auditSourceSha256": "3473F688B0AC4A8D16BA8E9ACE2CDA3BA21C890C3B16D52FE0D2BD2B6DC17800",
+      "auditOleanSha256": "3B855D3F2C9716E0DE8B8D77994799DA2872003425BBECC49292F9BF9A309A06"
+    },
+    {
+      "ordinal": 7,
+      "label": "df-pw",
+      "module": "NominalAlphaRepairedBase001007Pw",
+      "sourceSha256": "972A60018E016A775BA6B56E60C11A2F8C85E569E67270E57BA1CDB664508E29",
+      "oleanSha256": "C0731B6C532706694DBD2E4C53C58A75FC22A43914BA1BB28C06CD60204E9464",
+      "auditSourceSha256": "5EDCDCCF1AD13D00A6E5697C61A59107DAA851123407857BD192BBE6B8BFD1FE",
+      "auditOleanSha256": "FE618B5845919E9C2255ADB629CDF5154A3D19FC37A1570D11C1FE4EC0B74075"
+    },
+    {
+      "ordinal": 8,
+      "label": "df-sn",
+      "module": "NominalAlphaRepairedBase001008Sn",
+      "sourceSha256": "3123ABC7D1016B8267FDE6D507C91CF297E96997E43A7C0F39BFFD30938FFB0B",
+      "oleanSha256": "534DA42886C8B88A0F4A53A1C5B16F5FAE5D54D5695E4C96291C05C983AF0A08",
+      "auditSourceSha256": "524A2CF945E2A6D5CDAFAF48ABFA591FC6A0AFEC71C396EB2ED3DE17B5BFE56F",
+      "auditOleanSha256": "A068DD46B8986050AF6FC20BC58CA708641D93248FBDD4982BC26C7E160419F5"
+    },
+    {
+      "ordinal": 9,
+      "label": "df-uni",
+      "module": "NominalAlphaRepairedBase001009Uni",
+      "sourceSha256": "4DF4CBBE123755621785D4F5E0E32D49523AFD367612D9B8F9B4B9DCA57D36AF",
+      "oleanSha256": "2EF769A2729A5EC0EE8A57CA70EC735221FBF80F17EA337922D27BDD74D27741",
+      "auditSourceSha256": "2ED2C059E87037732E6B41E0FCB3DF9486E6D162D20FD0B2A308CCB9F8F7B66A",
+      "auditOleanSha256": "57D71F046AA87A504874ABA12A3507F22F778062C775BB0D0294125D5F74D8B7"
+    },
+    {
+      "ordinal": 10,
+      "label": "df-int",
+      "module": "NominalAlphaRepairedBase001010Int",
+      "sourceSha256": "3E7D1E9D71875E1A7BD6F400B3C1F2C27AF606E17487D7641FB2286E5B6E1F84",
+      "oleanSha256": "C81F86066456053D372F9D48B5218A9ACE7A263200945635317410D14945947D",
+      "auditSourceSha256": "294E261680182A7B50D4E79B9421CBD778855103A7DA6091B774AD93B0A7574F",
+      "auditOleanSha256": "BC57C4DD4E1AAA68D8E055C2D2682B56A470CD7A97879CCD414B65C37F1F8AB3"
+    },
+    {
+      "ordinal": 11,
+      "label": "df-iun",
+      "module": "NominalAlphaRepairedBase001011Iun",
+      "sourceSha256": "83EB654E8F5B6DD779B1FFF15AF905D1E8A365BE8BA4918F0E10A7CB9529879E",
+      "oleanSha256": "FA983AB7DEB3EC76FD8DA65A1992571E3A9B34016BE3DF42280F329EEE5A92FA",
+      "auditSourceSha256": "CBCEB46AAA1630AA45F9EEDE64DB24ED3E4BA1435A41C733B2423E84C5031B6A",
+      "auditOleanSha256": "EFC08FD7AC7D24AAB5C41DACAE72F78AB4F5B116F0A0CB861D8EFF8EC4EAABEB"
+    },
+    {
+      "ordinal": 12,
+      "label": "df-1c",
+      "module": "NominalAlphaRepairedBase001012Leaf1c",
+      "sourceSha256": "255C0EFDDB139D7B6E5675D6756DE5BDEABF82A2CE3B471FD5D1B889352375C8",
+      "oleanSha256": "A55F04A500B44526EF7A3AD447A502A6EE055E443FC8AAF9F2502B350154A35F",
+      "auditSourceSha256": "7E8B7A5513A1BB40BDDC4F6A05A68C4B47A31C89A830CF303137C2AC61C156E8",
+      "auditOleanSha256": "B3CD4B45CEE1868ECE8BFCF4519089A24F183967F213C89BD31BAD297382C7D6"
+    }
+  ],
+  "compiledBatchModuleCount": 10,
+  "exactAllowedThreeAll": true,
+  "forbiddenSourceMatches": [],
+  "preservedPreLeanFailure": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_launch_failure_001/resource.json",
+    "resourceSha256": "2B3E0EBAD93CCC76C223D2E3F05CB4B619BCCBC23629E585D24BAE77CE8F8F01"
+  },
+  "nextExactFirstUse": {
+    "ordinal": 13,
+    "label": "df-xpk",
+    "module": "NominalAlphaRepairedBase001013Xpk"
+  }
+}

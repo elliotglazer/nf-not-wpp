@@ -1,0 +1,70 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaFoundFocusedSplit001",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "0B673D9554DD8847AAE4BCA5D234923C339801433E067D79AFDEC8B0E1D7934D",
+  "records": [
+    {
+      "label": "df-found",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_found",
+      "floating": [
+        "x",
+        "y",
+        "z",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "a",
+          "y"
+        ],
+        [
+          "a",
+          "z"
+        ],
+        [
+          "r",
+          "x"
+        ],
+        [
+          "r",
+          "y"
+        ],
+        [
+          "r",
+          "z"
+        ],
+        [
+          "x",
+          "y"
+        ],
+        [
+          "x",
+          "z"
+        ],
+        [
+          "y",
+          "z"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 2929,
+      "opaque_refl_subtrees": 0,
+      "fresh_facts": 100,
+      "split_alpha_haves": 5,
+      "alpha_case_split": null,
+      "alpha_three_way_split": null
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+import NominalWPPReplayChunk018Compact001Part004
+
+namespace NFChoice.DirectNominalPrf.WPPReplay
+
+#print axioms g_wppfiniteblocknotwppndv
+
+end NFChoice.DirectNominalPrf.WPPReplay

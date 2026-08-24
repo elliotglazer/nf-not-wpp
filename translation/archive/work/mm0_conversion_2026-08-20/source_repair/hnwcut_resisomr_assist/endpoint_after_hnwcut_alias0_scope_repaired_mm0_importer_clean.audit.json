@@ -1,0 +1,107 @@
+{
+  "schema": "hnwcut-mm0-importer-clean-audit-v1",
+  "frozen_parent": {
+    "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired.mm",
+    "sha256": "3A05D138CAD97D2A75AD0E029F49FB2D71D54F6BE1DB376B0A55424F92C79AFF",
+    "bytes": 9945892
+  },
+  "deduplicated_proof_trial": {
+    "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_dedup_trial.mm",
+    "sha256": "AC63E2E9712407C1219813C2661F448CBAF9A61EB2A725D0B2A78DD70858CAF1",
+    "bytes": 9945369
+  },
+  "source": {
+    "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+    "sha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+    "bytes": 9945323
+  },
+  "normalized_source": {
+    "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.normalized_for_mm0.mm",
+    "sha256": "AB4B33F9E9873B45B4CE504A9A7FC94AFB9DFE9464467AD5643D362AF945C454",
+    "bytes": 9945172
+  },
+  "mm0": {
+    "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm0",
+    "sha256": "503D35EA113DFA50324F98709239ADC1F59F49F7C1C740DDCC2F3A902437E461",
+    "bytes": 125710
+  },
+  "mmu": {
+    "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mmu",
+    "sha256": "5EA04A13ECB096BC0B7765F899BFBFFE86B7C483AD17AB7C91434AE35B776AA7",
+    "bytes": 27647028
+  },
+  "source_delta": {
+    "proof_table_changes_from_frozen": [
+      {
+        "label": "hnwcutambfactorranbrimpndv",
+        "frozen_proof_tokens": 71,
+        "deduplicated_proof_tokens": 70
+      },
+      {
+        "label": "hnwcutambclassstrictbrimpndv",
+        "frozen_proof_tokens": 48,
+        "deduplicated_proof_tokens": 47
+      },
+      {
+        "label": "hnwcutambstrictsegbrimpndv",
+        "frozen_proof_tokens": 69,
+        "deduplicated_proof_tokens": 68
+      }
+    ],
+    "proof_table_change_count": 3,
+    "closed_scope_declaration_deleted": "hnwcutcodeeq-vx $f setvar x $.",
+    "proof_table_label_retargeted": {
+      "from": "hnwcutcodeeq-vx",
+      "to": "vx"
+    },
+    "assertion_formulas_changed": 0,
+    "essential_hypotheses_changed": 0,
+    "dv_conditions_changed": 0
+  },
+  "verification": {
+    "primary": {
+      "ok": true,
+      "verified": 4352,
+      "trusted": 0
+    },
+    "secondary": {
+      "ok": true,
+      "proofs": 4352,
+      "statements": 12486
+    },
+    "strict": {
+      "ok": true,
+      "verified": 4352,
+      "rejected": 0,
+      "inactive": 0
+    },
+    "normalizer_changed_proofs": 6,
+    "normalized_primary": {
+      "ok": true,
+      "verified": 4352,
+      "trusted": 0
+    },
+    "normalized_secondary": {
+      "ok": true,
+      "proofs": 4352,
+      "statements": 12486
+    },
+    "normalized_strict": {
+      "ok": true,
+      "verified": 4352,
+      "rejected": 0,
+      "inactive": 0
+    },
+    "stock_mm0_hs_from_mm": {
+      "exit_code": 0
+    },
+    "stock_mm0_hs_verify": {
+      "exit_code": 0,
+      "stdout_lines": [
+        "spec checked",
+        "verified"
+      ]
+    },
+    "metamath_executable_invoked": false
+  }
+}

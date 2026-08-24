@@ -1,0 +1,43 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-first-use-kernel-prefix-successor-v1",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_22",
+  "parent": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix21_001/resource.json",
+    "resourceSha256": "9B7BE9A79CCD682FFFC63F9AB6078739951D598DE0290EED9672F75EE5AB9E9E",
+    "endOrdinal": 21
+  },
+  "sourceBoundary": {
+    "resourceSha256": "8EDBCC3FC57E074AB7F43E4B25291A41ECC107DA4FB57925E959CE8EE732BFBF",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+  },
+  "runner": {
+    "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/run_nominal_alpha_direct_leaf_v1.ps1",
+    "sha256": "F07EF1E8925E667A2347534DC4769971B3E2CF5C35B5CFC588886823C9B2CB59"
+  },
+  "settings": { "trust": 0, "threads": 1, "maxHeartbeats": 5000000 },
+  "newLeaf": {
+    "ordinal": 22,
+    "label": "df-iota",
+    "module": "NominalAlphaRepairedBase001022Iota",
+    "import": "NominalAlphaRepairedBase001022Iota",
+    "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_iota",
+    "sourceSha256": "D2B6BDFF9ABAE5A2F5FE88AFED8B6E7867EE49839791ACF50CF0AD1E71AB3D57",
+    "sourceBytes": 5642,
+    "oleanSha256": "1CD65658041DC1475E09D1F5A7D88C601E29456ADD953EFC428BB3501D1AF492",
+    "oleanBytes": 124184,
+    "auditSourceSha256": "9C9DB96326ECE109B228220D8F998A2C0D63C310FB82E1A95E4ED15EA11C0008",
+    "auditOleanSha256": "B28EFCB054FDEE695D237B8B33C45724507C01193FF3B29AD607E967A73B76D2",
+    "auditOleanBytes": 1272,
+    "reportedAxioms": ["propext", "Classical.choice", "Quot.sound"],
+    "exactAllowedThree": true,
+    "forbiddenSourceMatches": [],
+    "sourceCompileExitCode": 0,
+    "auditCompileExitCode": 0
+  },
+  "firstUsePrefix": { "startOrdinal": 1, "endOrdinal": 22, "coveredCount": 22 },
+  "nextExactFirstUse": {
+    "ordinal": 23,
+    "label": "df-addc",
+    "module": "NominalAlphaRepairedBase001023Addc"
+  }
+}

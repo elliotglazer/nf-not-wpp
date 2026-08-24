@@ -1,0 +1,40 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaUrgent061",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "FAD383FA191203F7E61515359F53421461923C0E0A57FF8FD30B0749BB7D6C0F",
+  "records": [
+    {
+      "label": "df-tc",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_tc",
+      "floating": [
+        "x",
+        "A",
+        "b"
+      ],
+      "dv": [
+        [
+          "A",
+          "b"
+        ],
+        [
+          "A",
+          "x"
+        ],
+        [
+          "b",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 107193,
+      "opaque_refl_subtrees": 0,
+      "fresh_facts": 383,
+      "split_alpha_haves": 188,
+      "alpha_case_split": null,
+      "alpha_three_way_split": null
+    }
+  ]
+}

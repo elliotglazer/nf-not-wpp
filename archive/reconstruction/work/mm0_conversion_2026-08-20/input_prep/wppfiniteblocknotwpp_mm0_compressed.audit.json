@@ -1,0 +1,14 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_dv_clean.mm",
+  "source_bytes": 10641794,
+  "source_sha256": "E39E2B6B7ADF36CE2127ABE7C31F940C6887A4676B50D34294F17FFEFD0236E0",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_compressed.mm",
+  "output_bytes": 9937781,
+  "output_sha256": "751DC9B8DF1A1E218CE8F1257AE751359554CF855B8E4A07346D4572232FF56E",
+  "proofs_total": 7973,
+  "proofs_already_compressed": 7756,
+  "normal_proofs_converted": 217,
+  "assertion_expressions_rewritten": 0,
+  "j_metadata_blocks_before": 18,
+  "j_metadata_blocks_after": 18
+}

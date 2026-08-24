@@ -1,0 +1,16 @@
+{
+  "base": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\df_lnwmap_syntax_repair\\endpoint_after_df_lnwmap_frozen_checkpoint.mm",
+  "base_sha256": "EE2E4C2672711EAF9D8FFDE680E708849941F8DAD5F1C33E6B6DAE08D2F0F9DC",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\integration\\endpoint_after_df_lnwmap_wppstop.mm",
+  "output_sha256": "60271E6C951F21307987923A565B6448927FF97C1EF3F10E189585B5B3E62168",
+  "changes": [
+    {
+      "label": "wppstopfixedhitcontrgrowfixdndv",
+      "donor": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\wppstop_fixedhit\\endpoint_after_cfb_codecover_wppstopfixedhit_scope_repaired.mm",
+      "donor_sha256": "F9AC32DFA0F370CCF3D349C1BEE128207F0C3F2FF58CFF6046EF30B0B4FD132F",
+      "old_proof_token_count": 357,
+      "new_proof_token_count": 269,
+      "proof_changed": true
+    }
+  ]
+}

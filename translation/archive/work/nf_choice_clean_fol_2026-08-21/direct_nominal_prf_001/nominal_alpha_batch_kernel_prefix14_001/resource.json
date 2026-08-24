@@ -1,0 +1,48 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-first-use-kernel-prefix-successor-v1",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_14",
+  "parent": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix13_001/resource.json",
+    "resourceSha256": "DDEBBA585BC956E48689D74A39D76F107D4B0679D5B0D256326A952723B23594",
+    "endOrdinal": 13
+  },
+  "sourceBoundary": {
+    "resourceSha256": "8EDBCC3FC57E074AB7F43E4B25291A41ECC107DA4FB57925E959CE8EE732BFBF",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+  },
+  "settings": {
+    "trust": 0,
+    "threads": 1,
+    "maxHeartbeats": 5000000
+  },
+  "newLeaf": {
+    "ordinal": 14,
+    "label": "df-cnvk",
+    "module": "NominalAlphaRepairedBase001014Cnvk",
+    "import": "NominalAlphaRepairedBase001014Cnvk",
+    "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_cnvk",
+    "sourceSha256": "006DFDC434A05ADA469374F13D6081605F2E5761A9A69CFF05EC2CB53BD75599",
+    "sourceBytes": 51973,
+    "oleanSha256": "22F60F5FEC93A9F3DBCF17F93D08B542D6F4B2A579A1D7C1F3F67582746E4E28",
+    "oleanBytes": 417920,
+    "auditSourceSha256": "03D04D6D1DE66CA4E93BC03BB4E59D58AEC1291EF50C5FC025A7522C8E3D94A9",
+    "auditOleanSha256": "4C200D84E06635DA7ACF1E8B7EE021C6CED56E640DAFFE61F241016361D49F0C",
+    "reportedAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "exactAllowedThree": true,
+    "forbiddenSourceMatches": []
+  },
+  "firstUsePrefix": {
+    "startOrdinal": 1,
+    "endOrdinal": 14,
+    "coveredCount": 14
+  },
+  "nextExactFirstUse": {
+    "ordinal": 15,
+    "label": "df-ins2k",
+    "module": "NominalAlphaRepairedBase001015Ins2k"
+  }
+}

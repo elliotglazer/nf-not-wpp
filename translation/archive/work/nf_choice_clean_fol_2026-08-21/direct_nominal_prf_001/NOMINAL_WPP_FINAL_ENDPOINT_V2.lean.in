@@ -1,0 +1,31 @@
+import NominalClosedEndpointBridgeV1
+import @@FINAL_REPLAY_MODULE@@
+
+namespace NFChoice.DirectNominalPrf.Nominal.WPPFinalEndpointV1
+
+open scoped Fol
+open NFChoice.Foundation
+open NFChoice.Foundation.ExactLiteralTrial
+open NFChoice.SemanticCore
+open NFChoice.Compiler.CompactSourceSyntax
+open NFChoice.DirectNominalPrf
+open NFChoice.DirectNominalPrf.Nominal
+open NFWPP.FinalCompact
+
+/-!
+This wrapper is intentionally tiny.  Its only proof input is the exact closed
+nominal replay theorem generated for the repaired Metamath endpoint
+`wppfiniteblocknotwppndv`, whose source expression is `wn wwpp`.
+-/
+
+theorem hailperinNF_proves_not_WPP :
+    LiteralHailperinNF ⊢ₛ' Fol.bd_not SourceWPPFOL := by
+  have generatedEndpoint : Nominal.NPrf (Wff.neg syn_wwpp) :=
+    NFChoice.DirectNominalPrf.WPPReplay.g_wppfiniteblocknotwppndv
+  exact
+    NFChoice.DirectNominalPrf.Nominal.ClosedEndpointBridgeV1.hailperinNF_derives_not_WPP_of_nominal
+      generatedEndpoint
+
+#print axioms hailperinNF_proves_not_WPP
+
+end NFChoice.DirectNominalPrf.Nominal.WPPFinalEndpointV1

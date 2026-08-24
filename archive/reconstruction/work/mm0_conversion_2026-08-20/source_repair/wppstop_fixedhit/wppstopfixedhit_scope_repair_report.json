@@ -1,0 +1,34 @@
+{
+  "frozen": true,
+  "base": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\cfb_codecover_scope_repair\\endpoint_after_cfb_codecover_frozen_checkpoint.mm",
+  "base_sha256": "DE0C790F31F9ED3D0B8083D12EDFEBE63236AECF3CDD7A0205CF335CE1925853",
+  "base_bytes": 9931128,
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\wppstop_fixedhit\\endpoint_after_cfb_codecover_wppstopfixedhit_scope_repaired.mm",
+  "output_sha256": "F9AC32DFA0F370CCF3D349C1BEE128207F0C3F2FF58CFF6046EF30B0B4FD132F",
+  "output_bytes": 9880768,
+  "byte_delta": -50360,
+  "changed_assertions": [
+    "wppstopfixedhitcontrgrowfixdndv"
+  ],
+  "nonproof_prefix_identical": true,
+  "nonproof_suffix_identical": true,
+  "old_proof_bytes": 93625,
+  "new_proof_bytes": 43265,
+  "proof_byte_delta": -50360,
+  "old_proof_region_sha256": "270B7844E73F80C5070B97AB3ADB9F790F3A5119BB9C4CC53903DC9A5A4AAECB",
+  "new_proof_region_sha256": "75AFD87E19261318C64E5D97DBFE8A305CCBD5510D95E6AC821D975D745BE4DD",
+  "proof_artifact": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\wppstop_fixedhit\\wppstopfixedhitcontrgrowfixdndv_scope_clean_proof.txt",
+  "proof_artifact_sha256": "2AEB3F1651303089D5EBD1CEA623822CD40DE8307A8857FDC15325CA555DE8C1",
+  "builder": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\wppstop_fixedhit\\build_shallow_scope_repair.py",
+  "builder_sha256": "A833A3D79944933969E4778F98D18DC5FF6B6656320D0C94D5A9800F6D641629",
+  "donor_unique_nodes": 12523,
+  "shallow_expansions": {
+    "wpphitstartfix": 2,
+    "frecstartfix": 1,
+    "mt2i": 1,
+    "wpphitshiftptndv": 1
+  },
+  "output_dag_nodes": 13639,
+  "output_saved_nodes": 414,
+  "method": "single shallow conditional-class instantiation of donor DAG"
+}

@@ -1,0 +1,59 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+  "source_sha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm",
+  "output_sha256": "AB4B33F9E9873B45B4CE504A9A7FC94AFB9DFE9464467AD5643D362AF945C454",
+  "changed_proof_count": 6,
+  "changes": [
+    {
+      "label": "sifvald",
+      "removed_redundant_mandatory_preloads": [
+        "sifvald.1"
+      ],
+      "old_proof_token_count": 24,
+      "new_proof_token_count": 23
+    },
+    {
+      "label": "wecutnclecclndv",
+      "removed_redundant_mandatory_preloads": [
+        "wecutnclecclndv.1"
+      ],
+      "old_proof_token_count": 34,
+      "new_proof_token_count": 33
+    },
+    {
+      "label": "wppconcrete6dmcovndv",
+      "removed_redundant_mandatory_preloads": [
+        "wppconcrete6dmcovndv.1"
+      ],
+      "old_proof_token_count": 55,
+      "new_proof_token_count": 54
+    },
+    {
+      "label": "hnsiquomapvalndv",
+      "removed_redundant_mandatory_preloads": [
+        "hnsiquomapvalndv.1"
+      ],
+      "old_proof_token_count": 45,
+      "new_proof_token_count": 44
+    },
+    {
+      "label": "wppstopstepexndv",
+      "removed_redundant_mandatory_preloads": [
+        "wppstopstepexndv.1"
+      ],
+      "old_proof_token_count": 37,
+      "new_proof_token_count": 36
+    },
+    {
+      "label": "cfbthresholdnn2lencndv",
+      "removed_redundant_mandatory_preloads": [
+        "cfbthresholdnn2lencndv.2",
+        "cfbthresholdnn2lencndv.1"
+      ],
+      "old_proof_token_count": 39,
+      "new_proof_token_count": 37
+    }
+  ],
+  "assertion_or_hypothesis_tokens_changed": 0
+}

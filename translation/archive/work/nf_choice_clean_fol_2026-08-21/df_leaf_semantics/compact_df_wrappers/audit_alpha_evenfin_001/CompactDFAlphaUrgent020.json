@@ -1,0 +1,28 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaUrgent020",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "A6CA8175EA17881FF0DBB306156F29E31B18CBFA2C977456A611EC9FFCF092F0",
+  "records": [
+    {
+      "label": "df-evenfin",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_evenfin",
+      "floating": [
+        "x",
+        "n"
+      ],
+      "dv": [
+        [
+          "n",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 73,
+      "opaque_refl_subtrees": 3,
+      "fresh_facts": 18
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "repair": "df-lnwmap function-value parenthesization",
+  "repair_kind": "assertion-formula syntax repair",
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\cfb_codecover_scope_repair\\endpoint_after_cfb_codecover_frozen_checkpoint.mm",
+  "source_sha256": "DE0C790F31F9ED3D0B8083D12EDFEBE63236AECF3CDD7A0205CF335CE1925853",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\df_lnwmap_syntax_repair\\endpoint_after_df_lnwmap.mm",
+  "output_sha256": "EE2E4C2672711EAF9D8FFDE680E708849941F8DAD5F1C33E6B6DAE08D2F0F9DC",
+  "frozen_checkpoint": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\df_lnwmap_syntax_repair\\endpoint_after_df_lnwmap_frozen_checkpoint.mm",
+  "frozen_checkpoint_sha256": "EE2E4C2672711EAF9D8FFDE680E708849941F8DAD5F1C33E6B6DAE08D2F0F9DC",
+  "primary_verified": 4329,
+  "primary_trusted": 0,
+  "secondary_stdout": "OK 4329 proofs, 12431 statements",
+  "strict_rejected_proof_count": 2,
+  "strict_rejected_proofs": [
+    "wppstopfixedhitcontrgrowfixdndv",
+    "hnwcutambstrictsegresisomralias0ndv"
+  ],
+  "changed_assertion_formulas": [
+    "df-lnwmap"
+  ],
+  "changed_proofs": [],
+  "changed_kinds": [],
+  "added_labels": [],
+  "removed_labels": [],
+  "structure_identical": true,
+  "downstream_proof_regeneration_required": false,
+  "preload_normalized_copy": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\df_lnwmap_syntax_repair\\endpoint_after_df_lnwmap_preloads_normalized.mm",
+  "preload_normalized_copy_sha256": "822176B4DC8C8FF9327B92C50AB849F44EB9591FFAA608AA25905815229C827E",
+  "preload_normalized_changed_proof_count": 7,
+  "preload_normalized_primary_verified": 4329,
+  "preload_normalized_primary_trusted": 0,
+  "preload_normalized_secondary_stdout": "OK 4329 proofs, 12431 statements",
+  "stock_mm0_hs": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe",
+  "stock_mm0_hs_sha256": "64D73FD69F3123AE5D573B7B4B0817D9F403DD7B366107B9D1AA20E16058368B",
+  "stock_from_mm_exit_code": 1,
+  "stock_from_mm_diagnostic": "at wppstopfixedhitcontrgrowfixdndv: $e found in paren list",
+  "stock_from_mm_passed_df_lnwmap": true,
+  "stock_from_mm_next_blocker_is_pending_scope_repair": true,
+  "metamath_executable_invoked": false
+}

@@ -1,0 +1,113 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaUrgent006",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "4A173E8B0743B7949FFC4CD29E4F03C4036E1E45AD3BCD074389EA38F9C0DD56",
+  "records": [
+    {
+      "label": "df-ins2k",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ins2k",
+      "floating": [
+        "x",
+        "y",
+        "z",
+        "v",
+        "u",
+        "t",
+        "A"
+      ],
+      "dv": [
+        [
+          "A",
+          "t"
+        ],
+        [
+          "A",
+          "u"
+        ],
+        [
+          "A",
+          "v"
+        ],
+        [
+          "A",
+          "x"
+        ],
+        [
+          "A",
+          "y"
+        ],
+        [
+          "A",
+          "z"
+        ],
+        [
+          "t",
+          "u"
+        ],
+        [
+          "t",
+          "v"
+        ],
+        [
+          "t",
+          "x"
+        ],
+        [
+          "t",
+          "y"
+        ],
+        [
+          "t",
+          "z"
+        ],
+        [
+          "u",
+          "v"
+        ],
+        [
+          "u",
+          "x"
+        ],
+        [
+          "u",
+          "y"
+        ],
+        [
+          "u",
+          "z"
+        ],
+        [
+          "v",
+          "x"
+        ],
+        [
+          "v",
+          "y"
+        ],
+        [
+          "v",
+          "z"
+        ],
+        [
+          "x",
+          "y"
+        ],
+        [
+          "x",
+          "z"
+        ],
+        [
+          "y",
+          "z"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 347,
+      "opaque_refl_subtrees": 1,
+      "fresh_facts": 62
+    }
+  ]
+}

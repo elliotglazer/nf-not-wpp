@@ -1,0 +1,2852 @@
+{
+  "schema": "nf-wpp-nominal-alpha-global-successor-049-072-v1",
+  "status": "GENERATED_SOURCE_ONLY_KERNEL_PENDING",
+  "leanStartedByProducer": false,
+  "firstGlobalOrdinal": 49,
+  "lastGlobalOrdinal": 72,
+  "count": 24,
+  "surfaceSequence": "B49..B71,W1",
+  "globalRecordContract": {
+    "schema": "nf-wpp-nominal-alpha-global-record-prefix-v3",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47",
+    "globalEndOrdinal": 72,
+    "globalRecordCount": 72,
+    "baseRecordCount": 71,
+    "wppRecordCount": 1,
+    "recordOrderSha256": "0E5231014445B25C31737A520C4F4516101E27E9BAAEF5543B264DC7388FD0D5",
+    "sourceHashOrderSha256": "FCDCD473111EAD48A6089E2049C0F273C106733CB90DBE87722C586F65726FFA",
+    "acceptedBasePrefix48RecordOrderSha256": "8A88DF5DB2DCFD214FFB4835D481C601D66A2030F950E687D8DE42F8B75E95CD",
+    "acceptedBasePrefix48SourceHashOrderSha256": "5381495822D152AD1FC8127617563BFD0AD19FCB6CF95140DDEB990D3A9220F5",
+    "acceptedBasePrefix48ResourceSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+    "firstRecord": {
+      "globalOrdinal": 1,
+      "surface": "base",
+      "surfaceOrdinal": 1,
+      "label": "df-eu"
+    },
+    "lastRecord": {
+      "globalOrdinal": 72,
+      "surface": "wpp",
+      "surfaceOrdinal": 1,
+      "label": "df-iso"
+    }
+  },
+  "acceptedPrefix48": {
+    "resource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a3848k1\\resource.json",
+    "resourceSha256": "5299F0DA88C07150FCEBB96F2C04CC0DCDFF6C3FC48265C65BA407BC8DBC9FCA",
+    "endGlobalOrdinal": 48,
+    "recordOrderSha256": "8A88DF5DB2DCFD214FFB4835D481C601D66A2030F950E687D8DE42F8B75E95CD",
+    "sourceHashOrderSha256": "5381495822D152AD1FC8127617563BFD0AD19FCB6CF95140DDEB990D3A9220F5",
+    "imports": [
+      "NominalDfEu",
+      "NominalAlphaRepairedDfNfc001",
+      "NominalAlphaRepairedBase001003V",
+      "NominalAlphaRepairedBase001004Csb",
+      "NominalAlphaRepairedBase001005Nin",
+      "NominalAlphaRepairedBase001006If",
+      "NominalAlphaRepairedBase001007Pw",
+      "NominalAlphaRepairedBase001008Sn",
+      "NominalAlphaRepairedBase001009Uni",
+      "NominalAlphaRepairedBase001010Int",
+      "NominalAlphaRepairedBase001011Iun",
+      "NominalAlphaRepairedBase001012Leaf1c",
+      "NominalAlphaRepairedBase001013Xpk",
+      "NominalAlphaRepairedBase001014Cnvk",
+      "NominalAlphaRepairedBase001015Ins2k",
+      "NominalAlphaRepairedBase001016Ins3k",
+      "NominalAlphaRepairedBase001017Imak",
+      "NominalAlphaRepairedBase001018P6",
+      "NominalAlphaRepairedBase001019Sik",
+      "NominalAlphaRepairedBase001020Ssetk",
+      "NominalAlphaRepairedBase001021Idk",
+      "NominalAlphaRepairedBase001022Iota",
+      "NominalAlphaRepairedBase001023Addc",
+      "NominalAlphaRepairedBase001024Nnc",
+      "NominalAlphaRepairedBase001025Lefin",
+      "NominalAlphaRepairedBase001026Ltfin",
+      "NominalAlphaRepairedBase001027Ncfin",
+      "NominalAlphaRepairedBase001028Tfin",
+      "NominalAlphaRepairedBase001029Evenfin",
+      "NominalAlphaRepairedBase001030Oddfin",
+      "NominalAlphaRepairedBase001031Sfin",
+      "NominalAlphaRepairedBase001032Spfin",
+      "NominalAlphaRepairedBase001033Phi",
+      "NominalAlphaRepairedBase001034OpReflected001",
+      "NominalAlphaRepairedBase001035Proj1Reflected001",
+      "NominalAlphaRepairedBase001036Proj2Reflected001",
+      "NominalAlphaRepairedBase001037OpabOpaqueHoisted004",
+      "NominalAlphaRepairedBase001038Leaf1stReflected001",
+      "NominalAlphaRepairedBase001039SwapReflected001",
+      "NominalAlphaRepairedBase001040SsetReflected001",
+      "NominalAlphaRepairedBase001041CoReflected001",
+      "NominalAlphaRepairedBase001042ImaReflected001",
+      "NominalAlphaRepairedBase001043SiReflected001",
+      "NominalAlphaRepairedBase001044IdReflected001",
+      "NominalAlphaRepairedBase001045XpReflected001",
+      "NominalAlphaRepairedBase001046CnvReflected001",
+      "NominalAlphaRepairedBase001047FvReflected001",
+      "NominalAlphaRepairedBase001048Leaf2ndReflected001"
+    ]
+  },
+  "globalImportChain": [
+    {
+      "globalOrdinal": 1,
+      "surface": "base",
+      "surfaceOrdinal": 1,
+      "label": "df-eu",
+      "module": "NominalDfEu",
+      "recordFingerprintSha256": "A2E9CE1A7CAE240510CC11E8DB7852C383861F700DC53F6BB3526A54F6495634",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 2,
+      "surface": "base",
+      "surfaceOrdinal": 2,
+      "label": "df-nfc",
+      "module": "NominalAlphaRepairedDfNfc001",
+      "recordFingerprintSha256": "9D921467C6AED25F61F39FC633E9A2C0BCF996F50A0C8B009A86F041BAA0BE15",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 3,
+      "surface": "base",
+      "surfaceOrdinal": 3,
+      "label": "df-v",
+      "module": "NominalAlphaRepairedBase001003V",
+      "recordFingerprintSha256": "D402CCDE259FB31A7EEF70BB2F6057FD289E04551AA4CBC227DBE0566480BBB1",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 4,
+      "surface": "base",
+      "surfaceOrdinal": 4,
+      "label": "df-csb",
+      "module": "NominalAlphaRepairedBase001004Csb",
+      "recordFingerprintSha256": "660D2469CDF1E2FE01F493F58FCDC1099147CA1E443BD38BE86ED24C971CC146",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 5,
+      "surface": "base",
+      "surfaceOrdinal": 5,
+      "label": "df-nin",
+      "module": "NominalAlphaRepairedBase001005Nin",
+      "recordFingerprintSha256": "250D9B6CC9E3AA4F5760384A2B9130C809B7CA469FDB5D5D888A68A9C7447425",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 6,
+      "surface": "base",
+      "surfaceOrdinal": 6,
+      "label": "df-if",
+      "module": "NominalAlphaRepairedBase001006If",
+      "recordFingerprintSha256": "B67C07973EE906DC965B4E57BA2AAF96DC0600AA71CDCBB0B384067CE3E76DFF",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 7,
+      "surface": "base",
+      "surfaceOrdinal": 7,
+      "label": "df-pw",
+      "module": "NominalAlphaRepairedBase001007Pw",
+      "recordFingerprintSha256": "61D594B8ADD51B182375B10CC662FCED105A269A1D188DBD992AAC1529668B95",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 8,
+      "surface": "base",
+      "surfaceOrdinal": 8,
+      "label": "df-sn",
+      "module": "NominalAlphaRepairedBase001008Sn",
+      "recordFingerprintSha256": "243463904E21EB6B10C4C353F8CDF260C4BEE201A5F6050CCD19797BA124542F",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 9,
+      "surface": "base",
+      "surfaceOrdinal": 9,
+      "label": "df-uni",
+      "module": "NominalAlphaRepairedBase001009Uni",
+      "recordFingerprintSha256": "C1FAD2F0AFAF9E3B4484B496E3FC030FCDCD083959AF0CF924BE23AE1BBAD91B",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 10,
+      "surface": "base",
+      "surfaceOrdinal": 10,
+      "label": "df-int",
+      "module": "NominalAlphaRepairedBase001010Int",
+      "recordFingerprintSha256": "9BD6B6BB6681723667FF3F5A932325B9666CFDF5BA10B6BCEDE49568DAD9A9A3",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 11,
+      "surface": "base",
+      "surfaceOrdinal": 11,
+      "label": "df-iun",
+      "module": "NominalAlphaRepairedBase001011Iun",
+      "recordFingerprintSha256": "86511AD3E4ECCA1DA1F60A573441DD99514FBC523AE2CEF15BBDC0848E75710A",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 12,
+      "surface": "base",
+      "surfaceOrdinal": 12,
+      "label": "df-1c",
+      "module": "NominalAlphaRepairedBase001012Leaf1c",
+      "recordFingerprintSha256": "C32558C70FDF680E461F97081678E6CB5B80ABC07A50B4DDE00E19EFD3527EEC",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 13,
+      "surface": "base",
+      "surfaceOrdinal": 13,
+      "label": "df-xpk",
+      "module": "NominalAlphaRepairedBase001013Xpk",
+      "recordFingerprintSha256": "3E32B9FD3B726039AC5972DD27420846B56DBB1B46CC437D16A5C4A36EB32568",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 14,
+      "surface": "base",
+      "surfaceOrdinal": 14,
+      "label": "df-cnvk",
+      "module": "NominalAlphaRepairedBase001014Cnvk",
+      "recordFingerprintSha256": "FABF9209EAF394CC05C9A13B127E308CC214C37C2444F23A6E2178C155E7E9D6",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 15,
+      "surface": "base",
+      "surfaceOrdinal": 15,
+      "label": "df-ins2k",
+      "module": "NominalAlphaRepairedBase001015Ins2k",
+      "recordFingerprintSha256": "19EF8FDB29090A72A345EEAB078AF6164A2682E78C6ABD40F6E88B82D46ECEBD",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 16,
+      "surface": "base",
+      "surfaceOrdinal": 16,
+      "label": "df-ins3k",
+      "module": "NominalAlphaRepairedBase001016Ins3k",
+      "recordFingerprintSha256": "AF2F881E2BBF8CECF58C5F6331E16FBA389097BCF2772698BA78DCC20902F98F",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 17,
+      "surface": "base",
+      "surfaceOrdinal": 17,
+      "label": "df-imak",
+      "module": "NominalAlphaRepairedBase001017Imak",
+      "recordFingerprintSha256": "7FE9A1510744979416A92076A7D1113AB846645B7F06B844C6E354EF470E6ACE",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 18,
+      "surface": "base",
+      "surfaceOrdinal": 18,
+      "label": "df-p6",
+      "module": "NominalAlphaRepairedBase001018P6",
+      "recordFingerprintSha256": "99921C26020B0A8DA58781D52029539B3D4FA07CF7BBBA375D2D424B9C990E76",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 19,
+      "surface": "base",
+      "surfaceOrdinal": 19,
+      "label": "df-sik",
+      "module": "NominalAlphaRepairedBase001019Sik",
+      "recordFingerprintSha256": "7171B5FD8E068D0DDEBFB3D1928F162A5016CED82759958A7637767A5B37AB24",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 20,
+      "surface": "base",
+      "surfaceOrdinal": 20,
+      "label": "df-ssetk",
+      "module": "NominalAlphaRepairedBase001020Ssetk",
+      "recordFingerprintSha256": "46CD8224B3B52DE50F628F0CB0C135F93B8F5E1314628C383ECD85AAD8C35DD9",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 21,
+      "surface": "base",
+      "surfaceOrdinal": 21,
+      "label": "df-idk",
+      "module": "NominalAlphaRepairedBase001021Idk",
+      "recordFingerprintSha256": "451250A500639E3E284C1D3FA044860C83ABBD72106BE8C6DEF1C2F38DDFB698",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 22,
+      "surface": "base",
+      "surfaceOrdinal": 22,
+      "label": "df-iota",
+      "module": "NominalAlphaRepairedBase001022Iota",
+      "recordFingerprintSha256": "9E2802D82ABA3929D83B574F6E4F8195DE6A332131E6F9C8DDC055DFC43360A0",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 23,
+      "surface": "base",
+      "surfaceOrdinal": 23,
+      "label": "df-addc",
+      "module": "NominalAlphaRepairedBase001023Addc",
+      "recordFingerprintSha256": "D4BE36517A91B4EA7C2A2752832C96480177A644E96E58E5489180884E2BB93F",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 24,
+      "surface": "base",
+      "surfaceOrdinal": 24,
+      "label": "df-nnc",
+      "module": "NominalAlphaRepairedBase001024Nnc",
+      "recordFingerprintSha256": "EF26DAD5B334A579319544C208CF32DDA98173EEE94AD3386ADD082C96B1921A",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 25,
+      "surface": "base",
+      "surfaceOrdinal": 25,
+      "label": "df-lefin",
+      "module": "NominalAlphaRepairedBase001025Lefin",
+      "recordFingerprintSha256": "50D7CBB4CBE29905C71C2307CE47D077E2F63338211FF3D8B983D8132821F008",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 26,
+      "surface": "base",
+      "surfaceOrdinal": 26,
+      "label": "df-ltfin",
+      "module": "NominalAlphaRepairedBase001026Ltfin",
+      "recordFingerprintSha256": "3835B2C2CECF5D70E04EA21F7F32223F203B025BFBEDA48071EE3332FDD987C6",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 27,
+      "surface": "base",
+      "surfaceOrdinal": 27,
+      "label": "df-ncfin",
+      "module": "NominalAlphaRepairedBase001027Ncfin",
+      "recordFingerprintSha256": "CFED7007A9D7B8CD17C277CAD472327159AC497006F07456FD75A023065D904C",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 28,
+      "surface": "base",
+      "surfaceOrdinal": 28,
+      "label": "df-tfin",
+      "module": "NominalAlphaRepairedBase001028Tfin",
+      "recordFingerprintSha256": "BD4708FF504F6F22F4F7B4EDABA2FF4B49F3B21162796A5CE43B8B6472402BEB",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 29,
+      "surface": "base",
+      "surfaceOrdinal": 29,
+      "label": "df-evenfin",
+      "module": "NominalAlphaRepairedBase001029Evenfin",
+      "recordFingerprintSha256": "95D1C22C1F3F514A39E4E19013636EE5C617136755B979D4039086BB46112F8C",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 30,
+      "surface": "base",
+      "surfaceOrdinal": 30,
+      "label": "df-oddfin",
+      "module": "NominalAlphaRepairedBase001030Oddfin",
+      "recordFingerprintSha256": "4B8F900BAC9636ABC26C502E7D1D0A4EACF4B34D9D25D655BF7787D461D36F8A",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 31,
+      "surface": "base",
+      "surfaceOrdinal": 31,
+      "label": "df-sfin",
+      "module": "NominalAlphaRepairedBase001031Sfin",
+      "recordFingerprintSha256": "4EB6AD8645234BC20125FE398EC316BE35C09E57E49C5583AAE580CA0CE21C0D",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 32,
+      "surface": "base",
+      "surfaceOrdinal": 32,
+      "label": "df-spfin",
+      "module": "NominalAlphaRepairedBase001032Spfin",
+      "recordFingerprintSha256": "BE651885A8F8E4845CD5F60FE1BC36C2DD138979D7BC0E03D5502D05B3179951",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 33,
+      "surface": "base",
+      "surfaceOrdinal": 33,
+      "label": "df-phi",
+      "module": "NominalAlphaRepairedBase001033Phi",
+      "recordFingerprintSha256": "6F153567C2ED1B8EA0717050531DF97C12B10E7B46FB8EA37D0BC4824A66CB57",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 34,
+      "surface": "base",
+      "surfaceOrdinal": 34,
+      "label": "df-op",
+      "module": "NominalAlphaRepairedBase001034OpReflected001",
+      "recordFingerprintSha256": "107D9D1FB436C0188CBF456DA55C9CB8160D75DE7CEFB7CC2B0267D2B1D61011",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 35,
+      "surface": "base",
+      "surfaceOrdinal": 35,
+      "label": "df-proj1",
+      "module": "NominalAlphaRepairedBase001035Proj1Reflected001",
+      "recordFingerprintSha256": "5D009C3B0AF6FDC70CA68D99D433905C15DE00D67B5C5A03B087DA01BFEF8D8C",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 36,
+      "surface": "base",
+      "surfaceOrdinal": 36,
+      "label": "df-proj2",
+      "module": "NominalAlphaRepairedBase001036Proj2Reflected001",
+      "recordFingerprintSha256": "18F0E4D5DB47849A8CDC2A4FA7AEA16155C6C018AC5E6EFD152A5593F3D3D8DE",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 37,
+      "surface": "base",
+      "surfaceOrdinal": 37,
+      "label": "df-opab",
+      "module": "NominalAlphaRepairedBase001037OpabOpaqueHoisted004",
+      "recordFingerprintSha256": "2113B750868B95E1C8A60D2743181DDEC905299E9221DCD791AC33EC5E1CEDFF",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 38,
+      "surface": "base",
+      "surfaceOrdinal": 38,
+      "label": "df-1st",
+      "module": "NominalAlphaRepairedBase001038Leaf1stReflected001",
+      "recordFingerprintSha256": "F70A09AADAA696273FA87DD389362578593980168B3A61A3D67A14A358AA8034",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 39,
+      "surface": "base",
+      "surfaceOrdinal": 39,
+      "label": "df-swap",
+      "module": "NominalAlphaRepairedBase001039SwapReflected001",
+      "recordFingerprintSha256": "3DD3051E357DE0F6DD7ABAB9C3CD02D71A5EDFE2AE447AE8E8AD2504E11A6C82",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 40,
+      "surface": "base",
+      "surfaceOrdinal": 40,
+      "label": "df-sset",
+      "module": "NominalAlphaRepairedBase001040SsetReflected001",
+      "recordFingerprintSha256": "C9F7451C09BA1ADE6A208160D6BFCAB14979884E6F22CE17DEB4326776197F27",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 41,
+      "surface": "base",
+      "surfaceOrdinal": 41,
+      "label": "df-co",
+      "module": "NominalAlphaRepairedBase001041CoReflected001",
+      "recordFingerprintSha256": "4333EC03E4C296509AE174192D53A62A58FFB91D9B302861086DDACC27C7AA19",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 42,
+      "surface": "base",
+      "surfaceOrdinal": 42,
+      "label": "df-ima",
+      "module": "NominalAlphaRepairedBase001042ImaReflected001",
+      "recordFingerprintSha256": "1EA7E0257AAB26628FA13814AB20A38FA118890F0CA065E3817444A4BD714F68",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 43,
+      "surface": "base",
+      "surfaceOrdinal": 43,
+      "label": "df-si",
+      "module": "NominalAlphaRepairedBase001043SiReflected001",
+      "recordFingerprintSha256": "A93893ECF1AF2401AAAB8BDE6CB9DAAB24F6D7689AD8ABCD09B6498B17F67DF5",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 44,
+      "surface": "base",
+      "surfaceOrdinal": 44,
+      "label": "df-id",
+      "module": "NominalAlphaRepairedBase001044IdReflected001",
+      "recordFingerprintSha256": "71500E562A54944432A074673E02910644F04411A06A97E06696548CC8B167B1",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 45,
+      "surface": "base",
+      "surfaceOrdinal": 45,
+      "label": "df-xp",
+      "module": "NominalAlphaRepairedBase001045XpReflected001",
+      "recordFingerprintSha256": "96E7DA92F0E1EB9099E6897E7C78AE3276B9B8360D8CDC65E90AA30876EB8DC3",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 46,
+      "surface": "base",
+      "surfaceOrdinal": 46,
+      "label": "df-cnv",
+      "module": "NominalAlphaRepairedBase001046CnvReflected001",
+      "recordFingerprintSha256": "E14637479846DBEB1C269A429874FC479E170FA26BD409A94221B5F56CDF7209",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 47,
+      "surface": "base",
+      "surfaceOrdinal": 47,
+      "label": "df-fv",
+      "module": "NominalAlphaRepairedBase001047FvReflected001",
+      "recordFingerprintSha256": "105E27680D16A99000FE084FBA8AFDA9DAED884348D82EBA43803CBDA6D13EF7",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 48,
+      "surface": "base",
+      "surfaceOrdinal": 48,
+      "label": "df-2nd",
+      "module": "NominalAlphaRepairedBase001048Leaf2ndReflected001",
+      "recordFingerprintSha256": "F57FF5E4EF1AB1EA91F3A4AD978AF47F64943A3397D404A2E2E8532C47407F8C",
+      "provenance": "accepted-prefix48"
+    },
+    {
+      "globalOrdinal": 49,
+      "surface": "base",
+      "surfaceOrdinal": 49,
+      "label": "df-oprab",
+      "module": "NominalAlphaRepairedBase001049OprabReflected001",
+      "recordFingerprintSha256": "8BCFE0A881E0AB5B2246E1D16BF18781FBB3AA634790F3E8955ECB16FE593223",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 50,
+      "surface": "base",
+      "surfaceOrdinal": 50,
+      "label": "df-mpt",
+      "module": "NominalAlphaRepairedBase001050MptReflected001",
+      "recordFingerprintSha256": "18C6CE723E9DCF70DC66072C301D4A32B9C7A2F6ED72D8E71EE924F9A344CD9E",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 51,
+      "surface": "base",
+      "surfaceOrdinal": 51,
+      "label": "df-mpt2",
+      "module": "NominalAlphaRepairedBase001051Mpt2Reflected001",
+      "recordFingerprintSha256": "61F7B03B93CCA27E87EF95266274B8A192D31FE1CAF842FEA3F596751DE11627",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 52,
+      "surface": "base",
+      "surfaceOrdinal": 52,
+      "label": "df-cup",
+      "module": "NominalAlphaRepairedBase001052CupReflected001",
+      "recordFingerprintSha256": "A9F7EFED47A2C2C564465A2B537CE3BE4EA0D44A47E917868B4F3BD755A83B0C",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 53,
+      "surface": "base",
+      "surfaceOrdinal": 53,
+      "label": "df-disj",
+      "module": "NominalAlphaRepairedBase001053DisjReflected001",
+      "recordFingerprintSha256": "4D84F17BC2622F2DA100E70C9825486AA6A76CABAAB8A6164728ADF1DF003E5E",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 54,
+      "surface": "base",
+      "surfaceOrdinal": 54,
+      "label": "df-addcfn",
+      "module": "NominalAlphaRepairedBase001054AddcfnReflected001",
+      "recordFingerprintSha256": "3C55D81B02267B1524A775EBCC6A165DF12B84AD84D05F7C698E30F6D62AB2E7",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 55,
+      "surface": "base",
+      "surfaceOrdinal": 55,
+      "label": "df-compose",
+      "module": "NominalAlphaRepairedBase001055ComposeReflected001",
+      "recordFingerprintSha256": "C80455486190185571984C1526B1FB8913D46E78605A042131C50D277954D65E",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 56,
+      "surface": "base",
+      "surfaceOrdinal": 56,
+      "label": "df-funs",
+      "module": "NominalAlphaRepairedBase001056FunsReflected001",
+      "recordFingerprintSha256": "022AB8323CF1376FFB12CF9B19803B18888B6B9DEEF51280E711299CB7B44C78",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 57,
+      "surface": "base",
+      "surfaceOrdinal": 57,
+      "label": "df-fns",
+      "module": "NominalAlphaRepairedBase001057FnsReflected001",
+      "recordFingerprintSha256": "8366FF1460EE1E06893A94260F4216EA9EB921A3A677E96EE7ADFC13C88F54E7",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 58,
+      "surface": "base",
+      "surfaceOrdinal": 58,
+      "label": "df-pw1fn",
+      "module": "NominalAlphaRepairedBase001058Pw1fnReflected001",
+      "recordFingerprintSha256": "B1B961C828E13E91DD6AEC870CC50A7B44963B3A57A68E95C327AA1CF4187895",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 59,
+      "surface": "base",
+      "surfaceOrdinal": 59,
+      "label": "df-clos1",
+      "module": "NominalAlphaRepairedBase001059Clos1Reflected001",
+      "recordFingerprintSha256": "C90BC7422B2985F1399D7AB97956A41E2D273B75D5C7CB2E4D0F951A1894B7EC",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 60,
+      "surface": "base",
+      "surfaceOrdinal": 60,
+      "label": "df-trans",
+      "module": "NominalAlphaRepairedBase001060TransReflected001",
+      "recordFingerprintSha256": "01D7A03DBF42CB3CB311EB72127E45BAE472A5D613670DF4AA3F59050018BA08",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 61,
+      "surface": "base",
+      "surfaceOrdinal": 61,
+      "label": "df-ref",
+      "module": "NominalAlphaRepairedBase001061RefReflected001",
+      "recordFingerprintSha256": "E8120CFC0E6D5C94D4849EC97B128889C56294CAEC4B5CE6102E4D478FEC7C87",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 62,
+      "surface": "base",
+      "surfaceOrdinal": 62,
+      "label": "df-antisym",
+      "module": "NominalAlphaRepairedBase001062AntisymReflected001",
+      "recordFingerprintSha256": "355BE6B7FF88D3B968DEE3CE5822C31602B8EE92B0D01B610D683D1E8FF9206B",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 63,
+      "surface": "base",
+      "surfaceOrdinal": 63,
+      "label": "df-connex",
+      "module": "NominalAlphaRepairedBase001063ConnexReflected001",
+      "recordFingerprintSha256": "26525A77C201B18FBA96853A586682DCDD544FF11621BD4EC787EE92D269A3A5",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 64,
+      "surface": "base",
+      "surfaceOrdinal": 64,
+      "label": "df-found",
+      "module": "NominalAlphaRepairedBase001064FoundReflected001",
+      "recordFingerprintSha256": "F7D8F3D3F4DF90D44A52A968481D9FB77E05CE5BB521662D4788F4F3282B462E",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 65,
+      "surface": "base",
+      "surfaceOrdinal": 65,
+      "label": "df-sym",
+      "module": "NominalAlphaRepairedBase001065SymReflected001",
+      "recordFingerprintSha256": "6B5EE2377FD12E6CD3A1FC7C8431F718270BB27EC7003D66409DB270C4FCB6F7",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 66,
+      "surface": "base",
+      "surfaceOrdinal": 66,
+      "label": "df-qs",
+      "module": "NominalAlphaRepairedBase001066QsReflected001",
+      "recordFingerprintSha256": "5707896D6DFCA1B905EDB6F404E6F4E1C848E35C59C243A3D71C6DC28939901E",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 67,
+      "surface": "base",
+      "surfaceOrdinal": 67,
+      "label": "df-map",
+      "module": "NominalAlphaRepairedBase001067MapReflected001",
+      "recordFingerprintSha256": "B1809F85CE5BD4EEC362378D61E2A1CE890136919805D78093EF95A9C6A5FEE2",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 68,
+      "surface": "base",
+      "surfaceOrdinal": 68,
+      "label": "df-en",
+      "module": "NominalAlphaRepairedBase001068EnReflected001",
+      "recordFingerprintSha256": "2E89B037CB1B3F509BF557D1BB2FD8A2BA2E8A2B5F73EEEB9344E69B7AF515A2",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 69,
+      "surface": "base",
+      "surfaceOrdinal": 69,
+      "label": "df-lec",
+      "module": "NominalAlphaRepairedBase001069LecReflected001",
+      "recordFingerprintSha256": "15C986E4FD7ED28EC5B92A0BFD8DF21FC12F3B45C9DF83BA7B2CBE4934353D3E",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 70,
+      "surface": "base",
+      "surfaceOrdinal": 70,
+      "label": "df-tc",
+      "module": "NominalAlphaRepairedBase001070TcReflected001",
+      "recordFingerprintSha256": "698CBBF2A3D959F983595987AF10BA154CD045EB998F71A11BE01AF7AB3FEC79",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 71,
+      "surface": "base",
+      "surfaceOrdinal": 71,
+      "label": "df-tcfn",
+      "module": "NominalAlphaRepairedBase001071TcfnReflected001",
+      "recordFingerprintSha256": "6AEC7130A5D238690B026097855685D9C93623021C4F3C34872A94E256337EF7",
+      "provenance": "successor-source"
+    },
+    {
+      "globalOrdinal": 72,
+      "surface": "wpp",
+      "surfaceOrdinal": 1,
+      "label": "df-iso",
+      "module": "NominalAlphaRepairedWpp001001IsoStructural001",
+      "recordFingerprintSha256": "7F7CDE33BE8FDB1930AD3B70C2D334A5F2A0CFEAB524ADBD2ED79859F45DDEF7",
+      "provenance": "successor-source"
+    }
+  ],
+  "umbrellaModule": "NominalAlphaGlobalPrefix072Structural001",
+  "umbrellaSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaGlobalPrefix072Structural001.lean",
+  "umbrellaSourceSha256": "96244E07777517287B2AC9FD4A8DFDAF9EC24A4EB3F506BD703EED7E4ED8F5AA",
+  "exactSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+  "exactSourceSha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+  "originalManifest": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedAll003.json",
+  "originalManifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47",
+  "reflectionPredecessor": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\emit_reflected_suffix_v1.py",
+  "reflectionPredecessorSha256": "A69FF3728C24105F523D374F948705CE95827AFFD9C631996F2F94ADCD24B77B",
+  "reflectionSourceManifest": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\NominalAlphaReflectedSuffix035048001.json",
+  "reflectionSourceManifestSha256": "07B0FA37277F3469CDDD3F327AE17E88900FEF71E375627F80A70FC0E0E4D007",
+  "reflectionSourceAudit": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\alpha_reflection_suffix_035_048_001\\source_audit_001\\resource.json",
+  "reflectionSourceAuditSha256": "591E88BC6B65B94A580346DC09225F735A7FE646BE52033F2F17A9A8A290E281",
+  "globalDispatcherV3": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_dispatch_core_v3.py",
+  "globalDispatcherV3Sha256": "4B05500EEBD44F4605DF67E5CBEFF64DC92F28C3D6B3434E4A2FA6BCB04C6C58",
+  "globalDispatcherV3SourceAudit": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\nominal_alpha_dispatch_core_v3_prefix72_source_audit_001\\resource.json",
+  "globalDispatcherV3SourceAuditSha256": "E7E2146F94666F313D4ACE5019C4FC39A56DE5F5E29E6E996DE67F727C4919D9",
+  "producer": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\emit_nominal_alpha_global_049_072_v1.py",
+  "producerSha256": "91DE412C0E0964A045D62E5DEF79E78900B3FCA15F9582CBD040CB47583976E0",
+  "adapter": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\emit_nominal_alpha_wrappers_v2.py",
+  "adapterSha256": "766CE07BBB6985815D397EB570CA843EAF78AE1254F32959C3D8C75304FCB2D9",
+  "semanticEmitter": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\df_leaf_semantics\\compact_df_wrappers\\emit_alpha_wrappers.py",
+  "semanticEmitterSha256": "2A9669078FE59F10996B6B4BAE3A9B91E9B9B3AD54E77061EF8713E5535C6FCD",
+  "focusedAlphaEngine": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\df_leaf_semantics\\compact_df_wrappers\\focused_alpha_impl.py",
+  "focusedAlphaEngineSha256": "490AB2E8CE855D2E9A3C2E89A8D02F58F49C1072210E673C75BE13E345E52CD1",
+  "wppFrontend": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_wpp_clean_fol_2026-08-21\\definition_leaves\\emit_wpp_alpha_wrappers.py",
+  "wppFrontendSha256": "557A40E1848F8DFF8CBB3FE4FAF10B18BBB03CF9D536E1F5F264113AE4C0D3D9",
+  "wppExplicitFVRules": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_wpp_clean_fol_2026-08-21\\definition_leaves\\generated\\WPPCompactSyntaxFVExplicit.lean",
+  "wppExplicitFVRulesSha256": "E09FA6176086DFFA998C20DEF8A782252B9D50A0873181A32E1E2C887A6E65F4",
+  "workerResults": [
+    {
+      "surface": "base",
+      "command": [
+        "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\emit_nominal_alpha_global_049_072_v1.py",
+        "--worker",
+        "base",
+        "--stage",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a49s953428c8"
+      ],
+      "exitCode": 0
+    },
+    {
+      "surface": "wpp",
+      "command": [
+        "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\emit_nominal_alpha_global_049_072_v1.py",
+        "--worker",
+        "wpp",
+        "--stage",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a49s953428c8"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "workerFragments": [
+    {
+      "surface": "base",
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\base.fragment.json",
+      "sha256": "617CFC4A5827B233D796DD8B72709143AF844558FBF56AF2296EFBA901ABAF8F"
+    },
+    {
+      "surface": "wpp",
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\wpp.fragment.json",
+      "sha256": "A04E3843B5DE1AD9A3F4C7CEDE36A5BD3C20026CA40EBA0FFD751C51404277A6"
+    }
+  ],
+  "generationElapsedSeconds": 46.84117289999267,
+  "records": [
+    {
+      "globalOrdinal": 49,
+      "surface": "base",
+      "surfaceOrdinal": 49,
+      "label": "df-oprab",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001049OprabReflected001",
+      "import": "NominalAlphaRepairedBase001049OprabReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_oprab",
+      "floating": [
+        "ph",
+        "x",
+        "y",
+        "z",
+        "w"
+      ],
+      "dv": [
+        [
+          "ph",
+          "w"
+        ],
+        [
+          "w",
+          "x"
+        ],
+        [
+          "w",
+          "y"
+        ],
+        [
+          "w",
+          "z"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001049Oprab",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001049Oprab.lean",
+      "originalSourceSha256": "D5BCCCA802F80157BAA5AE230CEE2AC673CF75F018CB31EE23F4532A086ED45E",
+      "originalSemanticBlockSha256": "DFC2B6E5E682D18CC223FB96C1E26473636D02BEB0395BEC35725CB6E8BE2867",
+      "originalNominalBlockSha256": "79CE31C7E6EFA7234CDE56EB60B70F45F2DF5123B2479195F85738C7C8ADCD71",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001049OprabReflected001.lean",
+      "successorSourceSha256": "7424756751C6D26D6D9D763FD7FC0015042409492C419B9C5A74B14536E002A2",
+      "successorBytes": 26586,
+      "semanticBlockSha256": "4CA53436382B0DB9E122D6A6D7B284563CC7F9921EE33EB7A087FE9A854FB207",
+      "nominalBlockSha256": "3CACDC21C51F2468C0CACABA025EC82E3446871DAE80B35F39F19C166DD6C6D2",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 10,
+      "reflOfReflOnOccurrenceCount": 10,
+      "semanticRecord": {
+        "label": "df-oprab",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_oprab",
+        "floating": [
+          "ph",
+          "x",
+          "y",
+          "z",
+          "w"
+        ],
+        "dv": [
+          [
+            "ph",
+            "w"
+          ],
+          [
+            "w",
+            "x"
+          ],
+          [
+            "w",
+            "y"
+          ],
+          [
+            "w",
+            "z"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 45,
+        "opaque_refl_subtrees": 10,
+        "fresh_facts": 5,
+        "split_alpha_haves": 0,
+        "alpha_case_split": null,
+        "alpha_three_way_split": [
+          "x",
+          "y",
+          "z"
+        ]
+      }
+    },
+    {
+      "globalOrdinal": 50,
+      "surface": "base",
+      "surfaceOrdinal": 50,
+      "label": "df-mpt",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001050MptReflected001",
+      "import": "NominalAlphaRepairedBase001050MptReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_mpt",
+      "floating": [
+        "x",
+        "y",
+        "A",
+        "B"
+      ],
+      "dv": [
+        [
+          "A",
+          "y"
+        ],
+        [
+          "B",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001050Mpt",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001050Mpt.lean",
+      "originalSourceSha256": "BF627D38B3B488DA12FD753B729D63DA7B6004BBDCCEBC7BA58AD7F83DD2FC22",
+      "originalSemanticBlockSha256": "0E1C43329D094D5FB980F4F4B56F3A24B631B8FA75228C5DBCCF22F2B92E2746",
+      "originalNominalBlockSha256": "B6310938F8A72249D15A1D488AA2315896575D1AA6FBDB323F9D7FCF2CC3C87B",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001050MptReflected001.lean",
+      "successorSourceSha256": "143C65F7EA678491B359A913D4E3623EB007ACCCAD074A47740172836C6DDE1D",
+      "successorBytes": 109597,
+      "semanticBlockSha256": "E2B8D3A0354C4C6A70D5011EB4A184F91AE47B2F883928E3797FB501382F3E34",
+      "nominalBlockSha256": "BA48C00FECD9F3DD6297686E564E3D4A345E831AB5558F149E4EF6331C6D3010",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 10,
+      "reflOfReflOnOccurrenceCount": 16,
+      "semanticRecord": {
+        "label": "df-mpt",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_mpt",
+        "floating": [
+          "x",
+          "y",
+          "A",
+          "B"
+        ],
+        "dv": [
+          [
+            "A",
+            "y"
+          ],
+          [
+            "B",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 281,
+        "opaque_refl_subtrees": 16,
+        "fresh_facts": 39,
+        "split_alpha_haves": 5,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 51,
+      "surface": "base",
+      "surfaceOrdinal": 51,
+      "label": "df-mpt2",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001051Mpt2Reflected001",
+      "import": "NominalAlphaRepairedBase001051Mpt2Reflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_mpt2",
+      "floating": [
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C"
+      ],
+      "dv": [
+        [
+          "A",
+          "z"
+        ],
+        [
+          "B",
+          "z"
+        ],
+        [
+          "C",
+          "z"
+        ],
+        [
+          "x",
+          "z"
+        ],
+        [
+          "y",
+          "z"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001051Mpt2",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001051Mpt2.lean",
+      "originalSourceSha256": "D05B0777CD6BE24C309C3A36075E40A08035202E1A1371E13AE1E51B689E7116",
+      "originalSemanticBlockSha256": "CFA1439C3B865EBE93C6F7283B7633774AF75F5B2D6BAC65C14A3AE39EFCF29A",
+      "originalNominalBlockSha256": "2314981F6B3AF8A22361583D679BC92C57E5EA5D4E7D3F620B96EFE85961BFD8",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001051Mpt2Reflected001.lean",
+      "successorSourceSha256": "9500110FA0C881ADC7EB17C168361C0AE59C44E673BAC3EAE11465E3FDEE48B3",
+      "successorBytes": 232155,
+      "semanticBlockSha256": "22059DA342E5F4B60AB8C5A40491380846723530EDDD923A0BB498B767070CDD",
+      "nominalBlockSha256": "60691E1EDFEC99D9D06B130399821F8E77DE75D070534D3FA6A7AC3C36E8A8F8",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 20,
+      "reflOfReflOnOccurrenceCount": 32,
+      "semanticRecord": {
+        "label": "df-mpt2",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_mpt2",
+        "floating": [
+          "x",
+          "y",
+          "z",
+          "A",
+          "B",
+          "C"
+        ],
+        "dv": [
+          [
+            "A",
+            "z"
+          ],
+          [
+            "B",
+            "z"
+          ],
+          [
+            "C",
+            "z"
+          ],
+          [
+            "x",
+            "z"
+          ],
+          [
+            "y",
+            "z"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 566,
+        "opaque_refl_subtrees": 32,
+        "fresh_facts": 78,
+        "split_alpha_haves": 10,
+        "alpha_case_split": [
+          "x",
+          "y"
+        ],
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 52,
+      "surface": "base",
+      "surfaceOrdinal": 52,
+      "label": "df-cup",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001052CupReflected001",
+      "import": "NominalAlphaRepairedBase001052CupReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_cup",
+      "floating": [
+        "x",
+        "y"
+      ],
+      "dv": [
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001052Cup",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001052Cup.lean",
+      "originalSourceSha256": "129E7695CD39DA9A52F1F799403F374C3A7A138EDF7BECA772DD15D067B76538",
+      "originalSemanticBlockSha256": "457F0CB6211EFF25404BCBFFA771EC6B434A205D5080A44354104BC1F6926DDD",
+      "originalNominalBlockSha256": "33FE12B2A533AC1E367D41CF67B370507CC64F8C148FA6DA094EB89CB0D84DDD",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001052CupReflected001.lean",
+      "successorSourceSha256": "FD7C0A83F13C7C5A17A001FC304CFB3C17EE17D9265163466F63FCAB8B60D860",
+      "successorBytes": 224545,
+      "semanticBlockSha256": "437C960D0255F05A532717CBCF69FADECBEFDE227F31939D024CC137E3DAD217",
+      "nominalBlockSha256": "CF5AEBCC80D37C1F864A034E226C84168C2FCE03BB43596853A067095FC18726",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 15,
+      "reflOfReflOnOccurrenceCount": 22,
+      "semanticRecord": {
+        "label": "df-cup",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_cup",
+        "floating": [
+          "x",
+          "y"
+        ],
+        "dv": [
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 547,
+        "opaque_refl_subtrees": 22,
+        "fresh_facts": 84,
+        "split_alpha_haves": 10,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 53,
+      "surface": "base",
+      "surfaceOrdinal": 53,
+      "label": "df-disj",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001053DisjReflected001",
+      "import": "NominalAlphaRepairedBase001053DisjReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_disj",
+      "floating": [
+        "x",
+        "y"
+      ],
+      "dv": [
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001053Disj",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001053Disj.lean",
+      "originalSourceSha256": "C6F86D14AD592926D2DDA87956824BFE4A5570DD51DE14D142F1BC489AB77B44",
+      "originalSemanticBlockSha256": "4472ACE09EADE989BE2C2CEBB74669F8C7E30367BD03FF03FE842FCABFC05AE4",
+      "originalNominalBlockSha256": "2C9DCAAA822A01866884C468BFD8AC83E25FE090B3140DA506E7942CDEB73DFB",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001053DisjReflected001.lean",
+      "successorSourceSha256": "8A0A20A19F325BB9FBDAED2B64ACD9B0DFE48E21067FBA5810D587F7347EA567",
+      "successorBytes": 106786,
+      "semanticBlockSha256": "237E134D12A94E8A8633C316C24BEE97EE10721C2493BA42A45C6B0F0B5778F0",
+      "nominalBlockSha256": "D6EFE73BB739E870A334F283137D6FE1A5FA7F005900A60D4254ECE1C82AEE1C",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 8,
+      "reflOfReflOnOccurrenceCount": 14,
+      "semanticRecord": {
+        "label": "df-disj",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_disj",
+        "floating": [
+          "x",
+          "y"
+        ],
+        "dv": [
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 301,
+        "opaque_refl_subtrees": 14,
+        "fresh_facts": 42,
+        "split_alpha_haves": 5,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 54,
+      "surface": "base",
+      "surfaceOrdinal": 54,
+      "label": "df-addcfn",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001054AddcfnReflected001",
+      "import": "NominalAlphaRepairedBase001054AddcfnReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_addcfn",
+      "floating": [
+        "x",
+        "y"
+      ],
+      "dv": [
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001054Addcfn",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001054Addcfn.lean",
+      "originalSourceSha256": "3E9934D6AB6DC17374D967066679A9A7544F56D6554D219883B7C1CB7953F637",
+      "originalSemanticBlockSha256": "4AE2A17F6C48B6B36BACA1F43F5954EF598FFA09F976DDC48DD5FA1AE7BAB4CA",
+      "originalNominalBlockSha256": "FF74A8C7923780925BD0EE125110FFACAA56D97B2A76A8564FE82AD72420DD80",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001054AddcfnReflected001.lean",
+      "successorSourceSha256": "49223230EAAD6D42FE8AFE60BC50A3BA9D1405EE8974CA418A9037A7D03C203D",
+      "successorBytes": 236767,
+      "semanticBlockSha256": "D8CAC9DA6E08611E15CD8FDA550BFFD2B8AE4BDAC5A8E51FA494605F42CD4E89",
+      "nominalBlockSha256": "135631247D6D655DCEE079979EE82470EAD4341D3820C65EF3B230430D0025F1",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 16,
+      "reflOfReflOnOccurrenceCount": 23,
+      "semanticRecord": {
+        "label": "df-addcfn",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_addcfn",
+        "floating": [
+          "x",
+          "y"
+        ],
+        "dv": [
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 585,
+        "opaque_refl_subtrees": 23,
+        "fresh_facts": 90,
+        "split_alpha_haves": 11,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 55,
+      "surface": "base",
+      "surfaceOrdinal": 55,
+      "label": "df-compose",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001055ComposeReflected001",
+      "import": "NominalAlphaRepairedBase001055ComposeReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_compose",
+      "floating": [
+        "x",
+        "y"
+      ],
+      "dv": [
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001055Compose",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001055Compose.lean",
+      "originalSourceSha256": "7E7CF7811BC4B2A06E5E3BBC456AF4056E4529DEDFD06B292CF4F8677D8738F4",
+      "originalSemanticBlockSha256": "6CE4590DCA98C82D285A5C602D903A51E30FC47F2FE46F98817538B83FF61F7E",
+      "originalNominalBlockSha256": "368BB626B367864BBE02BA181AC8526876CC92D65D9219E112FF6BCF5E4CB32C",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001055ComposeReflected001.lean",
+      "successorSourceSha256": "A4D5F2EF624FCCBF26E725F74D09068C86A9D05B17F1F57CE72D1427F743A605",
+      "successorBytes": 531228,
+      "semanticBlockSha256": "14B274CD817061B0C9921D675535FEAE5B19B89EC6498700241ACCBFFAEF44CD",
+      "nominalBlockSha256": "E5116B7AB1B1F353275AF18E606CB957B3BC2161DA35DF723C1647DF85EF4269",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 36,
+      "reflOfReflOnOccurrenceCount": 52,
+      "semanticRecord": {
+        "label": "df-compose",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_compose",
+        "floating": [
+          "x",
+          "y"
+        ],
+        "dv": [
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 1327,
+        "opaque_refl_subtrees": 52,
+        "fresh_facts": 190,
+        "split_alpha_haves": 27,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 56,
+      "surface": "base",
+      "surfaceOrdinal": 56,
+      "label": "df-funs",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001056FunsReflected001",
+      "import": "NominalAlphaRepairedBase001056FunsReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_funs",
+      "floating": [
+        "f"
+      ],
+      "dv": [],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001056Funs",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001056Funs.lean",
+      "originalSourceSha256": "4E5536D1B5BD2980FE6F1971C9782BDC221DB79304273AB2718D0BA6ED6DDF0C",
+      "originalSemanticBlockSha256": "979436622EC98FB66E172A8BBCF41EDDB70FABA190945BBD557C95D99E6F50CC",
+      "originalNominalBlockSha256": "DE73BFF6247DFA931BA645C5CE52A1DABED5F2F4036D198ED2098DF7ED57DBCF",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001056FunsReflected001.lean",
+      "successorSourceSha256": "832CEC31F183F10B2A343DA7E6E3F62B68C6BB7BC2282661CF97A9A70B08DED5",
+      "successorBytes": 789687,
+      "semanticBlockSha256": "12188FE3801884E3F200D817865CD41EF3EAA99A73F5D7B6B561C09BB2B77ABC",
+      "nominalBlockSha256": "FDCB1298D7C5C77B27106D327D641EDC28F75F49715481F4B651BEAB2D42F506",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 71,
+      "reflOfReflOnOccurrenceCount": 102,
+      "semanticRecord": {
+        "label": "df-funs",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_funs",
+        "floating": [
+          "f"
+        ],
+        "dv": [],
+        "essential": [],
+        "selective_expansions": 2781,
+        "opaque_refl_subtrees": 102,
+        "fresh_facts": 199,
+        "split_alpha_haves": 54,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 57,
+      "surface": "base",
+      "surfaceOrdinal": 57,
+      "label": "df-fns",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001057FnsReflected001",
+      "import": "NominalAlphaRepairedBase001057FnsReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_fns",
+      "floating": [
+        "f",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "f"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001057Fns",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001057Fns.lean",
+      "originalSourceSha256": "7D686F14F0149EB934B0F33AC6501B961A761E3C118ED187D1B47F4A4093E18D",
+      "originalSemanticBlockSha256": "08FF9C949B180006A055CD5530A410A546B0A557CED6168A5BC52AAE01330BD6",
+      "originalNominalBlockSha256": "E5AA071165CE6C05B1CFAAB0D62BC70DC65A41892145C933C701B8B6412B76B6",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001057FnsReflected001.lean",
+      "successorSourceSha256": "AEC357C1D2D44DF25121184D1FBCBBCB6598AE36773A4AC1917FA7B085532581",
+      "successorBytes": 1127642,
+      "semanticBlockSha256": "CA481741AFD06ED6664169A0914A8028E7EA024DFA22AAE339D4AC8F128A2C05",
+      "nominalBlockSha256": "C5B5F592F91B02DD92E689FCFF1AB12D01CBE5A0179B0C0328570A0B92058375",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 100,
+      "reflOfReflOnOccurrenceCount": 146,
+      "semanticRecord": {
+        "label": "df-fns",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_fns",
+        "floating": [
+          "f",
+          "a"
+        ],
+        "dv": [
+          [
+            "a",
+            "f"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 3901,
+        "opaque_refl_subtrees": 146,
+        "fresh_facts": 278,
+        "split_alpha_haves": 77,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 58,
+      "surface": "base",
+      "surfaceOrdinal": 58,
+      "label": "df-pw1fn",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001058Pw1fnReflected001",
+      "import": "NominalAlphaRepairedBase001058Pw1fnReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_pw1fn",
+      "floating": [
+        "x"
+      ],
+      "dv": [],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001058Pw1fn",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001058Pw1fn.lean",
+      "originalSourceSha256": "9382BE5EBB1458A1EB9C2F334631167BB8F8DAF3830F518AC64892990B1CBDC9",
+      "originalSemanticBlockSha256": "48FB125E439ECE7B040912D121D9F27CF46C07C11887A8BBDF71DB7CC18E1A03",
+      "originalNominalBlockSha256": "03311927ACC75C4822A0407D8C17011CB397075266DA2DC0F8A86A7609F67127",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001058Pw1fnReflected001.lean",
+      "successorSourceSha256": "996629F156812CA5487F0C80F20EBFF606A402BB93A30ECDF2AD70FCC727F8E9",
+      "successorBytes": 117841,
+      "semanticBlockSha256": "058C43E0BAA3126C01D727A092053FE4C4061BE7EB09CBEE0A7EA8388FDC7207",
+      "nominalBlockSha256": "91AE73878870A5D63CF400A94CF5D7229D3304A7B5E565F2458271E7413CE8F5",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 9,
+      "reflOfReflOnOccurrenceCount": 13,
+      "semanticRecord": {
+        "label": "df-pw1fn",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_pw1fn",
+        "floating": [
+          "x"
+        ],
+        "dv": [],
+        "essential": [],
+        "selective_expansions": 313,
+        "opaque_refl_subtrees": 13,
+        "fresh_facts": 55,
+        "split_alpha_haves": 6,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 59,
+      "surface": "base",
+      "surfaceOrdinal": 59,
+      "label": "df-clos1",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001059Clos1Reflected001",
+      "import": "NominalAlphaRepairedBase001059Clos1Reflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_clos1",
+      "floating": [
+        "R",
+        "S",
+        "a"
+      ],
+      "dv": [
+        [
+          "R",
+          "a"
+        ],
+        [
+          "S",
+          "a"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001059Clos1",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001059Clos1.lean",
+      "originalSourceSha256": "93C36E960DC0002928486405D8DE98F750901F9EF7771096E8D375E3F721AF8D",
+      "originalSemanticBlockSha256": "5E76C87683F051136908BF22B4DC369DA5301B2321A12DD129E95354B8F029C5",
+      "originalNominalBlockSha256": "2B4563F3B50E0817A75F95F398E9C9DDCE96AE51189BA1B871C2E14E681137F7",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001059Clos1Reflected001.lean",
+      "successorSourceSha256": "D832DD4A367C60306B669502F3DBEACF07D3B6853A5AFE35AE9A1ED732E087C8",
+      "successorBytes": 191374,
+      "semanticBlockSha256": "01790C2F7CDE5A99A5AD96632F40A3B84CAAE4B701BA8C0BAB8DFE749B034BFE",
+      "nominalBlockSha256": "DD6F03ADD4FAD1CB3229102140CFD1CA5053CBCDE4FB843CE92FECCB286E3392",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 18,
+      "reflOfReflOnOccurrenceCount": 26,
+      "semanticRecord": {
+        "label": "df-clos1",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_clos1",
+        "floating": [
+          "R",
+          "S",
+          "a"
+        ],
+        "dv": [
+          [
+            "R",
+            "a"
+          ],
+          [
+            "S",
+            "a"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 645,
+        "opaque_refl_subtrees": 26,
+        "fresh_facts": 53,
+        "split_alpha_haves": 11,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 60,
+      "surface": "base",
+      "surfaceOrdinal": 60,
+      "label": "df-trans",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001060TransReflected001",
+      "import": "NominalAlphaRepairedBase001060TransReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_trans",
+      "floating": [
+        "x",
+        "y",
+        "z",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "a",
+          "y"
+        ],
+        [
+          "a",
+          "z"
+        ],
+        [
+          "r",
+          "x"
+        ],
+        [
+          "r",
+          "y"
+        ],
+        [
+          "r",
+          "z"
+        ],
+        [
+          "x",
+          "y"
+        ],
+        [
+          "x",
+          "z"
+        ],
+        [
+          "y",
+          "z"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001060Trans",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001060Trans.lean",
+      "originalSourceSha256": "E0B8921EF0198B3C586B191444BAC80DBC1941F0B2B0AA0F8603984191E5A28B",
+      "originalSemanticBlockSha256": "E1CB97C6103634A1485D387370BD62CFD07F41A63E866C696587930D6E1D5C93",
+      "originalNominalBlockSha256": "C866B885F454F903391A9C921C3499B2B7B2C5393B1B0908D441F0B571992BD5",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001060TransReflected001.lean",
+      "successorSourceSha256": "A623BF16BAC0AF8633E53879BA9F56BC1AA94DCDB176E161A69A8890D57E692B",
+      "successorBytes": 396726,
+      "semanticBlockSha256": "AF20B3D4C40176A0D2066E33EA6E6D2F1F632FDBD5CFAEA71D34F65BF307284C",
+      "nominalBlockSha256": "47FCE82D342784F2427A897ECFF0BBE2DD943171BAAF7F22FBBC2C22E8ADFAE8",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 28,
+      "reflOfReflOnOccurrenceCount": 43,
+      "semanticRecord": {
+        "label": "df-trans",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_trans",
+        "floating": [
+          "x",
+          "y",
+          "z",
+          "r",
+          "a"
+        ],
+        "dv": [
+          [
+            "a",
+            "r"
+          ],
+          [
+            "a",
+            "x"
+          ],
+          [
+            "a",
+            "y"
+          ],
+          [
+            "a",
+            "z"
+          ],
+          [
+            "r",
+            "x"
+          ],
+          [
+            "r",
+            "y"
+          ],
+          [
+            "r",
+            "z"
+          ],
+          [
+            "x",
+            "y"
+          ],
+          [
+            "x",
+            "z"
+          ],
+          [
+            "y",
+            "z"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 1079,
+        "opaque_refl_subtrees": 43,
+        "fresh_facts": 151,
+        "split_alpha_haves": 20,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 61,
+      "surface": "base",
+      "surfaceOrdinal": 61,
+      "label": "df-ref",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001061RefReflected001",
+      "import": "NominalAlphaRepairedBase001061RefReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_ref",
+      "floating": [
+        "x",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "r",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001061Ref",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001061Ref.lean",
+      "originalSourceSha256": "57E1A7610027F61D9950D301CFCDD301C811FBD0BA7D1BF94CF6B5E47616803F",
+      "originalSemanticBlockSha256": "8503076D242CE4D7991ABECFBACB11744F61F34DA555B495CC0BFE0D6900AC38",
+      "originalNominalBlockSha256": "C4A5331C1C2DC51EAEB87D0F036ACF3CD05C41FDA28E81A4F9464D777F7C7FDB",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001061RefReflected001.lean",
+      "successorSourceSha256": "A6B3724DFB67F23894F576F1EFBE21C3C8A91F46620F36C0FC20D5EBF86689F2",
+      "successorBytes": 192627,
+      "semanticBlockSha256": "9E25B5939FB7FB1B739C468F4E23256EBFC41609F84C931D095E1D0CADDACA9A",
+      "nominalBlockSha256": "AA22E90E2C59E48B7201E6A88C9D895FF3D6B1AE74BC475D4733DCB265D7AF50",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 14,
+      "reflOfReflOnOccurrenceCount": 23,
+      "semanticRecord": {
+        "label": "df-ref",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_ref",
+        "floating": [
+          "x",
+          "r",
+          "a"
+        ],
+        "dv": [
+          [
+            "a",
+            "r"
+          ],
+          [
+            "a",
+            "x"
+          ],
+          [
+            "r",
+            "x"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 521,
+        "opaque_refl_subtrees": 23,
+        "fresh_facts": 77,
+        "split_alpha_haves": 10,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 62,
+      "surface": "base",
+      "surfaceOrdinal": 62,
+      "label": "df-antisym",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001062AntisymReflected001",
+      "import": "NominalAlphaRepairedBase001062AntisymReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_antisym",
+      "floating": [
+        "x",
+        "y",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "a",
+          "y"
+        ],
+        [
+          "r",
+          "x"
+        ],
+        [
+          "r",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001062Antisym",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001062Antisym.lean",
+      "originalSourceSha256": "8B4E2A608E522070C8C9CC54A73E37EE1C21741967FB06D6E50EA3299B758CEA",
+      "originalSemanticBlockSha256": "C1A26365187807BA08F5C691DEAA734C53EE48C64DC1DCB04A0AFE82D670308E",
+      "originalNominalBlockSha256": "0896687FCA56F1F75FD3798BAB12B5B310F9D4C22AB2EFCE0E6D68CA17256E3A",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001062AntisymReflected001.lean",
+      "successorSourceSha256": "BBF8D3736DB94F06CE073C3E1D42AB77543149BD59A30646C513B7EBF3DFF2E8",
+      "successorBytes": 294873,
+      "semanticBlockSha256": "649B970EBCBC6DD513DDC1C6C16BC9E85F02EEF7F75D7C4E51B3768E228E431A",
+      "nominalBlockSha256": "F889605FEEA07083840508D8744020DBA2A75D0AD7C7CAFDE49C8AEA92B8282A",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 21,
+      "reflOfReflOnOccurrenceCount": 33,
+      "semanticRecord": {
+        "label": "df-antisym",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_antisym",
+        "floating": [
+          "x",
+          "y",
+          "r",
+          "a"
+        ],
+        "dv": [
+          [
+            "a",
+            "r"
+          ],
+          [
+            "a",
+            "x"
+          ],
+          [
+            "a",
+            "y"
+          ],
+          [
+            "r",
+            "x"
+          ],
+          [
+            "r",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 801,
+        "opaque_refl_subtrees": 33,
+        "fresh_facts": 114,
+        "split_alpha_haves": 15,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 63,
+      "surface": "base",
+      "surfaceOrdinal": 63,
+      "label": "df-connex",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001063ConnexReflected001",
+      "import": "NominalAlphaRepairedBase001063ConnexReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_connex",
+      "floating": [
+        "x",
+        "y",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "a",
+          "y"
+        ],
+        [
+          "r",
+          "x"
+        ],
+        [
+          "r",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001063Connex",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001063Connex.lean",
+      "originalSourceSha256": "92A549D76130FCE2710EAA703045ED961777C2309F7233957B9B74E7BF78A80F",
+      "originalSemanticBlockSha256": "C61EB7AF7D36D0D5AE2A00DC3F5E66CEFFE46FEF058CD44F19C632D99E2E228C",
+      "originalNominalBlockSha256": "625AFB86912E9B03CD210016D2F0A69952BD25B67F2D57733DE432FBBCAC644A",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001063ConnexReflected001.lean",
+      "successorSourceSha256": "4F5FD3914C855989215FE7A2DC86D7005A91DBAB3E655C4E8A3FD1E3B0279EB1",
+      "successorBytes": 294276,
+      "semanticBlockSha256": "3C083254FA2947E9C02A0A0687F97793620EB5941C7B11EAF6F44000043C7A38",
+      "nominalBlockSha256": "F17B79F2D3482489EFC323A5B095AED4A9EB027B204C8E2F37DD295437450D3C",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 21,
+      "reflOfReflOnOccurrenceCount": 33,
+      "semanticRecord": {
+        "label": "df-connex",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_connex",
+        "floating": [
+          "x",
+          "y",
+          "r",
+          "a"
+        ],
+        "dv": [
+          [
+            "a",
+            "r"
+          ],
+          [
+            "a",
+            "x"
+          ],
+          [
+            "a",
+            "y"
+          ],
+          [
+            "r",
+            "x"
+          ],
+          [
+            "r",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 801,
+        "opaque_refl_subtrees": 33,
+        "fresh_facts": 114,
+        "split_alpha_haves": 15,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 64,
+      "surface": "base",
+      "surfaceOrdinal": 64,
+      "label": "df-found",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001064FoundReflected001",
+      "import": "NominalAlphaRepairedBase001064FoundReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_found",
+      "floating": [
+        "x",
+        "y",
+        "z",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "a",
+          "y"
+        ],
+        [
+          "a",
+          "z"
+        ],
+        [
+          "r",
+          "x"
+        ],
+        [
+          "r",
+          "y"
+        ],
+        [
+          "r",
+          "z"
+        ],
+        [
+          "x",
+          "y"
+        ],
+        [
+          "x",
+          "z"
+        ],
+        [
+          "y",
+          "z"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001064Found",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001064Found.lean",
+      "originalSourceSha256": "555898FEB055047A61D755CC6CE8CA2C3494765B96F051FD6A9CBFFDDCFC8461",
+      "originalSemanticBlockSha256": "CBEF493AF9F98C8E0ECBF7579984D35F509939D6D9D1B5A66E24A9E9A165BE20",
+      "originalNominalBlockSha256": "A73A4E27266A812AC8A865C753696AB098CD6DF20BF43D0418C1BF2CC2525387",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001064FoundReflected001.lean",
+      "successorSourceSha256": "33AFEEA126A3F41F4B9372345B446EBC1C0491C567150D862D07A9A3440D91F3",
+      "successorBytes": 214457,
+      "semanticBlockSha256": "6F053BEE3C9EC40362D8557DE24711ED36AA916E454487A00AFF5E1FD13A72F8",
+      "nominalBlockSha256": "5310223A64E73C3E42E12BB1B53631A864D41D216EC6F11AF6716853E57AF66F",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 15,
+      "reflOfReflOnOccurrenceCount": 24,
+      "semanticRecord": {
+        "label": "df-found",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_found",
+        "floating": [
+          "x",
+          "y",
+          "z",
+          "r",
+          "a"
+        ],
+        "dv": [
+          [
+            "a",
+            "r"
+          ],
+          [
+            "a",
+            "x"
+          ],
+          [
+            "a",
+            "y"
+          ],
+          [
+            "a",
+            "z"
+          ],
+          [
+            "r",
+            "x"
+          ],
+          [
+            "r",
+            "y"
+          ],
+          [
+            "r",
+            "z"
+          ],
+          [
+            "x",
+            "y"
+          ],
+          [
+            "x",
+            "z"
+          ],
+          [
+            "y",
+            "z"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 579,
+        "opaque_refl_subtrees": 24,
+        "fresh_facts": 83,
+        "split_alpha_haves": 11,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 65,
+      "surface": "base",
+      "surfaceOrdinal": 65,
+      "label": "df-sym",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001065SymReflected001",
+      "import": "NominalAlphaRepairedBase001065SymReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_sym",
+      "floating": [
+        "x",
+        "y",
+        "r",
+        "a"
+      ],
+      "dv": [
+        [
+          "a",
+          "r"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "a",
+          "y"
+        ],
+        [
+          "r",
+          "x"
+        ],
+        [
+          "r",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001065Sym",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001065Sym.lean",
+      "originalSourceSha256": "C41FEC47487D0EC74FF82792C77C4A89F94F595B4C1A9E05971D89700CEAACB0",
+      "originalSemanticBlockSha256": "F1982F551AC425AA96EC63FAA8A366F53A7C7DC47E2BDF2E872AA2C1F4844CEB",
+      "originalNominalBlockSha256": "8F07209DCD70FE1B3EC0E61C31AD34DEAF31DA2A6B83DC0223A217FD4C6F3515",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001065SymReflected001.lean",
+      "successorSourceSha256": "D93E31FD1A91988A9A003CCBEC0A68D52DAB3CF9FD400221AFD5B1F40782FDEB",
+      "successorBytes": 294262,
+      "semanticBlockSha256": "2A5624F0BC2540627B9C14FB2C856C3796550CF36DBA561E972A6F00AF6FE01D",
+      "nominalBlockSha256": "8CC16498C8AF0B55FBA0107753CBFDB2155203AAD4EF985FEAA8D2CE921AAE5F",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 21,
+      "reflOfReflOnOccurrenceCount": 33,
+      "semanticRecord": {
+        "label": "df-sym",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_sym",
+        "floating": [
+          "x",
+          "y",
+          "r",
+          "a"
+        ],
+        "dv": [
+          [
+            "a",
+            "r"
+          ],
+          [
+            "a",
+            "x"
+          ],
+          [
+            "a",
+            "y"
+          ],
+          [
+            "r",
+            "x"
+          ],
+          [
+            "r",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 799,
+        "opaque_refl_subtrees": 33,
+        "fresh_facts": 114,
+        "split_alpha_haves": 15,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 66,
+      "surface": "base",
+      "surfaceOrdinal": 66,
+      "label": "df-qs",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001066QsReflected001",
+      "import": "NominalAlphaRepairedBase001066QsReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_qs",
+      "floating": [
+        "x",
+        "y",
+        "A",
+        "R"
+      ],
+      "dv": [
+        [
+          "A",
+          "x"
+        ],
+        [
+          "A",
+          "y"
+        ],
+        [
+          "R",
+          "x"
+        ],
+        [
+          "R",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001066Qs",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001066Qs.lean",
+      "originalSourceSha256": "F92845B65BD12E1EAEE40FCD2018FE6CF63A4ED3BB3DDCCAE86B56D543CA03B3",
+      "originalSemanticBlockSha256": "1199A5214FA3A8D959C49AD8EA67FE1C3BC8B7B03B5F3712EA5B5F28246C9243",
+      "originalNominalBlockSha256": "F58B3776EB7DB1AA90FC927AEB620A76651F13F876FE8C281162BC269AAB52F2",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001066QsReflected001.lean",
+      "successorSourceSha256": "B128CEE3740E6BBD187EB978F915671EE01221A10020685719EC48CEBA6F61DA",
+      "successorBytes": 108673,
+      "semanticBlockSha256": "E84FFD1505EF4E4B2D2FCF4D565E3ACC5F3B35749537D17B0E052F1558B9578B",
+      "nominalBlockSha256": "59E0BF36005521FEAD7368C246E435B58261728FABD1249CEAF193D671E5512F",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 9,
+      "reflOfReflOnOccurrenceCount": 12,
+      "semanticRecord": {
+        "label": "df-qs",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_qs",
+        "floating": [
+          "x",
+          "y",
+          "A",
+          "R"
+        ],
+        "dv": [
+          [
+            "A",
+            "x"
+          ],
+          [
+            "A",
+            "y"
+          ],
+          [
+            "R",
+            "x"
+          ],
+          [
+            "R",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 265,
+        "opaque_refl_subtrees": 12,
+        "fresh_facts": 44,
+        "split_alpha_haves": 5,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 67,
+      "surface": "base",
+      "surfaceOrdinal": 67,
+      "label": "df-map",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001067MapReflected001",
+      "import": "NominalAlphaRepairedBase001067MapReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_map",
+      "floating": [
+        "x",
+        "y",
+        "f"
+      ],
+      "dv": [
+        [
+          "f",
+          "x"
+        ],
+        [
+          "f",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001067Map",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001067Map.lean",
+      "originalSourceSha256": "7E322525FE78089991142DC7489EDB613E4764C53791068D33748F6760F8FA4D",
+      "originalSemanticBlockSha256": "C6D11F1403A81C187072ECA9261BD2595363BB27589107323DD7DF7A6DF7AF62",
+      "originalNominalBlockSha256": "0E7F03E8F2FADD2A59594D6BEB4EAD284105EDBA2A6A194B1E68541CE75A00C0",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001067MapReflected001.lean",
+      "successorSourceSha256": "9711B99C9C5F0ED12097FD5FD7489F56DC544B39974F113BEABDD24448FFE20C",
+      "successorBytes": 1461106,
+      "semanticBlockSha256": "473A584835C420D1FD0E2508060646786193873C5120F4A3C9A0ECC9DE160A0E",
+      "nominalBlockSha256": "8E48B4F079A9A3FB454C02B048ED98DAC6B5A08CA6D365A2E8493E99468DF1D3",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 124,
+      "reflOfReflOnOccurrenceCount": 175,
+      "semanticRecord": {
+        "label": "df-map",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_map",
+        "floating": [
+          "x",
+          "y",
+          "f"
+        ],
+        "dv": [
+          [
+            "f",
+            "x"
+          ],
+          [
+            "f",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 4689,
+        "opaque_refl_subtrees": 175,
+        "fresh_facts": 361,
+        "split_alpha_haves": 95,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 68,
+      "surface": "base",
+      "surfaceOrdinal": 68,
+      "label": "df-en",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001068EnReflected001",
+      "import": "NominalAlphaRepairedBase001068EnReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_en",
+      "floating": [
+        "x",
+        "y",
+        "f"
+      ],
+      "dv": [
+        [
+          "f",
+          "x"
+        ],
+        [
+          "f",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001068En",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001068En.lean",
+      "originalSourceSha256": "86265B0077C447A4F9E5051F86E75B68C0FABB0805FBF4474CCE9E31F3E49D78",
+      "originalSemanticBlockSha256": "7411B90B289FE9291783F5F9EE2543A7B00B0BEF718AA14A6DA6EAA65963F15A",
+      "originalNominalBlockSha256": "6E64E7F1C7BD7463E38E590795B0DC39FAFCC9B0DF8BA67CB2570E558D14562A",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001068EnReflected001.lean",
+      "successorSourceSha256": "9FA7BE2382CB6855228B452C8BF512A1675C60B61E08C3442F9295FB552D7D32",
+      "successorBytes": 2645085,
+      "semanticBlockSha256": "18A0EEF94501E65CFF3AF966E74019CA86FAF87A6706141431F15817E4BA1D95",
+      "nominalBlockSha256": "0AAF90F00BD3984112FDF8D6C2B2442D4943AC3886922A799862475BC6CD5DC5",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 243,
+      "reflOfReflOnOccurrenceCount": 345,
+      "semanticRecord": {
+        "label": "df-en",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_en",
+        "floating": [
+          "x",
+          "y",
+          "f"
+        ],
+        "dv": [
+          [
+            "f",
+            "x"
+          ],
+          [
+            "f",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 9463,
+        "opaque_refl_subtrees": 345,
+        "fresh_facts": 521,
+        "split_alpha_haves": 193,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 69,
+      "surface": "base",
+      "surfaceOrdinal": 69,
+      "label": "df-lec",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001069LecReflected001",
+      "import": "NominalAlphaRepairedBase001069LecReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_lec",
+      "floating": [
+        "x",
+        "y",
+        "a",
+        "b"
+      ],
+      "dv": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "a",
+          "x"
+        ],
+        [
+          "a",
+          "y"
+        ],
+        [
+          "b",
+          "x"
+        ],
+        [
+          "b",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001069Lec",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001069Lec.lean",
+      "originalSourceSha256": "E5C5AA94F9DE17A109BF19F614957CB54481E6512212E324E206BE81AD7EC6A9",
+      "originalSemanticBlockSha256": "62D583D038906983976355562E691362B59314BF306C9B2B5CA85D560D4E8930",
+      "originalNominalBlockSha256": "4D401A42D6B93A42CB9E3EB28373DBBDE37F750BAD901F510351A41ACC0B5B21",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001069LecReflected001.lean",
+      "successorSourceSha256": "1EF9844D52E858615014F2F6248CEC48B1D47FF5B27E4B3D12B59725BFCAFE83",
+      "successorBytes": 110428,
+      "semanticBlockSha256": "A4ACE04BE300B4C72783ABCAAB6031526FE09227B61BF711A7499752F71CD83E",
+      "nominalBlockSha256": "992260C219B7F380B71890DDB76F82FED39456E00B9990FF7A6C8B5C6AC51856",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 7,
+      "reflOfReflOnOccurrenceCount": 13,
+      "semanticRecord": {
+        "label": "df-lec",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_lec",
+        "floating": [
+          "x",
+          "y",
+          "a",
+          "b"
+        ],
+        "dv": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "x"
+          ],
+          [
+            "a",
+            "y"
+          ],
+          [
+            "b",
+            "x"
+          ],
+          [
+            "b",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 315,
+        "opaque_refl_subtrees": 13,
+        "fresh_facts": 46,
+        "split_alpha_haves": 5,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 70,
+      "surface": "base",
+      "surfaceOrdinal": 70,
+      "label": "df-tc",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001070TcReflected001",
+      "import": "NominalAlphaRepairedBase001070TcReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_tc",
+      "floating": [
+        "x",
+        "A",
+        "b"
+      ],
+      "dv": [
+        [
+          "A",
+          "b"
+        ],
+        [
+          "A",
+          "x"
+        ],
+        [
+          "b",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001070Tc",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001070Tc.lean",
+      "originalSourceSha256": "59FAAF40B926E7A8DC4E3BB6257662E83A08FAF453AD8A3A1DCBD00974E67E3E",
+      "originalSemanticBlockSha256": "40F2D97F0EBCDC9984E8FB0257DD85B0CB8032FE7A9BC110C0543229F9587815",
+      "originalNominalBlockSha256": "A5A2482AD9B6997BD2177D7B0AB776BB89283DD8666BFDA1AB15B569E769865C",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001070TcReflected001.lean",
+      "successorSourceSha256": "3A3CE6E8D692FED25741DD15F0B8F09EC9A929936A1A45491A75A349DED2DC3E",
+      "successorBytes": 158254,
+      "semanticBlockSha256": "9513037A4E1CA060D4EF333C3A777E21AB291A8EEC87666BF3F0AEF7C532F685",
+      "nominalBlockSha256": "969955C28636CFE9F2779C18E71BAE1D4803C3FD8F0F3A65F2EA756D7311DF7E",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 11,
+      "reflOfReflOnOccurrenceCount": 15,
+      "semanticRecord": {
+        "label": "df-tc",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_tc",
+        "floating": [
+          "x",
+          "A",
+          "b"
+        ],
+        "dv": [
+          [
+            "A",
+            "b"
+          ],
+          [
+            "A",
+            "x"
+          ],
+          [
+            "b",
+            "x"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 373,
+        "opaque_refl_subtrees": 15,
+        "fresh_facts": 62,
+        "split_alpha_haves": 7,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 71,
+      "surface": "base",
+      "surfaceOrdinal": 71,
+      "label": "df-tcfn",
+      "category": "alpha_classEq",
+      "module": "NominalAlphaRepairedBase001071TcfnReflected001",
+      "import": "NominalAlphaRepairedBase001071TcfnReflected001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_tcfn",
+      "floating": [
+        "x"
+      ],
+      "dv": [],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedBase001071Tcfn",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedBase001071Tcfn.lean",
+      "originalSourceSha256": "6379660B8575EF3A221D07ADA8D9D91E711A0E6B0B523AFA1E721DFC784EEB28",
+      "originalSemanticBlockSha256": "5B25A692066A8FFC2BC73BB2C14B833A180554A168D6D6A9D1D2EAFBBD42A675",
+      "originalNominalBlockSha256": "2909728C92BD2074C832AFBFAE60BDEB49DD3B1D8FAD9CB2DBA4EDE15AB619D2",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedBase001071TcfnReflected001.lean",
+      "successorSourceSha256": "3B2B6B83E1F3629FE5AD556E81D31306A1F37A5F769BD4A727615ACD796B086D",
+      "successorBytes": 268461,
+      "semanticBlockSha256": "1C0EB5E9BEE2BBDB89C02C526137BA0DE3544079E3BB6315552C3B5D3EA50A39",
+      "nominalBlockSha256": "76E50D36034859B07F8805F8AC0D2B96A90640FD32CF70E66D0596F687722C01",
+      "originalSourceByteIdentical": false,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 18,
+      "reflOfReflOnOccurrenceCount": 25,
+      "semanticRecord": {
+        "label": "df-tcfn",
+        "category": "alpha_classEq",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_tcfn",
+        "floating": [
+          "x"
+        ],
+        "dv": [],
+        "essential": [],
+        "selective_expansions": 639,
+        "opaque_refl_subtrees": 25,
+        "fresh_facts": 109,
+        "split_alpha_haves": 12,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    },
+    {
+      "globalOrdinal": 72,
+      "surface": "wpp",
+      "surfaceOrdinal": 1,
+      "label": "df-iso",
+      "category": "alpha_biimp",
+      "module": "NominalAlphaRepairedWpp001001IsoStructural001",
+      "import": "NominalAlphaRepairedWpp001001IsoStructural001",
+      "theorem": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_iso",
+      "floating": [
+        "x",
+        "y",
+        "A",
+        "B",
+        "R",
+        "S",
+        "H"
+      ],
+      "dv": [
+        [
+          "A",
+          "x"
+        ],
+        [
+          "A",
+          "y"
+        ],
+        [
+          "B",
+          "x"
+        ],
+        [
+          "B",
+          "y"
+        ],
+        [
+          "H",
+          "x"
+        ],
+        [
+          "H",
+          "y"
+        ],
+        [
+          "R",
+          "x"
+        ],
+        [
+          "R",
+          "y"
+        ],
+        [
+          "S",
+          "x"
+        ],
+        [
+          "S",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "originalModule": "NominalAlphaRepairedWpp001001Iso",
+      "originalSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\generated_nominal_alpha_batch_003\\NominalAlphaRepairedWpp001001Iso.lean",
+      "originalSourceSha256": "CF76E477A68EE513FDEDFC3F7AC502A0B321BBD8EEFC9666CBE9FF1E3618CB61",
+      "originalSemanticBlockSha256": "4895BF1459CB93EE7F41AAB8E2B16681B026F40D8F3DD278228FE1FC025433EF",
+      "originalNominalBlockSha256": "2784BDC6534724B986A30A06AF12EA9AB3C4BA85E04D63F4FE77086F6EF16F1C",
+      "successorSource": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\nf_choice_clean_fol_2026-08-21\\direct_nominal_prf_001\\a4972s1\\NominalAlphaRepairedWpp001001IsoStructural001.lean",
+      "successorSourceSha256": "CF76E477A68EE513FDEDFC3F7AC502A0B321BBD8EEFC9666CBE9FF1E3618CB61",
+      "successorBytes": 559315,
+      "semanticBlockSha256": "4895BF1459CB93EE7F41AAB8E2B16681B026F40D8F3DD278228FE1FC025433EF",
+      "nominalBlockSha256": "2784BDC6534724B986A30A06AF12EA9AB3C4BA85E04D63F4FE77086F6EF16F1C",
+      "originalSourceByteIdentical": true,
+      "legacyAesopCallCount": 0,
+      "genericFirstCallCount": 0,
+      "axiomDeclarationCount": 0,
+      "opaqueDeclarationCount": 0,
+      "tReflOnOccurrenceCount": 35,
+      "reflOfReflOnOccurrenceCount": 99,
+      "semanticRecord": {
+        "label": "df-iso",
+        "category": "alpha_biimp",
+        "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_iso",
+        "floating": [
+          "x",
+          "y",
+          "A",
+          "B",
+          "R",
+          "S",
+          "H"
+        ],
+        "dv": [
+          [
+            "A",
+            "x"
+          ],
+          [
+            "A",
+            "y"
+          ],
+          [
+            "B",
+            "x"
+          ],
+          [
+            "B",
+            "y"
+          ],
+          [
+            "H",
+            "x"
+          ],
+          [
+            "H",
+            "y"
+          ],
+          [
+            "R",
+            "x"
+          ],
+          [
+            "R",
+            "y"
+          ],
+          [
+            "S",
+            "x"
+          ],
+          [
+            "S",
+            "y"
+          ],
+          [
+            "x",
+            "y"
+          ]
+        ],
+        "essential": [],
+        "selective_expansions": 2077,
+        "opaque_refl_subtrees": 90,
+        "fresh_facts": 166,
+        "split_alpha_haves": 9,
+        "alpha_case_split": null,
+        "alpha_three_way_split": null
+      }
+    }
+  ]
+}

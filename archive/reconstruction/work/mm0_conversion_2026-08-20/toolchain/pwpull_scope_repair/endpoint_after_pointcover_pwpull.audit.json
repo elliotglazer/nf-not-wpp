@@ -1,0 +1,27 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\endpoint_after_fdminvalp_pointcover_frozen_checkpoint.mm",
+  "source_sha256": "B52CC7592B9FD3A4685EAC47D990F4A1C174E02BD8BAA1FAC8BBA53AEA45AA46",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\pwpull_scope_repair\\endpoint_after_pointcover_pwpull.mm",
+  "output_sha256": "D4161B3B46B845AF695C1D260CE33A464CF4BF1A7FDCB7FF306A6D6CA94A40D9",
+  "generated_proof": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\pwpull_scope_repair\\pwpullwesetimp_scope_clean_proof.txt",
+  "generated_proof_sha256": "5E2CA4EE436B140FC31316659AAB41615320F0BFD807AE993EE08BD9FF2B8255",
+  "lax_verified": 4329,
+  "lax_trusted": 0,
+  "strict_rejected_proof_count": 4,
+  "strict_rejected_proofs": [
+    "hnqinctrnvaldndv",
+    "wppstopfixedhitcontrgrowfixdndv",
+    "hnwcutambstrictsegresisomralias0ndv",
+    "cfbhnqinjcodecoverddndv"
+  ],
+  "secondary_stdout": "OK 4329 proofs, 12431 statements",
+  "changed_proofs": [
+    "pwpullwesetimpndv"
+  ],
+  "changed_assertion_formulas": [],
+  "structure_identical": true,
+  "frozen_checkpoint": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\pwpull_scope_repair\\endpoint_after_pointcover_pwpull_frozen_checkpoint.mm",
+  "frozen_checkpoint_sha256": "D4161B3B46B845AF695C1D260CE33A464CF4BF1A7FDCB7FF306A6D6CA94A40D9",
+  "repair": "identity-safe dependency cache; regenerate pwpullwesetimpndv",
+  "metamath_executable_invoked": false
+}

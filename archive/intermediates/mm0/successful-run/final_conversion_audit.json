@@ -1,0 +1,409 @@
+{
+  "schema": "mm0-final-conversion-audit-v1",
+  "status": "COMPLETE",
+  "source": {
+    "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+    "bytes": 9945323,
+    "sha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F"
+  },
+  "endpoint": "wppfiniteblocknotwppndv",
+  "pinned_commit": "697060e119ab3f4f1a8dae4451f5cbacd9803626",
+  "tools": {
+    "python": {
+      "path": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA"
+    },
+    "primary": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\root_integration\\local_mm_verify_compressed.py",
+      "sha256": "4E0B837A73B736F6B6698840FDCA66057C01489CD09956ABA4573175D73E21D8"
+    },
+    "secondary": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\release_final_2026-08-17\\formalization_continue\\reconstruct\\mmverify_simple.py",
+      "sha256": "1D340B258C0E324518BE13C2A6A475C1586A62250A912A4DD632F5CE862E200C"
+    },
+    "strict": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\strict_scope\\local_mm_verify_compressed_strict_scope.py",
+      "sha256": "29EE7F7C324F8F09A16FFB0104699674E25B6C84C691B68EE7FFBEE25AF9B497"
+    },
+    "normalizer": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\normalize_compressed_preloads_for_mm0.py",
+      "sha256": "16A5315980EC294D761CBFF44CDAFD7521AC99330798F5A6FCF67E8E4E12E780"
+    },
+    "mm0_hs": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe",
+      "sha256": "64D73FD69F3123AE5D573B7B4B0817D9F403DD7B366107B9D1AA20E16058368B"
+    },
+    "mm0_c": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-c.exe",
+      "sha256": "6E573D7AD05455C9B1B002A75744E0C7FDD359EF187A456E514CADBBD0C58288"
+    },
+    "runner": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_final_conversion.ps1",
+      "sha256": "8F8932D13BA63A0847A55A1D75E3C77F68B5C44048BE8AD7BC214D8867F142AB"
+    }
+  },
+  "memory_guard_bytes": 1610612736,
+  "memory_guard_mib": 1536,
+  "stages": [
+    {
+      "name": "source_primary",
+      "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\root_integration\\local_mm_verify_compressed.py",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_primary.verifier.json"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\root_integration\\local_mm_verify_compressed.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_primary.verifier.json\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:39:31.5170448-07:00",
+      "elapsed_seconds": 5.579,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 56041472,
+      "peak_working_set_mib": 53.445,
+      "peak_private_bytes": 49569792,
+      "peak_private_mib": 47.273,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_primary.stdout.txt",
+      "stdout_bytes": 886,
+      "stdout_sha256": "F578C0E81B97BE9527BC174B6F005C2D0FC177907E434DE2C3E19F3C24267098",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_primary.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "source_secondary",
+      "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\release_final_2026-08-17\\formalization_continue\\reconstruct\\mmverify_simple.py",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\release_final_2026-08-17\\formalization_continue\\reconstruct\\mmverify_simple.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:39:37.1748995-07:00",
+      "elapsed_seconds": 4.029,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 48635904,
+      "peak_working_set_mib": 46.383,
+      "peak_private_bytes": 42377216,
+      "peak_private_mib": 40.414,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_secondary.stdout.txt",
+      "stdout_bytes": 34,
+      "stdout_sha256": "4C78EA738C90FDFF3D9408E667BD15A07E60A11649CEB853D229C586912D635E",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_secondary.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "source_strict",
+      "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\strict_scope\\local_mm_verify_compressed_strict_scope.py",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_strict.verifier.json"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\strict_scope\\local_mm_verify_compressed_strict_scope.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_strict.verifier.json\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:39:41.2201387-07:00",
+      "elapsed_seconds": 5.616,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 59756544,
+      "peak_working_set_mib": 56.988,
+      "peak_private_bytes": 51871744,
+      "peak_private_mib": 49.469,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_strict.stdout.txt",
+      "stdout_bytes": 2047,
+      "stdout_sha256": "B9F7BE46DD41D4ACAA036360F91721E3B3FE806FB6798F6CFD6B25A7205187A8",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\source_strict.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "normalize_mandatory_e_preloads",
+      "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\normalize_compressed_preloads_for_mm0.py",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\normalize_compressed_preloads_for_mm0.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:39:46.8585283-07:00",
+      "elapsed_seconds": 6.703,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 120709120,
+      "peak_working_set_mib": 115.117,
+      "peak_private_bytes": 112218112,
+      "peak_private_mib": 107.02,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalize_mandatory_e_preloads.stdout.txt",
+      "stdout_bytes": 2076,
+      "stdout_sha256": "68E449BD7C5081643083C9A07EB751C68C968F85E47756A4AF1888B5B19B4F01",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalize_mandatory_e_preloads.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "normalized_primary",
+      "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\root_integration\\local_mm_verify_compressed.py",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_primary.verifier.json"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\root_integration\\local_mm_verify_compressed.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_primary.verifier.json\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:39:53.6224376-07:00",
+      "elapsed_seconds": 4.714,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 56659968,
+      "peak_working_set_mib": 54.035,
+      "peak_private_bytes": 50364416,
+      "peak_private_mib": 48.031,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_primary.stdout.txt",
+      "stdout_bytes": 912,
+      "stdout_sha256": "2C57D3A7B50C270B0C5D2C67ED9E70E3255EA714BA77F76E9DDF1F2E3FE3926C",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_primary.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "normalized_secondary",
+      "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\release_final_2026-08-17\\formalization_continue\\reconstruct\\mmverify_simple.py",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\release_final_2026-08-17\\formalization_continue\\reconstruct\\mmverify_simple.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:39:58.3651473-07:00",
+      "elapsed_seconds": 3.98,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 48721920,
+      "peak_working_set_mib": 46.465,
+      "peak_private_bytes": 42893312,
+      "peak_private_mib": 40.906,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_secondary.stdout.txt",
+      "stdout_bytes": 34,
+      "stdout_sha256": "4C78EA738C90FDFF3D9408E667BD15A07E60A11649CEB853D229C586912D635E",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_secondary.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "normalized_strict",
+      "executable": "C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "executable_sha256": "D8E3F0ADF246DB00358C0C4ED349CF714898178F9558FB0E944F79F5C07F8EAA",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\strict_scope\\local_mm_verify_compressed_strict_scope.py",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_strict.verifier.json"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\strict_scope\\local_mm_verify_compressed_strict_scope.py\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_strict.verifier.json\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:40:02.3520396-07:00",
+      "elapsed_seconds": 6.358,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 60010496,
+      "peak_working_set_mib": 57.23,
+      "peak_private_bytes": 51269632,
+      "peak_private_mib": 48.895,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_strict.stdout.txt",
+      "stdout_bytes": 2073,
+      "stdout_sha256": "879A80F552CC987D2C394689975740A746BB6FBE90A6206D04B752E70EB7A031",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\normalized_strict.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "from_mm_textual_pair",
+      "executable": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe",
+      "executable_sha256": "64D73FD69F3123AE5D573B7B4B0817D9F403DD7B366107B9D1AA20E16058368B",
+      "arguments": [
+        "from-mm",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm",
+        "-f",
+        "wppfiniteblocknotwppndv",
+        "-o",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mm0",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mmu"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe\" \"from-mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\" \"-f\" \"wppfiniteblocknotwppndv\" \"-o\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mm0\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mmu\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:40:08.7417119-07:00",
+      "elapsed_seconds": 7.665,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 350302208,
+      "peak_working_set_mib": 334.074,
+      "peak_private_bytes": 361361408,
+      "peak_private_mib": 344.621,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\from_mm_textual_pair.stdout.txt",
+      "stdout_bytes": 0,
+      "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\from_mm_textual_pair.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "verify_mmu",
+      "executable": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe",
+      "executable_sha256": "64D73FD69F3123AE5D573B7B4B0817D9F403DD7B366107B9D1AA20E16058368B",
+      "arguments": [
+        "verify",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mm0",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mmu"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe\" \"verify\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mm0\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mmu\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:40:16.4900805-07:00",
+      "elapsed_seconds": 7.336,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 946925568,
+      "peak_working_set_mib": 903.059,
+      "peak_private_bytes": 960225280,
+      "peak_private_mib": 915.742,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\verify_mmu.stdout.txt",
+      "stdout_bytes": 24,
+      "stdout_sha256": "98F65164906092EF2E41E720D52B72E834AD936F2EE7CFFC3168AE1CC18E6604",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\verify_mmu.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "from_mm_direct_mmb",
+      "executable": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe",
+      "executable_sha256": "64D73FD69F3123AE5D573B7B4B0817D9F403DD7B366107B9D1AA20E16058368B",
+      "arguments": [
+        "from-mm",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm",
+        "-f",
+        "wppfiniteblocknotwppndv",
+        "-o",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\direct.mm0",
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\proof.mmb"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-hs.exe\" \"from-mm\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm\" \"-f\" \"wppfiniteblocknotwppndv\" \"-o\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\direct.mm0\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\proof.mmb\"",
+      "standard_input": "",
+      "started": "2026-08-20T22:40:23.8917300-07:00",
+      "elapsed_seconds": 24.068,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 489205760,
+      "peak_working_set_mib": 466.543,
+      "peak_private_bytes": 500764672,
+      "peak_private_mib": 477.566,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\from_mm_direct_mmb.stdout.txt",
+      "stdout_bytes": 0,
+      "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\from_mm_direct_mmb.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    },
+    {
+      "name": "mm0_c_parser_verification",
+      "executable": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-c.exe",
+      "executable_sha256": "6E573D7AD05455C9B1B002A75744E0C7FDD359EF187A456E514CADBBD0C58288",
+      "arguments": [
+        "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\proof.mmb"
+      ],
+      "exact_command": "& \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\bin\\mm0-c.exe\" \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\proof.mmb\" < \"C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\direct.mm0\"",
+      "standard_input": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\direct.mm0",
+      "started": "2026-08-20T22:40:48.0530738-07:00",
+      "elapsed_seconds": 0.325,
+      "limit_bytes": 1610612736,
+      "limit_mib": 1536,
+      "peak_working_set_bytes": 315293696,
+      "peak_working_set_mib": 300.688,
+      "peak_private_bytes": 694251520,
+      "peak_private_mib": 662.09,
+      "guard_killed": false,
+      "exit_code": 0,
+      "stdout": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\mm0_c_parser_verification.stdout.txt",
+      "stdout_bytes": 0,
+      "stdout_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "stderr": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\logs\\mm0_c_parser_verification.stderr.txt",
+      "stderr_bytes": 0,
+      "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "metamath_executable_invoked": false
+    }
+  ],
+  "outputs": {
+    "normalized_metamath": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.mm",
+      "bytes": 9945172,
+      "sha256": "AB4B33F9E9873B45B4CE504A9A7FC94AFB9DFE9464467AD5643D362AF945C454"
+    },
+    "normalizer_report": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\normalized_for_mm0.preload_normalization.json",
+      "bytes": 2017,
+      "sha256": "A243D353C80809CC74DB1E473C641361261D5BD21F8A1DC00B479563E4C9C674"
+    },
+    "textual_mm0": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mm0",
+      "bytes": 125710,
+      "sha256": "503D35EA113DFA50324F98709239ADC1F59F49F7C1C740DDCC2F3A902437E461"
+    },
+    "textual_mmu": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\verified_text.mmu",
+      "bytes": 27647028,
+      "sha256": "5EA04A13ECB096BC0B7765F899BFBFFE86B7C483AD17AB7C91434AE35B776AA7"
+    },
+    "direct_mm0": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\direct.mm0",
+      "bytes": 125710,
+      "sha256": "503D35EA113DFA50324F98709239ADC1F59F49F7C1C740DDCC2F3A902437E461"
+    },
+    "direct_mmb": {
+      "path": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\generated\\run_20260821T053931Z_endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean_868DF831E63E\\proof.mmb",
+      "bytes": 2059548,
+      "sha256": "CD5AC6A064FB4D3E98A39392CB8FF2FEC89959890FF426E97B74D3CE53E04CFE"
+    }
+  },
+  "mm0_byte_identical": true,
+  "normalized_assertion_or_hypothesis_tokens_changed": 0,
+  "parser_enabled_mm0_c_exit_code": 0,
+  "metamath_executable_invoked": false,
+  "proof_artifact_candidate": true
+}

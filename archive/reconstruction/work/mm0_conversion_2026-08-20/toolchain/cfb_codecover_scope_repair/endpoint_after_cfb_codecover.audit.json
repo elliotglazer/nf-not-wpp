@@ -1,0 +1,26 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\hnqinc_scope_repair\\endpoint_after_hnqinc_frozen_checkpoint.mm",
+  "source_sha256": "BD113CBBFD435B4AAB864A52213A955D4CCB1DE86B1E0A1130BDFD1251609C03",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\cfb_codecover_scope_repair\\endpoint_after_cfb_codecover.mm",
+  "output_sha256": "DE0C790F31F9ED3D0B8083D12EDFEBE63236AECF3CDD7A0205CF335CE1925853",
+  "frozen_checkpoint": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\cfb_codecover_scope_repair\\endpoint_after_cfb_codecover_frozen_checkpoint.mm",
+  "frozen_checkpoint_sha256": "DE0C790F31F9ED3D0B8083D12EDFEBE63236AECF3CDD7A0205CF335CE1925853",
+  "first_stage_proof": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\cfb_codecover_scope_repair\\cfbhnqinjcodecoverdndv_scope_clean_proof.txt",
+  "first_stage_proof_sha256": "30419920AF54097E6E9B3D1310C6BE5552DAC09D4FCC37B77D68DFE2BBBDD821",
+  "final_proof": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\cfb_codecover_scope_repair\\cfbhnqinjcodecoverddndv_scope_clean_proof.txt",
+  "final_proof_sha256": "AB1D43D17BA1BF3E839BD3B5EA84EE952AAF14E94477231AFA733316B5C8E1F7",
+  "primary_verified": 4329,
+  "primary_trusted": 0,
+  "secondary_stdout": "OK 4329 proofs, 12431 statements",
+  "strict_rejected_proof_count": 2,
+  "strict_rejected_proofs": [
+    "wppstopfixedhitcontrgrowfixdndv",
+    "hnwcutambstrictsegresisomralias0ndv"
+  ],
+  "changed_proofs": [
+    "cfbhnqinjcodecoverddndv"
+  ],
+  "changed_assertion_formulas": [],
+  "structure_identical": true,
+  "metamath_executable_invoked": false
+}

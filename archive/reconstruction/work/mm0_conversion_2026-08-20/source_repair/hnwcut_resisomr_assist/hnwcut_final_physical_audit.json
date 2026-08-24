@@ -1,0 +1,59 @@
+{
+  "schema": "hnwcut-final-physical-scope-repair-audit-v1",
+  "parent": "work\\mm0_conversion_2026-08-20\\toolchain\\hnwcut_factor_value_stage5\\value_ambient_be2d_frozen_checkpoint.mm",
+  "parent_sha256": "2BBB76DD71F34B66F0CBE74EB49E64C3F691766B01F6D208E0FA00EF375A8314",
+  "parent_bytes": 9899752,
+  "helper_checkpoint": "work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\physical_helpers_before_alias0.mm",
+  "helper_checkpoint_sha256": "E88B80A205C1797FB2CCA37FA6B5353B34F4A818AA7476F06246ED2DA0D31905",
+  "helper_checkpoint_bytes": 9946257,
+  "final": "work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\endpoint_after_hnwcut_alias0_scope_repaired.mm",
+  "final_sha256": "3A05D138CAD97D2A75AD0E029F49FB2D71D54F6BE1DB376B0A55424F92C79AFF",
+  "final_bytes": 9945892,
+  "physical_helper_suffix": "work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\hnwcut_final_physical_helper_suffix.mmfrag",
+  "physical_helper_suffix_sha256": "E7BB6F528D045AE2B57172A16244358C149639BEE0CFCB09ABA85FC337B93E5B",
+  "physical_helper_suffix_bytes": 46505,
+  "proof_only_fragment": "work\\mm0_conversion_2026-08-20\\source_repair\\hnwcut_resisomr_assist\\hnwcutambstrictsegresisomralias0ndv.proof_only.mmfrag",
+  "proof_only_fragment_sha256": "D0433DF14857C0C7B57BFCFF59BC1F4BCF94481D2A7AAADAD1DBF2A7B006E5CC",
+  "proof_only_fragment_bytes": 2009,
+  "helper_labels": [
+    "hnwcutambfactorfnnoarndv",
+    "hnwcutclassinjambnoarndv",
+    "hnwcutambfactorf1noarndv",
+    "hnwcutambfactorf1codendv",
+    "hnwcutambfactorf1impclndv",
+    "hnwcutambfactorf1impndv",
+    "hnwcutambfactorranbrimpndv",
+    "hnwcutambclassstrictbrimpndv",
+    "hnwcutambstrictsegbrimpndv",
+    "hnwcutambstrictsegranimpndv"
+  ],
+  "helper_label_count": 10,
+  "target": "hnwcutambstrictsegresisomralias0ndv",
+  "target_statement_unchanged": true,
+  "target_mandatory_dvs_unchanged": true,
+  "only_target_proof_changed_after_helper_insertion": true,
+  "parent_to_final_byte_delta": 46140,
+  "parent_to_helper_checkpoint_byte_delta": 46505,
+  "helper_checkpoint_to_final_byte_delta": -365,
+  "old_target_proof_bytes": 2367,
+  "new_target_proof_bytes": 2002,
+  "verification": {
+    "primary_lax": {
+      "ok": true,
+      "verified": 4352,
+      "trusted": 0
+    },
+    "secondary": {
+      "ok": true,
+      "proofs": 4352,
+      "statements": 12487
+    },
+    "strict_scope": {
+      "ok": true,
+      "verified_scope_clean_proofs": 4352,
+      "trusted_scope_clean_proofs": 0,
+      "rejected_proof_count": 0,
+      "inactive_hypothesis_reference_count": 0
+    }
+  }
+}

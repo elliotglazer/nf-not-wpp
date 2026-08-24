@@ -1,0 +1,33 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaUrgent013",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "8CD968ED7EC5E76F85DFAB99980FD854687E1BB5869963B47E3646D54300DDB6",
+  "records": [
+    {
+      "label": "df-iota",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_iota",
+      "floating": [
+        "ph",
+        "x",
+        "y"
+      ],
+      "dv": [
+        [
+          "ph",
+          "y"
+        ],
+        [
+          "x",
+          "y"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 9,
+      "opaque_refl_subtrees": 1,
+      "fresh_facts": 7
+    }
+  ]
+}

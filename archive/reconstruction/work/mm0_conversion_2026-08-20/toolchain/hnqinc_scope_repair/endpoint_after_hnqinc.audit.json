@@ -1,0 +1,25 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\pwpull_scope_repair\\endpoint_after_pointcover_pwpull_frozen_checkpoint.mm",
+  "source_sha256": "D4161B3B46B845AF695C1D260CE33A464CF4BF1A7FDCB7FF306A6D6CA94A40D9",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\hnqinc_scope_repair\\endpoint_after_hnqinc.mm",
+  "output_sha256": "BD113CBBFD435B4AAB864A52213A955D4CCB1DE86B1E0A1130BDFD1251609C03",
+  "frozen_checkpoint": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\hnqinc_scope_repair\\endpoint_after_hnqinc_frozen_checkpoint.mm",
+  "frozen_checkpoint_sha256": "BD113CBBFD435B4AAB864A52213A955D4CCB1DE86B1E0A1130BDFD1251609C03",
+  "proof": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\toolchain\\hnqinc_scope_repair\\hnqinctrnvaldndv_scope_clean_proof.txt",
+  "proof_sha256": "61233ED03575F44059DEDCA85A492714825F47AC691A4E5DC5E1A4A878D4FE18",
+  "primary_verified": 4329,
+  "primary_trusted": 0,
+  "secondary_stdout": "OK 4329 proofs, 12431 statements",
+  "strict_rejected_proof_count": 3,
+  "strict_rejected_proofs": [
+    "wppstopfixedhitcontrgrowfixdndv",
+    "hnwcutambstrictsegresisomralias0ndv",
+    "cfbhnqinjcodecoverddndv"
+  ],
+  "changed_proofs": [
+    "hnqinctrnvaldndv"
+  ],
+  "changed_assertion_formulas": [],
+  "structure_identical": true,
+  "metamath_executable_invoked": false
+}

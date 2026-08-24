@@ -1,0 +1,15 @@
+{
+  "source": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_compressed.mm",
+  "source_bytes": 9937781,
+  "source_sha256": "751DC9B8DF1A1E218CE8F1257AE751359554CF855B8E4A07346D4572232FF56E",
+  "overlay": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\metadata_audit\\proposed_binding_overlay.mm.inc",
+  "overlay_bytes": 394,
+  "overlay_sha256": "6FD0E6E2AF6EE098B11635C756E49D459EACEC408F930D6368BA98AF867F0FAA",
+  "output": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\mm0_conversion_2026-08-20\\input_prep\\wppfiniteblocknotwpp_mm0_input.mm",
+  "output_bytes": 9938176,
+  "output_sha256": "F7A8B4B332489EF4657DACFA8E633E581A7F4D99750F77EA5BA4D62157789036",
+  "overlay_is_comment_only": true,
+  "original_j_metadata_blocks": 18,
+  "output_j_metadata_blocks": 19,
+  "metamath_tokens_changed_by_overlay": 0
+}

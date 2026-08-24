@@ -1,0 +1,43 @@
+{
+  "schema": "nf-wpp-direct-nominal-alpha-first-use-kernel-prefix-successor-v1",
+  "status": "PASS_KERNEL_FIRST_USE_PREFIX_25",
+  "parent": {
+    "resource": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_alpha_batch_kernel_prefix24_001/resource.json",
+    "resourceSha256": "358CBF57147E7B4FD2436A759675A9AEFB2E31A492CF39BFC39D40138D9456F3",
+    "endOrdinal": 24
+  },
+  "sourceBoundary": {
+    "resourceSha256": "8EDBCC3FC57E074AB7F43E4B25291A41ECC107DA4FB57925E959CE8EE732BFBF",
+    "manifestSha256": "733E17BAA3798E165989FE991BF26A0AA69E45A1FAECB9EC7CA711B9FC732E47"
+  },
+  "runner": {
+    "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/run_nominal_alpha_direct_leaf_v1.ps1",
+    "sha256": "F07EF1E8925E667A2347534DC4769971B3E2CF5C35B5CFC588886823C9B2CB59"
+  },
+  "settings": { "trust": 0, "threads": 1, "maxHeartbeats": 5000000 },
+  "newLeaf": {
+    "ordinal": 25,
+    "label": "df-lefin",
+    "module": "NominalAlphaRepairedBase001025Lefin",
+    "import": "NominalAlphaRepairedBase001025Lefin",
+    "endpoint": "NFChoice.DirectNominalPrf.NominalAlphaWrappersRepaired.nominal_df_lefin",
+    "sourceSha256": "98D1D51C9813AF3D050FA44B367360360C084A3E24184C0EB25CBA6F3EB94450",
+    "sourceBytes": 78829,
+    "oleanSha256": "AF7C73DEEDDE950A61C306ECB7A763ABCF0AD3753E4DCAD08D5AF8BCA0A771D4",
+    "oleanBytes": 538864,
+    "auditSourceSha256": "62E8440B728911D724BDF12E879CCC06362DE066B3A3113E4F6E89F681231857",
+    "auditOleanSha256": "0C3A530C82191015ECD36423365F9154D99BA621B1592BA3C953F0C4932EAAB1",
+    "auditOleanBytes": 1272,
+    "reportedAxioms": ["propext", "Classical.choice", "Quot.sound"],
+    "exactAllowedThree": true,
+    "forbiddenSourceMatches": [],
+    "sourceCompileExitCode": 0,
+    "auditCompileExitCode": 0
+  },
+  "firstUsePrefix": { "startOrdinal": 1, "endOrdinal": 25, "coveredCount": 25 },
+  "nextExactFirstUse": {
+    "ordinal": 26,
+    "label": "df-ltfin",
+    "module": "NominalAlphaRepairedBase001026Ltfin"
+  }
+}

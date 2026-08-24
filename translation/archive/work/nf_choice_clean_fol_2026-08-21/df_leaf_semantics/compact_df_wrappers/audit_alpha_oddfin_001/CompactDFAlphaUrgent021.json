@@ -1,0 +1,28 @@
+{
+  "status": "GENERATED_UNCHECKED",
+  "module": "CompactDFAlphaUrgent021",
+  "count": 1,
+  "source_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+  "lean_source_sha256": "41C4C46778BCC7E37BC3F497077E2999178A2279FEAD0D6EC0F6DBD124F28FB6",
+  "records": [
+    {
+      "label": "df-oddfin",
+      "category": "alpha_classEq",
+      "theorem": "NFChoice.DefinitionLeaves.CompactDFWrappers.compact_df_oddfin",
+      "floating": [
+        "x",
+        "n"
+      ],
+      "dv": [
+        [
+          "n",
+          "x"
+        ]
+      ],
+      "essential": [],
+      "selective_expansions": 135,
+      "opaque_refl_subtrees": 5,
+      "fresh_facts": 34
+    }
+  ]
+}

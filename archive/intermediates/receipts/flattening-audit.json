@@ -1,0 +1,14 @@
+{
+  "entry": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\cumulative_finite_block\\integration_audit\\wppfiniteblocknotwpp_frozen_checkpoint.mm",
+  "entry_bytes": 747,
+  "entry_sha256": "266B9DC2CBBA5ECCA2C0930BA4D12D026EF720E5947AD214153A6C40BF0B8F62",
+  "flattened": "C:\\Users\\glaze\\Documents\\Codex\\2026-08-16\\study-the-contents-of-this-and\\work\\formalization_continue\\cumulative_finite_block\\common_ambient_hartogs_graph\\flattening_audit\\wppfiniteblocknotwpp_flattened_test.mm",
+  "flattened_bytes": 10591102,
+  "flattened_sha256": "DD1E4E778EB2B023827AF2AFFB35E043482B538118CFFB1932BFA7642C00C751",
+  "dependency_files": 136,
+  "duplicate_includes_omitted": 0,
+  "active_includes_after_flattening": 0,
+  "verification": "dual-verified",
+  "primary_verifier": "OK 7973 proofs, 16074 statements",
+  "secondary_verifier": "OK 7973 proofs, 16074 statements"
+}

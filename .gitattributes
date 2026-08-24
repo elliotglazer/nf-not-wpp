@@ -6,6 +6,7 @@
 *.lock text eol=lf
 *.sh text eol=lf
 *.rb text eol=lf
+*.py text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
 Gemfile text eol=lf
@@ -18,3 +19,5 @@ LICENSE text eol=lf
 # line-ending normalization would invalidate the recorded SHA-256 values.
 Proof/** -text -eol
 provenance/** -text -eol
+archive/** -text -eol
+translation/archive/** -text -eol
