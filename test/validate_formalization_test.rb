@@ -16,7 +16,7 @@ class ValidateFormalizationTest < Minitest::Test
     version: v0.4
     project:
       name: Example
-      description: A concise account of the example result.
+      description: "A concise account of the example result."
       license: Apache-2.0
     classification:
       arxiv: [math.LO]
@@ -74,7 +74,7 @@ class ValidateFormalizationTest < Minitest::Test
   end
 
   def test_requires_a_bounded_public_description
-    metadata(CUSTOMIZED_YAML.sub("  description: A concise account of the example result.\n", "")) do |path|
+    metadata(CUSTOMIZED_YAML.sub("  description: \"A concise account of the example result.\"\n", "")) do |path|
       error = assert_raises(FormalizationTemplate::ValidationError) do
         FormalizationTemplate.validate(path)
       end
@@ -268,6 +268,7 @@ class MetadataWorkflowRoutingTest < Minitest::Test
   EXPECTED_ACTIONS = [
     "actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
     "actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e",
+    "actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405",
     "leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9",
     "ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b"
   ].freeze

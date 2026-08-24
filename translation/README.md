@@ -103,12 +103,15 @@ those relocation changes and installs a narrowly scoped virtual-path layer for
 the 79 ledger entries. For those exact paths only, legacy existence/size/hash
 queries are answered from the checked textual contracts; any attempt to read a
 compiled payload raises an error. All ordinary source and receipt files still
-have to exist and match their original hashes.
+have to exist and match their original hashes. During the frozen alpha-module
+import, the same wrapper also interprets the basename of original Windows
+receipt labels consistently on POSIX; it does not rewrite the archived module
+or any hash-pinned record.
 
 The v2 wrapper then installs the historical V2 identity-cache patch and V3 FV
 deduplication patch. It requires only CPython 3.12's standard library. Its
 SHA-256 is
-`100FB1C07DB0450FDE10194B826609A711D8CC144159F6943C72580E9FEB4B9B`.
+`D481332291549E844ACA557158DDBB6A55EBBB5F7250EA1E87E5D7C1E47EA2F5`.
 Because regenerated JSON receipts name the portable wrapper and current output
 paths, their hashes are expected to differ. The emitted Lean sources and
 semantic metrics must not.

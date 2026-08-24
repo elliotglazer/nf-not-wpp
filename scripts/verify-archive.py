@@ -28,10 +28,11 @@ MANIFEST = REPO / "archive" / "MANIFEST.sha256"
 MANIFEST_RELATIVE = "archive/MANIFEST.sha256"
 ROOTS = (SCAN_REPO / "archive", SCAN_REPO / "translation" / "archive")
 LINE_RE = re.compile(r"^([0-9A-F]{64})  (.+)$")
-# Local recovery copies of historical Lean build products may exist in a
-# development checkout, but `.gitignore` excludes them from the submitted
-# repository. Their path/size/hash contracts live in the textual ledger.
-LOCAL_RECOVERY_SUFFIXES = {".olean"}
+# Local recovery copies of historical Lean build products and Python import
+# caches may exist after a development replay, but `.gitignore` excludes them
+# from the submitted repository. The `.olean` path/size/hash contracts live in
+# the textual ledger; `.pyc` files are disposable interpreter caches.
+LOCAL_RECOVERY_SUFFIXES = {".olean", ".pyc"}
 
 
 def sha256(path: Path) -> str:

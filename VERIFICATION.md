@@ -75,12 +75,17 @@ python -B translation/reproduce_c18.py out/c18
 
 The result regenerated all five C18 `.lean` files byte-for-byte against both
 the historical outputs and `Proof/`. The portable v2 wrapper SHA-256 is
-`100FB1C07DB0450FDE10194B826609A711D8CC144159F6943C72580E9FEB4B9B`;
+`D481332291549E844ACA557158DDBB6A55EBBB5F7250EA1E87E5D7C1E47EA2F5`;
 the relocated run's output `resource.json` SHA-256 was
 `561790BB3826959FB817E1E21A45BE89A6BB4D4B7039FF9457BF5A4AE076E288`.
 The same public command then passed from the final candidate's long Windows
 checkout in 123.8 seconds; that path-specific `resource.json` SHA-256 was
 `60E9B948D3ACE14C95A3F32210C43848C2A2FBBDAB99FA7358C8CA3649F726B3`.
+After the first public Linux run exposed POSIX treatment of the manifest's
+frozen Windows source labels, the wrapper gained a scoped basename adapter.
+A complete post-fix replay again emitted all five files byte-identically; its
+path-specific `resource.json` SHA-256 was
+`089989E0F16840B41596CF54783ACDD2B456F0CA1199370B826DCD116FDB79FA`.
 
 `translation/archive/compiled_lean_evidence.json` replaces no proof source. It
 records the paths, sizes, SHA-256 values, and hash-pinned JSON authorities for
@@ -108,8 +113,8 @@ to the independent kernel/Comparator checks.
   265,762,469 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
   `0ACA7BBB08D4D5A62AC61DFAF03C1EDA84AD7463A89E3F968531E89B81FFE3A8`.
-- The intended Git snapshot contains 1,868 files and 373,627,855 bytes
-  (356.319 MiB); the largest is the 27,647,028-byte MM0 `.mmu`. Its forbidden
+- The intended Git snapshot contains 1,868 files and 373,629,988 bytes
+  (356.321 MiB); the largest is the 27,647,028-byte MM0 `.mmu`. Its forbidden
   compiled-suffix scan found zero files. Seventy-nine local `.olean` recovery
   copies remain ignored and are not part of the submitted snapshot.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and
@@ -140,6 +145,6 @@ pipeline is retained in `.github/workflows/ci.yml` and
 `scripts/verify-comparator.sh` for the first public Linux run.
 
 Elliot Glazer has confirmed the formalization author list,
-responsible-maintainer list, and Apache-2.0 repository licence. Before
-publication, he must still approve the remaining metadata, provide the public
-repository destination, and authorize upload and submission.
+responsible-maintainer list, Apache-2.0 repository licence, and public upload
+to `https://github.com/elliotglazer/nf-not-wpp`. Before Palomar submission, he
+must still approve the remaining metadata and explicitly authorize submission.

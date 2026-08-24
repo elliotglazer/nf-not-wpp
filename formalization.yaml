@@ -114,7 +114,7 @@ status:
 
 automation:
   methods:
-    - method: "deterministic proof translation"
+    - method: "other"
       framework: "Project Metamath-to-Lean translator"
       tool_setup: >-
         A standard-library-only CPython 3.12 translator parses and verifies
@@ -154,8 +154,9 @@ automation:
     parallel agent passes over the proof bridge, Challenge/Solution boundary,
     provenance, and Palomar release surface. The human fixed the mathematical
     scope, confirmed authorship, maintenance responsibility, and the repository
-    licence, and retains authority over public upload and submission. No
-    independent human peer review is claimed.
+    licence, authorized public upload to elliotglazer/nf-not-wpp, and retains
+    authority over Palomar submission. No independent human peer review is
+    claimed.
 
 fidelity:
   divergences: >-

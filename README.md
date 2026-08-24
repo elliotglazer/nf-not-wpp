@@ -7,6 +7,8 @@ Foundations syntactically derives the negation of the weak partition principle
 preserves the informal paper and the successful Metamath/MM0 translation
 history.
 
+Public repository: [`elliotglazer/nf-not-wpp`](https://github.com/elliotglazer/nf-not-wpp).
+
 In the exact Metamath source spelling used here, WPP says that for all sets
 `x` and `y`, if there is both a function from `y` onto `x` and a one-to-one
 function from `y` to `x`, then there is a one-to-one function from `x` to `y`.
@@ -32,8 +34,8 @@ identified below.
 > empty-origin, diagnosed/resumed source build and all local Lake targets pass;
 > an uninterrupted final-configuration cold build and the Linux-only
 > Comparator/export/NanoDa gate remain pending. Authorship, maintenance
-> responsibility, and Apache-2.0 licensing are confirmed; public upload and
-> submission remain under the responsible maintainer's control.
+> responsibility, Apache-2.0 licensing, and public upload are confirmed;
+> Palomar submission remains under the responsible maintainer's control.
 
 ## Public statement
 
@@ -207,7 +209,7 @@ remaining evidence gates.
 Elliot Glazer is the confirmed formalization author and responsible
 maintainer, and the repository is licensed under Apache-2.0. The remaining
 human gates are final approval of the other metadata and authorization of the
-public upload and Palomar submission. The remaining mechanical gates are the
+Palomar submission. The remaining mechanical gates are the
 uninterrupted Linux cold build and protected Comparator/export/NanoDa run.
 
 After those gates pass on an immutable public commit, submission goes through the

@@ -14,6 +14,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import pathlib
 from pathlib import Path, PurePosixPath
 import re
 import sys
@@ -262,6 +263,15 @@ _NativePath = type(Path())
 class ReceiptPath(_NativePath):
     """Path whose archived ``.olean`` identity is supplied by the ledger."""
 
+    @property
+    def name(self) -> str:
+        """Recognize frozen Windows receipt paths when replaying on POSIX."""
+
+        native_name = super().name
+        if sys.platform != "win32" and re.match(r"^[A-Za-z]:\\", native_name):
+            return native_name.rsplit("\\", 1)[-1]
+        return native_name
+
     def is_file(self) -> bool:
         if evidence_contract(self) is not None:
             return True
@@ -387,7 +397,24 @@ def install_textual_evidence(translator: ModuleType) -> None:
     original_load_backend = translator.load_backend
 
     def load_backend(profile_id: str = "WPP_PROFILE_V1") -> Any:
-        backend = original_load_backend(profile_id)
+        # The frozen alpha manifest records its original absolute Windows
+        # source labels.  One historical import validates `Path(label).name`
+        # before this wrapper can replace its workspace resolver; POSIX Path
+        # deliberately does not treat backslashes as separators.  Scope the
+        # receipt-aware Path class to that import so the byte-exact historical
+        # module remains untouched and sees the same basename on every host.
+        native_path = pathlib.Path
+
+        def receipt_path_factory(*segments: Any) -> ReceiptPath:
+            # Use a factory rather than assigning the subclass itself:
+            # pathlib.Path.__new__ compares against pathlib.Path by identity.
+            return ReceiptPath(*segments)
+
+        pathlib.Path = receipt_path_factory
+        try:
+            backend = original_load_backend(profile_id)
+        finally:
+            pathlib.Path = native_path
         install_alpha_receipts(backend.alpha_core)
         install_wpp_profile_receipts(backend.wpp_config)
         return backend

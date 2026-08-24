@@ -15,6 +15,8 @@
 *.obj
 *.so
 *.trace
+__pycache__/
+*.py[cod]
 
 # Local verification output
 /build/

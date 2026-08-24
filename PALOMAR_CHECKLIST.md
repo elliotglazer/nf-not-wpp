@@ -13,7 +13,8 @@ requires a human decision.
       starter revision.
 - [ ] Approve the abstract, classifications, scope, acknowledgements,
       automation disclosure, source relationships, and review status.
-- [ ] Explicitly approve publication and Palomar submission.
+- [x] Explicitly approve publication at `elliotglazer/nf-not-wpp`.
+- [ ] Explicitly approve Palomar submission.
 
 ## 2. Exact source extraction
 
@@ -119,7 +120,7 @@ requires a human decision.
       declarations or proof terms, then repeat every trust check.
 - [x] The copied proof payload is 97,305,006 bytes. The complete intended Git
       snapshot, including the paper and research archive, has 1,868 files and
-      373,627,855 bytes (356.319 MiB), below the 500 MiB repository cap. Its
+      373,629,988 bytes (356.321 MiB), below the 500 MiB repository cap. Its
       largest file is the 27,647,028-byte MM0 `.mmu` artifact.
 - [x] Scan the staged tree for Git LFS pointers, submodules, forbidden compiled
       artifacts, secrets, credentials, and operative machine-local paths; no
@@ -146,8 +147,8 @@ requires a human decision.
 
 ## 8. Publication and submission (never implicit)
 
-- [ ] Obtain explicit user approval to publish the repository.
-- [ ] Publish a public GitHub repository without submodules.
+- [x] Obtain explicit user approval to publish the repository.
+- [x] Publish `https://github.com/elliotglazer/nf-not-wpp` without submodules.
 - [ ] Run all checks against the exact public snapshot.
 - [ ] Submit the public repository, immutable 40-character commit SHA, and
       root-relative `comparator.json` path through Palomar's official form.
