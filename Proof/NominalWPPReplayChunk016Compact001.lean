@@ -1,0 +1,7 @@
+import NominalWPPReplayChunk016Compact001Part072
+
+namespace NFChoice.DirectNominalPrf.WPPReplay
+
+#print axioms g_siorreflectndv
+
+end NFChoice.DirectNominalPrf.WPPReplay

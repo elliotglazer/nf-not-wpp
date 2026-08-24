@@ -1,0 +1,90 @@
+import WPPCompactSourceSyntax
+import WPPCompactSyntaxFVExplicit
+import CompactSyntaxFV
+import CoreFVSimp
+import NominalSubstitutionLemmas
+import NominalDefinitionRefl
+import NominalDfEu
+import NominalAlphaRepairedDfNfc001
+import NominalAlphaRepairedBase001003V
+import NominalAlphaRepairedBase001004Csb
+import NominalAlphaRepairedBase001005Nin
+import NominalAlphaRepairedBase001006If
+import NominalAlphaRepairedBase001007Pw
+import NominalAlphaRepairedBase001008Sn
+import NominalAlphaRepairedBase001009Uni
+import NominalAlphaRepairedBase001010Int
+import NominalAlphaRepairedBase001011Iun
+import NominalAlphaRepairedBase001012Leaf1c
+import NominalAlphaRepairedBase001013Xpk
+import NominalAlphaRepairedBase001014Cnvk
+import NominalAlphaRepairedBase001015Ins2k
+import NominalAlphaRepairedBase001016Ins3k
+import NominalAlphaRepairedBase001017Imak
+import NominalAlphaRepairedBase001018P6
+import NominalAlphaRepairedBase001019Sik
+import NominalAlphaRepairedBase001020Ssetk
+import NominalAlphaRepairedBase001021Idk
+import NominalAlphaRepairedBase001022Iota
+import NominalAlphaRepairedBase001023Addc
+import NominalAlphaRepairedBase001024Nnc
+import NominalAlphaRepairedBase001025Lefin
+import NominalAlphaRepairedBase001026Ltfin
+import NominalAlphaRepairedBase001027Ncfin
+import NominalAlphaRepairedBase001028Tfin
+import NominalAlphaRepairedBase001029Evenfin
+import NominalAlphaRepairedBase001030Oddfin
+import NominalAlphaRepairedBase001031Sfin
+import NominalAlphaRepairedBase001032Spfin
+import NominalAlphaRepairedBase001033Phi
+import NominalAlphaRepairedBase001034OpReflected001
+import NominalAlphaRepairedBase001035Proj1Reflected001
+import NominalAlphaRepairedBase001036Proj2Reflected001
+import NominalAlphaRepairedBase001037OpabOpaqueHoisted004
+import NominalAlphaRepairedBase001038Leaf1stReflected001
+import NominalAlphaRepairedBase001039SwapReflected001
+import NominalAlphaRepairedBase001040SsetReflected001
+import NominalAlphaRepairedBase001041CoReflected001
+import NominalAlphaRepairedBase001042ImaReflected001
+import NominalAlphaRepairedBase001043SiReflected001
+import NominalAlphaRepairedBase001044IdReflected001
+import NominalAlphaRepairedBase001045XpReflected001
+import NominalAlphaRepairedBase001046CnvReflected001
+import NominalAlphaRepairedBase001047FvReflected001
+import NominalAlphaRepairedBase001048Leaf2ndReflected001
+import NominalNFLiteralBaseFour
+import NominalNFLiteralXpViaCompletenessDev003
+import NominalNFLiteralRemainingViaCompletenessDev001
+import NominalDefinitionLeafHandlersCanonical001
+import NominalDefinitionLeafHandlersObjExtCompat001
+import NominalRecanonTransportCompat001
+import NominalWPPReplayChunk010Compact001Part056
+
+set_option maxRecDepth 20000
+set_option linter.unusedVariables false
+set_option linter.unusedTactic false
+set_option linter.unusedSimpArgs false
+set_option linter.unreachableTactic false
+set_option linter.unnecessarySeqFocus false
+
+namespace NFChoice.DirectNominalPrf.WPPReplay
+
+open scoped Fol
+open NFChoice.Foundation
+open NFChoice.SemanticCore
+open NFChoice.ReplaySupport
+open NFChoice.Compiler.CompactSourceSyntax
+
+noncomputable def g_coex
+    (A : Class) (B : Class) (hyp_coex_1 : Nominal.NPrf (.classMem A (syn_cvv))) (hyp_coex_2 : Nominal.NPrf (.classMem B (syn_cvv))) :
+    Nominal.NPrf (.classMem (syn_ccom A B) (syn_cvv)) := by
+  let proofSupport : Finset Var := A.fv ∪ B.fv
+  have p0000 :=
+    @g_coexg A B (syn_cvv) (syn_cvv)
+  have p0001 :=
+    @g_mp2an (.classMem A (syn_cvv)) (.classMem B (syn_cvv)) (.classMem (syn_ccom A B) (syn_cvv)) hyp_coex_1 hyp_coex_2 p0000
+  exact p0001
+
+#print axioms g_coex
+
+end NFChoice.DirectNominalPrf.WPPReplay

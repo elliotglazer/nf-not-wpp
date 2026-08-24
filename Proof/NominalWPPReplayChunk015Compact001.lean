@@ -1,0 +1,7 @@
+import NominalWPPReplayChunk015Compact001Part044
+
+namespace NFChoice.DirectNominalPrf.WPPReplay
+
+#print axioms g_wecutisocompatndv
+
+end NFChoice.DirectNominalPrf.WPPReplay

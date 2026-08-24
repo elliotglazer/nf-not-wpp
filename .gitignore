@@ -1,0 +1,31 @@
+# Lake output and dependency checkouts
+/.lake/
+/**/.lake/
+/lake-packages/
+/**/lake-packages/
+
+# Lean build artifacts must never enter the submitted source tree.
+*.olean
+*.ilean
+*.a
+*.bc
+*.dll
+*.dylib
+*.o
+*.obj
+*.so
+*.trace
+
+# Local verification output
+/build/
+/dist/
+/logs/
+/tmp/
+/.cache/
+
+# Editors and operating systems
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+*~

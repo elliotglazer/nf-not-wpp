@@ -1,0 +1,409 @@
+{
+  "schema": "nf-not-wpp-metamath-provenance-v1",
+  "audit_date": "2026-08-24",
+  "hash_algorithm": "SHA-256",
+  "evidence_levels": {
+    "verified_local_rehash_and_receipt": "Artifact was rehashed in the workspace and agrees with a pinned audit receipt.",
+    "verified_local_rehash": "Artifact was rehashed in the workspace; no dedicated receipt is claimed.",
+    "verified_upstream_byte_match": "Raw bytes fetched from the immutable upstream URL have the stated local SHA-256.",
+    "inference": "Conclusion follows from evidence but is not directly encoded in retained metadata.",
+    "unresolved": "The retained artifacts do not determine this fact."
+  },
+  "upstream": {
+    "repository": "https://github.com/metamath/set.mm",
+    "nf_mm_last_change_commit": "c1814c4fbaf88d329d7d73ec1c7358647570e435",
+    "commit_url": "https://github.com/metamath/set.mm/commit/c1814c4fbaf88d329d7d73ec1c7358647570e435",
+    "blob_url": "https://github.com/metamath/set.mm/blob/c1814c4fbaf88d329d7d73ec1c7358647570e435/nf.mm",
+    "raw_url": "https://raw.githubusercontent.com/metamath/set.mm/c1814c4fbaf88d329d7d73ec1c7358647570e435/nf.mm",
+    "commit_date_utc": "2026-07-13T20:17:11Z",
+    "nf_mm": {
+      "bytes": 2985424,
+      "sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+      "workspace_path": "work/NF_WPP_complete_project_archive_2026-08-16/uploads_normalized/nf.mm",
+      "original_upload_name": "52d068cf-64af-4c1e-b9d4-3c54ebc0df12.mm",
+      "evidence": "verified_upstream_byte_match"
+    },
+    "comparison_checkout": {
+      "commit": "b263d6e45b460ace961dea8839c953be7034adb4",
+      "worktree_clean_for_nf_mm": true,
+      "nf_mm_sha256": "727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083",
+      "evidence": "verified_local_rehash"
+    },
+    "historical_upload_checkout_commit": {
+      "value": null,
+      "evidence": "unresolved",
+      "reason": "The uploaded file and project archive contain no .git metadata. The last-change commit proves file-content provenance but not the exact whole-repository checkout used for upload."
+    }
+  },
+  "wpp_standalone_source": {
+    "include_entry": {
+      "path": "work/formalization_continue/cumulative_finite_block/integration_audit/wppfiniteblocknotwpp_frozen_checkpoint.mm",
+      "bytes": 747,
+      "sha256": "266B9DC2CBBA5ECCA2C0930BA4D12D026EF720E5947AD214153A6C40BF0B8F62"
+    },
+    "flattened_commented": {
+      "path": "work/formalization_continue/cumulative_finite_block/common_ambient_hartogs_graph/flattening_audit/wppfiniteblocknotwpp_flattened_test.mm",
+      "bytes": 10591102,
+      "sha256": "DD1E4E778EB2B023827AF2AFFB35E043482B538118CFFB1932BFA7642C00C751",
+      "dependency_file_count": 136,
+      "proof_count": 7973,
+      "statement_count": 16074,
+      "verification": "dual-verified"
+    },
+    "published_comment_free": {
+      "path": "output/metamath/NF_Refutes_WPP_Formalized_no_comments.mm",
+      "bytes": 9037362,
+      "sha256": "8BE8C92D49838B719BA65B226CCC923BD4511FB8CFE388684F6C062A964E56F0"
+    },
+    "normalized_token_identity": {
+      "normalization": "remove Metamath comments, trim, split on whitespace, join tokens with LF",
+      "token_count": 838534,
+      "sha256": "FC39C23CB7154F754B6D65C427BB9BDDB35F2BFBC2FF7048967CB981E9777D93",
+      "status": "PASS"
+    },
+    "flatten_receipt": {
+      "path": "work/formalization_continue/cumulative_finite_block/common_ambient_hartogs_graph/flattening_audit/wppfiniteblocknotwpp_flattened_test.audit.json",
+      "sha256": "DB6FC2EB01D68FE53B455DFA98EA32254BFB05E38C0DEEFF067941BB389841D7"
+    },
+    "token_identity_receipt": {
+      "path": "work/mm0_conversion_2026-08-20/metadata_audit/mm0_translation_acceptance_manifest.json",
+      "sha256": "05DD81EBC0E611EF33BF98D2EEF3C287BAA4A5B47CB568E3495FC05EF444A71F"
+    },
+    "authored_extension_vcs_commit": {
+      "value": null,
+      "evidence": "unresolved",
+      "reason": "The extension is pinned by flattened bytes and audits but no immutable public VCS commit was retained."
+    }
+  },
+  "repair_chain": [
+    {
+      "id": "private_dv_scoping",
+      "input_sha256": "DD1E4E778EB2B023827AF2AFFB35E043482B538118CFFB1932BFA7642C00C751",
+      "output_sha256": "E39E2B6B7ADF36CE2127ABE7C31F940C6887A4676B50D34294F17FFEFD0236E0",
+      "output_bytes": 10641794,
+      "material_change": "Privately scope inherited $d c e R A and $d v A environments; zero assertion/proof token rewrites.",
+      "receipt_sha256": "2189546AF70E1702B2ECF4BFA3827633AE71F4CA8D306511EFD0E1A500356882",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "compress_all_proofs",
+      "input_sha256": "E39E2B6B7ADF36CE2127ABE7C31F940C6887A4676B50D34294F17FFEFD0236E0",
+      "output_sha256": "751DC9B8DF1A1E218CE8F1257AE751359554CF855B8E4A07346D4572232FF56E",
+      "output_bytes": 9937781,
+      "material_change": "Convert 217 normal proofs to compressed proofs; 7973/7973 proofs compressed; no assertion expression changes.",
+      "receipt_sha256": "1C2E7975300162DB1BE65B5F612A5250E7CC317DD0932AD136DAE4FB8788895B",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "binding_metadata_overlay",
+      "input_sha256": "751DC9B8DF1A1E218CE8F1257AE751359554CF855B8E4A07346D4572232FF56E",
+      "output_sha256": "F7A8B4B332489EF4657DACFA8E633E581A7F4D99750F77EA5BA4D62157789036",
+      "output_bytes": 9938176,
+      "material_change": "Append a 394-byte $j binding/free-variable comment overlay; zero Metamath-token changes.",
+      "overlay_sha256": "6FD0E6E2AF6EE098B11635C756E49D459EACEC408F930D6368BA98AF867F0FAA",
+      "receipt_sha256": "04DB07AC4FC364789E25FCAA430BA7CC6792CB63AE1ED27BFC1564C922F861CE",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "active_hypothesis_relabel_22",
+      "input_sha256": "F7A8B4B332489EF4657DACFA8E633E581A7F4D99750F77EA5BA4D62157789036",
+      "output_sha256": "DFFA1C0775354E70F17DBB55B5438FCDA58CA203121D8C6C75B157DC46EC4865",
+      "output_bytes": 9938212,
+      "material_change": "Replace 22 inactive explicit $e preload labels by unique active labels with byte-identical formula tokens.",
+      "changed_theorems": [
+        "sifvald",
+        "lnpwcheckfnval",
+        "wecutnclecclndv",
+        "hncodetrnfnfnndv",
+        "wppconcrete6dmcovndv",
+        "hnsiquomapvalndv",
+        "wppstopstepexndv",
+        "wppconcrete10dmcovndv",
+        "hnwcutambstrictsegresisomndv",
+        "hnwcutambstrictsegresisomdndv",
+        "hnwcutambstrictsegresisomralias0ndv",
+        "hnreal8endpointdecoderndv",
+        "cfbhnpw13pointcoverndv",
+        "cfbthresholdnn2lencndv",
+        "cfbthresholdnn2injndv"
+      ],
+      "replacement_count": 22,
+      "receipt_path": "work/mm0_conversion_2026-08-20/input_prep/wppfiniteblocknotwpp_mm0_hyp_label_repaired22.manifest.json",
+      "receipt_sha256": "AE1DB6A9F3247848ADA1D034F980BAD5DE64CBCE3B2B2C9AF5D1CC35485F31E7",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "endpoint_slice",
+      "input_sha256": "DFFA1C0775354E70F17DBB55B5438FCDA58CA203121D8C6C75B157DC46EC4865",
+      "output_sha256": "CE9807628B970AA4904FC59EBC42CFDF5B0E99C52459900965753630A13D3F38",
+      "output_bytes": 9938212,
+      "material_change": "Blank 3644 unrelated $p statements in place; retain 4329 parser-closure proofs with identical statement/proof tokens.",
+      "semantic_endpoint_dependency_closure_size": 4326,
+      "receipt_sha256": "7EB256A483D2CCE8B05B6EDD724C2C4E6D9EF6E387416C55B2BB0CBD0ADAE586",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "fdminvalp_scope_repair",
+      "input_sha256": "CE9807628B970AA4904FC59EBC42CFDF5B0E99C52459900965753630A13D3F38",
+      "output_sha256": "B0018F209E8059E5B6D127D976A5021B92ADDF87F4E86560AA7876E7799F4E44",
+      "output_bytes": 9938246,
+      "material_change": "Add active essential fdminvalpbr.1 and rebuild five endpoint-closure proofs.",
+      "regenerated_proofs": ["fdminvalpbr", "fdpivmap2ex", "fdpivrange2ex", "fdminvalpss", "elfdminvalp"],
+      "receipt_sha256": "FE4CF13BE169B2BB2BB4410D3FD9449E05DEC8D44E387F4E37268ED7AB546AD0",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "pointcover_scope_repair",
+      "input_sha256": "B0018F209E8059E5B6D127D976A5021B92ADDF87F4E86560AA7876E7799F4E44",
+      "output_sha256": "B52CC7592B9FD3A4685EAC47D990F4A1C174E02BD8BAA1FAC8BBA53AEA45AA46",
+      "output_bytes": 9947972,
+      "changed_proofs": ["cfbhnpw13pointcoverndv"],
+      "changed_assertion_formulas": [],
+      "receipt_sha256": "A578DCBFE81A096E3FB67B7C55086981701B77841BC1C399EB0398CACA9AD899",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "pwpull_scope_repair",
+      "input_sha256": "B52CC7592B9FD3A4685EAC47D990F4A1C174E02BD8BAA1FAC8BBA53AEA45AA46",
+      "output_sha256": "D4161B3B46B845AF695C1D260CE33A464CF4BF1A7FDCB7FF306A6D6CA94A40D9",
+      "output_bytes": 9942083,
+      "changed_proofs": ["pwpullwesetimpndv"],
+      "changed_assertion_formulas": [],
+      "receipt_sha256": "D69A7B3799E52CB31B11B1BA539F23ED32A649C875393C7B171955688DFDCF46",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "hnqinc_scope_repair",
+      "input_sha256": "D4161B3B46B845AF695C1D260CE33A464CF4BF1A7FDCB7FF306A6D6CA94A40D9",
+      "output_sha256": "BD113CBBFD435B4AAB864A52213A955D4CCB1DE86B1E0A1130BDFD1251609C03",
+      "output_bytes": 9941950,
+      "changed_proofs": ["hnqinctrnvaldndv"],
+      "changed_assertion_formulas": [],
+      "receipt_sha256": "C875B30C6C701E661C49DF93E049845CC91622290E2C5A3D23AD0FA57E3CF26E",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "cfb_codecover_scope_repair",
+      "input_sha256": "BD113CBBFD435B4AAB864A52213A955D4CCB1DE86B1E0A1130BDFD1251609C03",
+      "output_sha256": "DE0C790F31F9ED3D0B8083D12EDFEBE63236AECF3CDD7A0205CF335CE1925853",
+      "output_bytes": 9931128,
+      "changed_proofs": ["cfbhnqinjcodecoverddndv"],
+      "changed_assertion_formulas": [],
+      "receipt_sha256": "3B7310749C132DBD19834FC092DDF1530C247EA736979AF4C70CC8DAA0575F21",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "df_lnwmap_syntax_repair",
+      "input_sha256": "DE0C790F31F9ED3D0B8083D12EDFEBE63236AECF3CDD7A0205CF335CE1925853",
+      "output_sha256": "EE2E4C2672711EAF9D8FFDE680E708849941F8DAD5F1C33E6B6DAE08D2F0F9DC",
+      "output_bytes": 9931136,
+      "changed_assertion_formulas": ["df-lnwmap"],
+      "changed_proofs": [],
+      "material_change": "Correct function-value parenthesization; no downstream proof regeneration required.",
+      "receipt_sha256": "295A8992BE62EFA64D015D14EFF791A578A411258EF579F9DC7A3364BFF9D1DA",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "wppstop_scope_repair_donor",
+      "input_sha256": "DE0C790F31F9ED3D0B8083D12EDFEBE63236AECF3CDD7A0205CF335CE1925853",
+      "output_sha256": "F9AC32DFA0F370CCF3D349C1BEE128207F0C3F2FF58CFF6046EF30B0B4FD132F",
+      "output_bytes": 9880768,
+      "changed_proofs": ["wppstopfixedhitcontrgrowfixdndv"],
+      "changed_assertion_formulas": [],
+      "receipt_sha256": "6DC74EC8321E8473B8E954CC4EAB3FD5A3E15DE18D13C2C8A213E75DA17826DA",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "merge_df_lnwmap_and_wppstop",
+      "base_sha256": "EE2E4C2672711EAF9D8FFDE680E708849941F8DAD5F1C33E6B6DAE08D2F0F9DC",
+      "donor_sha256": "F9AC32DFA0F370CCF3D349C1BEE128207F0C3F2FF58CFF6046EF30B0B4FD132F",
+      "output_sha256": "60271E6C951F21307987923A565B6448927FF97C1EF3F10E189585B5B3E62168",
+      "output_bytes": 9880776,
+      "merged_proof": "wppstopfixedhitcontrgrowfixdndv",
+      "receipt_sha256": "052C4EA57ECDD922DBEEF52A040CC4E97854DE15592BDB9F582AE7C46B236478",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "hnwcut_quotient_proxy_stage1",
+      "input_sha256": "60271E6C951F21307987923A565B6448927FF97C1EF3F10E189585B5B3E62168",
+      "output_sha256": "6969776C5998BCC588203B0A4160C0C93A6C786C91E54174E4041CA5C4111FD0",
+      "output_bytes": 9883127,
+      "inserted_proved_theorems": ["hncodecmpquotbrproxyimpndv"],
+      "builder_sha256": "5E54B6C90DA1151C73A344CE3A1DE5E5FB685039464C9013F0A7259137FC1249",
+      "evidence": "verified_local_rehash"
+    },
+    {
+      "id": "hnwcut_quotient_proxy_stage2",
+      "input_sha256": "6969776C5998BCC588203B0A4160C0C93A6C786C91E54174E4041CA5C4111FD0",
+      "output_sha256": "24A5D458B22747CFBD172326293548BD4EF56BC08DD11908AC91E6A8AB57335A",
+      "output_bytes": 9885108,
+      "inserted_proved_theorems": ["hncodecmpquotbrproxyimpclndv"],
+      "builder_sha256": "1A6DCAB82B9683CC4B49606F5B482F607F02E699ED3A5A82709597BB45B21CA6",
+      "evidence": "verified_local_rehash"
+    },
+    {
+      "id": "hnwcut_strict_quotient_stage3",
+      "input_sha256": "24A5D458B22747CFBD172326293548BD4EF56BC08DD11908AC91E6A8AB57335A",
+      "output_sha256": "BE2D112F89516EED24DCB972EA1B2792A95590547D2E9823903C73312C3DFBB1",
+      "output_bytes": 9887693,
+      "inserted_proved_theorems": ["hncodecmpquotstrictbrproxyimpclndv"],
+      "builder_sha256": "691B6F4379232E69F2026D24365D1508D552DF53118FDCB8EDA89FEC13CF6F00",
+      "receipt_sha256": "71F083417E7A9F9A6541339CCE39D3BF6152A1F7B729E0D2B4CF67FA58A54A4E",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "hnwcut_factor_value_stage5",
+      "input_sha256": "BE2D112F89516EED24DCB972EA1B2792A95590547D2E9823903C73312C3DFBB1",
+      "output_sha256": "2BBB76DD71F34B66F0CBE74EB49E64C3F691766B01F6D208E0FA00EF375A8314",
+      "output_bytes": 9899752,
+      "inserted_proved_theorems": [
+        "hnwcutrelambfnnoarndv",
+        "hnwcutambfactorvalnoarndv",
+        "hnwcutambfactorvalcodendv",
+        "hnwcuttxpeq1dndv",
+        "hnwcutimageeqdndv",
+        "hnwcutreleq12dndv",
+        "hnwcutcodeeq12clndv",
+        "hnwcutambfactorvalimpclndv",
+        "hnwcutambfactorvalimpndv",
+        "hnwcutambordbrproxyimpndv"
+      ],
+      "builder_sha256": "2F6DFBA44F1BC27CF62374A1CA62D6BA1B2C05C682DC07280E4BD76E53BFA8BA",
+      "receipt_sha256": "AEAE34C83DD9973E7A0A34A46801349D42E6EE313F84FEEF4BCC924FB2F477CA",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "hnwcut_final_physical_scope_repair",
+      "input_sha256": "2BBB76DD71F34B66F0CBE74EB49E64C3F691766B01F6D208E0FA00EF375A8314",
+      "output_sha256": "3A05D138CAD97D2A75AD0E029F49FB2D71D54F6BE1DB376B0A55424F92C79AFF",
+      "output_bytes": 9945892,
+      "inserted_proved_theorems": [
+        "hnwcutambfactorfnnoarndv",
+        "hnwcutclassinjambnoarndv",
+        "hnwcutambfactorf1noarndv",
+        "hnwcutambfactorf1codendv",
+        "hnwcutambfactorf1impclndv",
+        "hnwcutambfactorf1impndv",
+        "hnwcutambfactorranbrimpndv",
+        "hnwcutambclassstrictbrimpndv",
+        "hnwcutambstrictsegbrimpndv",
+        "hnwcutambstrictsegranimpndv"
+      ],
+      "replaced_proof": "hnwcutambstrictsegresisomralias0ndv",
+      "target_statement_unchanged": true,
+      "target_mandatory_dvs_unchanged": true,
+      "verified_proofs": 4352,
+      "trusted_proofs": 0,
+      "strict_rejected_proofs": 0,
+      "builder_sha256": "BBD87990B032F2CF6C14098CD589CC904C08D1B10273ABB7DE80AAE8982DC367",
+      "receipt_sha256": "B81B840C1AA389C221B1C92A41E6990399A6EE42BA1DF57003C05480180D0667",
+      "evidence": "verified_local_rehash_and_receipt"
+    },
+    {
+      "id": "mm0_importer_cleanup",
+      "input_sha256": "3A05D138CAD97D2A75AD0E029F49FB2D71D54F6BE1DB376B0A55424F92C79AFF",
+      "output_sha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+      "output_bytes": 9945323,
+      "deduplicated_proof_tables": [
+        "hnwcutambfactorranbrimpndv",
+        "hnwcutambclassstrictbrimpndv",
+        "hnwcutambstrictsegbrimpndv"
+      ],
+      "deleted_closed_scope_declaration": "hnwcutcodeeq-vx $f setvar x $.",
+      "proof_table_retarget": {"from": "hnwcutcodeeq-vx", "to": "vx"},
+      "assertion_formulas_changed": 0,
+      "essential_hypotheses_changed": 0,
+      "dv_conditions_changed": 0,
+      "builder_sha256": "A43029FCA72818D73B5887F94BA68D71D31B637A5CD3F98499977C5E5EA8F8F4",
+      "auditor_sha256": "65E115D69D18C09E65EDCAE625C43BD8916F5CB7059A0C207686CD42D5AFDB3D",
+      "receipt_path": "work/mm0_conversion_2026-08-20/source_repair/hnwcut_resisomr_assist/endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.audit.json",
+      "receipt_sha256": "695E1D0E4D48ACDBC6BD72919E0D56E504AB2BFEF60530283FBAFF2CEA5DE57F",
+      "evidence": "verified_local_rehash_and_receipt"
+    }
+  ],
+  "accepted_source": {
+    "path": "work/mm0_conversion_2026-08-20/source_repair/hnwcut_resisomr_assist/endpoint_after_hnwcut_alias0_scope_repaired_mm0_importer_clean.mm",
+    "bytes": 9945323,
+    "sha256": "868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F",
+    "database_statements": 12486,
+    "strictly_replayed_proofs": 4352,
+    "trusted_proofs": 0,
+    "strict_inactive_references": 0,
+    "source_provenance_receipt": {
+      "path": "work/nf_choice_clean_fol_2026-08-21/replay_provenance_audit/wpp_source_provenance_001/resource.json",
+      "sha256": "F3AD11E9F099F95A46F4922AC509908B46C7DB930FAF76B019E540AC0263A8B2"
+    }
+  },
+  "endpoint": {
+    "label": "wppfiniteblocknotwppndv",
+    "kind": "$p",
+    "exact_expression_tokens": ["|-", "-.", "WPP"],
+    "mandatory_hypotheses": 0,
+    "mandatory_distinct_variable_pairs": 0,
+    "nominal_ast": "(wn wwpp)",
+    "nominal_ast_sha256": "600DA6FBC50032822E82069EA55CF2CD389162CC050681A3BECF5412079F69D5",
+    "semantic_proof_theorem_ordinal": 4321,
+    "endpoint_proof_operation_count": 13,
+    "endpoint_proof_operations_sha256": "C1781B4EA65A4D11188C9896FDBE53157545D1990BBB7253CFE013E92EC724B8"
+  },
+  "translator": {
+    "accepted_c18_resource": {
+      "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/reusable_nominal_mm_translator_v3_chunk018_compact_001/resource.json",
+      "sha256": "44CCEF5B0AB6594EFDC867BF8E59A7B3A7EA37D5BD3235DECB3293AC52F80D75",
+      "schema": "nf-reusable-nominal-mm-translator-v1",
+      "status": "PASS_SOURCE_ONLY_EMITTED_STRUCTURAL"
+    },
+    "producer_v3_sha256": "DECC5089EAB55B95806EB74742FD47A1EB127502B243811DD882737FCB98475F",
+    "pinned_predecessor_v2_sha256": "52ED85A33329D1D4CE0E9D05622F74917E1CD9662959AAD7D7B6175244F34615",
+    "pinned_core_v1_sha256": "8ABE386FEC8BEE78499D25B3B488C4C81054019590789CC1AF71D4DC352F3A94",
+    "compact_fv_backend_sha256": "CA7493053B75FC9B2EDC0F6C16AE31DE07C5F1A52119F15314BD09D3A165BDA4",
+    "profile": {
+      "id": "WPP_PROFILE_V2",
+      "version": 2,
+      "manifest_sha256": "96B6A85D4B5B60023000C49BB40CF4F7DCD679AAF4DB6C796880A684DBF12949",
+      "input_count": 97,
+      "python_module_count": 20,
+      "fixed_data_count": 77,
+      "input_set_sha256": "E2CEA5925FB6A69A00544A01138356AC66C15B0CF614CF824D954BDB26725FF5",
+      "audit_resource_sha256": "38C63085D71EAA3454D25D24DD9E50B5449B984CF58EDB13A53A310ABFC3A346"
+    },
+    "c18": {
+      "start_ordinal": 4255,
+      "end_ordinal": 4321,
+      "theorem_count": 67,
+      "part_count": 4,
+      "application_count": 1227,
+      "application_trace_sha256": "B3354FF6DCEEF17BAE2C4A31F4CECD87FF7B1C56382E19346DD04B0CDAB4760A",
+      "aggregate_theorem_bytes": 168716,
+      "aggregate_theorem_sha256": "F65B52D032B15C78B4D8482196B30714BF30A9A11A5CAE0E68EC3CDFBF421E59",
+      "compact_fv_normalization_count": 7,
+      "generic_dv_fallback_count": 0,
+      "source_audit_sha256": "7C341CF8F40E9405A180D4E2D957607BDFB02DD920B1B3FD2A9778DD2D0649BE"
+    },
+    "generated_lean": [
+      {"module": "NominalWPPReplayChunk018Compact001Part001", "bytes": 62672, "sha256": "A9782A12DF7A3842C792E75C67835F3EE5345D35719E6CF9DD38AD000C472DE5"},
+      {"module": "NominalWPPReplayChunk018Compact001Part002", "bytes": 21886, "sha256": "CDF3F363A81F2E7BA206B736282FD3C360B4D37F71259901F43873514972E615"},
+      {"module": "NominalWPPReplayChunk018Compact001Part003", "bytes": 72636, "sha256": "5C09B85D3A13B2BDF59135F178B59E233BC825BA5508DB639793782F2B4FE97C"},
+      {"module": "NominalWPPReplayChunk018Compact001Part004", "bytes": 31919, "sha256": "366D0667A8D38AD4CA6AB12C4A7094910E1B9E95241BAC7DABE2C11DD26C5277"},
+      {"module": "NominalWPPReplayChunk018Compact001", "bytes": 178, "sha256": "D549ACE24BD40B5E4C8D422CCEC54AA128B41A85FF28393F0A54C43FA6C2F8EB"}
+    ]
+  },
+  "accepted_final_endpoint_receipt": {
+    "path": "work/nf_choice_clean_fol_2026-08-21/direct_nominal_prf_001/nominal_wpp_final_endpoint_kernel_002/resource.json",
+    "sha256": "1B31418843E0968B566BCE7727F437AF05ACE311BC2B151AE84C4755CCBA9A08",
+    "source_resource_sha256": "44CCEF5B0AB6594EFDC867BF8E59A7B3A7EA37D5BD3235DECB3293AC52F80D75",
+    "status": "PASS_TRUST_ZERO_EXACT_ELEVEN_NF_PROVES_NOT_WPP_EXACT_THREE"
+  },
+  "unresolved": [
+    {
+      "item": "historical_whole_repository_checkout_commit_for_uploaded_nf_mm",
+      "status": "unresolved",
+      "impact": "No ambiguity in nf.mm bytes; prevents claiming the upload was made from one exact repository checkout."
+    },
+    {
+      "item": "immutable_public_vcs_commit_for_project_authored_wpp_extension_and_repairs",
+      "status": "unresolved",
+      "impact": "Exact local bytes and receipts are pinned, but public-source reconstruction still needs a repository commit containing them."
+    }
+  ]
+}

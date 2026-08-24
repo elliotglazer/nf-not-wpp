@@ -1,0 +1,20 @@
+# Shell entry points must retain an executable Unix shebang on checkout.
+*.lean text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.lock text eol=lf
+*.sh text eol=lf
+*.rb text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+Gemfile text eol=lf
+lean-toolchain text eol=lf
+LICENSE text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
+# These bundles are content-addressed evidence. Preserve their exact bytes;
+# line-ending normalization would invalidate the recorded SHA-256 values.
+Proof/** -text -eol
+provenance/** -text -eol
