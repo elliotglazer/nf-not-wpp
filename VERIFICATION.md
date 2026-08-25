@@ -5,15 +5,18 @@ candidate. It does not replace Palomar's protected Linux verifier.
 
 ## Statement boundary
 
-- `Challenge.lean`: 777 physical lines, 32,621 bytes, SHA-256
-  `C11A4D460ECA22BE99ACF19557BD63D15B43A17EF3596982E096B3680C303CA1`.
-- `Solution.lean`: 1,640 physical lines, 67,390 bytes, SHA-256
-  `85E6A14A23AE79FC997E4F42FC9BACCAAE831DF659D45A2F4E03CAC9A3BACE85`.
-- The 745-line declaration region from `namespace NFNotWPP` through
+- `Challenge.lean`: 827 physical lines, 34,394 bytes, SHA-256
+  `719D3F180A22AFF950A3839145846FDDB4D1D7AC2E50385DCA90AD426F65FC5D`.
+- `Solution.lean`: 1,862 physical lines, 76,085 bytes, SHA-256
+  `427F4FACD2E7D722501736BD9E9BF322E105CDAFA5B143AC67B9BEC9554CC214`.
+- The 793-line declaration region from `namespace NFNotWPP` through
   `SourceWPPFOL` is text-identical in the two files.
 - The compared declaration is
-  `NFNotWPP.hailperinNF_proves_not_WPP` at the exact type
-  `LiteralHailperinNF ⊢ₛ' Formula.neg SourceWPPFOL`.
+  `NFNotWPP.NF_proves_not_WPP` at the exact type
+  `NF ⊢ₛ' Formula.neg SourceWPPFOL`.
+- Here public `NF` is extensionality plus every instance of the full
+  stratified-comprehension schema. The eleven literal Hailperin sentences are
+  retained only as the translated proof's internal finite-basis bridge.
 - Solution does not import Challenge. Challenge imports only Mathlib.
 
 ## Source build
@@ -22,16 +25,18 @@ The candidate uses Lean `v4.30.0-rc2`, Mathlib
 `83a5988a25fdd78621774a57af7e1f5c55f24289`, and Flypitch
 `503dd00ba677b42628a878ad263cc116abb0a8f7`.
 
-The local source-only build originated from an empty `.lake` directory on a
-Windows x86-64 workstation. Lake scheduling was bounded first at two and then,
-after measuring memory headroom, three jobs; every Lean child used
-`--threads=1`. Two generated modules exhausted only Lean's
+The historical translated-replay-closure build originated from an empty
+`.lake` directory on a Windows x86-64 workstation. Lake scheduling was bounded
+first at two and then, after measuring memory headroom, three jobs; every Lean
+child used `--threads=1`. Two generated modules exhausted only Lean's
 `constructorNameAsVariable` style-linter heartbeat budget after elaboration.
 They were isolated in `NFNotWPPLinterHeavy`. That Lake target adds exactly one
 override, `-Dlinter.constructorNameAsVariable=false`; pre-existing
 generated-source linter settings and all proof-checking options are unchanged.
-The final build resumed the same source-created cache and compiled all 1,527
-packaged proof modules successfully.
+The resumed build compiled all 1,527 source modules in the translated C18
+replay closure successfully. It predates the added `NFStandard` layer and the
+migration of the public Challenge/Solution statement, so it is historical
+closure evidence rather than a cold build of the current whole configuration.
 
 This is not evidence of one uninterrupted cold build of the final staged Lake
 configuration. That clean Linux run remains a release gate alongside
@@ -44,24 +49,27 @@ Observed timing results on 2026-08-24:
 - contemporaneous working notes record a 3 h 10 min diagnosis/resume window
   ending in final success; no raw timing log was retained, so neither figure
   should be treated as a clean benchmark;
-- `lake build Challenge Solution` from the completed proof tree: 24.5 s;
-- final post-metadata warm `lake build Challenge Solution`: 6.8 s;
-- post-archive packaging `lake build Challenge Solution`: 91.2 s, successfully
-  replaying all 2,585 reported jobs after the local cache state had changed;
-- warm default `lake build`: 3.9 s;
-- direct `--trust=0 --threads=1` Challenge recompilation: 15.3 s;
-- direct `--trust=0 --threads=1` Solution recompilation: 35.6 s.
+- migrated final `Challenge.lean` warm compilation: 14.52 s wall time, with
+  Lake reporting 11 s;
+- migrated final `Solution.lean` warm compilation: 23.30 s wall time, with
+  Lake reporting 18 s;
+- warm `lake build NFStandard`: 10.814 s wall time; and
+- warm default `lake build`: 3.918 s wall time.
+
+Both final Lake target checks passed. No uninterrupted cold-build timing is
+claimed for the migrated whole configuration.
 
 The final axiom query reported exactly:
 
 ```text
-'NFNotWPP.hailperinNF_proves_not_WPP' depends on axioms:
+'NFNotWPP.NF_proves_not_WPP' depends on axioms:
   [propext, Classical.choice, Quot.sound]
 ```
 
 Lexical and declaration audits found no Solution/proof `sorry`, `admit`,
 `sorryAx`, custom `axiom`, `opaque`, `unsafe`, `partial`, `native_decide`, or
-`Lean.ofReduceBool`. Challenge contains exactly its deliberate theorem hole.
+`Lean.ofReduceBool`. Challenge contains exactly its deliberate theorem whose
+declaration starts at line 823 and whose `sorry` body is at line 825.
 
 ## Translator reproduction
 
@@ -100,9 +108,10 @@ to the independent kernel/Comparator checks.
 
 ## Source and repository integrity
 
-- All 1,527 closure-manifest rows exist in `Proof/` and match their recorded
-  SHA-256 values.
-- The proof payload is 97,305,006 bytes and 699,761 physical source lines.
+- All 1,527 translated-replay closure-manifest rows exist in `Proof/` and match
+  their recorded SHA-256 values.
+- That historical C18 proof payload is 97,305,006 bytes and 699,761 physical
+  source lines. These figures do not include the later `NFStandard` layer.
 - The exact 12-page manuscript is present in TeX and PDF; the PDF is 357,483
   bytes with SHA-256
   `9B3BD8EB7AE23AD9C55029C262DE3DADADF9DA329D55E42C597C0A95860571B3`.
@@ -113,18 +122,19 @@ to the independent kernel/Comparator checks.
   265,762,469 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
   `0ACA7BBB08D4D5A62AC61DFAF03C1EDA84AD7463A89E3F968531E89B81FFE3A8`.
-- The intended Git snapshot contains 1,868 files and 373,629,988 bytes
-  (356.321 MiB); the largest is the 27,647,028-byte MM0 `.mmu`. Its forbidden
-  compiled-suffix scan found zero files. Seventy-nine local `.olean` recovery
-  copies remain ignored and are not part of the submitted snapshot.
+- The final intended source snapshot contains 1,884 files and 373,793,823
+  bytes (356.48 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
+  the snapshot remains below Palomar's 500-MiB repository limit.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and
   full lowercase 40-character revisions.
-- Static scans found no LFS pointer, submodule, symlink/reparse point,
-  forbidden compiled Lean/native artifact outside `.lake`, credential, or
-  operative machine-local dependency. Historical receipts deliberately retain
-  their original workstation labels, including 122 inert comments in the
-  byte-exact Metamath input; the portable translator rebases those labels and
-  the Lean build does not consume them.
+- Final static scans found no LFS pointer, submodule, Git symlink, forbidden
+  compiled Lean/native artifact, cache/build directory, credential, or
+  operative machine-local dependency. Historical receipts deliberately
+  retain their original workstation labels, including 122 inert comments in
+  the byte-exact Metamath input; the portable translator rebases those labels
+  and the Lean build does not consume them. This was a scan of the intended
+  tracked-plus-untracked source snapshot before its final commit; the public
+  immutable commit remains subject to the same protected CI checks.
 - The three shell entry points are recorded as executable and their syntax and
   Landrun-wrapper regression pass under Git Bash.
 - `formalization.yaml` contains no operative publication placeholder. Its

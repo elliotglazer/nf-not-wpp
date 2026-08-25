@@ -1,18 +1,19 @@
 import Mathlib.Data.Finset.Basic
 import Mathlib.Data.Finset.Lattice.Fold
 import Mathlib.Data.Set.Basic
-import NominalWPPReplayChunk018Compact001
+import NFStandard.NotWPP
 
 /-!
-# Proved solution: literal Hailperin NF derives the negation of WPP
+# Proved solution: standard NF derives the negation of WPP
 
 This module independently repeats the transparent Challenge declarations and
 then imports the accepted proof only through its solution-side dependency. WPP
 means the **Weak Partition Principle**: if there are a surjection from `y` onto
 `x` and an injection from `y` into `x`, then there is an injection from `x`
-into `y`. The final proof instantiates the accepted C18
-nominal endpoint at the identity environment and translates all eight
-first-order proof constructors structurally.
+into `y`. The final proof first replaces every use of one of Hailperin's eleven
+finite-basis axioms by its formal derivation from extensionality and stratified
+comprehension, then translates all eight first-order proof constructors
+structurally into the independently repeated Challenge calculus.
 -/
 
 namespace NFNotWPP
@@ -336,6 +337,54 @@ def literalAxiomFormula (name : HailperinAxiomName) : Formula :=
 
 /-- The object theory: the range of exactly the eleven named Hailperin formulas. -/
 abbrev LiteralHailperinNF : SentTheory := Set.range literalAxiomFormula
+
+/-! ## Standard NF: extensionality and stratified comprehension -/
+
+namespace Formula
+
+/-- Apply universal quantification `n` times. -/
+def alls : Nat -> Formula -> Formula
+  | 0, p => p
+  | n + 1, p => .all (alls n p)
+
+end Formula
+
+namespace BFormula
+
+/-- An integer type assignment certifies the ordinary NF stratification rules. -/
+def StratifiedBy {n : Nat} (ty : Fin n -> Int) : BFormula n -> Prop
+  | .falsum => True
+  | .equal x y => ty x = ty y
+  | .mem x y => ty y = ty x + 1
+  | .imp p q => StratifiedBy ty p ∧ StratifiedBy ty q
+  | .all p => ∃ k : Int, StratifiedBy (Fin.cases k ty) p
+
+/-- A formula is stratified when it admits an integer type assignment. -/
+def Stratified {n : Nat} (p : BFormula n) : Prop :=
+  ∃ ty : Fin n -> Int, StratifiedBy ty p
+
+/-- Universally close every free de Bruijn variable. -/
+def closeAll {n : Nat} (p : BFormula n) : Formula :=
+  Formula.alls n (erase p)
+
+end BFormula
+
+/-- The open assertion that a set has exactly the extension selected by `p`. -/
+def comprehensionBody {n : Nat} (p : BFormula (n + 1)) : BFormula n :=
+  BFormula.ex (BFormula.eqCandidateToPredicate p)
+
+/-- The universally closed comprehension axiom associated with `p`. -/
+def comprehensionInstance {n : Nat} (p : BFormula (n + 1)) : Formula :=
+  BFormula.closeAll (comprehensionBody p)
+
+/-- Every stratified instance of the comprehension schema. -/
+def StratifiedComprehension : SentTheory :=
+  {f | ∃ (n : Nat) (p : BFormula (n + 1)),
+    BFormula.Stratified p ∧ f = comprehensionInstance p}
+
+/-- Standard NF: extensionality plus the full stratified-comprehension schema. -/
+abbrev NF : SentTheory :=
+  insert (BFormula.erase literalAxExt) StratifiedComprehension
 
 /-! ## Exact nominal source syntax and deterministic lowering -/
 
@@ -1181,9 +1230,10 @@ theorem quote_accepted_sourceWPP :
 end SourceEquality
 
 /-!
-Finite theory-identification layer for the Palomar solution. It deliberately
-does not use the C18 endpoint: this section only identifies the eleven accepted
-source axioms with the eleven Challenge axioms.
+Theory-identification layer for the Palomar solution. It quotes the accepted
+standard NF schema into the independently repeated Challenge schema; the
+eleven finite-basis formulas remain available as the internal bridge used to
+construct the source derivation.
 -/
 
 namespace TheoryBridgeProbe
@@ -1274,6 +1324,135 @@ theorem quoteFormula_toFlypitch {n : Nat}
   | all p ih =>
       change quoteFormula (Fol.preformula.all p.toFlypitch.fst) = _
       simp [quoteBFormula, NFNotWPP.BFormula.erase, ih]
+
+/-- Inverse quotation of the challenge's intrinsically scoped syntax. -/
+def unquoteBFormula : {n : Nat} -> NFNotWPP.BFormula n ->
+    NFChoice.Foundation.Formula n
+  | _, .falsum => .falsum
+  | _, .equal x y => .equal x y
+  | _, .mem x y => .mem x y
+  | _, .imp p q => .imp (unquoteBFormula p) (unquoteBFormula q)
+  | _, .all p => .all (unquoteBFormula p)
+
+@[simp] theorem quoteBFormula_unquoteBFormula {n : Nat}
+    (p : NFNotWPP.BFormula n) :
+    quoteBFormula (unquoteBFormula p) = p := by
+  induction p with
+  | falsum => rfl
+  | equal => rfl
+  | mem => rfl
+  | imp p q ihp ihq => simp [quoteBFormula, unquoteBFormula, ihp, ihq]
+  | all p ih => simp [quoteBFormula, unquoteBFormula, ih]
+
+@[simp] theorem unquoteBFormula_quoteBFormula {n : Nat}
+    (p : NFChoice.Foundation.Formula n) :
+    unquoteBFormula (quoteBFormula p) = p := by
+  induction p with
+  | falsum => rfl
+  | equal => rfl
+  | mem => rfl
+  | imp p q ihp ihq => simp [quoteBFormula, unquoteBFormula, ihp, ihq]
+  | all p ih => simp [quoteBFormula, unquoteBFormula, ih]
+
+/-- Quotation commutes with the intrinsic renaming used by comprehension. -/
+theorem quoteBFormula_renameVars {n m : Nat} (rho : Fin n -> Fin m)
+    (p : NFChoice.Foundation.Formula n) :
+    quoteBFormula
+        (NFChoice.Foundation.ExactLiteralTrial.Formula.renameVars rho p) =
+      NFNotWPP.BFormula.renameVars rho (quoteBFormula p) := by
+  induction p generalizing m with
+  | falsum => rfl
+  | equal => rfl
+  | mem => rfl
+  | imp p q ihp ihq =>
+      simp [NFChoice.Foundation.ExactLiteralTrial.Formula.renameVars,
+        NFNotWPP.BFormula.renameVars, quoteBFormula, ihp, ihq]
+  | all p ih =>
+      simp [NFChoice.Foundation.ExactLiteralTrial.Formula.renameVars,
+        NFNotWPP.BFormula.renameVars, quoteBFormula, ih]
+
+/-- Quotation preserves every fixed integer stratification assignment. -/
+theorem quoteBFormula_stratifiedBy {n : Nat} (ty : Fin n -> Int)
+    (p : NFChoice.Foundation.Formula n) :
+    NFNotWPP.BFormula.StratifiedBy ty (quoteBFormula p) ↔
+      NFChoice.Foundation.Formula.StratifiedBy ty p := by
+  induction p with
+  | falsum => rfl
+  | equal => rfl
+  | mem => rfl
+  | imp p q ihp ihq =>
+      exact and_congr (ihp ty) (ihq ty)
+  | all p ih =>
+      exact exists_congr (fun k => ih (Fin.cases k ty))
+
+/-- Quotation preserves existence of a stratification assignment. -/
+theorem quoteBFormula_stratified {n : Nat}
+    (p : NFChoice.Foundation.Formula n) :
+    NFNotWPP.BFormula.Stratified (quoteBFormula p) ↔
+      NFChoice.Foundation.Formula.Stratified p := by
+  simp only [NFNotWPP.BFormula.Stratified,
+    NFChoice.Foundation.Formula.Stratified]
+  exact exists_congr (fun ty => quoteBFormula_stratifiedBy ty p)
+
+/-- The inverse quotation also preserves stratification. -/
+theorem unquoteBFormula_stratified {n : Nat}
+    (p : NFNotWPP.BFormula n) :
+    NFChoice.Foundation.Formula.Stratified (unquoteBFormula p) ↔
+      NFNotWPP.BFormula.Stratified p := by
+  rw [← quoteBFormula_stratified]
+  simp
+
+/-- Quotation commutes with the open comprehension body. -/
+theorem quoteBFormula_comprehensionBody {n : Nat}
+    (p : NFChoice.Foundation.Formula (n + 1)) :
+    quoteBFormula (NFChoice.Foundation.NFStandard.comprehensionBody p) =
+      NFNotWPP.comprehensionBody (quoteBFormula p) := by
+  simp [NFChoice.Foundation.NFStandard.comprehensionBody,
+    NFNotWPP.comprehensionBody,
+    NFChoice.Foundation.ExactLiteralTrial.Formula.eqCandidateToPredicate,
+    NFChoice.Foundation.ExactLiteralTrial.Formula.liftClassPredicate,
+    NFNotWPP.BFormula.eqCandidateToPredicate,
+    NFNotWPP.BFormula.liftClassPredicate,
+    NFChoice.Foundation.Formula.ex, NFNotWPP.BFormula.ex,
+    NFChoice.Foundation.Formula.neg, NFNotWPP.BFormula.neg,
+    NFChoice.Foundation.Formula.biimp, NFNotWPP.BFormula.biimp,
+    NFChoice.Foundation.Formula.conj, NFNotWPP.BFormula.conj,
+    quoteBFormula, quoteBFormula_renameVars]
+
+/-- Erasing bounded universal closure gives ordinary repeated closure. -/
+theorem fst_bd_alls : ∀ (n : Nat) (p : Fol.bounded_formula SourceLNF n),
+    (Fol.bd_alls n p).fst = Fol.alls n p.fst := by
+  intro n
+  induction n with
+  | zero => intro p; rfl
+  | succ n ih =>
+      intro p
+      simp only [Fol.bd_alls]
+      rw [ih (Fol.bd_all p)]
+      change Fol.alls n (Fol.preformula.all p.fst) = _
+      rw [Fol.alls_all_commute]
+      rfl
+
+/-- Quotation commutes with repeated universal closure. -/
+theorem quoteFormula_alls (n : Nat) (p : Fol.formula SourceLNF) :
+    quoteFormula (Fol.alls n p) =
+      NFNotWPP.Formula.alls n (quoteFormula p) := by
+  induction n with
+  | zero => rfl
+  | succ n ih => simp [Fol.alls, NFNotWPP.Formula.alls, ih]
+
+/-- Quotation commutes with each standard NF comprehension instance. -/
+theorem quote_comprehensionInstance {n : Nat}
+    (p : NFChoice.Foundation.Formula (n + 1)) :
+    quoteFormula
+        (NFChoice.Foundation.NFStandard.comprehensionInstance p).fst =
+      NFNotWPP.comprehensionInstance (quoteBFormula p) := by
+  rw [NFChoice.Foundation.NFStandard.comprehensionInstance,
+    NFChoice.Foundation.Formula.closeAll]
+  rw [fst_bd_alls]
+  rw [quoteFormula_alls, quoteFormula_toFlypitch,
+    quoteBFormula_comprehensionBody]
+  rfl
 
 /-- The constructor-for-constructor identification of the two finite indexes. -/
 def quoteName : SourceName -> NFNotWPP.HailperinAxiomName
@@ -1398,12 +1577,49 @@ theorem quote_sourceTheory :
     · simpa [sourceSentence] using
         quote_literalAxiomFormula (unquoteName name)
 
+/-- The exact quoted image of standard NF is the challenge's standard NF. -/
+theorem quote_NF :
+    quoteFormula '' NFChoice.Foundation.NF.fst = NFNotWPP.NF := by
+  ext q
+  constructor
+  · rintro ⟨_, ⟨s, hs, rfl⟩, rfl⟩
+    rcases hs with rfl | hs
+    · apply Set.mem_insert_iff.mpr
+      left
+      simpa [NFNotWPP.literalAxiomFormula,
+        NFNotWPP.literalAxiomSyntax] using
+        quote_literalAxiomFormula (.axExt : SourceName)
+    · apply Set.mem_insert_iff.mpr
+      right
+      rcases hs with ⟨n, p, hp, rfl⟩
+      exact ⟨n, quoteBFormula p,
+        (quoteBFormula_stratified p).2 hp,
+        quote_comprehensionInstance p⟩
+  · intro hq
+    rcases Set.mem_insert_iff.mp hq with hq | hq
+    · subst q
+      let s := NFChoice.Foundation.ExactLiteralTrial.literalAxiomFormula
+        (.axExt : SourceName)
+      refine ⟨s.fst, ?_, ?_⟩
+      · exact ⟨s, NFChoice.Foundation.NFStandard.extensionality_mem_NF, rfl⟩
+      · simpa [s, NFNotWPP.literalAxiomFormula,
+          NFNotWPP.literalAxiomSyntax] using
+          quote_literalAxiomFormula (.axExt : SourceName)
+    · rcases hq with ⟨n, p, hp, rfl⟩
+      let p' : NFChoice.Foundation.Formula (n + 1) :=
+        unquoteBFormula p
+      let s := NFChoice.Foundation.NFStandard.comprehensionInstance p'
+      refine ⟨s.fst, ?_, ?_⟩
+      · refine ⟨s, Set.mem_insert_of_mem _ ?_, rfl⟩
+        exact ⟨n, p', (unquoteBFormula_stratified p).2 hp, rfl⟩
+      · simpa [s, p'] using quote_comprehensionInstance p'
+
 end TheoryBridgeProbe
 
 /-!
-Generic solution-only bridge from the accepted direct nominal C18 endpoint to
-the small Challenge calculus. The exact public theorem below instantiates this
-structural translator.
+Generic solution-only bridge from the accepted Flypitch derivation to the small
+Challenge calculus. The exact public theorem below instantiates this structural
+translator after the finite-basis axiom uses have been replaced by NF proofs.
 -/
 
 namespace SolutionBridge
@@ -1596,6 +1812,11 @@ theorem quote_sourceTheory :
   rw [quoteFormula_eq_theoryBridge]
   exact NFNotWPP.TheoryBridgeProbe.quote_sourceTheory
 
+theorem quote_NF :
+    quoteFormula '' NFChoice.Foundation.NF.fst = NFNotWPP.NF := by
+  rw [quoteFormula_eq_theoryBridge]
+  exact NFNotWPP.TheoryBridgeProbe.quote_NF
+
 theorem quote_accepted_sourceWPP :
     quoteFormula
         (NFChoice.DirectNominalPrf.Nominal.lowerWff id
@@ -1628,13 +1849,14 @@ theorem quote_accepted_not_sourceWPP :
 
 end SolutionBridge
 
-theorem hailperinNF_proves_not_WPP :
-    LiteralHailperinNF ⊢ₛ' Formula.neg SourceWPPFOL := by
-  have accepted :=
-    NFChoice.DirectNominalPrf.WPPReplay.g_wppfiniteblocknotwppndv id
-  have translated := SolutionBridge.translatePrf accepted
-  rw [SolutionBridge.quote_sourceTheory] at translated
+theorem NF_proves_not_WPP :
+    NF ⊢ₛ' Formula.neg SourceWPPFOL := by
+  have translated := SolutionBridge.translatePrf
+    NFChoice.Foundation.NFStandard.nfPrfNotSourceWPP
+  rw [SolutionBridge.quote_NF] at translated
   rw [SolutionBridge.quote_accepted_not_sourceWPP] at translated
   exact ⟨translated⟩
+
+#print axioms NF_proves_not_WPP
 
 end NFNotWPP

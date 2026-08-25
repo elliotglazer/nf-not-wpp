@@ -3,7 +3,7 @@ import Mathlib.Data.Finset.Lattice.Fold
 import Mathlib.Data.Set.Basic
 
 /-!
-# Literal Hailperin NF derives the negation of WPP
+# Standard NF derives the negation of WPP
 
 This is the self-contained statement surface for the Palomar challenge. Here
 WPP means the **Weak Partition Principle**, not the well-ordering principle.
@@ -12,9 +12,10 @@ function maps `y` onto `x` and a one-to-one function maps `y` into `x`, then a
 one-to-one function maps `x` into `y`.
 
 The final theorem says that this sentence's negation has a formal derivation
-from exactly the eleven Hailperin NF sentences below. Those sentences are
-object-theory hypotheses in `LiteralHailperinNF`; they are not Lean axioms.
-The proof calculus is the eight-rule first-order calculus mirrored from
+from standard NF: extensionality plus the full schema of stratified
+comprehension. The eleven Hailperin sentences below are retained as a
+transparent finite-basis bridge; they are object-theory formulas, not Lean
+axioms. The proof calculus is the eight-rule first-order calculus mirrored from
 Flypitch. Every constructor used to state the theory and target is transparent,
 and the sole deliberate proof hole is the final theorem.
 -/
@@ -340,6 +341,54 @@ def literalAxiomFormula (name : HailperinAxiomName) : Formula :=
 
 /-- The object theory: the range of exactly the eleven named Hailperin formulas. -/
 abbrev LiteralHailperinNF : SentTheory := Set.range literalAxiomFormula
+
+/-! ## Standard NF: extensionality and stratified comprehension -/
+
+namespace Formula
+
+/-- Apply universal quantification `n` times. -/
+def alls : Nat -> Formula -> Formula
+  | 0, p => p
+  | n + 1, p => .all (alls n p)
+
+end Formula
+
+namespace BFormula
+
+/-- An integer type assignment certifies the ordinary NF stratification rules. -/
+def StratifiedBy {n : Nat} (ty : Fin n -> Int) : BFormula n -> Prop
+  | .falsum => True
+  | .equal x y => ty x = ty y
+  | .mem x y => ty y = ty x + 1
+  | .imp p q => StratifiedBy ty p ∧ StratifiedBy ty q
+  | .all p => ∃ k : Int, StratifiedBy (Fin.cases k ty) p
+
+/-- A formula is stratified when it admits an integer type assignment. -/
+def Stratified {n : Nat} (p : BFormula n) : Prop :=
+  ∃ ty : Fin n -> Int, StratifiedBy ty p
+
+/-- Universally close every free de Bruijn variable. -/
+def closeAll {n : Nat} (p : BFormula n) : Formula :=
+  Formula.alls n (erase p)
+
+end BFormula
+
+/-- The open assertion that a set has exactly the extension selected by `p`. -/
+def comprehensionBody {n : Nat} (p : BFormula (n + 1)) : BFormula n :=
+  BFormula.ex (BFormula.eqCandidateToPredicate p)
+
+/-- The universally closed comprehension axiom associated with `p`. -/
+def comprehensionInstance {n : Nat} (p : BFormula (n + 1)) : Formula :=
+  BFormula.closeAll (comprehensionBody p)
+
+/-- Every stratified instance of the comprehension schema. -/
+def StratifiedComprehension : SentTheory :=
+  {f | ∃ (n : Nat) (p : BFormula (n + 1)),
+    BFormula.Stratified p ∧ f = comprehensionInstance p}
+
+/-- Standard NF: extensionality plus the full stratified-comprehension schema. -/
+abbrev NF : SentTheory :=
+  insert (BFormula.erase literalAxExt) StratifiedComprehension
 
 /-! ## Exact nominal source syntax and deterministic lowering -/
 
@@ -767,11 +816,12 @@ def SourceWPPFOL : Formula := Nominal.lowerWff id Source.syn_wwpp
 
 /-!
 PALOMAR CHALLENGE: replace `sorry` by a term.  No new axiom should be declared.
-The expected solution imports the accepted C18 endpoint only in its solution
-file, instantiates its `NPrf` at `id`, and structurally translates `Fol.prf`.
+The expected solution replaces every use of a finite-basis axiom by its
+derivation from standard NF, then structurally quotes the resulting first-order
+derivation into this self-contained calculus.
 -/
-theorem hailperinNF_proves_not_WPP :
-    LiteralHailperinNF ⊢ₛ' Formula.neg SourceWPPFOL := by
+theorem NF_proves_not_WPP :
+    NF ⊢ₛ' Formula.neg SourceWPPFOL := by
   sorry
 
 end NFNotWPP

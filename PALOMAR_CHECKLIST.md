@@ -27,7 +27,8 @@ requires a human decision.
       mismatches.
 - [x] Retain the exact source endpoint
       `NFChoice.DirectNominalPrf.WPPReplay.g_wppfiniteblocknotwppndv` and the
-      Challenge representation of the eleven literal theory axioms.
+      Challenge representation of its eleven literal theory axioms as the
+      internal finite-basis bridge to the public standard-NF theorem.
 - [x] Pin upstream `nf.mm` to its last content-changing set.mm commit
       `c1814c4fbaf88d329d7d73ec1c7358647570e435`, file SHA-256
       `727A3707545E13EC53F03502EB07DC4635A8C176F275D4014A17FBD823E66083`.
@@ -40,12 +41,12 @@ requires a human decision.
 - [x] Include and document the historical translator stack, frozen profile,
       textual compiled-evidence contract, and portable CPython 3.12 launcher;
       an exact C18 replay emits all five packaged Lean files byte-for-byte.
-- [x] Complete the final whole-tree scan for absolute paths, local executable
-      or package overrides, compiled artifacts, caches, and experiment output.
-      No forbidden compiled Lean/native artifact remains. Historical archive
-      receipts retain documented workstation labels, including 122 inert
-      comments in the accepted Metamath input; the portable translator rebases
-      its receipt paths, and no Lean build input consumes those labels.
+- [x] The final intended source-snapshot scan found no forbidden absolute
+      dependency, local executable or package override, compiled artifact,
+      cache, or experiment output. Historical archive receipts retain
+      documented workstation labels, including 122 inert comments in the
+      accepted Metamath input; the portable translator rebases its receipt
+      paths, and no Lean build input consumes those labels.
 
 ## 3. Lake package
 
@@ -56,11 +57,13 @@ requires a human decision.
       full immutable SHA and every URL is public, credential-free HTTPS.
 - [x] Pin Lean `v4.30.0-rc2` and verify that the matching `lean4export` revision
       is available in Palomar's supported toolchain path.
-- [x] Finish an empty-origin, diagnosed/resumed source-only candidate build. It
-      completed all 1,527 packaged modules, including two narrowly fixed
-      style-linter diagnoses and scheduler restarts; every Lean child used
-      `--threads=1`. Artifact timestamps span 4 h 02 min with a 49 min 42 s
-      unlogged pause; working notes record a 3 h 10 min diagnosis/resume window.
+- [x] Finish an empty-origin, diagnosed/resumed source-only build of the
+      historical translated-replay closure. It completed all 1,527 C18 closure
+      modules, including two narrowly fixed style-linter diagnoses and
+      scheduler restarts; every Lean child used `--threads=1`. Artifact
+      timestamps span 4 h 02 min with a 49 min 42 s unlogged pause; working
+      notes record a 3 h 10 min diagnosis/resume window. This predates
+      `NFStandard` and is not final-configuration cold-build evidence.
 - [ ] Run an uninterrupted final-configuration cold source-only build on Linux
       comparable to a Palomar worker.
 - [ ] Optionally test a stable-toolchain upgrade; it is not required for the
@@ -70,47 +73,55 @@ requires a human decision.
 
 - [x] Add a self-contained `Challenge.lean` whose transitive project-facing
       imports are Mathlib only.
-- [x] Compile the Challenge with exactly one deliberate final-theorem `sorry`.
-- [x] Keep the Challenge below Palomar's hard limits: 777 lines and 32,621
+- [x] Compile the Challenge with exactly one deliberate final-theorem hole. The
+      theorem begins at line 823, and its `sorry` proof body is at line 825.
+- [x] Keep the Challenge below Palomar's hard limits: 827 lines and 34,394
       bytes versus 1,000 lines and 100 KiB.
 - [x] Define the membership-only syntax, eight primitive proof constructors,
-      exactly eleven literal Hailperin formulas, and exact lowered source WPP.
+      ordinary integer stratification, the full stratified-comprehension
+      schema, standard `NF` as that schema plus extensionality, and the exact
+      lowered source WPP. The eleven literal Hailperin formulas remain only as
+      the internal translated finite-basis bridge.
 - [x] State syntactic derivability of `Formula.neg SourceWPPFOL` under the public
-      name `NFNotWPP.hailperinNF_proves_not_WPP`.
+      name `NFNotWPP.NF_proves_not_WPP`, at the exact type
+      `NF ⊢ₛ' Formula.neg SourceWPPFOL`.
 - [x] Configure distinct `Challenge` and `Solution` module names in Lake and
       `comparator.json`.
 - [x] Prove the direct structural bridge from the accepted C18 nominal/Flypitch
-      proof into the independent Challenge calculus; the isolated trust-zero
-      endpoint compiles at the exact Challenge type with precisely the three
-      permitted axioms.
+      proof into the internal literal basis, then replace every finite-basis
+      axiom leaf by its derivation from standard NF. The public endpoint
+      compiles at the exact Challenge type and its axiom audit reports precisely
+      the three permitted axioms.
 - [x] Add standalone `Solution.lean` with the same public declaration name and
-      exact type, no Challenge import, and a 745-line declaration prefix that
+      exact type, no Challenge import, and a 793-line declaration prefix that
       is text-identical to the Challenge through `SourceWPPFOL`.
 
 ## 5. Trust and proof checks
 
-- [x] Compile the packaged public Solution theorem at trust zero; it reports
-      only `propext`, `Classical.choice`, and `Quot.sound`.
+- [x] Compile the packaged public Solution theorem and audit its dependencies;
+      it reports only `propext`, `Classical.choice`, and `Quot.sound`.
 - [x] Confirm the production Solution and selected dependency closure contain
       no `sorry`, `sorryAx`, custom `axiom`, or opaque proof assumption.
-- [x] Confirm `#print axioms NFNotWPP.hailperinNF_proves_not_WPP` reports exactly
+- [x] Confirm `#print axioms NFNotWPP.NF_proves_not_WPP` reports exactly
       `propext`, `Classical.choice`, and `Quot.sound`.
 - [ ] Run Comparator and confirm exact Challenge/Solution statement identity.
 - [ ] Export the public proof and have Lean's kernel accept it at trust zero.
 - [ ] Replay the exported proof independently with NanoDa.
 - [~] Retain tool revisions, commands, logs, elapsed time, and artifact hashes;
-      empty-origin diagnosed/resumed build evidence and local
-      Challenge/Solution trust evidence are complete, while the uninterrupted
-      final-configuration Linux cold build and Comparator/export/NanoDa records
-      remain outstanding.
+      exact migrated Challenge/Solution metrics, hashes, local compilation, and
+      axiom evidence are recorded, as is the historical empty-origin replay
+      closure build. The uninterrupted final-configuration Linux cold build and
+      Comparator/export/NanoDa records remain outstanding.
 
 ## 6. Runtime and repository limits
 
-- [x] Measure and stabilize the source build with bounded Lake scheduling: the
-      empty-origin diagnosed/resumed effort ultimately completed, warm
-      Challenge+Solution took 24.5 s, and a warm default build took 3.9 s. The
-      source-build observations above are not a clean benchmark because no raw
-      timing log was retained.
+- [~] Measure and stabilize the source build with bounded Lake scheduling. The
+      historical empty-origin translated-replay closure completed. For the
+      migrated final files, warm Challenge compilation took 14.52 s wall time
+      (Lake reported 11 s), and warm Solution compilation took 23.30 s wall
+      time (Lake reported 18 s). Warm `NFStandard` took 10.814 s and the warm
+      default build took 3.918 s. No uninterrupted final cold-build timing is
+      claimed.
 - [x] Reproduce C18 with the portable source-only translator and confirm that
       all five emitted `.lean` files are byte-identical to the historical and
       packaged copies. The translator itself does not invoke Lean.
@@ -118,13 +129,14 @@ requires a human decision.
       and fit the ordinary Palomar allowance or arrange a larger worker.
 - [ ] If measurements require it, coalesce generated modules without changing
       declarations or proof terms, then repeat every trust check.
-- [x] The copied proof payload is 97,305,006 bytes. The complete intended Git
-      snapshot, including the paper and research archive, has 1,868 files and
-      373,629,988 bytes (356.321 MiB), below the 500 MiB repository cap. Its
-      largest file is the 27,647,028-byte MM0 `.mmu` artifact.
-- [x] Scan the staged tree for Git LFS pointers, submodules, forbidden compiled
-      artifacts, secrets, credentials, and operative machine-local paths; no
-      unexpected findings remain.
+- [x] The copied historical C18 proof payload is 97,305,006 bytes. The final
+      intended source snapshot contains 1,884 files and 373,793,823 bytes
+      (356.48 MiB), below the 500-MiB repository cap; its largest file is the
+      27,647,028-byte retained MM0 `.mmu`.
+- [x] The final intended source-snapshot scan found no Git LFS pointer,
+      submodule, Git symlink, forbidden compiled Lean/native artifact,
+      cache/build directory, secret, credential, or operative machine-local
+      path. Protected CI must repeat release checks on the immutable commit.
 
 ## 7. Metadata and editorial review
 
@@ -141,8 +153,10 @@ requires a human decision.
       Challenge statement hole as Palomar directs.
 - [x] Supply an accurate, non-promotional human/agent automation and cost
       disclosure, explicitly claiming no independent human peer review.
-- [ ] Have a human audit the eleven Challenge formulas and WPP target against
-      Hailperin/Metamath source syntax.
+- [ ] Have a human audit the public standard-NF definition (extensionality,
+      stratification, and the full comprehension schema), the internal eleven
+      Hailperin bridge formulas, and the WPP target against the intended
+      NF/Hailperin/Metamath syntax.
 - [ ] Run the current Palomar metadata validator with no warnings or sentinels.
 
 ## 8. Publication and submission (never implicit)

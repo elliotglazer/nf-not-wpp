@@ -1,6 +1,6 @@
 name = "NFNotWPP"
 version = "0.1.0"
-defaultTargets = ["NFNotWPPProof", "Challenge", "Solution"]
+defaultTargets = ["NFNotWPPProof", "NFStandard", "Challenge", "Solution"]
 
 # The proof was accepted with this exact Mathlib revision. Keep every Git
 # dependency immutable; regenerate and commit lake-manifest.json only after a
@@ -1566,6 +1566,15 @@ roots = [
   "NominalWPPReplayChunk009StructuralPart038"
 ]
 moreLeanArgs = ["--threads=1", "-DmaxHeartbeats=5000000", "-DmaxRecDepth=30000", "-Dlinter.constructorNameAsVariable=false"]
+
+# Public standard-NF equivalence and final `NF ⊢ ¬WPP` endpoints.  Imports are
+# followed from this umbrella root, so this target does not enumerate or rebuild
+# the full generated replay closure as additional roots.
+[[lean_lib]]
+name = "NFStandard"
+srcDir = "Proof"
+roots = ["NFStandard"]
+moreLeanArgs = ["--threads=1", "-DmaxHeartbeats=5000000", "-DmaxRecDepth=30000"]
 
 [[lean_lib]]
 name = "Challenge"
