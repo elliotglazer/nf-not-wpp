@@ -51,13 +51,17 @@ if [ "$#" -eq 0 ]; then
   exit 2
 fi
 
-# Isolate the two measured memory peaks before Lake schedules the full Solution
-# graph.  Both use the same sandbox and must succeed before the original build.
+# Isolate each measured or dependency-graph boundary before Lake schedules the
+# full Solution graph.  Every target uses the same sandbox and must succeed
+# before Comparator's original build command is executed unchanged.
 if [ "$#" -eq 3 ] && [ "$1" = lake ] && [ "$2" = build ] && [ "$3" = Solution ]; then
   for prebuild_target in \
     +WPPCompactSyntaxFVExplicitPart001 \
     +NFStandard.HailperinAlgebra \
-    +NFStandard.Equivalence; do
+    +NFStandard.Equivalence \
+    +NFStandard.NotWPPLiteralReplay \
+    +NFStandard.NotWPP \
+    +NFStandard.NotWPPPrfBridge; do
     "$landrun_binary" "${landrun_options[@]}" -- \
       lake build "$prebuild_target"
   done

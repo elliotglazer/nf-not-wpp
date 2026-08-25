@@ -1,7 +1,7 @@
 import Mathlib.Data.Finset.Basic
 import Mathlib.Data.Finset.Lattice.Fold
 import Mathlib.Data.Set.Basic
-import NFStandard.NotWPP
+import NFStandard.NotWPPPrfBridge
 
 /-!
 # Proved solution: standard NF derives the negation of WPP

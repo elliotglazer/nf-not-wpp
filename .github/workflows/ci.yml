@@ -126,6 +126,7 @@ jobs:
     timeout-minutes: 330
     env:
       LEAN_NUM_THREADS: "1"
+      PALOMAR_SWAP_GIB: "12"
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -137,5 +138,34 @@ jobs:
         with:
           go-version: "1.24.0"
           cache: false
+      - name: Provision virtual memory for the measured Lean peak
+        shell: bash
+        run: |
+          set -euo pipefail
+          swap_dir="$RUNNER_TEMP"
+          available_kib=$(df -Pk "$swap_dir" | awk 'NR == 2 { print $4 }')
+          if [ -d /mnt ]; then
+            mnt_available_kib=$(df -Pk /mnt | awk 'NR == 2 { print $4 }')
+            if [ -n "$mnt_available_kib" ] && [ "$mnt_available_kib" -gt "${available_kib:-0}" ]; then
+              swap_dir=/mnt
+              available_kib=$mnt_available_kib
+            fi
+          fi
+          swap_file="$swap_dir/nf-not-wpp.swap"
+          swap_kib=$((PALOMAR_SWAP_GIB * 1024 * 1024))
+          required_kib=$((swap_kib + 2 * 1024 * 1024))
+          if [ -z "$available_kib" ] || [ "$available_kib" -lt "$required_kib" ]; then
+            echo "error: need ${required_kib} KiB for swap plus build reserve; ${available_kib:-unknown} KiB available" >&2
+            exit 1
+          fi
+          if [ -r /sys/fs/cgroup/memory.swap.max ] && [ "$(cat /sys/fs/cgroup/memory.swap.max)" = 0 ]; then
+            echo "error: this runner's cgroup forbids swap" >&2
+            exit 1
+          fi
+          sudo fallocate -l "${PALOMAR_SWAP_GIB}G" "$swap_file"
+          sudo chmod 600 "$swap_file"
+          sudo mkswap "$swap_file"
+          sudo swapon "$swap_file"
+          swapon --show
       - name: Run pinned Comparator toolchain
         run: ./scripts/verify-comparator.sh

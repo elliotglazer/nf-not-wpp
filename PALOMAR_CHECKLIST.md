@@ -86,24 +86,22 @@ requires a human decision.
       build job checks `Challenge`, and the serialized 330-minute Comparator
       job uses `LEAN_NUM_THREADS=1`. For Comparator's exact `lake build
       Solution` command, its wrapper sequentially prebuilds the opening WPP FV
-      shard, `NFStandard.HailperinAlgebra`, and `NFStandard.Equivalence` inside
-      byte-identical Landrun sandboxes sharing the writable `.lake`. Any failure
-      aborts before the original unchanged command, while every other command
-      is passed through once. Regression tests cover the ordering and
-      fail-closed boundary.
-- [~] Record final-configuration Linux attempts accurately. Two earlier runs
-      were terminated while processing the former monolith. Runs #7
-      (`a2d512e`) and #8 (`8543027`) each completed all five non-Comparator
-      jobs. Run #7 completed Part001 before the unchanged Solution exited 143
-      after `NFStandard.HailperinUnitUnion`, with
-      `NFStandard.HailperinAlgebra` lacking a completion line. Run #8 completed
-      both configured prebuilds before the unchanged Solution exited 143 after
-      `NFStandard.HailperinUnitUnion` and
-      `NFStandard.HailperinPresentationBridge`, with
-      `NFStandard.Equivalence` lacking a completion line. These are
-      runner-level terminations, not reported Lean proof errors or evidence of
-      a settled root cause; no successful cold build or Comparator result is
-      inferred.
+      shard, `NFStandard.HailperinAlgebra`, `NFStandard.Equivalence`, the
+      semantic NotWPP replay, the thin headline theorem, and the direct proof
+      bridge inside byte-identical Landrun sandboxes sharing the writable
+      `.lake`. Any failure aborts before the original unchanged command, while
+      every other command is passed through once. Regression tests cover the
+      ordering and fail-closed boundary. The job provisions a checked 12 GiB
+      swap file for the measured single-process peak and records swap use.
+- [~] Record final-configuration Linux attempts accurately. Runs #7
+      (`a2d512e`), #8 (`8543027`), and #9 (`23114e0`) completed all five
+      non-Comparator jobs. Run #9 completed all three configured prebuilds;
+      `[1080/1085] Built NFStandard.Consequences` was the final completion
+      before its successor `NFStandard.NotWPP` was killed. Telemetry recorded
+      one Lean process at 15,171,700 KiB RSS with 231,548 KiB host memory
+      available, followed by cgroup `oom_kill` changing from zero to one. The
+      cause is therefore a single-process OOM, not a Lean proof/type error.
+      No successful cold build or Comparator result is inferred.
 - [ ] Run an uninterrupted final-configuration cold source-only build on Linux
       comparable to a Palomar worker using the committed shard layout.
 - [ ] Optionally test a stable-toolchain upgrade; it is not required for the
@@ -180,7 +178,7 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      edits: 1,898 files and 373,926,643 bytes (356.60 MiB). Its largest file
+      edits: 1,900 files and 373,931,848 bytes (356.61 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on
       the immutable commit.

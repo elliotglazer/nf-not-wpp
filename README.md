@@ -42,7 +42,9 @@ identified below.
 > Challenge/Solution proof, and the C18 source closure are present. The public
 > theorem passes a local trust-zero audit with exactly the three permitted
 > axioms. An empty-origin, diagnosed/resumed source build and all local Lake
-> targets pass;
+> targets passed before the final NotWPP branch split; the split's import,
+> shell, and wrapper checks pass, while its protected Linux elaboration is
+> pending;
 > an uninterrupted final-configuration cold build and the Linux-only
 > Comparator/export/NanoDa gate remain pending. Authorship, maintenance
 > responsibility, Apache-2.0 licensing, and public upload are confirmed;
@@ -235,23 +237,27 @@ roots are in the same isolated target so their non-semantic generated
 diagnostics are suppressed too. The target changes no proof-checking option.
 
 For Comparator's exact `lake build Solution` command, the Landrun wrapper first
-builds `+WPPCompactSyntaxFVExplicitPart001`,
-`+NFStandard.HailperinAlgebra`, and `+NFStandard.Equivalence`, in order. Each
-isolated build uses the same Landrun binary, restrictions, environment, and
-writable `.lake` directory as the full build, and each must succeed before the
-wrapper executes Comparator's original command unchanged. Other commands
-remain single-pass. This isolates the three measured phases without moving any
-build outside Comparator's sandbox or changing its trust checks.
+builds, in order, `+WPPCompactSyntaxFVExplicitPart001`,
+`+NFStandard.HailperinAlgebra`, `+NFStandard.Equivalence`,
+`+NFStandard.NotWPPLiteralReplay`, `+NFStandard.NotWPP`, and
+`+NFStandard.NotWPPPrfBridge`. Each isolated build uses the same Landrun
+binary, restrictions, environment, and writable `.lake` directory as the full
+build, and each must succeed before the wrapper executes Comparator's original
+command unchanged. Other commands remain single-pass. The final result is now
+split into a semantic replay/equivalence branch and the direct syntactic proof
+bridge; `Solution` imports only the latter. This keeps every proof step inside
+Comparator's sandbox and changes neither its command nor its trust checks.
 
-CI runs #7 (`a2d512e`) and #8 (`8543027`) both left all five non-Comparator
-jobs green. Run #7 completed the Part001 prebuild, then the unchanged Solution
-build exited 143 after `NFStandard.HailperinUnitUnion` while
-`NFStandard.HailperinAlgebra` lacked a completion line. Run #8 completed both
-then-isolated prebuilds; its unchanged Solution build exited 143 after
-`NFStandard.HailperinUnitUnion` and `NFStandard.HailperinPresentationBridge`,
-while `NFStandard.Equivalence` lacked a completion line. These were runner-level
-terminations, not reported Lean proof errors, and do not establish a root
-cause. The third prebuild is the scoped response to the newly measured boundary.
+CI runs #7 (`a2d512e`), #8 (`8543027`), and #9 (`23114e0`) left all five
+non-Comparator jobs green. Run #9 completed all three then-configured
+prebuilds. During the unchanged Solution build, `[1080/1085] Built
+NFStandard.Consequences` was the final completed job; Lake's dependency graph
+identifies `NFStandard.NotWPP` as its active successor. The final steady sample
+recorded one Lean process at 15,171,700 KiB RSS with 231,548 KiB host memory
+available, and the cgroup `oom_kill` counter then increased from zero to one.
+This establishes a single-process out-of-memory kill rather than a Lean proof
+or type error. The protected job now provisions a checked 12 GiB swap file and
+records host and cgroup swap use alongside the existing telemetry.
 
 The setup/Challenge stages, public Flypitch build, standalone Solution, exact
 prefix comparison, trust-zero proof check, final axiom audit, standard-NF

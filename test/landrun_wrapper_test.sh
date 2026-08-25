@@ -73,8 +73,8 @@ $wrapper_argv"
   fi
 }
 
-# The Solution build isolates both measured peaks, then repeats the identical
-# sandbox vector for Comparator's untouched command.
+# The Solution build isolates every configured boundary, then repeats the
+# identical sandbox vector for Comparator's untouched command.
 assert_passthrough "Solution peaks are isolated before Comparator's build" \
   '--best-effort
 --ro
@@ -154,12 +154,72 @@ PATH
 --
 lake
 build
++NFStandard.NotWPPLiteralReplay
+---
+--best-effort
+--ro
+/
+--rw
+/dev
+-ldd
+-add-exec
+--env
+PATH
+--ro
+/workspace
+--rwx
+/workspace/.lake
+--rox
+/toolchain
+--
+lake
+build
++NFStandard.NotWPP
+---
+--best-effort
+--ro
+/
+--rw
+/dev
+-ldd
+-add-exec
+--env
+PATH
+--ro
+/workspace
+--rwx
+/workspace/.lake
+--rox
+/toolchain
+--
+lake
+build
++NFStandard.NotWPPPrfBridge
+---
+--best-effort
+--ro
+/
+--rw
+/dev
+-ldd
+-add-exec
+--env
+PATH
+--ro
+/workspace
+--rwx
+/workspace/.lake
+--rox
+/toolchain
+--
+lake
+build
 Solution' \
   --best-effort --ro / --rw /dev -ldd -add-exec --env PATH \
   --ro /workspace --rwx /workspace/.lake --rox /toolchain \
   lake build Solution
 
-# Failure at either isolated build prevents every later invocation.
+# Failure at any isolated build prevents every later invocation.
 assert_prebuild_failure() {
   local target=$1 expected=$2
   export PALOMAR_TEST_FAIL_TARGET=$target
@@ -208,6 +268,96 @@ build
 lake
 build
 +NFStandard.Equivalence'
+
+assert_prebuild_failure +NFStandard.NotWPPLiteralReplay '--best-effort
+--
+lake
+build
++WPPCompactSyntaxFVExplicitPart001
+---
+--best-effort
+--
+lake
+build
++NFStandard.HailperinAlgebra
+---
+--best-effort
+--
+lake
+build
++NFStandard.Equivalence
+---
+--best-effort
+--
+lake
+build
++NFStandard.NotWPPLiteralReplay'
+
+assert_prebuild_failure +NFStandard.NotWPP '--best-effort
+--
+lake
+build
++WPPCompactSyntaxFVExplicitPart001
+---
+--best-effort
+--
+lake
+build
++NFStandard.HailperinAlgebra
+---
+--best-effort
+--
+lake
+build
++NFStandard.Equivalence
+---
+--best-effort
+--
+lake
+build
++NFStandard.NotWPPLiteralReplay
+---
+--best-effort
+--
+lake
+build
++NFStandard.NotWPP'
+
+assert_prebuild_failure +NFStandard.NotWPPPrfBridge '--best-effort
+--
+lake
+build
++WPPCompactSyntaxFVExplicitPart001
+---
+--best-effort
+--
+lake
+build
++NFStandard.HailperinAlgebra
+---
+--best-effort
+--
+lake
+build
++NFStandard.Equivalence
+---
+--best-effort
+--
+lake
+build
++NFStandard.NotWPPLiteralReplay
+---
+--best-effort
+--
+lake
+build
++NFStandard.NotWPP
+---
+--best-effort
+--
+lake
+build
++NFStandard.NotWPPPrfBridge'
 
 # Commands other than the exact Solution build remain single-pass.
 assert_passthrough "Challenge remains a single sandbox invocation" \

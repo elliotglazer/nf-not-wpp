@@ -97,9 +97,13 @@ telemetry_snapshot() {
   local phase=${1:-interval}
   local timestamp=na
   local mem_available_kib=na
+  local swap_total_kib=na
+  local swap_free_kib=na
   local cgroup_dir=
   local cgroup_memory_current=na
   local cgroup_memory_max=na
+  local cgroup_swap_current=na
+  local cgroup_swap_max=na
   local cgroup_oom=na
   local cgroup_oom_kill=na
   local repository_available_kib=na
@@ -122,13 +126,26 @@ telemetry_snapshot() {
 
   if [ -r /proc/meminfo ]; then
     while read -r key value _; do
-      if [ "$key" = "MemAvailable:" ]; then
-        case "$value" in
-          ''|*[!0-9]*) ;;
-          *) mem_available_kib=$value ;;
-        esac
-        break
-      fi
+      case "$key" in
+        MemAvailable:)
+          case "$value" in
+            ''|*[!0-9]*) ;;
+            *) mem_available_kib=$value ;;
+          esac
+          ;;
+        SwapTotal:)
+          case "$value" in
+            ''|*[!0-9]*) ;;
+            *) swap_total_kib=$value ;;
+          esac
+          ;;
+        SwapFree:)
+          case "$value" in
+            ''|*[!0-9]*) ;;
+            *) swap_free_kib=$value ;;
+          esac
+          ;;
+      esac
     done < /proc/meminfo 2>/dev/null || true
   fi
 
@@ -143,6 +160,8 @@ telemetry_snapshot() {
   if [ -n "$cgroup_dir" ]; then
     cgroup_memory_current=$(telemetry_file_value "$cgroup_dir/memory.current")
     cgroup_memory_max=$(telemetry_file_value "$cgroup_dir/memory.max")
+    cgroup_swap_current=$(telemetry_file_value "$cgroup_dir/memory.swap.current")
+    cgroup_swap_max=$(telemetry_file_value "$cgroup_dir/memory.swap.max")
     if [ -r "$cgroup_dir/memory.events" ]; then
       while read -r key value _; do
         case "$key" in
@@ -194,7 +213,7 @@ telemetry_snapshot() {
   done
 
   printf '%s\n' \
-    "PALOMAR_RESOURCE timestamp=$timestamp phase=$phase mem_available_kib=$mem_available_kib cgroup_memory_current_bytes=$cgroup_memory_current cgroup_memory_max_bytes=$cgroup_memory_max cgroup_oom=$cgroup_oom cgroup_oom_kill=$cgroup_oom_kill repository_available_kib=$repository_available_kib lean_processes=$lean_process_count lean_rss_kib=$lean_rss_kib top_process=$top_process_name top_rss_kib=$top_process_rss_kib"
+    "PALOMAR_RESOURCE timestamp=$timestamp phase=$phase mem_available_kib=$mem_available_kib swap_total_kib=$swap_total_kib swap_free_kib=$swap_free_kib cgroup_memory_current_bytes=$cgroup_memory_current cgroup_memory_max_bytes=$cgroup_memory_max cgroup_swap_current_bytes=$cgroup_swap_current cgroup_swap_max_bytes=$cgroup_swap_max cgroup_oom=$cgroup_oom cgroup_oom_kill=$cgroup_oom_kill repository_available_kib=$repository_available_kib lean_processes=$lean_process_count lean_rss_kib=$lean_rss_kib top_process=$top_process_name top_rss_kib=$top_process_rss_kib"
 }
 
 telemetry_monitor() {
