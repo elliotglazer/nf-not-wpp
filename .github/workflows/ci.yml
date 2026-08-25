@@ -88,8 +88,12 @@ jobs:
           python-version: "3.12"
       - name: Rehash every retained archive file
         run: python3 scripts/verify-archive.py
+      - name: Rehash the packaged translated-replay source closure
+        run: python3 scripts/verify-source-closure.py
       - name: Reproduce the final translated C18 source
         run: python3 translation/reproduce_c18.py "$RUNNER_TEMP/c18-replay"
+      - name: Reproduce the memory-bounded WPP FV packaging
+        run: python3 translation/reproduce_wpp_fv_split.py
 
   sandbox:
     name: Check the Landrun wrapper's flag policy
@@ -102,9 +106,9 @@ jobs:
         run: ./test/landrun_wrapper_test.sh
 
   build:
-    name: Build with Lean
+    name: Build Challenge with Lean
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 30
     env:
       LEAN_NUM_THREADS: "1"
     steps:
@@ -114,6 +118,7 @@ jobs:
       - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
           build: true
+          build-args: "Challenge"
 
   comparator:
     name: Check statement against solution

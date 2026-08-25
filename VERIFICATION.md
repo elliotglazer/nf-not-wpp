@@ -34,14 +34,23 @@ They were isolated in `NFNotWPPLinterHeavy` with the single override
 `-Dlinter.constructorNameAsVariable=false`.
 
 The first final-configuration Linux CI run then exposed one additional
-non-semantic output issue: `WPPCompactSyntaxFVExplicit` emitted over fifteen
-thousand lines of unused-simp-argument and generated-tactic diagnostics before
-the standard runner sent `SIGTERM`. It is now isolated in the same target with
-the five linter settings already embedded throughout the generated replay
-modules,
-and both large Linux jobs serialize Lake at `LEAN_NUM_THREADS=1`. None of these
-settings changes declarations, generated source bytes, proof terms, or kernel
-checking.
+non-semantic output issue: the monolithic `WPPCompactSyntaxFVExplicit` emitted
+over fifteen thousand lines of unused-simp-argument and generated-tactic
+diagnostics before the standard runner sent `SIGTERM`. Linter suppression and
+`LEAN_NUM_THREADS=1` removed that output but a second run again received
+`SIGTERM` during the same monolith's silent elaboration peak, after already
+building the standard-NF equivalence layer.
+
+The exact 86,349-byte monolith is now frozen under `translation/reference/`
+and deterministically packaged as ten chained modules plus its original import
+facade. The splitter verifies the monolith and FV-manifest hashes, all 143
+declaration names in manifest order, all 181 internal references as backward
+dependencies, every generated shard hash, and byte equality with `Proof/`.
+The first three expensive shards compile locally in 19 s, 15 s, and 14 s; the
+remaining shards take 14--29 s each. The complete ten-shard facade builds
+successfully. This changes source packaging only: theorem bodies, fully
+qualified declaration names, proof-checker settings, and kernel checking are
+unchanged.
 
 The resumed build compiled all 1,527 source modules in the translated C18
 replay closure successfully. It predates the added `NFStandard` layer and the
@@ -105,6 +114,16 @@ A complete post-fix replay again emitted all five files byte-identically; its
 path-specific `resource.json` SHA-256 was
 `089989E0F16840B41596CF54783ACDD2B456F0CA1199370B826DCD116FDB79FA`.
 
+The separate memory-bounded packaging check
+
+```text
+python -B translation/reproduce_wpp_fv_split.py
+```
+
+also passes. It reproduces all ten WPP FV shards and their facade from the
+frozen original without invoking Lean. The original's SHA-256 is
+`E09FA6176086DFFA998C20DEF8A782252B9D50A0873181A32E1E2C887A6E65F4`.
+
 `translation/archive/compiled_lean_evidence.json` replaces no proof source. It
 records the paths, sizes, SHA-256 values, and hash-pinned JSON authorities for
 77 historical alpha certificates and two profile certificates (21,417,512
@@ -118,22 +137,25 @@ to the independent kernel/Comparator checks.
 
 ## Source and repository integrity
 
-- All 1,527 translated-replay closure-manifest rows exist in `Proof/` and match
-  their recorded SHA-256 values.
-- That historical C18 proof payload is 97,305,006 bytes and 699,761 physical
-  source lines. These figures do not include the later `NFStandard` layer.
-- The exact 12-page manuscript is present in TeX and PDF; the PDF is 357,483
+- The historical source extraction selected 1,527 translated-replay modules.
+  Of those, 1,526 remain byte-identical; the frozen WPP FV monolith is packaged
+  as ten shards plus a facade. All 1,537 current closure-manifest rows exist in
+  `Proof/` and match their recorded SHA-256 values.
+- The historical C18 proof payload was 97,305,006 bytes and 699,761 physical
+  source lines. The current memory-bounded packaging is 97,308,251 bytes.
+  These figures do not include the later `NFStandard` layer.
+- The exact authorless 12-page manuscript is present in TeX and PDF; the PDF is 355,891
   bytes with SHA-256
-  `9B3BD8EB7AE23AD9C55029C262DE3DADADF9DA329D55E42C597C0A95860571B3`.
+  `6318E3E73785AEF9B935F4353DBEB14F19EFD1667B4A6BB13C99018EE14ADC6D`.
 - The accepted intermediate archive contains every material Metamath state,
   the complete 44-file successful MM0 run (including all 37 logs), and 63
   retained reconstruction payload files.
 - `scripts/verify-archive.py` rehashed 306 retained files totalling
-  265,762,469 bytes with zero missing, extra, or mismatched entries.
+  265,760,801 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
-  `0ACA7BBB08D4D5A62AC61DFAF03C1EDA84AD7463A89E3F968531E89B81FFE3A8`.
-- The final intended source snapshot contains 1,884 files and 373,793,823
-  bytes (356.48 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
+  `B295B3BCA787DAA8B7D5E15845C9F72405324C40B5538A104A013509AD751B62`.
+- The final intended source snapshot contains 1,898 files and 373,914,668
+  bytes (356.59 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
   the snapshot remains below Palomar's 500-MiB repository limit.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and
   full lowercase 40-character revisions.
@@ -162,7 +184,7 @@ Comparator, `lean4export`, Lean-kernel replay, and NanoDa require Linux because
 the pinned Landrun sandbox uses Landlock. This Windows host has neither a WSL
 distribution nor Docker, Rust, Go, or a native linker, so the exact protected
 pipeline is retained in `.github/workflows/ci.yml` and
-`scripts/verify-comparator.sh` for the first public Linux run.
+`scripts/verify-comparator.sh` for the fresh public Linux rerun.
 
 Elliot Glazer has confirmed the formalization author list,
 responsible-maintainer list, Apache-2.0 repository licence, and public upload

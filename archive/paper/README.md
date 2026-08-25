@@ -1,14 +1,15 @@
 # Informal paper
 
-This is the exact informal manuscript tracked by the final formalization:
+This is the exact authorless informal manuscript tracked by the final
+formalization:
 
-> Elliot Glazer, “New Foundations Refutes the Weak Partition Principle,”
-> August 2026, unpublished manuscript, 12 pages.
+> “New Foundations Refutes the Weak Partition Principle,” August 2026,
+> unpublished manuscript, 12 pages.
 
 | File | Bytes | SHA-256 |
 | --- | ---: | --- |
-| `NF_Refutes_WPP_Unconditional_Proof.tex` | 35,912 | `935E8E2CC8ADA184EFE37A4D839772EA5DF923D485A6CAE2336BC85A5408F68C` |
-| `NF_Refutes_WPP_Unconditional_Proof.pdf` | 357,483 | `9B3BD8EB7AE23AD9C55029C262DE3DADADF9DA329D55E42C597C0A95860571B3` |
+| `NF_Refutes_WPP_Unconditional_Proof.tex` | 35,886 | `E1738BDC1F07E95230AC3E8B69E0570A1F85E49EFBEEEFC18024E73DEAE06510` |
+| `NF_Refutes_WPP_Unconditional_Proof.pdf` | 355,891 | `6318E3E73785AEF9B935F4353DBEB14F19EFD1667B4A6BB13C99018EE14ADC6D` |
 | `FINITE_TST_METAMATH_CONTRACT_LEDGER_2026-08-20.md` | 24,725 | `73FF1F6C4A9E8B71737CEB8855F5BBA197FA4C5B5E719F0E7B0292CB2D43A1E0` |
 
 The ledger is the decisive provenance record: it names this TeX source and
@@ -21,8 +22,8 @@ duplicated here. The earlier manuscript “Specker Bounds and Weak Choice in
 New Foundations” contributed exposition but was superseded and is not the
 paper governed by the final contract ledger.
 
-The repository's Apache-2.0 licence applies to this Elliot Glazer-authored
-manuscript. Historical papers used for context are not bundled:
+The repository's Apache-2.0 licence applies to this manuscript. Historical
+papers used for context are not bundled:
 
 - [Theodore Hailperin, “A set of axioms for logic”](https://doi.org/10.2307/2267307)
 - [Ernst P. Specker, “The Axiom of Choice in Quine's New Foundations for Mathematical Logic”](https://doi.org/10.1073/pnas.39.9.972)

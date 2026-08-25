@@ -111,19 +111,24 @@ The proof root is `NominalWPPReplayChunk018Compact001`; its accepted endpoint is
 dependency audit for the accepted translated replay found:
 
 - 4,706 transitive modules in the complete search closure;
-- 1,527 translated-replay source modules copied into `Proof/` before the
+- 1,527 historical translated-replay source modules selected before the
   handwritten `NFStandard` equivalence layer was added;
-- 97,305,006 source bytes and 699,761 physical source lines;
+- 97,305,006 historical source bytes and 699,761 physical source lines;
 - no missing or ambiguous imports, no source-hash mismatch, and no mismatch
   against the accepted ordered source search; and
 - eleven module-name collisions, all resolved by the accepted receipt's
   deterministic source precedence (four byte-identical, seven divergent).
 
-An independent post-copy hash pass checked all 1,527 files with zero
-mismatches. Only `.lean` sources were selected for `Proof/`; generated Lean
-artifacts and local caches are not part of that source payload. The sanitized
-repository-relative closure inventory and its hashes are retained under
-`provenance/`.
+An independent post-copy hash pass checked all 1,527 historical files with
+zero mismatches. To bound one Lean process's peak memory, the exact generated
+`WPPCompactSyntaxFVExplicit` monolith is now preserved under
+`translation/reference/` and deterministically packaged as ten chained shards
+plus its original import facade. All 143 theorem bodies, fully qualified names,
+and dependency order are retained. The other 1,526 files remain byte-identical;
+the current packaged closure therefore has 1,537 modules and 97,308,251 bytes.
+`scripts/verify-source-closure.py` rehashes that full inventory, while the
+splitter independently checks the frozen monolith and manifest. Generated Lean
+artifacts and local caches are not part of the source payload.
 
 ## Immutable inputs
 
@@ -163,7 +168,7 @@ those labels.
 The repository includes the complete successful-path material requested for
 independent study:
 
-- [`archive/paper/`](archive/paper/README.md) contains Elliot Glazer's exact
+- [`archive/paper/`](archive/paper/README.md) contains the exact authorless
   12-page informal manuscript in TeX and PDF, plus the contract ledger that
   maps its proof blocks to `wppfiniteblocknotwppndv`;
 - [`archive/intermediates/`](archive/intermediates/README.md) contains every
@@ -172,8 +177,9 @@ independent study:
 - [`archive/reconstruction/`](archive/reconstruction/README.md) contains the
   retained repair builders, auditors, proof fragments, and MM0 runners;
 - [`translation/`](translation/README.md) contains the hash-pinned historical
-  translator stack, its frozen profiles and textual evidence, and the portable
-  one-command C18 reproducer; and
+  translator stack, its frozen profiles and textual evidence, the portable
+  one-command C18 reproducer, and the deterministic WPP FV source packager;
+  and
 - [`archive/MANIFEST.sha256`](archive/MANIFEST.sha256) content-addresses the
   complete archive. `scripts/verify-archive.py` verifies every retained byte.
 
@@ -186,12 +192,14 @@ With CPython 3.12, the final translator chunk can be regenerated without Lean:
 
 ```text
 python translation/reproduce_c18.py build/c18-replay
+python translation/reproduce_wpp_fv_split.py
 ```
 
-The command replays the 4,321-theorem Metamath closure, emits C18, and checks
-all five generated Lean files byte-for-byte against both the historical output
-and `Proof/`. It uses textual, hash-pinned kernel receipts rather than bundled
-Lean build products, so the submitted tree contains no `.olean` files.
+The first command replays the 4,321-theorem Metamath closure, emits C18, and
+checks all five generated Lean files byte-for-byte against both the historical
+output and `Proof/`. The second byte-checks the memory-bounded packaging of the
+generated FV support monolith. Both use source/textual inputs rather than
+bundled Lean build products, so the submitted tree contains no `.olean` files.
 
 ## Reproduction and release gates
 
@@ -212,16 +220,18 @@ Lake compile one module at a time; the proof target also passes `--threads=1`
 to each Lean child. This changes scheduling only, not the proof or trust
 boundary.
 
-Three generated modules are isolated in `NFNotWPPLinterHeavy`. After
+Three generated module families are isolated in `NFNotWPPLinterHeavy`. After
 successfully elaborating their declarations,
 `NominalWPPReplayChunk009StructuralPart030` and
 `NominalWPPReplayChunk009StructuralPart038` exhaust the constructor-name style
-linter's private heartbeat budget. `WPPCompactSyntaxFVExplicit` otherwise
-emits over fifteen thousand lines of generated unused-tactic and simp-argument
-diagnostics. The isolated target disables only these non-semantic linters,
-using the same diagnostic settings already embedded in the other generated
-replay modules. Generated source bytes and all proof-checking options remain
-unchanged.
+linter's private heartbeat budget. The original monolithic
+`WPPCompactSyntaxFVExplicit` otherwise emits over fifteen thousand lines of
+generated unused-tactic and simp-argument diagnostics and creates the largest
+single-process elaboration peak. Its ten deterministic chained shards retain
+the exact theorem bodies and public declaration names while bounding that
+peak. The isolated target disables only non-semantic linters, using the same
+diagnostic settings already embedded in the other generated replay modules;
+all proof-checking options remain unchanged.
 
 The setup/Challenge stages, public Flypitch build, standalone Solution, exact
 prefix comparison, trust-zero proof check, final axiom audit, standard-NF

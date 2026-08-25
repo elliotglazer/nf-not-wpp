@@ -21,3 +21,4 @@ Proof/** -text -eol
 provenance/** -text -eol
 archive/** -text -eol
 translation/archive/** -text -eol
+translation/reference/** -text -eol

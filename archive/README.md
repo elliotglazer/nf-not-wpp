@@ -13,7 +13,7 @@ copy of that run is omitted because it contains no additional artifact.
 
 ## Contents
 
-- `paper/` contains the exact TeX and rendered PDF of Elliot Glazer's
+- `paper/` contains the exact TeX and rendered PDF of the authorless
   manuscript, plus the ledger connecting its mathematical blocks to the final
   Metamath theorem.
 - `upstream/nf.mm` is the exact CC0 upstream NF database used as the basis.
@@ -88,9 +88,9 @@ translator does not need their binary payloads. No omitted file is needed by
 
 ## Licence boundary
 
-Project-authored paper, proof extensions, scripts, receipts, and documentation
-are covered by the repository's Apache-2.0 grant from Elliot Glazer. Upstream
-`nf.mm` and MM0 are CC0; their notices are preserved. The historical journal
-articles cited by the paper are linked but not redistributed. See
+The project paper, proof extensions, scripts, receipts, and documentation are
+covered by the repository's Apache-2.0 licence. Upstream `nf.mm` and MM0 are
+CC0; their notices are preserved. The historical journal articles cited by the
+paper are linked but not redistributed. See
 [`../translation/THIRD_PARTY.md`](../translation/THIRD_PARTY.md) for the
 complete boundary.

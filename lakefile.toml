@@ -1555,16 +1555,27 @@ globs = [
 # These generated modules require non-semantic linter exceptions after their
 # declarations have elaborated.  The two structural modules exhaust the
 # constructor-name linter's private heartbeat budget.  The explicit WPP
-# free-variable module otherwise emits over fifteen thousand lines of generated
-# tactic diagnostics.  Keeping them in one narrow Lake target leaves all
-# proof-checker settings and generated source bytes unchanged.
+# free-variable proof otherwise emits over fifteen thousand lines of generated
+# tactic diagnostics.  Its ten chained source shards also bound elaborator
+# memory while retaining the original theorem names and theorem bodies.  Keeping
+# them in one narrow Lake target leaves all proof-checker settings unchanged.
 [[lean_lib]]
 name = "NFNotWPPLinterHeavy"
 srcDir = "Proof"
 roots = [
   "NominalWPPReplayChunk009StructuralPart030",
   "NominalWPPReplayChunk009StructuralPart038",
-  "WPPCompactSyntaxFVExplicit"
+  "WPPCompactSyntaxFVExplicit",
+  "WPPCompactSyntaxFVExplicitPart001",
+  "WPPCompactSyntaxFVExplicitPart002",
+  "WPPCompactSyntaxFVExplicitPart003",
+  "WPPCompactSyntaxFVExplicitPart004",
+  "WPPCompactSyntaxFVExplicitPart005",
+  "WPPCompactSyntaxFVExplicitPart006",
+  "WPPCompactSyntaxFVExplicitPart007",
+  "WPPCompactSyntaxFVExplicitPart008",
+  "WPPCompactSyntaxFVExplicitPart009",
+  "WPPCompactSyntaxFVExplicitPart010"
 ]
 moreLeanArgs = [
   "--threads=1",

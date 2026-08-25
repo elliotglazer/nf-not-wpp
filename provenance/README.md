@@ -21,13 +21,18 @@ the compact proof-closure and accepted-input boundary used by the Lean package.
   source consumed by the accepted translator. It is 9,945,323 bytes; SHA-256:
   `868DF831E63E28AA924CC099510CD9E5D3BE18CD8416A20B335F5BBF3B42ED3F`.
 - `c18-source-closure.tsv` is a sanitized, repository-relative inventory of
-  every packaged project module, its selected source hash, selection method,
-  and direct-import count. It has 1,527 data rows; SHA-256:
-  `E9A6EE3268A914A4091A20EEFF4EAE3EB1D26D50F6D016B68CE612784A8A8838`.
+  every packaged translated-replay module, its selected source hash, selection
+  method, and direct-import count. It has 1,537 data rows; SHA-256:
+  `483D3E1E12DD2AFECC1878559ECFE7EE298254B7936025C005D9F8ABFC3D1B21`.
 
-The TSV is derived mechanically from the accepted closure audit after
-removing workstation paths and compiled-artifact fields. A fresh verification
-against `Proof/` rehashed all 1,527 rows with zero missing files or mismatches.
+The historical extraction selected 1,527 modules. Of those, 1,526 remain at
+their original packaged paths and hashes. The remaining generated module is
+preserved byte-for-byte under `translation/reference/` and deterministically
+packaged as ten chained shards plus its original import name, producing the
+current 1,537-row inventory. `scripts/verify-source-closure.py` rehashes every
+row against `Proof/`; `translation/reproduce_wpp_fv_split.py` independently
+checks the frozen monolith, the 143-name manifest, dependency order, shard
+hashes, and packaged bytes.
 
 The exact translator input intentionally preserves 122 inert `Linear replay
 source:` comments containing historical `C:/Users/glaze/...` workstation

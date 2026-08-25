@@ -1,7 +1,7 @@
 # Third-party and licence notices
 
 The root Apache-2.0 licence covers project-authored code, generated proof
-sources, the Elliot Glazer manuscript, repair scripts, receipts, and
+sources, the project manuscript, repair scripts, receipts, and
 documentation. The following boundaries are retained explicitly.
 
 ## Metamath NF database

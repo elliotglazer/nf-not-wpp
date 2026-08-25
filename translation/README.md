@@ -7,6 +7,7 @@ From the repository root, with CPython 3.12:
 
 ```text
 python translation/reproduce_c18.py build/c18-replay
+python translation/reproduce_wpp_fv_split.py
 ```
 
 On Windows, `py -3.12` may be used instead of `python`. The command is
@@ -19,6 +20,16 @@ The final zero-`.olean`, relocated replay took about 111 seconds on the
 development machine. Startup and static profile validation are fast, but the
 translator still replays the 4,321-theorem closure; this is not yet a
 sub-second cached converter.
+
+The second command verifies a small deterministic packaging stage used to
+bound Lean's peak memory. It checks the exact 86,349-byte generated
+`WPPCompactSyntaxFVExplicit` monolith (SHA-256
+`E09FA6176086DFFA998C20DEF8A782252B9D50A0873181A32E1E2C887A6E65F4`),
+checks all 143 declaration names and their source order against the frozen FV
+manifest, proves mechanically that every internal FV reference points
+backward, and reproduces ten chained source shards plus the original import
+facade byte-for-byte against `Proof/`. The declarations remain in the same
+namespace with the same fully qualified names and unchanged theorem bodies.
 
 ## What the translator does
 
@@ -132,6 +143,15 @@ python translation/portable_nominal_mm_translator_v2.py --help
 imports v2 and is also exercised by the repository's `research-archive` CI
 job.
 
+`reproduce_wpp_fv_split.py` is the companion source-packaging verifier. The
+frozen original is
+`reference/WPPCompactSyntaxFVExplicit.monolith.lean`; `--write` regenerates
+the ten packaged parts and facade after all source and manifest checks pass.
+The historical translator and receipts remain untouched because the C18
+emitter consumes the FV lemmas by their unchanged fully qualified names. This
+stage reproduces the accepted monolith's packaging; it does not claim to
+regenerate that earlier support module directly from Metamath.
+
 ## Reuse and limits
 
 The engine is reusable for another interval of this same supported
@@ -147,7 +167,7 @@ Linux is unaffected.
 
 After source regeneration, the independent proof check remains the normal
 Lean workflow: build `NFNotWPPProof`/`Solution`, audit the public theorem's
-axioms, and run Comparator/NanoDa on Linux. The translator is not part of the
-Lean trusted computing base. The textual compiled-evidence ledger documents
-historical acceptance; it is not substituted for the current Lean kernel
-build of the emitted sources.
+axioms, and run Comparator/NanoDa on Linux. Neither the translator nor the
+packaging script is part of the Lean trusted computing base. The textual
+compiled-evidence ledger documents historical acceptance; it is not
+substituted for the current Lean kernel build of the emitted sources.

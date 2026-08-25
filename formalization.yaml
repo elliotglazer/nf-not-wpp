@@ -57,7 +57,6 @@ sources:
       development is a source-based port of that exact formal proof; the public
       theorem additionally transports it to standard NF.
   - title: "New Foundations Refutes the Weak Partition Principle"
-    authors: ["Elliot Glazer"]
     id: "archive/paper/NF_Refutes_WPP_Unconditional_Proof.pdf"
     type: "paper"
     location: "Unpublished manuscript, August 2026, 12 pages"
@@ -67,9 +66,9 @@ sources:
       manuscript-to-Metamath contract ledger. The repository includes both
       its TeX source and rendered PDF; the ledger maps its proof blocks to
       wppfiniteblocknotwppndv. The PDF SHA-256 is
-      9B3BD8EB7AE23AD9C55029C262DE3DADADF9DA329D55E42C597C0A95860571B3.
-      The manuscript is project-authored and covered by the repository's
-      Apache-2.0 licence.
+      6318E3E73785AEF9B935F4353DBEB14F19EFD1667B4A6BB13C99018EE14ADC6D.
+      The manuscript is published without an author attribution and is
+      covered by the repository's Apache-2.0 licence.
     license: "Apache-2.0"
   - title: "The Axiom of Choice in Quine's New Foundations for Mathematical Logic"
     authors: ["Ernst P. Specker"]

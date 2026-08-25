@@ -8,6 +8,8 @@ requires a human decision.
 
 - [x] Confirm the formalization author: Elliot Glazer.
 - [x] Confirm the responsible maintainer: Elliot Glazer.
+- [x] Keep the bundled informal manuscript authorless without changing the
+      formalization attribution or maintenance responsibility above.
 - [x] Choose Apache-2.0 and make its SPDX identity agree with metadata.
 - [x] Add exactly one conventional root `LICENSE` from the pinned Palomar
       starter revision.
@@ -18,10 +20,20 @@ requires a human decision.
 
 ## 2. Exact source extraction
 
-- [x] Compute the accepted C18 endpoint's exact dependency closure: 4,706 total
-      modules, of which 1,527 are project sources.
-- [x] Copy all 1,527 selected `.lean` sources into `Proof/`; independent
-      post-copy SHA-256 validation found zero mismatches.
+- [x] Compute the accepted C18 endpoint's historical dependency closure: 4,706
+      total search modules, of which 1,527 project sources were selected.
+- [x] Independently validate the original copy of all 1,527 selected `.lean`
+      sources with zero post-copy SHA-256 mismatches.
+- [x] Preserve 1,526 of those historical selections byte-for-byte at their
+      original packaged paths, and freeze the remaining
+      `WPPCompactSyntaxFVExplicit` monolith byte-for-byte under
+      `translation/reference/`.
+- [x] Deterministically package that frozen monolith as ten chained shards plus
+      its original-name import facade. The splitter checks all 143 declaration
+      names in order, all 181 internal references as backward dependencies,
+      every output hash, and byte equality with `Proof/`.
+- [x] Rehash the current 1,537-row packaged replay manifest: all 1,537 modules
+      exist and match, for a current replay payload of 97,308,251 bytes.
 - [x] Resolve all eleven module-name collisions by the accepted receipt's
       deterministic source precedence; the ordered-search audit found zero
       mismatches.
@@ -35,12 +47,14 @@ requires a human decision.
 - [x] Add the publication provenance bundle with the full 19-stage
       repair/normalization chain, translator/profile revisions, exact accepted
       Metamath input, sanitized closure manifest, and retained audit hashes.
-- [x] Include the exact informal manuscript in TeX and PDF, its contract
+- [x] Include the exact authorless informal manuscript in TeX and PDF, its contract
       ledger, every material successful-path Metamath state, the complete MM0
       successful run, and the retained reconstruction builders and receipts.
 - [x] Include and document the historical translator stack, frozen profile,
-      textual compiled-evidence contract, and portable CPython 3.12 launcher;
-      an exact C18 replay emits all five packaged Lean files byte-for-byte.
+      textual compiled-evidence contract, and portable CPython 3.12 launcher.
+      An exact C18 replay emits all five historical Lean outputs byte-for-byte;
+      the separate deterministic splitter then reproduces the current WPP FV
+      facade and ten shards.
 - [x] The final intended source-snapshot scan found no forbidden absolute
       dependency, local executable or package override, compiled artifact,
       cache, or experiment output. Historical archive receipts retain
@@ -64,11 +78,19 @@ requires a human decision.
       timestamps span 4 h 02 min with a 49 min 42 s unlogged pause; working
       notes record a 3 h 10 min diagnosis/resume window. This predates
       `NFStandard` and is not final-configuration cold-build evidence.
-- [x] Serialize the final Linux CI jobs at `LEAN_NUM_THREADS=1` and isolate the
-      generated `WPPCompactSyntaxFVExplicit` diagnostic storm without changing
-      its source bytes or proof-checker settings.
+- [x] Compile the complete ten-shard WPP FV facade locally. The split preserves
+      theorem bodies, fully qualified declaration names, dependency order, and
+      proof-checker settings while bounding the largest Lean process.
+- [x] Configure the shard-aware Linux workflow: the research-archive job
+      rehashes all 1,537 replay modules and reproduces the split, the 30-minute
+      build job checks `Challenge`, and the serialized 330-minute Comparator
+      job uses `LEAN_NUM_THREADS=1`.
+- [~] Record two earlier final-configuration Linux attempts accurately: both
+      were terminated while processing the former monolith, so neither is a
+      successful cold build or Comparator result. The shard layout addresses
+      that observed peak, but no CI success is inferred from the local fix.
 - [ ] Run an uninterrupted final-configuration cold source-only build on Linux
-      comparable to a Palomar worker.
+      comparable to a Palomar worker using the committed shard layout.
 - [ ] Optionally test a stable-toolchain upgrade; it is not required for the
       currently supported pinned toolchain.
 
@@ -113,7 +135,8 @@ requires a human decision.
 - [~] Retain tool revisions, commands, logs, elapsed time, and artifact hashes;
       exact migrated Challenge/Solution metrics, hashes, local compilation, and
       axiom evidence are recorded, as is the historical empty-origin replay
-      closure build. The uninterrupted final-configuration Linux cold build and
+      closure build and the local deterministic shard reproduction. The
+      uninterrupted shard-based Linux cold build and
       Comparator/export/NanoDa records remain outstanding.
 
 ## 6. Runtime and repository limits
@@ -123,19 +146,29 @@ requires a human decision.
       migrated final files, warm Challenge compilation took 14.52 s wall time
       (Lake reported 11 s), and warm Solution compilation took 23.30 s wall
       time (Lake reported 18 s). Warm `NFStandard` took 10.814 s and the warm
-      default build took 3.918 s. No uninterrupted final cold-build timing is
-      claimed.
+      default build took 3.918 s. The ten current WPP FV shards compile locally
+      in 14--29 s each and the facade completes, but these are engineering
+      observations rather than an uninterrupted final cold-build timing.
 - [x] Reproduce C18 with the portable source-only translator and confirm that
-      all five emitted `.lean` files are byte-identical to the historical and
-      packaged copies. The translator itself does not invoke Lean.
+      its five emitted `.lean` files are byte-identical to the historical
+      outputs. Separately reproduce the ten current WPP FV shards and facade
+      from the frozen emitted monolith. Neither reproducer invokes Lean.
 - [ ] Measure the full Comparator/export/NanoDa path on representative hardware
       and fit the ordinary Palomar allowance or arrange a larger worker.
-- [ ] If measurements require it, coalesce generated modules without changing
-      declarations or proof terms, then repeat every trust check.
-- [x] The copied historical C18 proof payload is 97,305,006 bytes. The final
-      intended source snapshot contains 1,884 files and 373,793,823 bytes
-      (356.48 MiB), below the 500-MiB repository cap; its largest file is the
-      27,647,028-byte retained MM0 `.mmu`.
+- [x] Resolve the identified single-process peak by deterministically splitting
+      the frozen generated WPP FV monolith, without changing theorem bodies,
+      declaration names, or proof-checker settings; the shards and facade pass
+      local compilation and reproduction. Protected trust checks still remain
+      separate gates in section 5.
+- [x] The historical 1,527-module replay payload is 97,305,006 bytes. With
+      1,526 modules unchanged and the frozen monolith represented by ten shards
+      plus its facade, the current 1,537-module replay payload is 97,308,251
+      bytes.
+- [x] Recompute the complete intended source snapshot after the shard/archive
+      edits: 1,898 files and 373,914,668 bytes (356.59 MiB). Its largest file
+      remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
+      Palomar's 500-MiB repository cap. Protected CI must repeat this census on
+      the immutable commit.
 - [x] The final intended source-snapshot scan found no Git LFS pointer,
       submodule, Git symlink, forbidden compiled Lean/native artifact,
       cache/build directory, secret, credential, or operative machine-local
@@ -150,8 +183,10 @@ requires a human decision.
 - [x] Retain a content-addressed provenance account for every source repair,
       translator/profile revision, proof-only rebuild, and translation
       divergence; final human review remains part of the publication gate.
-- [x] Content-address the paper, all retained intermediates, reconstruction
-      materials, and frozen translator archive in `archive/MANIFEST.sha256`.
+- [x] Content-address the authorless paper, all retained intermediates,
+      reconstruction materials, and frozen translator archive in
+      `archive/MANIFEST.sha256`; do not infer its authorship from Elliot
+      Glazer's confirmed formalization-author and maintainer roles.
 - [x] Report zero Solution/proof sorries, excluding only the one deliberate
       Challenge statement hole as Palomar directs.
 - [x] Supply an accurate, non-promotional human/agent automation and cost
@@ -166,7 +201,9 @@ requires a human decision.
 
 - [x] Obtain explicit user approval to publish the repository.
 - [x] Publish `https://github.com/elliotglazer/nf-not-wpp` without submodules.
-- [ ] Run all checks against the exact public snapshot.
+- [ ] Commit and publish the revised ten-shard layout, then obtain all
+      protected checks against that exact public snapshot; local results alone
+      are not evidence for the submitted commit.
 - [ ] Submit the public repository, immutable 40-character commit SHA, and
       root-relative `comparator.json` path through Palomar's official form.
 - [ ] Review the generated public record and editorial report before permanent

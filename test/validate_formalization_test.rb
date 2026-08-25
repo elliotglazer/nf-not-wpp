@@ -289,9 +289,11 @@ class MetadataWorkflowRoutingTest < Minitest::Test
     assert actual.all? { |action| action.match?(/@[0-9a-f]{40}\z/) }
   end
 
-  def test_large_jobs_have_the_reviewed_resource_bounds
-    assert_equal 2, WORKFLOW.scan("timeout-minutes: 330").length
+  def test_lean_jobs_have_the_reviewed_resource_bounds
+    assert_equal 1, WORKFLOW.scan("timeout-minutes: 330").length
+    assert_equal 1, WORKFLOW.scan("timeout-minutes: 30").length
     assert_equal 2, WORKFLOW.scan('LEAN_NUM_THREADS: "1"').length
+    assert_includes WORKFLOW, 'build-args: "Challenge"'
     refute_match(/^  docs:/, WORKFLOW)
   end
 end
