@@ -19,8 +19,8 @@ if [ -s "$PALOMAR_TEST_ARGV" ]; then
   printf '%s\n' '---' >>"$PALOMAR_TEST_ARGV"
 fi
 printf '%s\n' "$@" >>"$PALOMAR_TEST_ARGV"
-if [ "${PALOMAR_TEST_FAIL_PREBUILD:-}" = 1 ] && \
-    [ "${!#}" = +WPPCompactSyntaxFVExplicitPart001 ]; then
+if [ -n "${PALOMAR_TEST_FAIL_TARGET:-}" ] && \
+    [ "${!#}" = "$PALOMAR_TEST_FAIL_TARGET" ]; then
   exit 7
 fi
 STUB
@@ -73,9 +73,9 @@ $wrapper_argv"
   fi
 }
 
-# The Solution build first isolates its heavy opening module, then repeats the
-# identical sandbox vector for Comparator's untouched command.
-assert_passthrough "Solution is prebuilt once before Comparator's build" \
+# The Solution build isolates both measured peaks, then repeats the identical
+# sandbox vector for Comparator's untouched command.
+assert_passthrough "Solution peaks are isolated before Comparator's build" \
   '--best-effort
 --ro
 /
@@ -114,25 +114,62 @@ PATH
 --
 lake
 build
++NFStandard.HailperinAlgebra
+---
+--best-effort
+--ro
+/
+--rw
+/dev
+-ldd
+-add-exec
+--env
+PATH
+--ro
+/workspace
+--rwx
+/workspace/.lake
+--rox
+/toolchain
+--
+lake
+build
 Solution' \
   --best-effort --ro / --rw /dev -ldd -add-exec --env PATH \
   --ro /workspace --rwx /workspace/.lake --rox /toolchain \
   lake build Solution
 
-# A failed isolated build prevents the original Solution build.
-export PALOMAR_TEST_FAIL_PREBUILD=1
-run_wrapper --best-effort lake build Solution
-unset PALOMAR_TEST_FAIL_PREBUILD
-if [ "$wrapper_status" -ne 7 ]; then
-  report_failure "a failed prebuild exits 7, got $wrapper_status: $wrapper_stderr"
-elif [ "$wrapper_argv" != '--best-effort
+# Failure at either isolated build prevents every later invocation.
+assert_prebuild_failure() {
+  local target=$1 expected=$2
+  export PALOMAR_TEST_FAIL_TARGET=$target
+  run_wrapper --best-effort lake build Solution
+  unset PALOMAR_TEST_FAIL_TARGET
+  if [ "$wrapper_status" -ne 7 ]; then
+    report_failure "$target failure exits 7, got $wrapper_status: $wrapper_stderr"
+  elif [ "$wrapper_argv" != "$expected" ]; then
+    report_failure "$target failure reached a later command:
+$wrapper_argv"
+  fi
+}
+
+assert_prebuild_failure +WPPCompactSyntaxFVExplicitPart001 '--best-effort
 --
 lake
 build
-+WPPCompactSyntaxFVExplicitPart001' ]; then
-  report_failure "a failed prebuild still reached the original command:
-$wrapper_argv"
-fi
++WPPCompactSyntaxFVExplicitPart001'
+
+assert_prebuild_failure +NFStandard.HailperinAlgebra '--best-effort
+--
+lake
+build
++WPPCompactSyntaxFVExplicitPart001
+---
+--best-effort
+--
+lake
+build
++NFStandard.HailperinAlgebra'
 
 # Commands other than the exact Solution build remain single-pass.
 assert_passthrough "Challenge remains a single sandbox invocation" \

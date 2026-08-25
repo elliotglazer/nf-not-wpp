@@ -51,11 +51,15 @@ if [ "$#" -eq 0 ]; then
   exit 2
 fi
 
-# Isolate the memory-heavy opening proof before Lake schedules the full
-# Solution graph.  It uses the same sandbox and must succeed first.
+# Isolate the two measured memory peaks before Lake schedules the full Solution
+# graph.  Both use the same sandbox and must succeed before the original build.
 if [ "$#" -eq 3 ] && [ "$1" = lake ] && [ "$2" = build ] && [ "$3" = Solution ]; then
-  "$landrun_binary" "${landrun_options[@]}" -- \
-    lake build +WPPCompactSyntaxFVExplicitPart001
+  for prebuild_target in \
+    +WPPCompactSyntaxFVExplicitPart001 \
+    +NFStandard.HailperinAlgebra; do
+    "$landrun_binary" "${landrun_options[@]}" -- \
+      lake build "$prebuild_target"
+  done
 fi
 
 exec "$landrun_binary" "${landrun_options[@]}" -- "$@"

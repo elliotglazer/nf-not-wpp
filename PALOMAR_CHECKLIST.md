@@ -85,14 +85,19 @@ requires a human decision.
       rehashes all 1,537 replay modules and reproduces the split, the 30-minute
       build job checks `Challenge`, and the serialized 330-minute Comparator
       job uses `LEAN_NUM_THREADS=1`. For Comparator's exact `lake build
-      Solution` command, its wrapper first builds the opening WPP FV shard
-      alone inside the identical Landrun sandbox and shared writable `.lake`;
-      failure aborts before the original command, while every other command is
-      passed through once. Regression tests cover that boundary.
-- [~] Record two earlier final-configuration Linux attempts accurately: both
-      were terminated while processing the former monolith, so neither is a
-      successful cold build or Comparator result. The shard layout addresses
-      that observed peak, but no CI success is inferred from the local fix.
+      Solution` command, its wrapper sequentially prebuilds the opening WPP FV
+      shard and `NFStandard.HailperinAlgebra` inside byte-identical Landrun
+      sandboxes sharing the writable `.lake`. Either failure aborts before the
+      original unchanged command, while every other command is passed through
+      once. Regression tests cover the ordering and fail-closed boundary.
+- [~] Record final-configuration Linux attempts accurately. Two earlier runs
+      were terminated while processing the former monolith. On public commit
+      `a2d512e`, CI run #7 completed all five non-Comparator jobs and the
+      isolated Part001 prebuild; the unchanged Solution build then completed
+      `NFStandard.HailperinUnitUnion` before a runner-level exit 143, with
+      `NFStandard.HailperinAlgebra` lacking a completion line. This is not a
+      reported Lean proof error or evidence of a settled root cause, and no
+      successful cold build or Comparator result is inferred.
 - [ ] Run an uninterrupted final-configuration cold source-only build on Linux
       comparable to a Palomar worker using the committed shard layout.
 - [ ] Optionally test a stable-toolchain upgrade; it is not required for the
@@ -169,7 +174,7 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      edits: 1,898 files and 373,918,219 bytes (356.60 MiB). Its largest file
+      edits: 1,898 files and 373,920,388 bytes (356.60 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on
       the immutable commit.

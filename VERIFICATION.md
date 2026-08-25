@@ -57,13 +57,23 @@ unchanged.
 
 `LEAN_NUM_THREADS=1` bounds Lake's worker pool but is not a strict guarantee
 that only one Lean child can run at a time. The Comparator Landrun wrapper
-therefore recognizes only the exact `lake build Solution` invocation and first
-runs `lake build +WPPCompactSyntaxFVExplicitPart001` with byte-identical
-sandbox options and the same writable `.lake`. Failure stops the full build;
-success is followed by Comparator's original command unchanged. Wrapper
-regression tests verify the ordering, identical restriction vector,
-fail-closed behavior, and single-pass handling of Challenge and other commands.
-No proof step runs outside Landrun.
+therefore recognizes only the exact `lake build Solution` invocation and runs
+two ordered prebuilds: `lake build +WPPCompactSyntaxFVExplicitPart001`, then
+`lake build +NFStandard.HailperinAlgebra`. Both use byte-identical sandbox
+options and the same writable `.lake` as the full build. Either failure stops
+the sequence; two successes are followed by Comparator's original command
+unchanged. Wrapper regression tests verify the ordering, identical restriction
+vector, fail-closed behavior, and single-pass handling of Challenge and other
+commands. No proof step runs outside Landrun.
+
+On public commit `a2d512e`, CI run #7 completed all five non-Comparator jobs
+successfully. Comparator's isolated Part001 prebuild also completed. Its
+subsequent unchanged Solution build completed
+`NFStandard.HailperinUnitUnion`; the runner then exited with code 143 while the
+next module, `NFStandard.HailperinAlgebra`, had no completion line. The log
+reports a runner-level shutdown, not a Lean type or proof error. It does not
+prove a resource root cause; the added second prebuild conservatively isolates
+the second measured phase before the unchanged full build.
 
 The resumed build compiled all 1,527 source modules in the translated C18
 replay closure successfully. It predates the added `NFStandard` layer and the
@@ -167,7 +177,7 @@ to the independent kernel/Comparator checks.
   265,760,801 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
   `B295B3BCA787DAA8B7D5E15845C9F72405324C40B5538A104A013509AD751B62`.
-- The final intended source snapshot contains 1,898 files and 373,918,219
+- The final intended source snapshot contains 1,898 files and 373,920,388
   bytes (356.60 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
   the snapshot remains below Palomar's 500-MiB repository limit.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and

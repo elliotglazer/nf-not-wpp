@@ -235,12 +235,21 @@ roots are in the same isolated target so their non-semantic generated
 diagnostics are suppressed too. The target changes no proof-checking option.
 
 For Comparator's exact `lake build Solution` command, the Landrun wrapper first
-builds `+WPPCompactSyntaxFVExplicitPart001` by itself, using the identical
-Landrun binary, restrictions, environment, and writable `.lake` directory.
-The isolated build must succeed before the wrapper executes Comparator's
-original command unchanged; other commands remain single-pass. This separates
-the measured opening memory peak from the full Solution graph without moving
-any build outside Comparator's sandbox or changing its trust checks.
+builds `+WPPCompactSyntaxFVExplicitPart001` and then
+`+NFStandard.HailperinAlgebra`, in order. Each isolated build uses the same
+Landrun binary, restrictions, environment, and writable `.lake` directory as
+the full build, and each must succeed before the wrapper executes Comparator's
+original command unchanged. Other commands remain single-pass. This isolates
+the two measured phases without moving any build outside Comparator's sandbox
+or changing its trust checks.
+
+On public commit `a2d512e`, CI run #7 left all five non-Comparator jobs green.
+The isolated Part001 prebuild completed; the following unchanged Solution build
+completed `NFStandard.HailperinUnitUnion`, after which the runner exited with
+code 143 while the next module, `NFStandard.HailperinAlgebra`, had no completion
+line. This is a runner-level termination, not a reported Lean proof error, and
+does not by itself establish a root cause. The second isolated prebuild is the
+scoped response to that measured boundary.
 
 The setup/Challenge stages, public Flypitch build, standalone Solution, exact
 prefix comparison, trust-zero proof check, final axiom audit, standard-NF
