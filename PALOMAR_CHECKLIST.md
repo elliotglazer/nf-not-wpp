@@ -109,14 +109,16 @@ requires a human decision.
 
 ## 4. Challenge/Solution boundary
 
-- [x] Add a proof-free `NFNotWPP.Surface` whose transitive project-facing
-      imports are Mathlib only, and have both Challenge and Solution import
-      that one compiled statement surface.
+- [x] Keep `Challenge.lean` self-contained with exactly three canonical Mathlib
+      imports and no candidate-local helper in its transitive closure. Add a
+      proof-free clean mirror used only by Solution.
+- [x] Enforce exact declaration-region equality and import order with
+      `scripts/verify-statement-mirror.py` in CI.
 - [x] Compile the Challenge with exactly one deliberate final-theorem hole. The
-      theorem begins at line 29, and its `sorry` proof body is at line 31.
-- [x] Keep the Challenge below Palomar's hard limits: 33 lines and 1,177 bytes
-      versus 1,000 lines and 100 KiB. The complete proof-free Surface is 810
-      lines and 33,542 bytes.
+      theorem begins at line 823, and its `sorry` proof body is at line 825.
+- [x] Keep the Challenge below Palomar's hard limits: 827 lines and 34,394
+      bytes versus 1,000 lines and 100 KiB. Its size exceeds only Palomar's
+      non-blocking warning thresholds.
 - [x] Define the membership-only syntax, eight primitive proof constructors,
       ordinary integer stratification, the full stratified-comprehension
       schema, standard `NF` as that schema plus extensionality, and the exact
@@ -133,8 +135,9 @@ requires a human decision.
       compiles at the exact Challenge type and its axiom audit reports precisely
       the three permitted axioms.
 - [x] Add standalone `Solution.lean` with the same public declaration name and
-      exact type and no Challenge import. Its supporting constants through
-      `SourceWPPFOL` come from the same proof-free Surface olean as Challenge,
+      exact type and no Challenge import. Its proof-free Surface mirror through
+      `SourceWPPFOL` is byte-identical to Challenge's declaration region and is
+      compiled under the same Mathlib-only environment before proof imports,
       preventing import-sensitive elaboration drift.
 
 ## 5. Trust and proof checks
@@ -148,7 +151,7 @@ requires a human decision.
 - [ ] Rerun Comparator and confirm exact Challenge/Solution statement identity.
       Run #10 completed the full cold build and reached Comparator without an
       OOM, then exposed the old duplicated surface's `freshVar` instance drift;
-      the shared-Surface correction is awaiting the protected rerun.
+      the clean-mirror correction is awaiting the protected rerun.
 - [ ] Export the public proof and have Lean's kernel accept it at trust zero.
 - [ ] Replay the exported proof independently with NanoDa.
 - [~] Retain tool revisions, commands, logs, elapsed time, and artifact hashes;
@@ -184,7 +187,7 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      edits: 1,900 files and 373,931,848 bytes (356.61 MiB). Its largest file
+      edits: 1,902 files and 373,939,209 bytes (356.62 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on
       the immutable commit.

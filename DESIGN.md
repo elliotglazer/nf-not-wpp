@@ -2,11 +2,11 @@
 
 ## Delivered statement
 
-`NFNotWPP/Surface.lean` is the shared proof-free statement surface. It imports
-only Mathlib, defines a membership-only first-order syntax and proof calculus,
-defines standard NF as extensionality plus the full stratified-comprehension
-schema, and transparently expands the exact Metamath source formula `wwpp`.
-`Challenge.lean` imports that surface and ends with one deliberate proof hole:
+`Challenge.lean` is a self-contained statement surface. It imports only three
+canonical Mathlib modules, defines a membership-only first-order syntax and
+proof calculus, defines standard NF as extensionality plus the full
+stratified-comprehension schema, transparently expands the exact Metamath
+source formula `wwpp`, and ends with one deliberate proof hole:
 
 ```lean
 theorem NFNotWPP.NF_proves_not_WPP :
@@ -31,9 +31,9 @@ The current public artifacts are:
 
 | File | Physical lines | Bytes | SHA-256 |
 | --- | ---: | ---: | --- |
-| `Challenge.lean` | 33 | 1,177 | `1EA53EB73A16D79C85BA6CA9C82AF7C68BCF231EA993BC4CA6FF37B51C49B7F1` |
-| `NFNotWPP/Surface.lean` | 810 | 33,542 | `FFFE794DF7DA4158FBF2D855875EAD7C33938160D896D0EEC7ED0020E3243BE3` |
-| `Solution.lean` | 1,070 | 43,006 | `FD87AAE4BD63AE44C7ECB6A4D50E7C2A03245837D5D900E7498B6DA9FB19CE13` |
+| `Challenge.lean` | 827 | 34,394 | `719D3F180A22AFF950A3839145846FDDB4D1D7AC2E50385DCA90AD426F65FC5D` |
+| `NFNotWPP/Surface.lean` | 811 | 33,674 | `804638829D571991172E8EBCD05ADDA1BA797F5ADB59157CF9D363B474B6C7D2` |
+| `Solution.lean` | 1,070 | 43,033 | `E992FA3FC5246E6FBAF6CA8DF6185B90780BB4538D4CAC576AB07A5EFA2D2438` |
 
 The Challenge remains below Palomar's 1,000-line and 100-KiB statement limits.
 It builds with only its intended final `sorry`. The larger reference Solution
@@ -176,8 +176,9 @@ is inserted at the public boundary. Only its eleven axiom leaves are replaced.
 
 ## Structural quotation into the public calculus
 
-`Solution.lean` imports the same compiled statement surface as Challenge and
-then quotes the Flypitch derivation constructor for constructor.
+`Solution.lean` imports a proof-free mirror of Challenge's declaration surface
+that is compiled under the same Mathlib-only environment, then quotes the
+Flypitch derivation constructor for constructor.
 
 ### Formula and proof maps
 
@@ -227,27 +228,28 @@ SolutionBridge.quote_accepted_not_sourceWPP :
 Applying the structural proof translator to `nfPrfNotSourceWPP` and rewriting
 by these two exact equations yields the public theorem.
 
-## Exact shared-surface contract
+## Exact clean-mirror contract
 
 The public contract is:
 
 1. The challenge file is `Challenge.lean`.
 2. The required declaration is exactly `NFNotWPP.NF_proves_not_WPP`.
 3. Its required type is exactly the type printed in the first section.
-4. Every supporting declaration through `def SourceWPPFOL` is defined once in
-   the proof-free `NFNotWPP.Surface` module. Challenge and Solution import the
-   same compiled declarations.
+4. Challenge directly defines every supporting declaration through
+   `def SourceWPPFOL`. The corresponding region in the proof-free
+   `NFNotWPP.Surface` solution module is byte-identical and is compiled under
+   the same three Mathlib imports.
 5. A submission may replace only the final proof hole. It may not alter the
    frozen syntax, calculus, stratification predicate, comprehension schema,
    standard `NF`, exact source WPP, or lowering definitions.
 6. A submitted solution must contain no `sorry`, `admit`, new `axiom`, opaque
    assumption, unsafe proof escape, or altered theorem type.
 
-The shared module imports only Mathlib and contains no proof of the headline
-theorem. Using one compiled surface prevents import-sensitive typeclass
-elaboration from changing a definition between Challenge and Solution, while
-still preventing a submission from shadowing the theorem name or proving a
-similar statement over a weakened theory.
+Challenge's transitive source closure contains no candidate-local helper, as
+Palomar's dependency policy requires. The mirror imports only Mathlib and
+contains no headline theorem. Solution imports it before the proof library, so
+typeclass elaboration of statement constants occurs in the same environment as
+Challenge while the theorem proof remains solution-only.
 
 ## Exact WPP and presentation fidelity
 
@@ -281,10 +283,11 @@ The local Challenge and prior standalone Solution builds and the final
 three-axiom audit pass. Public run #10 completed the exact cold Solution build
 and reached Comparator without an OOM. Comparator correctly rejected the old
 duplicated surface because `freshVar` had elaborated with two definitionally
-equivalent but structurally different lattice instances. The shared Surface
-eliminates that entire import-order failure mode without adding a definition
-hole. A protected Comparator/export/NanoDa rerun remains pending; no passing
-Comparator result is claimed in this document.
+equivalent but structurally different lattice instances. The clean Surface
+mirror eliminates that import-order failure mode without adding a definition
+hole or entering Challenge's import closure. A protected
+Comparator/export/NanoDa rerun remains pending; no passing Comparator result is
+claimed in this document.
 
 ## Audited source anchors
 
@@ -301,5 +304,5 @@ The challenge was derived from these pinned sources:
 - `WPPCompactSourceSyntax.lean`:
   `EED1484C89AF7BA7186B2D022C4D6BE5CB1156EA07B9423CD22D6D714A219CE1`
 
-These hashes are provenance anchors, not runtime dependencies of the
-proof-free statement surface or Challenge.
+These hashes are provenance anchors, not runtime dependencies of Challenge or
+the solution-side statement mirror.

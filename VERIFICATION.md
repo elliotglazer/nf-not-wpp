@@ -5,22 +5,24 @@ candidate. It does not replace Palomar's protected Linux verifier.
 
 ## Statement boundary
 
-- `Challenge.lean`: 33 physical lines, 1,177 bytes, SHA-256
-  `1EA53EB73A16D79C85BA6CA9C82AF7C68BCF231EA993BC4CA6FF37B51C49B7F1`.
-- `Solution.lean`: 1,070 physical lines, 43,006 bytes, SHA-256
-  `FD87AAE4BD63AE44C7ECB6A4D50E7C2A03245837D5D900E7498B6DA9FB19CE13`.
-- `NFNotWPP/Surface.lean`: 810 physical lines, 33,542 bytes, SHA-256
-  `FFFE794DF7DA4158FBF2D855875EAD7C33938160D896D0EEC7ED0020E3243BE3`.
-- Every supporting declaration through `SourceWPPFOL` is defined once in that
-  proof-free Surface and imported by both Challenge and Solution.
+- `Challenge.lean`: 827 physical lines, 34,394 bytes, SHA-256
+  `719D3F180A22AFF950A3839145846FDDB4D1D7AC2E50385DCA90AD426F65FC5D`.
+- `Solution.lean`: 1,070 physical lines, 43,033 bytes, SHA-256
+  `E992FA3FC5246E6FBAF6CA8DF6185B90780BB4538D4CAC576AB07A5EFA2D2438`.
+- `NFNotWPP/Surface.lean`: 811 physical lines, 33,674 bytes, SHA-256
+  `804638829D571991172E8EBCD05ADDA1BA797F5ADB59157CF9D363B474B6C7D2`.
+- Challenge's supporting declaration region through `SourceWPPFOL` is
+  byte-identical to the proof-free solution-side Surface mirror.
+- `scripts/verify-statement-mirror.py` enforces that exact equality, the
+  canonical Challenge import closure, and the headline theorem type in CI.
 - The compared declaration is
   `NFNotWPP.NF_proves_not_WPP` at the exact type
   `NF ⊢ₛ' Formula.neg SourceWPPFOL`.
 - Here public `NF` is extensionality plus every instance of the full
   stratified-comprehension schema. The eleven literal Hailperin sentences are
   retained only as the translated proof's internal finite-basis bridge.
-- Solution does not import Challenge. Challenge imports the Surface, whose
-  transitive project-facing imports are Mathlib only.
+- Solution does not import Challenge. Challenge directly imports exactly three
+  canonical Mathlib modules and no candidate-local helper.
 
 ## Source build
 
@@ -93,10 +95,11 @@ Comparator then rejected `NFNotWPP.freshVar`: the old Challenge and Solution
 sources were text-identical, but Solution's earlier proof import caused Lean to
 synthesize `Nat.instLattice` while Challenge used the lattice inherited from
 `instDistribLatticeNat`. Comparator intentionally compares compiled constant
-information structurally. The proof-free shared Surface now makes both sides
-import the same compiled declaration and removes this entire import-order
-failure mode without adding a definition hole. The corrected protected rerun
-is pending.
+information structurally. Solution now imports a byte-identical proof-free
+Surface mirror compiled under Challenge's same three Mathlib imports before it
+loads the proof dependency. This removes the import-order failure mode without
+adding a definition hole or a candidate-local import to Challenge. The
+corrected protected rerun is pending.
 
 The protected Comparator job now provisions a fail-closed 12 GiB swap file
 before entering Landrun. It checks disk capacity and rejects a cgroup that
@@ -116,8 +119,8 @@ migration of the public Challenge/Solution statement, so it is historical
 closure evidence rather than a cold build of the current whole configuration.
 
 Run #10 is uninterrupted cold-build evidence for the complete proof graph and
-shows that the build is below Palomar's 5.5-hour bar. Because the shared Surface
-was introduced after that run, the exact corrected commit must still repeat
+shows that the build is below Palomar's 5.5-hour bar. Because the clean Surface
+mirror was introduced after that run, the exact corrected commit must still repeat
 the protected Comparator/export/NanoDa gate.
 
 Observed timing results on 2026-08-24:
@@ -127,12 +130,11 @@ Observed timing results on 2026-08-24:
 - contemporaneous working notes record a 3 h 10 min diagnosis/resume window
   ending in final success; no raw timing log was retained, so neither figure
   should be treated as a clean benchmark;
-- pre-Surface `Challenge.lean` warm compilation: 14.52 s wall time, with
+- self-contained `Challenge.lean` warm compilation: 14.52 s wall time, with
   Lake reporting 11 s;
 - pre-Surface `Solution.lean` warm compilation: 23.30 s wall time, with
   Lake reporting 18 s;
-- refactored `NFNotWPP.Surface` plus Challenge local build: about 24 s of Lean
-  build time;
+- proof-free `NFNotWPP.Surface` local build: 15 s of Lean build time;
 - warm `lake build NFStandard`: 10.814 s wall time; and
 - warm default `lake build`: 3.918 s wall time.
 
@@ -149,7 +151,7 @@ The final axiom query reported exactly:
 Lexical and declaration audits found no Solution/proof `sorry`, `admit`,
 `sorryAx`, custom `axiom`, `opaque`, `unsafe`, `partial`, `native_decide`, or
 `Lean.ofReduceBool`. Challenge contains exactly its deliberate theorem whose
-declaration starts at line 29 and whose `sorry` body is at line 31.
+declaration starts at line 823 and whose `sorry` body is at line 825.
 
 ## Translator reproduction
 
@@ -215,8 +217,8 @@ to the independent kernel/Comparator checks.
   265,760,801 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
   `B295B3BCA787DAA8B7D5E15845C9F72405324C40B5538A104A013509AD751B62`.
-- The final intended source snapshot contains 1,900 files and 373,931,848
-  bytes (356.61 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
+- The final intended source snapshot contains 1,902 files and 373,939,209
+  bytes (356.62 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
   the snapshot remains below Palomar's 500-MiB repository limit.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and
   full lowercase 40-character revisions.

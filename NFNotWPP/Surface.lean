@@ -3,13 +3,15 @@ import Mathlib.Data.Finset.Lattice.Fold
 import Mathlib.Data.Set.Basic
 
 /-!
-# Shared proof-free statement surface for NF refutes WPP
+# Solution-side clean mirror of the NF-refutes-WPP statement surface
 
-This module contains every transparent constructor used by the Palomar
-Challenge and Solution, through the exact standard-NF theory and exact WPP
-formula. It deliberately contains no proof of the headline theorem and imports
-no solution-side proof module. Compiling this surface once ensures that
-Comparator sees exactly the same declarations on both sides.
+This module is an exact copy of the transparent declaration region in the
+self-contained Palomar Challenge, through the standard-NF theory and exact WPP
+formula. It deliberately contains no headline theorem and imports only the
+same Mathlib modules as Challenge. Solution imports this cleanly elaborated
+mirror before its proof dependency, so Comparator sees the same compiled
+constant information without putting a candidate-local file in Challenge's
+transitive import closure.
 -/
 
 namespace NFNotWPP
@@ -807,4 +809,3 @@ The same fixed-environment lowering obtained by instantiating C18's
 def SourceWPPFOL : Formula := Nominal.lowerWff id Source.syn_wwpp
 
 end NFNotWPP
-

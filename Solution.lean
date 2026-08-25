@@ -4,14 +4,14 @@ import NFStandard.NotWPPPrfBridge
 /-!
 # Proved solution: standard NF derives the negation of WPP
 
-This module imports the same proof-free statement surface as Challenge and adds
-the accepted proof through its solution-side dependency. WPP means the **Weak
+This module imports a clean proof-free mirror of Challenge's declaration
+surface and adds the accepted proof through its solution-side dependency. WPP means the **Weak
 Partition Principle**: if there are a surjection from `y` onto `x` and an
 injection from `y` into `x`, then there is an injection from `x` into
 `y`. The final proof first replaces every use of one of Hailperin's eleven
 finite-basis axioms by its formal derivation from extensionality and stratified
 comprehension, then translates all eight first-order proof constructors
-structurally into the shared Challenge calculus.
+structurally into the mirrored Challenge calculus.
 -/
 
 namespace NFNotWPP
@@ -20,7 +20,7 @@ open scoped NFNotWPP
 
 /-!
 This solution-only section bridges the accepted nominal source syntax and the
-shared proof-free Challenge surface. No proof objects or theory equalities
+clean proof-free mirror of the Challenge surface. No proof objects or theory equalities
 are handled here: it proves that structural quotation of nominal lowering
 preserves the exact WPP formula.
 -/
@@ -439,7 +439,7 @@ end SourceEquality
 
 /-!
 Theory-identification layer for the Palomar solution. It quotes the accepted
-standard NF schema into the shared Challenge schema; the
+standard NF schema into the mirrored Challenge schema; the
 eleven finite-basis formulas remain available as the internal bridge used to
 construct the source derivation.
 -/
