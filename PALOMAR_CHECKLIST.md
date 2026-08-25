@@ -64,6 +64,9 @@ requires a human decision.
       timestamps span 4 h 02 min with a 49 min 42 s unlogged pause; working
       notes record a 3 h 10 min diagnosis/resume window. This predates
       `NFStandard` and is not final-configuration cold-build evidence.
+- [x] Serialize the final Linux CI jobs at `LEAN_NUM_THREADS=1` and isolate the
+      generated `WPPCompactSyntaxFVExplicit` diagnostic storm without changing
+      its source bytes or proof-checker settings.
 - [ ] Run an uninterrupted final-configuration cold source-only build on Linux
       comparable to a Palomar worker.
 - [ ] Optionally test a stable-toolchain upgrade; it is not required for the

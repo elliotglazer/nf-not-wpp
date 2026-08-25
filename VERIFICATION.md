@@ -30,9 +30,19 @@ The historical translated-replay-closure build originated from an empty
 first at two and then, after measuring memory headroom, three jobs; every Lean
 child used `--threads=1`. Two generated modules exhausted only Lean's
 `constructorNameAsVariable` style-linter heartbeat budget after elaboration.
-They were isolated in `NFNotWPPLinterHeavy`. That Lake target adds exactly one
-override, `-Dlinter.constructorNameAsVariable=false`; pre-existing
-generated-source linter settings and all proof-checking options are unchanged.
+They were isolated in `NFNotWPPLinterHeavy` with the single override
+`-Dlinter.constructorNameAsVariable=false`.
+
+The first final-configuration Linux CI run then exposed one additional
+non-semantic output issue: `WPPCompactSyntaxFVExplicit` emitted over fifteen
+thousand lines of unused-simp-argument and generated-tactic diagnostics before
+the standard runner sent `SIGTERM`. It is now isolated in the same target with
+the five linter settings already embedded throughout the generated replay
+modules,
+and both large Linux jobs serialize Lake at `LEAN_NUM_THREADS=1`. None of these
+settings changes declarations, generated source bytes, proof terms, or kernel
+checking.
+
 The resumed build compiled all 1,527 source modules in the translated C18
 replay closure successfully. It predates the added `NFStandard` layer and the
 migration of the public Challenge/Solution statement, so it is historical

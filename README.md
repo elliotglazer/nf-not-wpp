@@ -200,25 +200,28 @@ The intended clean Linux verification sequence is:
 ```bash
 lake exe cache get
 lake build Challenge
-LEAN_NUM_THREADS=2 lake build NFNotWPPProof
-LEAN_NUM_THREADS=2 lake build NFStandard
-LEAN_NUM_THREADS=2 lake build Solution
-bash scripts/verify-comparator.sh
+LEAN_NUM_THREADS=1 lake build NFNotWPPProof
+LEAN_NUM_THREADS=1 lake build NFStandard
+LEAN_NUM_THREADS=1 lake build Solution
+LEAN_NUM_THREADS=1 bash scripts/verify-comparator.sh
 ```
 
 The proof library contains many large independent modules. On a machine with
-many logical cores relative to available RAM, use `LEAN_NUM_THREADS=2` (or
-another small value) to bound Lake's concurrent jobs; the proof target also
-passes `--threads=1` to each Lean child. This changes scheduling only, not the
-proof or trust boundary.
+many logical cores relative to available RAM, use `LEAN_NUM_THREADS=1` to make
+Lake compile one module at a time; the proof target also passes `--threads=1`
+to each Lean child. This changes scheduling only, not the proof or trust
+boundary.
 
-Two generated modules, `NominalWPPReplayChunk009StructuralPart030` and
-`NominalWPPReplayChunk009StructuralPart038`, are isolated in
-`NFNotWPPLinterHeavy`: after successfully elaborating their declarations,
-Lean's constructor-name style linter exhausts that linter's private heartbeat
-budget. The isolated Lake target adds exactly one override,
-`-Dlinter.constructorNameAsVariable=false`; pre-existing generated-source
-linter settings and all proof-checking options remain unchanged.
+Three generated modules are isolated in `NFNotWPPLinterHeavy`. After
+successfully elaborating their declarations,
+`NominalWPPReplayChunk009StructuralPart030` and
+`NominalWPPReplayChunk009StructuralPart038` exhaust the constructor-name style
+linter's private heartbeat budget. `WPPCompactSyntaxFVExplicit` otherwise
+emits over fifteen thousand lines of generated unused-tactic and simp-argument
+diagnostics. The isolated target disables only these non-semantic linters,
+using the same diagnostic settings already embedded in the other generated
+replay modules. Generated source bytes and all proof-checking options remain
+unchanged.
 
 The setup/Challenge stages, public Flypitch build, standalone Solution, exact
 prefix comparison, trust-zero proof check, final axiom audit, standard-NF

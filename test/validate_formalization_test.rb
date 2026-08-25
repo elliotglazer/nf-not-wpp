@@ -291,7 +291,7 @@ class MetadataWorkflowRoutingTest < Minitest::Test
 
   def test_large_jobs_have_the_reviewed_resource_bounds
     assert_equal 2, WORKFLOW.scan("timeout-minutes: 330").length
-    assert_equal 2, WORKFLOW.scan('LEAN_NUM_THREADS: "2"').length
+    assert_equal 2, WORKFLOW.scan('LEAN_NUM_THREADS: "1"').length
     refute_match(/^  docs:/, WORKFLOW)
   end
 end

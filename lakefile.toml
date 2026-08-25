@@ -1549,23 +1549,34 @@ globs = [
   "SemanticCore.LiteralFoundation",
   "SemanticCore.Lowering",
   "SemanticCore.PartialLowering",
-  "WPPCompactSourceSyntax",
-  "WPPCompactSyntaxFVExplicit"
+  "WPPCompactSourceSyntax"
 ]
 
-# These generated modules make Lean's constructor-name style linter exhaust
-# its private deterministic heartbeat budget after elaboration. Keep the proof
-# checker settings identical. This target adds exactly one Lake-level override,
-# disabling that non-semantic linter for the demonstrated modules; linter
-# settings already embedded in the generated sources remain unchanged.
+# These generated modules require non-semantic linter exceptions after their
+# declarations have elaborated.  The two structural modules exhaust the
+# constructor-name linter's private heartbeat budget.  The explicit WPP
+# free-variable module otherwise emits over fifteen thousand lines of generated
+# tactic diagnostics.  Keeping them in one narrow Lake target leaves all
+# proof-checker settings and generated source bytes unchanged.
 [[lean_lib]]
 name = "NFNotWPPLinterHeavy"
 srcDir = "Proof"
 roots = [
   "NominalWPPReplayChunk009StructuralPart030",
-  "NominalWPPReplayChunk009StructuralPart038"
+  "NominalWPPReplayChunk009StructuralPart038",
+  "WPPCompactSyntaxFVExplicit"
 ]
-moreLeanArgs = ["--threads=1", "-DmaxHeartbeats=5000000", "-DmaxRecDepth=30000", "-Dlinter.constructorNameAsVariable=false"]
+moreLeanArgs = [
+  "--threads=1",
+  "-DmaxHeartbeats=5000000",
+  "-DmaxRecDepth=30000",
+  "-Dlinter.constructorNameAsVariable=false",
+  "-Dlinter.unusedVariables=false",
+  "-Dlinter.unusedTactic=false",
+  "-Dlinter.unusedSimpArgs=false",
+  "-Dlinter.unreachableTactic=false",
+  "-Dlinter.unnecessarySeqFocus=false"
+]
 
 # Public standard-NF equivalence and final `NF ⊢ ¬WPP` endpoints.  Imports are
 # followed from this umbrella root, so this target does not enumerate or rebuild
