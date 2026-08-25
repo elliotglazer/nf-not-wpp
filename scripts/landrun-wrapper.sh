@@ -56,7 +56,8 @@ fi
 if [ "$#" -eq 3 ] && [ "$1" = lake ] && [ "$2" = build ] && [ "$3" = Solution ]; then
   for prebuild_target in \
     +WPPCompactSyntaxFVExplicitPart001 \
-    +NFStandard.HailperinAlgebra; do
+    +NFStandard.HailperinAlgebra \
+    +NFStandard.Equivalence; do
     "$landrun_binary" "${landrun_options[@]}" -- \
       lake build "$prebuild_target"
   done

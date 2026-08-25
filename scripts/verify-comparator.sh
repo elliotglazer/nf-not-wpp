@@ -82,8 +82,171 @@ GOBIN="$bin_dir" go install "github.com/zouuup/landrun/cmd/landrun@$landrun_comm
 (cd "$nanoda_dir" && cargo build --release --locked)
 cd "$repository_root"
 lake exe cache get
-PALOMAR_LANDRUN_BIN="$bin_dir/landrun" \
-COMPARATOR_LEAN4EXPORT="$lean4export_dir/.lake/build/bin/lean4export" \
-COMPARATOR_NANODA="$nanoda_dir/target/release/nanoda_bin" \
-COMPARATOR_LANDRUN="$repository_root/scripts/landrun-wrapper.sh" \
-  lake env "$comparator_dir/.lake/build/bin/comparator" comparator.json
+
+telemetry_file_value() {
+  local path=$1
+  local value=
+  if [ -r "$path" ] && IFS= read -r value < "$path" 2>/dev/null; then
+    printf '%s' "${value:-na}"
+  else
+    printf 'na'
+  fi
+}
+
+telemetry_snapshot() {
+  local phase=${1:-interval}
+  local timestamp=na
+  local mem_available_kib=na
+  local cgroup_dir=
+  local cgroup_memory_current=na
+  local cgroup_memory_max=na
+  local cgroup_oom=na
+  local cgroup_oom_kill=na
+  local repository_available_kib=na
+  local filesystem_output=
+  local filesystem_line=
+  local process_status=
+  local process_name=
+  local process_rss=0
+  local lean_process_count=0
+  local lean_rss_kib=0
+  local top_process_name=na
+  local top_process_rss_kib=0
+  local key=
+  local value=
+
+  if command -v date >/dev/null 2>&1; then
+    timestamp=$(date -u '+%Y-%m-%dT%H:%M:%SZ' 2>/dev/null || true)
+    timestamp=${timestamp:-na}
+  fi
+
+  if [ -r /proc/meminfo ]; then
+    while read -r key value _; do
+      if [ "$key" = "MemAvailable:" ]; then
+        case "$value" in
+          ''|*[!0-9]*) ;;
+          *) mem_available_kib=$value ;;
+        esac
+        break
+      fi
+    done < /proc/meminfo 2>/dev/null || true
+  fi
+
+  if [ -r /proc/self/cgroup ]; then
+    while IFS=: read -r key value process_status; do
+      if [ "$key" = 0 ] && [ -z "$value" ]; then
+        cgroup_dir="/sys/fs/cgroup${process_status}"
+        break
+      fi
+    done < /proc/self/cgroup 2>/dev/null || true
+  fi
+  if [ -n "$cgroup_dir" ]; then
+    cgroup_memory_current=$(telemetry_file_value "$cgroup_dir/memory.current")
+    cgroup_memory_max=$(telemetry_file_value "$cgroup_dir/memory.max")
+    if [ -r "$cgroup_dir/memory.events" ]; then
+      while read -r key value _; do
+        case "$key" in
+          oom) cgroup_oom=$value ;;
+          oom_kill) cgroup_oom_kill=$value ;;
+        esac
+      done < "$cgroup_dir/memory.events" 2>/dev/null || true
+    fi
+  fi
+
+  if command -v df >/dev/null 2>&1; then
+    filesystem_output=$(df -Pk "$repository_root" 2>/dev/null || true)
+    while IFS= read -r filesystem_line; do
+      case "$filesystem_line" in
+        Filesystem*) continue ;;
+      esac
+      read -r _ _ _ repository_available_kib _ <<< "$filesystem_line" || true
+    done <<< "$filesystem_output"
+    case "$repository_available_kib" in
+      ''|*[!0-9]*) repository_available_kib=na ;;
+    esac
+  fi
+
+  for process_status in /proc/[0-9]*/status; do
+    [ -r "$process_status" ] || continue
+    process_name=unknown
+    process_rss=0
+    while read -r key value _; do
+      case "$key" in
+        Name:) process_name=${value:-unknown} ;;
+        VmRSS:)
+          case "$value" in
+            ''|*[!0-9]*) process_rss=0 ;;
+            *) process_rss=$value ;;
+          esac
+          ;;
+      esac
+    done < "$process_status" 2>/dev/null || true
+    if [ "$process_rss" -gt "$top_process_rss_kib" ]; then
+      top_process_name=$process_name
+      top_process_rss_kib=$process_rss
+    fi
+    case "$process_name" in
+      lean|lean.exe)
+        lean_process_count=$((lean_process_count + 1))
+        lean_rss_kib=$((lean_rss_kib + process_rss))
+        ;;
+    esac
+  done
+
+  printf '%s\n' \
+    "PALOMAR_RESOURCE timestamp=$timestamp phase=$phase mem_available_kib=$mem_available_kib cgroup_memory_current_bytes=$cgroup_memory_current cgroup_memory_max_bytes=$cgroup_memory_max cgroup_oom=$cgroup_oom cgroup_oom_kill=$cgroup_oom_kill repository_available_kib=$repository_available_kib lean_processes=$lean_process_count lean_rss_kib=$lean_rss_kib top_process=$top_process_name top_rss_kib=$top_process_rss_kib"
+}
+
+telemetry_monitor() {
+  local sleeper_pid=
+  if ! command -v sleep >/dev/null 2>&1; then
+    telemetry_snapshot interval || true
+    return 0
+  fi
+  trap 'trap - TERM USR1; if [ -n "${sleeper_pid:-}" ]; then kill "$sleeper_pid" 2>/dev/null || true; wait "$sleeper_pid" 2>/dev/null || true; fi; exit 0' USR1
+  trap 'telemetry_snapshot term || true; trap - TERM USR1; if [ -n "${sleeper_pid:-}" ]; then kill "$sleeper_pid" 2>/dev/null || true; wait "$sleeper_pid" 2>/dev/null || true; fi; exit 143' TERM
+  while true; do
+    telemetry_snapshot interval || true
+    sleep 15 &
+    sleeper_pid=$!
+    wait "$sleeper_pid" || true
+    sleeper_pid=
+  done
+}
+
+telemetry_pid=
+stop_telemetry() {
+  if [ -n "${telemetry_pid:-}" ]; then
+    kill -USR1 "$telemetry_pid" 2>/dev/null || true
+    wait "$telemetry_pid" 2>/dev/null || true
+    telemetry_pid=
+  fi
+}
+
+on_comparator_term() {
+  telemetry_snapshot term || true
+  exit 143
+}
+
+telemetry_monitor &
+telemetry_pid=$!
+trap stop_telemetry EXIT
+trap on_comparator_term TERM
+
+if PALOMAR_LANDRUN_BIN="$bin_dir/landrun" \
+  COMPARATOR_LEAN4EXPORT="$lean4export_dir/.lake/build/bin/lean4export" \
+  COMPARATOR_NANODA="$nanoda_dir/target/release/nanoda_bin" \
+  COMPARATOR_LANDRUN="$repository_root/scripts/landrun-wrapper.sh" \
+    lake env "$comparator_dir/.lake/build/bin/comparator" comparator.json; then
+  comparator_status=0
+else
+  comparator_status=$?
+fi
+
+trap - TERM
+if [ "$comparator_status" -eq 143 ]; then
+  telemetry_snapshot exit-143 || true
+fi
+stop_telemetry
+trap - EXIT
+exit "$comparator_status"

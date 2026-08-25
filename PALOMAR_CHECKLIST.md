@@ -86,18 +86,24 @@ requires a human decision.
       build job checks `Challenge`, and the serialized 330-minute Comparator
       job uses `LEAN_NUM_THREADS=1`. For Comparator's exact `lake build
       Solution` command, its wrapper sequentially prebuilds the opening WPP FV
-      shard and `NFStandard.HailperinAlgebra` inside byte-identical Landrun
-      sandboxes sharing the writable `.lake`. Either failure aborts before the
-      original unchanged command, while every other command is passed through
-      once. Regression tests cover the ordering and fail-closed boundary.
+      shard, `NFStandard.HailperinAlgebra`, and `NFStandard.Equivalence` inside
+      byte-identical Landrun sandboxes sharing the writable `.lake`. Any failure
+      aborts before the original unchanged command, while every other command
+      is passed through once. Regression tests cover the ordering and
+      fail-closed boundary.
 - [~] Record final-configuration Linux attempts accurately. Two earlier runs
-      were terminated while processing the former monolith. On public commit
-      `a2d512e`, CI run #7 completed all five non-Comparator jobs and the
-      isolated Part001 prebuild; the unchanged Solution build then completed
-      `NFStandard.HailperinUnitUnion` before a runner-level exit 143, with
-      `NFStandard.HailperinAlgebra` lacking a completion line. This is not a
-      reported Lean proof error or evidence of a settled root cause, and no
-      successful cold build or Comparator result is inferred.
+      were terminated while processing the former monolith. Runs #7
+      (`a2d512e`) and #8 (`8543027`) each completed all five non-Comparator
+      jobs. Run #7 completed Part001 before the unchanged Solution exited 143
+      after `NFStandard.HailperinUnitUnion`, with
+      `NFStandard.HailperinAlgebra` lacking a completion line. Run #8 completed
+      both configured prebuilds before the unchanged Solution exited 143 after
+      `NFStandard.HailperinUnitUnion` and
+      `NFStandard.HailperinPresentationBridge`, with
+      `NFStandard.Equivalence` lacking a completion line. These are
+      runner-level terminations, not reported Lean proof errors or evidence of
+      a settled root cause; no successful cold build or Comparator result is
+      inferred.
 - [ ] Run an uninterrupted final-configuration cold source-only build on Linux
       comparable to a Palomar worker using the committed shard layout.
 - [ ] Optionally test a stable-toolchain upgrade; it is not required for the
@@ -174,7 +180,7 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      edits: 1,898 files and 373,920,388 bytes (356.60 MiB). Its largest file
+      edits: 1,898 files and 373,926,643 bytes (356.60 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on
       the immutable commit.

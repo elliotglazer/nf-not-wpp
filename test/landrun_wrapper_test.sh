@@ -134,6 +134,26 @@ PATH
 --
 lake
 build
++NFStandard.Equivalence
+---
+--best-effort
+--ro
+/
+--rw
+/dev
+-ldd
+-add-exec
+--env
+PATH
+--ro
+/workspace
+--rwx
+/workspace/.lake
+--rox
+/toolchain
+--
+lake
+build
 Solution' \
   --best-effort --ro / --rw /dev -ldd -add-exec --env PATH \
   --ro /workspace --rwx /workspace/.lake --rox /toolchain \
@@ -170,6 +190,24 @@ build
 lake
 build
 +NFStandard.HailperinAlgebra'
+
+assert_prebuild_failure +NFStandard.Equivalence '--best-effort
+--
+lake
+build
++WPPCompactSyntaxFVExplicitPart001
+---
+--best-effort
+--
+lake
+build
++NFStandard.HailperinAlgebra
+---
+--best-effort
+--
+lake
+build
++NFStandard.Equivalence'
 
 # Commands other than the exact Solution build remain single-pass.
 assert_passthrough "Challenge remains a single sandbox invocation" \

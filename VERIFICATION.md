@@ -58,22 +58,33 @@ unchanged.
 `LEAN_NUM_THREADS=1` bounds Lake's worker pool but is not a strict guarantee
 that only one Lean child can run at a time. The Comparator Landrun wrapper
 therefore recognizes only the exact `lake build Solution` invocation and runs
-two ordered prebuilds: `lake build +WPPCompactSyntaxFVExplicitPart001`, then
-`lake build +NFStandard.HailperinAlgebra`. Both use byte-identical sandbox
-options and the same writable `.lake` as the full build. Either failure stops
-the sequence; two successes are followed by Comparator's original command
-unchanged. Wrapper regression tests verify the ordering, identical restriction
-vector, fail-closed behavior, and single-pass handling of Challenge and other
-commands. No proof step runs outside Landrun.
+three ordered prebuilds: `lake build +WPPCompactSyntaxFVExplicitPart001`,
+`lake build +NFStandard.HailperinAlgebra`, then
+`lake build +NFStandard.Equivalence`. All use byte-identical sandbox options
+and the same writable `.lake` as the full build. Any failure stops the sequence;
+three successes are followed by Comparator's original command unchanged.
+Wrapper regression tests verify the ordering, identical restriction vector,
+fail-closed behavior, and single-pass handling of Challenge and other commands.
+No proof step runs outside Landrun.
 
-On public commit `a2d512e`, CI run #7 completed all five non-Comparator jobs
-successfully. Comparator's isolated Part001 prebuild also completed. Its
-subsequent unchanged Solution build completed
-`NFStandard.HailperinUnitUnion`; the runner then exited with code 143 while the
-next module, `NFStandard.HailperinAlgebra`, had no completion line. The log
-reports a runner-level shutdown, not a Lean type or proof error. It does not
-prove a resource root cause; the added second prebuild conservatively isolates
-the second measured phase before the unchanged full build.
+CI runs #7 on `a2d512e` and #8 on `8543027` completed all five non-Comparator
+jobs successfully. In #7, the Part001 prebuild completed; the unchanged
+Solution build then completed `NFStandard.HailperinUnitUnion` before a
+runner-level exit 143, with `NFStandard.HailperinAlgebra` lacking a completion
+line. In #8, both configured prebuilds completed; the unchanged Solution build
+then completed `NFStandard.HailperinUnitUnion` and
+`NFStandard.HailperinPresentationBridge` before another runner-level exit 143,
+with `NFStandard.Equivalence` lacking a completion line. Neither log reports a
+Lean type or proof error or proves a resource root cause. The third prebuild
+conservatively isolates the newly measured phase before the unchanged full
+build.
+
+While Comparator is running, the verification script emits one compact
+`PALOMAR_RESOURCE` snapshot every 15 seconds. It records host-available
+memory, cgroup-v2 memory limits and OOM counters when present, repository free
+space, and Lean/top-process RSS. This is diagnostic only: it does not alter the
+Comparator command, sandbox restrictions, proof inputs, or returned exit
+status.
 
 The resumed build compiled all 1,527 source modules in the translated C18
 replay closure successfully. It predates the added `NFStandard` layer and the
@@ -177,7 +188,7 @@ to the independent kernel/Comparator checks.
   265,760,801 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
   `B295B3BCA787DAA8B7D5E15845C9F72405324C40B5538A104A013509AD751B62`.
-- The final intended source snapshot contains 1,898 files and 373,920,388
+- The final intended source snapshot contains 1,898 files and 373,926,643
   bytes (356.60 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
   the snapshot remains below Palomar's 500-MiB repository limit.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and
