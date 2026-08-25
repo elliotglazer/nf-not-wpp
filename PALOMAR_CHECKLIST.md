@@ -165,7 +165,7 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      edits: 1,898 files and 373,914,668 bytes (356.59 MiB). Its largest file
+      edits: 1,898 files and 373,914,428 bytes (356.59 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on
       the immutable commit.
