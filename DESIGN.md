@@ -2,11 +2,11 @@
 
 ## Delivered statement
 
-`Challenge.lean` is a self-contained statement surface. It imports only
-Mathlib, defines a membership-only first-order syntax and proof calculus,
+`NFNotWPP/Surface.lean` is the shared proof-free statement surface. It imports
+only Mathlib, defines a membership-only first-order syntax and proof calculus,
 defines standard NF as extensionality plus the full stratified-comprehension
-schema, transparently expands the exact Metamath source formula `wwpp`, and
-ends with one deliberate proof hole:
+schema, and transparently expands the exact Metamath source formula `wwpp`.
+`Challenge.lean` imports that surface and ends with one deliberate proof hole:
 
 ```lean
 theorem NFNotWPP.NF_proves_not_WPP :
@@ -31,8 +31,9 @@ The current public artifacts are:
 
 | File | Physical lines | Bytes | SHA-256 |
 | --- | ---: | ---: | --- |
-| `Challenge.lean` | 827 | 34,394 | `719D3F180A22AFF950A3839145846FDDB4D1D7AC2E50385DCA90AD426F65FC5D` |
-| `Solution.lean` | 1,862 | 76,085 | `427F4FACD2E7D722501736BD9E9BF322E105CDAFA5B143AC67B9BEC9554CC214` |
+| `Challenge.lean` | 33 | 1,177 | `1EA53EB73A16D79C85BA6CA9C82AF7C68BCF231EA993BC4CA6FF37B51C49B7F1` |
+| `NFNotWPP/Surface.lean` | 810 | 33,542 | `FFFE794DF7DA4158FBF2D855875EAD7C33938160D896D0EEC7ED0020E3243BE3` |
+| `Solution.lean` | 1,070 | 43,006 | `FD87AAE4BD63AE44C7ECB6A4D50E7C2A03245837D5D900E7498B6DA9FB19CE13` |
 
 The Challenge remains below Palomar's 1,000-line and 100-KiB statement limits.
 It builds with only its intended final `sorry`. The larger reference Solution
@@ -175,8 +176,8 @@ is inserted at the public boundary. Only its eleven axiom leaves are replaced.
 
 ## Structural quotation into the public calculus
 
-`Solution.lean` repeats the Challenge's declarations and then quotes the
-Flypitch derivation constructor for constructor.
+`Solution.lean` imports the same compiled statement surface as Challenge and
+then quotes the Flypitch derivation constructor for constructor.
 
 ### Formula and proof maps
 
@@ -226,26 +227,27 @@ SolutionBridge.quote_accepted_not_sourceWPP :
 Applying the structural proof translator to `nfPrfNotSourceWPP` and rewriting
 by these two exact equations yields the public theorem.
 
-## Exact declaration-prefix contract
+## Exact shared-surface contract
 
 The public contract is:
 
 1. The challenge file is `Challenge.lean`.
 2. The required declaration is exactly `NFNotWPP.NF_proves_not_WPP`.
 3. Its required type is exactly the type printed in the first section.
-4. The declaration surface from `namespace NFNotWPP` through
-   `def SourceWPPFOL` is a 793-line prefix. Those 793 lines are identical in
-   `Challenge.lean` and `Solution.lean`.
+4. Every supporting declaration through `def SourceWPPFOL` is defined once in
+   the proof-free `NFNotWPP.Surface` module. Challenge and Solution import the
+   same compiled declarations.
 5. A submission may replace only the final proof hole. It may not alter the
    frozen syntax, calculus, stratification predicate, comprehension schema,
    standard `NF`, exact source WPP, or lowering definitions.
 6. A submitted solution must contain no `sorry`, `admit`, new `axiom`, opaque
    assumption, unsafe proof escape, or altered theorem type.
 
-The different file imports and explanatory headers are outside the 793-line
-declaration-prefix comparison. Freezing this prefix prevents a submission from
-shadowing the theorem name or proving a similar statement over a weakened
-theory.
+The shared module imports only Mathlib and contains no proof of the headline
+theorem. Using one compiled surface prevents import-sensitive typeclass
+elaboration from changing a definition between Challenge and Solution, while
+still preventing a submission from shadowing the theorem name or proving a
+similar statement over a weakened theory.
 
 ## Exact WPP and presentation fidelity
 
@@ -275,12 +277,13 @@ target formula, or proof rules.
 
 ## Comparator and release status
 
-The local Challenge and Solution builds and the final three-axiom kernel audit
-pass. The exact 793-line declaration surface and the theorem name/type are the
-inputs the Comparator must freeze. The Comparator should additionally reject
-any unapproved axiom and run the configured NanoDa check.
-
-The Linux Comparator/export/NanoDa release gate remains pending. No passing
+The local Challenge and prior standalone Solution builds and the final
+three-axiom audit pass. Public run #10 completed the exact cold Solution build
+and reached Comparator without an OOM. Comparator correctly rejected the old
+duplicated surface because `freshVar` had elaborated with two definitionally
+equivalent but structurally different lattice instances. The shared Surface
+eliminates that entire import-order failure mode without adding a definition
+hole. A protected Comparator/export/NanoDa rerun remains pending; no passing
 Comparator result is claimed in this document.
 
 ## Audited source anchors
@@ -299,4 +302,4 @@ The challenge was derived from these pinned sources:
   `EED1484C89AF7BA7186B2D022C4D6BE5CB1156EA07B9423CD22D6D714A219CE1`
 
 These hashes are provenance anchors, not runtime dependencies of the
-self-contained Challenge.
+proof-free statement surface or Challenge.

@@ -40,13 +40,13 @@ identified below.
 > **Status:** proof complete; final packaging checks are in progress. The
 > standard-NF theorem, the full `NF`/`HailperinNF` equivalence, the exact
 > Challenge/Solution proof, and the C18 source closure are present. The public
-> theorem passes a local trust-zero audit with exactly the three permitted
-> axioms. An empty-origin, diagnosed/resumed source build and all local Lake
-> targets passed before the final NotWPP branch split; the split's import,
-> shell, and wrapper checks pass, while its protected Linux elaboration is
-> pending;
-> an uninterrupted final-configuration cold build and the Linux-only
-> Comparator/export/NanoDa gate remain pending. Authorship, maintenance
+> theorem passes a trust-zero audit with exactly the three permitted axioms.
+> Public CI run #10 completed the full cold build in about 2 h 42 min without
+> an OOM and reached Comparator. Comparator then exposed an import-sensitive
+> elaboration mismatch in the formerly duplicated statement surface. The
+> surface is now compiled once in the proof-free `NFNotWPP.Surface` module and
+> imported by both sides; a protected Comparator/export/NanoDa rerun remains
+> pending. Authorship, maintenance
 > responsibility, Apache-2.0 licensing, and public upload are confirmed;
 > Palomar submission remains under the responsible maintainer's control.
 
@@ -72,11 +72,12 @@ basis to standard NF. Both headline declarations audit to exactly `propext`,
 
 ## Palomar public statement
 
-`Challenge.lean` defines a small membership-only first-order language, the
-eight primitive Flypitch-style proof constructors, the ordinary integer
-stratification relation, the full stratified-comprehension schema, standard
-`NF`, and a transparent lowering of the exact source WPP formula. Its sole
-deliberate proof hole is:
+The proof-free `NFNotWPP.Surface` module defines a small membership-only
+first-order language, the eight primitive Flypitch-style proof constructors,
+the ordinary integer stratification relation, the full
+stratified-comprehension schema, standard `NF`, and a transparent lowering of
+the exact source WPP formula. `Challenge.lean` imports that frozen surface; its
+sole deliberate proof hole is:
 
 ```lean
 theorem NFNotWPP.NF_proves_not_WPP :
@@ -89,16 +90,16 @@ stratified-comprehension instance. The eleven Hailperin formulas remain in the
 statement surface only as a transparent description of the translated finite
 basis; they are neither assumptions of the headline theorem nor Lean axioms.
 
-The Challenge compiles and is 827 lines / 34,394 bytes, below
-Palomar's hard limits of 1,000 lines / 100 KiB. It intentionally exceeds the
-non-blocking 300-line warning threshold because the statement surface spells
-out stratification, comprehension, the internal finite basis, and the source
-WPP expansion instead of hiding them in a project dependency. `Solution.lean`
-repeats the 793-line declaration surface exactly. On its proof side, it derives
-every literal Hailperin axiom from standard NF using the proved model inclusion
-and first-order completeness, substitutes those derivations for the axiom
-leaves of the accepted C18 replay, and structurally translates the resulting
-`Fol.prf` term into the Challenge calculus.
+The Challenge compiles and is 33 lines / 1,177 bytes, below Palomar's hard
+limits of 1,000 lines / 100 KiB. Its complete transparent statement surface is
+the 810-line / 33,542-byte proof-free `NFNotWPP.Surface` module. Challenge and
+Solution import that one module, so every compared constructor is the same
+compiled Lean declaration rather than a separately elaborated copy. On its
+proof side, Solution derives every literal Hailperin axiom from standard NF
+using the proved model inclusion and first-order completeness, substitutes
+those derivations for the axiom leaves of the accepted C18 replay, and
+structurally translates the resulting `Fol.prf` term into the Challenge
+calculus.
 
 The packaged Solution compiles at trust zero without global heartbeat or
 recursion-depth overrides. `#print axioms` reports exactly `propext`,
@@ -259,9 +260,12 @@ This establishes a single-process out-of-memory kill rather than a Lean proof
 or type error. The protected job now provisions a checked 12 GiB swap file and
 records host and cgroup swap use alongside the existing telemetry.
 
-The setup/Challenge stages, public Flypitch build, standalone Solution, exact
-prefix comparison, trust-zero proof check, final axiom audit, standard-NF
-target, and source-only `NFNotWPPProof` rebuild all pass. The earlier translated
+The setup/Challenge stages, public Flypitch build, standalone Solution,
+trust-zero proof check, final axiom audit, standard-NF target, and source-only
+`NFNotWPPProof` rebuild all pass. Public run #10 also completed the exact cold
+Solution build and export preparation without an OOM; its first Comparator
+failure was the now-diagnosed `freshVar` elaboration mismatch in the old
+duplicated surface. The earlier translated
 replay-closure rebuild originated from an empty `.lake` state and ultimately
 compiled every then-packaged module. Artifact timestamps span 4 h 02 min and
 include an unlogged 49 min 42 s pause after the first 82 modules;
@@ -269,11 +273,12 @@ contemporaneous working notes record a 3 h 10 min diagnosis/resume window
 ending in success. It predates the handwritten `NFStandard` layer, so an
 uninterrupted cold build of the final configuration remains a release gate.
 
-On the final warm tree, separate checks took 14.52 s for `Challenge`, 23.30 s
-for `Solution`, 10.814 s for `NFStandard`, and 3.918 s for the default build.
-These are engineering observations, not cold benchmarks. The remaining
-Comparator/kernel-export/NanoDa check requires a Linux Landlock environment
-and is delegated to the pinned CI workflow.
+Before the shared-surface refactor, separate warm checks took 14.52 s for
+`Challenge`, 23.30 s for `Solution`, 10.814 s for `NFStandard`, and 3.918 s for
+the default build. The refactored Surface and Challenge locally rebuild in
+about 24 seconds combined. These are engineering observations, not cold
+benchmarks. The remaining Comparator/kernel-export/NanoDa check requires a
+Linux Landlock environment and is delegated to the pinned CI workflow.
 Exact local timings, hashes, axiom output, and evidence boundaries are recorded
 in [`VERIFICATION.md`](VERIFICATION.md).
 

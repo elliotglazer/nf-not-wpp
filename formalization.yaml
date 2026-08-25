@@ -190,13 +190,13 @@ fidelity:
     chain recorded in provenance/METAMATH_PROVENANCE.md. Most stages only
     change scoping, labels, compression, or proof terms; df-lnwmap has one
     recorded parenthesization correction, and 23 proved helper theorems were
-    inserted as proofs rather than assumptions. In the Challenge, membership
-    is a primitive atom instead of Flypitch's two-node relation application,
+    inserted as proofs rather than assumptions. In the shared statement
+    surface, membership is a primitive atom instead of Flypitch's two-node relation application,
     and intrinsically scoped closed formulas are erased to Nat-indexed de
     Bruijn syntax. Both are structural presentation isomorphisms. The exact
     source ordered pair and WPP expansion are retained. The exact eleven
     literal Hailperin formulas remain as the internal target of the translated
-    C18 proof, but they are not the public theory: the Challenge defines
+    C18 proof, but they are not the public theory: the shared Surface defines
     standard `NF` as extensionality plus all certified stratified-comprehension
     instances. The development proves that standard NF, the repository's
     `HailperinNF`, and the exact `LiteralHailperinNF` presentation have the same
@@ -213,12 +213,12 @@ review:
     reporting exactly propext, Classical.choice, and Quot.sound. The earlier
     literal-basis Challenge/Solution and its nominal WPP AST comparison passed
     locally, as did an empty-origin, diagnosed/resumed build of the translated
-    source closure. Because the public Challenge/Solution statement and Lake
-    configuration have since been migrated to standard NF, their final prefix,
-    trust-zero, timing, and whole-configuration records must be refreshed. An
-    uninterrupted final-configuration cold build, Linux Comparator, export,
-    NanoDa, and public-commit evidence remain release gates; reviewers must be
-    named only with their authorization.
+    source closure. Public CI run #10 completed the standard-NF proof graph in
+    about 2 h 42 min without an OOM and reached Comparator. Comparator exposed
+    import-sensitive elaboration in the formerly duplicated statement surface;
+    Challenge and Solution now import one proof-free compiled Surface. The
+    corrected Linux Comparator, export, NanoDa, and exact-public-commit evidence
+    remain release gates; reviewers must be named only with their authorization.
 
 alignment:
   namespace: "NFNotWPP"
@@ -236,8 +236,9 @@ alignment:
         `LiteralHailperinNF` bridge. Formula and nominal-lowering maps identify
         its exact conclusion with the independently stated Challenge target.
         Each finite-basis axiom leaf is then replaced by a formal derivation
-        from `NF`, which the Challenge defines as extensionality plus the full
-        stratified-comprehension schema. The repository separately proves full
+        from `NF`, which the shared Challenge/solution Surface defines as
+        extensionality plus the full stratified-comprehension schema. The
+        repository separately proves full
         deductive equivalence between standard NF and both Hailperin
         presentations.
 

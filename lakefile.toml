@@ -1600,6 +1600,10 @@ roots = ["NFStandard"]
 moreLeanArgs = ["--threads=1", "-DmaxHeartbeats=5000000", "-DmaxRecDepth=30000"]
 
 [[lean_lib]]
+name = "NFNotWPPStatement"
+roots = ["NFNotWPP.Surface"]
+
+[[lean_lib]]
 name = "Challenge"
 roots = ["Challenge"]
 

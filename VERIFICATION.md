@@ -5,19 +5,22 @@ candidate. It does not replace Palomar's protected Linux verifier.
 
 ## Statement boundary
 
-- `Challenge.lean`: 827 physical lines, 34,394 bytes, SHA-256
-  `719D3F180A22AFF950A3839145846FDDB4D1D7AC2E50385DCA90AD426F65FC5D`.
-- `Solution.lean`: 1,862 physical lines, 76,085 bytes, SHA-256
-  `427F4FACD2E7D722501736BD9E9BF322E105CDAFA5B143AC67B9BEC9554CC214`.
-- The 793-line declaration region from `namespace NFNotWPP` through
-  `SourceWPPFOL` is text-identical in the two files.
+- `Challenge.lean`: 33 physical lines, 1,177 bytes, SHA-256
+  `1EA53EB73A16D79C85BA6CA9C82AF7C68BCF231EA993BC4CA6FF37B51C49B7F1`.
+- `Solution.lean`: 1,070 physical lines, 43,006 bytes, SHA-256
+  `FD87AAE4BD63AE44C7ECB6A4D50E7C2A03245837D5D900E7498B6DA9FB19CE13`.
+- `NFNotWPP/Surface.lean`: 810 physical lines, 33,542 bytes, SHA-256
+  `FFFE794DF7DA4158FBF2D855875EAD7C33938160D896D0EEC7ED0020E3243BE3`.
+- Every supporting declaration through `SourceWPPFOL` is defined once in that
+  proof-free Surface and imported by both Challenge and Solution.
 - The compared declaration is
   `NFNotWPP.NF_proves_not_WPP` at the exact type
   `NF ⊢ₛ' Formula.neg SourceWPPFOL`.
 - Here public `NF` is extensionality plus every instance of the full
   stratified-comprehension schema. The eleven literal Hailperin sentences are
   retained only as the translated proof's internal finite-basis bridge.
-- Solution does not import Challenge. Challenge imports only Mathlib.
+- Solution does not import Challenge. Challenge imports the Surface, whose
+  transitive project-facing imports are Mathlib only.
 
 ## Source build
 
@@ -82,6 +85,19 @@ final steady telemetry sample contained exactly one Lean process at
 termination, cgroup `oom_kill` increased from zero to one. This is conclusive
 evidence of a single-process out-of-memory kill, not a Lean proof/type error.
 
+Public run #10 on `ec378da` completed all six ordered prebuilds and the exact
+`lake build Solution` command in about 2 h 42 min. It built all 2,598 jobs,
+reported only `propext`, `Classical.choice`, and `Quot.sound` for the headline
+theorem, completed export preparation, and recorded no OOM or OOM-kill event.
+Comparator then rejected `NFNotWPP.freshVar`: the old Challenge and Solution
+sources were text-identical, but Solution's earlier proof import caused Lean to
+synthesize `Nat.instLattice` while Challenge used the lattice inherited from
+`instDistribLatticeNat`. Comparator intentionally compares compiled constant
+information structurally. The proof-free shared Surface now makes both sides
+import the same compiled declaration and removes this entire import-order
+failure mode without adding a definition hole. The corrected protected rerun
+is pending.
+
 The protected Comparator job now provisions a fail-closed 12 GiB swap file
 before entering Landrun. It checks disk capacity and rejects a cgroup that
 explicitly forbids swap. This changes the runner's virtual-memory capacity,
@@ -99,9 +115,10 @@ replay closure successfully. It predates the added `NFStandard` layer and the
 migration of the public Challenge/Solution statement, so it is historical
 closure evidence rather than a cold build of the current whole configuration.
 
-This is not evidence of one uninterrupted cold build of the final staged Lake
-configuration. That clean Linux run remains a release gate alongside
-Comparator/export/NanoDa verification.
+Run #10 is uninterrupted cold-build evidence for the complete proof graph and
+shows that the build is below Palomar's 5.5-hour bar. Because the shared Surface
+was introduced after that run, the exact corrected commit must still repeat
+the protected Comparator/export/NanoDa gate.
 
 Observed timing results on 2026-08-24:
 
@@ -110,10 +127,12 @@ Observed timing results on 2026-08-24:
 - contemporaneous working notes record a 3 h 10 min diagnosis/resume window
   ending in final success; no raw timing log was retained, so neither figure
   should be treated as a clean benchmark;
-- migrated final `Challenge.lean` warm compilation: 14.52 s wall time, with
+- pre-Surface `Challenge.lean` warm compilation: 14.52 s wall time, with
   Lake reporting 11 s;
-- migrated final `Solution.lean` warm compilation: 23.30 s wall time, with
+- pre-Surface `Solution.lean` warm compilation: 23.30 s wall time, with
   Lake reporting 18 s;
+- refactored `NFNotWPP.Surface` plus Challenge local build: about 24 s of Lean
+  build time;
 - warm `lake build NFStandard`: 10.814 s wall time; and
 - warm default `lake build`: 3.918 s wall time.
 
@@ -130,7 +149,7 @@ The final axiom query reported exactly:
 Lexical and declaration audits found no Solution/proof `sorry`, `admit`,
 `sorryAx`, custom `axiom`, `opaque`, `unsafe`, `partial`, `native_decide`, or
 `Lean.ofReduceBool`. Challenge contains exactly its deliberate theorem whose
-declaration starts at line 823 and whose `sorry` body is at line 825.
+declaration starts at line 29 and whose `sorry` body is at line 31.
 
 ## Translator reproduction
 
