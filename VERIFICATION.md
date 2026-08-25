@@ -31,7 +31,10 @@ first at two and then, after measuring memory headroom, three jobs; every Lean
 child used `--threads=1`. Two generated modules exhausted only Lean's
 `constructorNameAsVariable` style-linter heartbeat budget after elaboration.
 They were isolated in `NFNotWPPLinterHeavy` with the single override
-`-Dlinter.constructorNameAsVariable=false`.
+`-Dlinter.constructorNameAsVariable=false`. The generated `CompactSyntaxFV`
+and `CompactSyntaxFVExplicit` support roots, the WPP FV shard family, and its
+facade use that same narrow target to suppress generated non-semantic
+diagnostics; proof-checking options are unchanged.
 
 The first final-configuration Linux CI run then exposed one additional
 non-semantic output issue: the monolithic `WPPCompactSyntaxFVExplicit` emitted
@@ -51,6 +54,16 @@ remaining shards take 14--29 s each. The complete ten-shard facade builds
 successfully. This changes source packaging only: theorem bodies, fully
 qualified declaration names, proof-checker settings, and kernel checking are
 unchanged.
+
+`LEAN_NUM_THREADS=1` bounds Lake's worker pool but is not a strict guarantee
+that only one Lean child can run at a time. The Comparator Landrun wrapper
+therefore recognizes only the exact `lake build Solution` invocation and first
+runs `lake build +WPPCompactSyntaxFVExplicitPart001` with byte-identical
+sandbox options and the same writable `.lake`. Failure stops the full build;
+success is followed by Comparator's original command unchanged. Wrapper
+regression tests verify the ordering, identical restriction vector,
+fail-closed behavior, and single-pass handling of Challenge and other commands.
+No proof step runs outside Landrun.
 
 The resumed build compiled all 1,527 source modules in the translated C18
 replay closure successfully. It predates the added `NFStandard` layer and the
@@ -154,8 +167,8 @@ to the independent kernel/Comparator checks.
   265,760,801 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
   `B295B3BCA787DAA8B7D5E15845C9F72405324C40B5538A104A013509AD751B62`.
-- The final intended source snapshot contains 1,898 files and 373,914,428
-  bytes (356.59 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
+- The final intended source snapshot contains 1,898 files and 373,918,219
+  bytes (356.60 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
   the snapshot remains below Palomar's 500-MiB repository limit.
 - All ten Git dependencies use credential-free public GitHub HTTPS URLs and
   full lowercase 40-character revisions.

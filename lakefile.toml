@@ -35,9 +35,7 @@ globs = [
   "ClassBoundaryNormalizationDev005",
   "ClassBoundaryRawHandlersDev010",
   "CompactSourceSyntax",
-  "CompactSyntaxFV",
   "CompactSyntaxFVDisable",
-  "CompactSyntaxFVExplicit",
   "CoreFVSimp",
   "DefinitionLeaves.Basic",
   "exact_literal_trial.NFChoiceExactLiteral",
@@ -1555,16 +1553,19 @@ globs = [
 # These generated modules require non-semantic linter exceptions after their
 # declarations have elaborated.  The two structural modules exhaust the
 # constructor-name linter's private heartbeat budget.  The explicit WPP
-# free-variable proof otherwise emits over fifteen thousand lines of generated
-# tactic diagnostics.  Its ten chained source shards also bound elaborator
-# memory while retaining the original theorem names and theorem bodies.  Keeping
-# them in one narrow Lake target leaves all proof-checker settings unchanged.
+# free-variable proofs otherwise emit over fifteen thousand lines of generated
+# tactic diagnostics.  The WPP proof's ten chained source shards also bound
+# elaborator memory while retaining the original theorem names and theorem
+# bodies.  Keeping these modules in one narrow Lake target leaves all
+# proof-checker settings unchanged.
 [[lean_lib]]
 name = "NFNotWPPLinterHeavy"
 srcDir = "Proof"
 roots = [
   "NominalWPPReplayChunk009StructuralPart030",
   "NominalWPPReplayChunk009StructuralPart038",
+  "CompactSyntaxFV",
+  "CompactSyntaxFVExplicit",
   "WPPCompactSyntaxFVExplicit",
   "WPPCompactSyntaxFVExplicitPart001",
   "WPPCompactSyntaxFVExplicitPart002",

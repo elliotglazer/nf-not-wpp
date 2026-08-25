@@ -84,7 +84,11 @@ requires a human decision.
 - [x] Configure the shard-aware Linux workflow: the research-archive job
       rehashes all 1,537 replay modules and reproduces the split, the 30-minute
       build job checks `Challenge`, and the serialized 330-minute Comparator
-      job uses `LEAN_NUM_THREADS=1`.
+      job uses `LEAN_NUM_THREADS=1`. For Comparator's exact `lake build
+      Solution` command, its wrapper first builds the opening WPP FV shard
+      alone inside the identical Landrun sandbox and shared writable `.lake`;
+      failure aborts before the original command, while every other command is
+      passed through once. Regression tests cover that boundary.
 - [~] Record two earlier final-configuration Linux attempts accurately: both
       were terminated while processing the former monolith, so neither is a
       successful cold build or Comparator result. The shard layout addresses
@@ -165,7 +169,7 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      edits: 1,898 files and 373,914,428 bytes (356.59 MiB). Its largest file
+      edits: 1,898 files and 373,918,219 bytes (356.60 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on
       the immutable commit.

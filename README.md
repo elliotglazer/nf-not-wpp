@@ -215,10 +215,11 @@ LEAN_NUM_THREADS=1 bash scripts/verify-comparator.sh
 ```
 
 The proof library contains many large independent modules. On a machine with
-many logical cores relative to available RAM, use `LEAN_NUM_THREADS=1` to make
-Lake compile one module at a time; the proof target also passes `--threads=1`
-to each Lean child. This changes scheduling only, not the proof or trust
-boundary.
+many logical cores relative to available RAM, use `LEAN_NUM_THREADS=1` to
+bound Lake's worker scheduling; the proof target also passes `--threads=1` to
+each Lean child. Lake can still overlap tasks when required by its scheduler,
+so this setting is not a strict one-child serialization guarantee. It changes
+scheduling only, not the proof or trust boundary.
 
 Three generated module families are isolated in `NFNotWPPLinterHeavy`. After
 successfully elaborating their declarations,
@@ -229,9 +230,17 @@ linter's private heartbeat budget. The original monolithic
 generated unused-tactic and simp-argument diagnostics and creates the largest
 single-process elaboration peak. Its ten deterministic chained shards retain
 the exact theorem bodies and public declaration names while bounding that
-peak. The isolated target disables only non-semantic linters, using the same
-diagnostic settings already embedded in the other generated replay modules;
-all proof-checking options remain unchanged.
+peak. The generated `CompactSyntaxFV` and `CompactSyntaxFVExplicit` support
+roots are in the same isolated target so their non-semantic generated
+diagnostics are suppressed too. The target changes no proof-checking option.
+
+For Comparator's exact `lake build Solution` command, the Landrun wrapper first
+builds `+WPPCompactSyntaxFVExplicitPart001` by itself, using the identical
+Landrun binary, restrictions, environment, and writable `.lake` directory.
+The isolated build must succeed before the wrapper executes Comparator's
+original command unchanged; other commands remain single-pass. This separates
+the measured opening memory peak from the full Solution graph without moving
+any build outside Comparator's sandbox or changing its trust checks.
 
 The setup/Challenge stages, public Flypitch build, standalone Solution, exact
 prefix comparison, trust-zero proof check, final axiom audit, standard-NF

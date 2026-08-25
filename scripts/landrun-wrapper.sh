@@ -51,4 +51,11 @@ if [ "$#" -eq 0 ]; then
   exit 2
 fi
 
+# Isolate the memory-heavy opening proof before Lake schedules the full
+# Solution graph.  It uses the same sandbox and must succeed first.
+if [ "$#" -eq 3 ] && [ "$1" = lake ] && [ "$2" = build ] && [ "$3" = Solution ]; then
+  "$landrun_binary" "${landrun_options[@]}" -- \
+    lake build +WPPCompactSyntaxFVExplicitPart001
+fi
+
 exec "$landrun_binary" "${landrun_options[@]}" -- "$@"

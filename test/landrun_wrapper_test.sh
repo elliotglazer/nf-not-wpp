@@ -15,7 +15,14 @@ trap 'rm -rf "$work_dir"' EXIT
 stub="$work_dir/landrun-stub.sh"
 cat >"$stub" <<'STUB'
 #!/usr/bin/env bash
-printf '%s\n' "$@" >"$PALOMAR_TEST_ARGV"
+if [ -s "$PALOMAR_TEST_ARGV" ]; then
+  printf '%s\n' '---' >>"$PALOMAR_TEST_ARGV"
+fi
+printf '%s\n' "$@" >>"$PALOMAR_TEST_ARGV"
+if [ "${PALOMAR_TEST_FAIL_PREBUILD:-}" = 1 ] && \
+    [ "${!#}" = +WPPCompactSyntaxFVExplicitPart001 ]; then
+  exit 7
+fi
 STUB
 chmod +x "$stub"
 
@@ -66,9 +73,30 @@ $wrapper_argv"
   fi
 }
 
-# The flag vector the pinned Comparator builds, from its buildLandrunArgs.
-assert_passthrough "Comparator's own flags reach Landrun" \
+# The Solution build first isolates its heavy opening module, then repeats the
+# identical sandbox vector for Comparator's untouched command.
+assert_passthrough "Solution is prebuilt once before Comparator's build" \
   '--best-effort
+--ro
+/
+--rw
+/dev
+-ldd
+-add-exec
+--env
+PATH
+--ro
+/workspace
+--rwx
+/workspace/.lake
+--rox
+/toolchain
+--
+lake
+build
++WPPCompactSyntaxFVExplicitPart001
+---
+--best-effort
 --ro
 /
 --rw
@@ -90,6 +118,39 @@ Solution' \
   --best-effort --ro / --rw /dev -ldd -add-exec --env PATH \
   --ro /workspace --rwx /workspace/.lake --rox /toolchain \
   lake build Solution
+
+# A failed isolated build prevents the original Solution build.
+export PALOMAR_TEST_FAIL_PREBUILD=1
+run_wrapper --best-effort lake build Solution
+unset PALOMAR_TEST_FAIL_PREBUILD
+if [ "$wrapper_status" -ne 7 ]; then
+  report_failure "a failed prebuild exits 7, got $wrapper_status: $wrapper_stderr"
+elif [ "$wrapper_argv" != '--best-effort
+--
+lake
+build
++WPPCompactSyntaxFVExplicitPart001' ]; then
+  report_failure "a failed prebuild still reached the original command:
+$wrapper_argv"
+fi
+
+# Commands other than the exact Solution build remain single-pass.
+assert_passthrough "Challenge remains a single sandbox invocation" \
+  '--best-effort
+--
+lake
+build
+Challenge' \
+  --best-effort lake build Challenge
+
+assert_passthrough "a near-match Solution command remains single-pass" \
+  '--best-effort
+--
+lake
+build
+Solution
+extra' \
+  --best-effort lake build Solution extra
 
 # Landrun uses -add-exec to add the sandboxed binary to --rox. It narrows the
 # executable set rather than lifting a restriction, and Comparator sends it on
