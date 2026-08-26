@@ -15,7 +15,7 @@ Lean 4 port: Ian Klatzco, Claude
 import Flypitch4.RegularOpenAlgebra
 import Flypitch4.PSetOrdinal
 import Mathlib.Data.PFun
-import Mathlib.SetTheory.Cardinal.Cofinality
+import Mathlib.SetTheory.Cardinal.Cofinality.Ordinal
 import Mathlib.SetTheory.Cardinal.Arithmetic
 import Mathlib.SetTheory.Ordinal.Family
 

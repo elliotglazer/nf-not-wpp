@@ -26,14 +26,28 @@ candidate. It does not replace Palomar's protected Linux verifier.
 
 ## Source build
 
-The candidate uses Lean `v4.30.0-rc2`, Mathlib
-`83a5988a25fdd78621774a57af7e1f5c55f24289`, and the exact vendored
-Flypitch4 source snapshot from
-`503dd00ba677b42628a878ad263cc116abb0a8f7`. The normal Solution graph builds
-the eight modules imported by `Flypitch4.Completeness`; the optional
+The candidate uses Lean `v4.30.0`, Mathlib
+`c5ea00351c28e24afc9f0f84379aa41082b1188f`, and the vendored Flypitch4
+source snapshot based on
+`503dd00ba677b42628a878ad263cc116abb0a8f7`. Twenty-one Flypitch files remain
+byte-for-byte copies. Four have only the compatibility edits recorded in
+`vendor/flypitch4/COMPATIBILITY.md`: two split-module import paths, one renamed
+ordinal-recursion alternative, and one abbreviation for the removed
+`Finset.toSet` spelling. The normal Solution graph builds the eight modules
+imported by `Flypitch4.Completeness`; the optional
 `LEAN_NUM_THREADS=1 lake build Flypitch4` target audits all 25 vendored Lean
-sources. CI verifies those sources and the retained Apache-2.0 licence against
+sources. CI verifies the retained sources and Apache-2.0 licence against
 `vendor/flypitch4/SOURCES.sha256`.
+
+The stable-toolchain pin is a repository-side workaround for Palomar's
+post-verification renderer. With the earlier `v4.30.0-rc2` lockfile, submitted
+Mathlib required `plausible` revision `293af9b2...` while Palomar's matching
+Verso renderer required `86210d4a...`; Palomar rejected the merged manifest
+before compiling the Challenge. At `v4.30.0`, both Mathlib and Verso require
+`a456461b368b71d2accd95234832cd9c174b5437`. A local replay of Palomar's exact
+manifest merge and trusted-Lakefile generation passes with Mathlib
+`c5ea00351c28e24afc9f0f84379aa41082b1188f` and Verso
+`8bcbd2b8723307c329c12997a0c16a6ac174d3e9`.
 
 The historical translated-replay-closure build originated from an empty
 `.lake` directory on a Windows x86-64 workstation. Lake scheduling was bounded

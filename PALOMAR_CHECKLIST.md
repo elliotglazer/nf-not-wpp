@@ -64,16 +64,17 @@ requires a human decision.
 
 ## 3. Lake package
 
-- [x] Vendor the exact 25-file Flypitch4 source snapshot from public commit
+- [x] Vendor the 25-file Flypitch4 source snapshot from public commit
       `503dd00ba677b42628a878ad263cc116abb0a8f7`, retain its Apache-2.0 licence,
-      and check every retained byte against `vendor/flypitch4/SOURCES.sha256`.
+      document four semantics-preserving Lean 4.30 compatibility edits, and
+      check every retained byte against `vendor/flypitch4/SOURCES.sha256`.
 - [x] Build the eight-module `Flypitch4.Completeness` closure used by Solution;
       retain `LEAN_NUM_THREADS=1 lake build Flypitch4` as the optional full
       vendored-library audit.
-- [x] Pin Mathlib commit `83a5988a25fdd78621774a57af7e1f5c55f24289`.
+- [x] Pin Mathlib commit `c5ea00351c28e24afc9f0f84379aa41082b1188f`.
 - [x] Generate `lake-manifest.json` with Lake; all nine external Git packages
       use full immutable revisions and public, credential-free HTTPS URLs.
-- [x] Pin Lean `v4.30.0-rc2` and verify that the matching `lean4export` revision
+- [x] Pin Lean `v4.30.0` and verify that the matching `lean4export` revision
       is available in Palomar's supported toolchain path.
 - [x] Finish an empty-origin, diagnosed/resumed source-only build of the
       historical translated-replay closure. It completed all 1,527 C18 closure
@@ -108,8 +109,11 @@ requires a human decision.
       No successful cold build or Comparator result is inferred.
 - [ ] Run an uninterrupted final-configuration cold source-only build on Linux
       comparable to a Palomar worker using the committed shard layout.
-- [ ] Optionally test a stable-toolchain upgrade; it is not required for the
-      currently supported pinned toolchain.
+- [x] Upgrade from `v4.30.0-rc2` to stable `v4.30.0`. The exact Palomar
+      renderer-manifest replay now passes: Mathlib and Verso share immutable
+      `plausible` revision `a456461b368b71d2accd95234832cd9c174b5437`.
+      Challenge and the complete vendored Flypitch4 target compile locally;
+      four mechanical compatibility edits are documented separately.
 
 ## 4. Challenge/Solution boundary
 
@@ -191,7 +195,7 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      and Flypitch4-vendoring edits: 1,930 files and 375,411,613 bytes
+      and stable-toolchain compatibility edits: 1,931 files and 375,414,483 bytes
       (358.02 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on

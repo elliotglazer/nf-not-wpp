@@ -8,7 +8,7 @@ Lean 4 port: Ian Klatzco, Claude
 /- Lean 4 port of src/to_mathlib.lean -/
 
 import Mathlib.Data.Set.Countable
-import Mathlib.SetTheory.Cardinal.Cofinality
+import Mathlib.SetTheory.Cardinal.Cofinality.Ordinal
 import Mathlib.SetTheory.Cardinal.Order
 import Mathlib.Order.CompleteBooleanAlgebra
 import Mathlib.Topology.Bases

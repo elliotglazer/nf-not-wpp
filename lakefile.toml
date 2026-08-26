@@ -2,17 +2,19 @@ name = "NFNotWPP"
 version = "0.1.0"
 defaultTargets = ["NFNotWPPProof", "NFStandard", "Challenge", "Solution"]
 
-# The proof was accepted with this exact Mathlib revision. Keep every Git
-# dependency immutable; regenerate and commit lake-manifest.json only after a
-# clean dependency-resolution test.
+# Use the final Lean 4.30-compatible Mathlib release so Palomar's Verso
+# renderer and this package resolve their shared dependencies identically.
+# Keep every Git dependency immutable; regenerate and commit lake-manifest.json
+# only after a clean dependency-resolution test.
 [[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4.git"
-rev = "83a5988a25fdd78621774a57af7e1f5c55f24289"
+rev = "c5ea00351c28e24afc9f0f84379aa41082b1188f"
 
-# The exact Flypitch4 sources used by the accepted proof are vendored into the
-# root package.  Keeping them in this package makes Mathlib the sole external
-# dependency and gives ordinary Lake, CI, and Palomar the same build layout.
+# The Flypitch4 sources used by the accepted proof are vendored into the root
+# package, with stable-4.30 compatibility edits documented alongside them.
+# Keeping them here makes Mathlib the sole external dependency and gives
+# ordinary Lake, CI, and Palomar the same build layout.
 [[lean_lib]]
 name = "Flypitch4"
 srcDir = "vendor/flypitch4"

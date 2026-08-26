@@ -418,7 +418,7 @@ lemma ordinalMk_succ_equiv {η : Ordinal} :
 @[simp] lemma Ord_mk (η : Ordinal) : Ord (ordinalMk η) := by
   induction η using Ordinal.limitRecOn with
   | zero => exact Ord_equiv ordinalMk_zero_equiv.symm Ord_empty
-  | succ η ih =>
+  | add_one η ih =>
     -- ordinalMk_succ_equiv : Equiv (ordinalMk (succ η)) (succ_ord (ordinalMk η))
     -- Ord_succ_ord _ ih : Ord (succ_ord (ordinalMk η))
     -- Apply Ord_equiv in reverse: Equiv y x → Ord y → Ord x

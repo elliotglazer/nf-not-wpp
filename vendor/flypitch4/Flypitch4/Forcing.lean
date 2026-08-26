@@ -11,6 +11,10 @@ import Flypitch4.BvmExtras
 import Flypitch4.CantorSpace
 import Mathlib.SetTheory.Cardinal.Pigeonhole
 
+namespace Finset
+abbrev toSet {α : Type*} (s : Finset α) : Set α := s
+end Finset
+
 open scoped Cardinal
 open Flypitch Flypitch.Regular
 
