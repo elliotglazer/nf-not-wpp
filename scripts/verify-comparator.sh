@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Based on PalomarTemplate main at
 # 128a6c5ce5f48622e69927ccd639cbff401022e8.
-# The lean4export pin is the exact v4.30.0-rc2 tag commit, matching this
+# The lean4export pin is the exact v4.30.0 tag commit, matching this
 # candidate's lean-toolchain rather than the template's v4.32.0 toolchain.
 
 repository_root=$(cd "$(dirname "$0")/.." && pwd)
@@ -13,7 +13,7 @@ comparator_dir="$cache_root/comparator"
 lean4export_dir="$cache_root/lean4export"
 nanoda_dir="$cache_root/nanoda"
 comparator_commit=68a064109f01c08f47c8edc9f51d6a2bbffaa188
-lean4export_commit=12581a6b680d8478175596338eb2d53383a323e3
+lean4export_commit=a3e35a584f59b390667db7269cd37fca8575e4bf
 landrun_commit=811cfff51ceaf3d9843708aa6d22e9b84ccac8b4
 nanoda_commit=68d5ca9db226849b41a6fff59d796ff19d0a8840
 
