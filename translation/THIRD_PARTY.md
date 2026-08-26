@@ -21,10 +21,12 @@ executable is redistributed.
 
 ## Lean, Mathlib, and Flypitch
 
-The Lean source proof derives from the repository's pinned Lean 4, Mathlib,
-and Flypitch inputs. Lean 4, Mathlib, and the pinned Flypitch checkout carry
-Apache-2.0 licences. Exact revisions are in `lean-toolchain` and
-`lake-manifest.json`.
+The Lean source proof derives from the repository's pinned Lean 4 and Mathlib
+inputs and its exact vendored Flypitch4 source snapshot. Lean 4, Mathlib, and
+Flypitch4 carry Apache-2.0 licences; the Flypitch4 licence is retained beside
+the vendored sources. Exact revisions are recorded in `lean-toolchain`,
+`lake-manifest.json`, and `vendor/flypitch4/README.md`, and CI checks every
+vendored source byte against `vendor/flypitch4/SOURCES.sha256`.
 
 Historical translator receipts name 79 `.olean` certificates and retain each
 certificate's path, byte count, and SHA-256. Their binary payloads are not

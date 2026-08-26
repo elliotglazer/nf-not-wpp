@@ -10,13 +10,12 @@ name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4.git"
 rev = "83a5988a25fdd78621774a57af7e1f5c55f24289"
 
-# Public source and exact revision of the Flypitch package used by the
-# accepted proof.
-[[require]]
-name = "flypitch4"
-git = "https://github.com/ianklatzco/flypitch.git"
-rev = "503dd00ba677b42628a878ad263cc116abb0a8f7"
-subDir = "flypitch4"
+# The exact Flypitch4 sources used by the accepted proof are vendored into the
+# root package.  Keeping them in this package makes Mathlib the sole external
+# dependency and gives ordinary Lake, CI, and Palomar the same build layout.
+[[lean_lib]]
+name = "Flypitch4"
+srcDir = "vendor/flypitch4"
 
 # The accepted direct C18 proof and its exact audited source closure live in a
 # separate source root.  The root imports the whole generated proof DAG.

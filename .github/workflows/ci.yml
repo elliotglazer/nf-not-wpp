@@ -90,6 +90,9 @@ jobs:
         run: python3 scripts/verify-archive.py
       - name: Rehash the packaged translated-replay source closure
         run: python3 scripts/verify-source-closure.py
+      - name: Rehash the exact vendored Flypitch4 sources
+        working-directory: vendor/flypitch4
+        run: sha256sum --check SOURCES.sha256
       - name: Reproduce the final translated C18 source
         run: python3 translation/reproduce_c18.py "$RUNNER_TEMP/c18-replay"
       - name: Reproduce the memory-bounded WPP FV packaging

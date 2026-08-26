@@ -27,8 +27,13 @@ candidate. It does not replace Palomar's protected Linux verifier.
 ## Source build
 
 The candidate uses Lean `v4.30.0-rc2`, Mathlib
-`83a5988a25fdd78621774a57af7e1f5c55f24289`, and Flypitch
-`503dd00ba677b42628a878ad263cc116abb0a8f7`.
+`83a5988a25fdd78621774a57af7e1f5c55f24289`, and the exact vendored
+Flypitch4 source snapshot from
+`503dd00ba677b42628a878ad263cc116abb0a8f7`. The normal Solution graph builds
+the eight modules imported by `Flypitch4.Completeness`; the optional
+`LEAN_NUM_THREADS=1 lake build Flypitch4` target audits all 25 vendored Lean
+sources. CI verifies those sources and the retained Apache-2.0 licence against
+`vendor/flypitch4/SOURCES.sha256`.
 
 The historical translated-replay-closure build originated from an empty
 `.lake` directory on a Windows x86-64 workstation. Lake scheduling was bounded
@@ -217,10 +222,10 @@ to the independent kernel/Comparator checks.
   265,760,801 bytes with zero missing, extra, or mismatched entries.
   `archive/MANIFEST.sha256` has 306 lines, 54,294 bytes, and SHA-256
   `B295B3BCA787DAA8B7D5E15845C9F72405324C40B5538A104A013509AD751B62`.
-- The final intended source snapshot contains 1,902 files and 373,938,969
-  bytes (356.62 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
+- The final intended source snapshot contains 1,930 files and 375,411,613
+  bytes (358.02 MiB). Its largest file is the 27,647,028-byte MM0 `.mmu`, and
   the snapshot remains below Palomar's 500-MiB repository limit.
-- All ten Git dependencies use credential-free public GitHub HTTPS URLs and
+- All nine external Git dependencies use credential-free public GitHub HTTPS URLs and
   full lowercase 40-character revisions.
 - Final static scans found no LFS pointer, submodule, Git symlink, forbidden
   compiled Lean/native artifact, cache/build directory, credential, or

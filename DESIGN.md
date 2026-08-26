@@ -293,8 +293,8 @@ claimed in this document.
 
 The challenge was derived from these pinned sources:
 
-- `Flypitch4/Fol.lean`:
-  `D10D42D54568C822C593A4CE0C3341EA438F0A30C7CF98D91439276F42F44251`
+- `vendor/flypitch4/Flypitch4/Fol.lean`:
+  `DAA858EE87062AC7810C54B8C2AFA0D5B6982D29F19B27CC126158772D9E2B95`
 - `NFChoiceExactLiteral.lean`:
   `1E98C0E0B9BA90B9501A7160DFE27D836B86E78698F00C1D9DB43160FC83574A`
 - `NominalWffPrf.lean`:
@@ -304,5 +304,6 @@ The challenge was derived from these pinned sources:
 - `WPPCompactSourceSyntax.lean`:
   `EED1484C89AF7BA7186B2D022C4D6BE5CB1156EA07B9423CD22D6D714A219CE1`
 
-These hashes are provenance anchors, not runtime dependencies of Challenge or
-the solution-side statement mirror.
+These hashes, together with `vendor/flypitch4/SOURCES.sha256`, are provenance
+anchors, not runtime dependencies of Challenge or the solution-side statement
+mirror.

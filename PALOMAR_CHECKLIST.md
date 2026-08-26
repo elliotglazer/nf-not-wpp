@@ -64,11 +64,15 @@ requires a human decision.
 
 ## 3. Lake package
 
-- [x] Pin and independently build public Flypitch commit
-      `503dd00ba677b42628a878ad263cc116abb0a8f7` from subdirectory `flypitch4`.
+- [x] Vendor the exact 25-file Flypitch4 source snapshot from public commit
+      `503dd00ba677b42628a878ad263cc116abb0a8f7`, retain its Apache-2.0 licence,
+      and check every retained byte against `vendor/flypitch4/SOURCES.sha256`.
+- [x] Build the eight-module `Flypitch4.Completeness` closure used by Solution;
+      retain `LEAN_NUM_THREADS=1 lake build Flypitch4` as the optional full
+      vendored-library audit.
 - [x] Pin Mathlib commit `83a5988a25fdd78621774a57af7e1f5c55f24289`.
-- [x] Generate `lake-manifest.json` with Lake; every effective Git `rev` is a
-      full immutable SHA and every URL is public, credential-free HTTPS.
+- [x] Generate `lake-manifest.json` with Lake; all nine external Git packages
+      use full immutable revisions and public, credential-free HTTPS URLs.
 - [x] Pin Lean `v4.30.0-rc2` and verify that the matching `lean4export` revision
       is available in Palomar's supported toolchain path.
 - [x] Finish an empty-origin, diagnosed/resumed source-only build of the
@@ -187,7 +191,8 @@ requires a human decision.
       plus its facade, the current 1,537-module replay payload is 97,308,251
       bytes.
 - [x] Recompute the complete intended source snapshot after the shard/archive
-      edits: 1,902 files and 373,938,969 bytes (356.62 MiB). Its largest file
+      and Flypitch4-vendoring edits: 1,930 files and 375,411,613 bytes
+      (358.02 MiB). Its largest file
       remains the 27,647,028-byte MM0 `.mmu`, and the snapshot stays below
       Palomar's 500-MiB repository cap. Protected CI must repeat this census on
       the immutable commit.
