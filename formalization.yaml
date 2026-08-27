@@ -96,10 +96,21 @@ sources:
     location: "MathOverflow answer, 2023"
     relationship: "background"
     note: >-
-      Public background evidence that the corresponding partition-principle
-      question for NF was regarded as open in 2023. It supports the qualified
-      novelty statement and is not represented as a source formalized line by
-      line in this repository.
+      Records that consistency of the stronger Partition Principle (PP) with
+      NF was regarded as open in 2023. The answer does not mention WPP by name
+      and is not used as the sole evidence for novelty of the exact WPP result.
+      Since PP implies WPP, the submitted theorem bears on that question. The
+      bounded literature-search record is in LITERATURE_SEARCH.md.
+  - title: "Literature search for prior proofs of NF ⊢ ¬WPP"
+    id: "LITERATURE_SEARCH.md"
+    location: "Repository literature audit completed 2026-08-26"
+    relationship: "background"
+    note: >-
+      Records the exact claim and terminology variants, database queries,
+      principal NF literature, recent-candidate dispositions, citation-trail
+      checks, post-discovery corroboration, and limitations. The bounded search
+      found no independent proof in the publicly accessible literature of the
+      exact result `NF ⊢ ¬WPP`.
 
 related_formalizations:
   - id: "https://github.com/metamath/set.mm"
@@ -116,9 +127,16 @@ status:
     schema. The eleven literal Hailperin sentences are an internal translated
     finite-basis bridge, not the assumptions of the public theorem; the
     repository proves their full deductive equivalence with standard NF. This
-    is not a consistency theorem or an assertion that NF has a model. To the
-    best of our knowledge, the headline result `NF ⊢ ¬WPP` is novel; the
-    cited 2023 MathOverflow answer records the corresponding question as open.
+    is not a consistency theorem or an assertion that NF has a model. A
+    documented search of the publicly accessible literature, completed on
+    2026-08-26, located no independent proof of the exact result `NF ⊢ ¬WPP`.
+    On that bounded evidence, the result is claimed as novel; searched sources,
+    queries, candidate dispositions, citation checks, and limitations are
+    recorded in `LITERATURE_SEARCH.md`. The cited 2023 MathOverflow answer
+    concerns the stronger Partition Principle rather than WPP by name and is
+    used only as contextual evidence. Under the standard definitions, PP
+    implies WPP, so the result mathematically also rules out PP in NF; the
+    compared declaration itself states only not-WPP.
   # Challenge.lean's deliberate statement sorry is excluded from these counts.
   sorry_count: 0
   sorry_in_definitions: 0
@@ -246,7 +264,8 @@ alignment:
 acknowledgements: >-
   This work builds on the Metamath New Foundations Explorer, Flypitch, Lean 4,
   and Mathlib communities. Thomas Forster's 2023 MathOverflow answer is cited
-  as public evidence about the question's prior open status. Strategic
-  discussion with New Foundations and Lean contributors motivated the direct
-  constructor-level syntactic bridge; citation or acknowledgment does not imply
-  endorsement.
+  as historical evidence that the stronger Partition Principle question was
+  regarded as open in 2023, not as sole evidence for the exact WPP novelty
+  claim. Strategic discussion with New Foundations and Lean contributors
+  motivated the direct constructor-level syntactic bridge; citation or
+  acknowledgment does not imply endorsement.

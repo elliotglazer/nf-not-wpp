@@ -21,14 +21,23 @@ In the exact Metamath source spelling used here, WPP says that for all sets
 `x` and `y`, if there is both a function from `y` onto `x` and a one-to-one
 function from `y` to `x`, then there is a one-to-one function from `x` to `y`.
 The compared Lean theorem constructs a formal derivation of the negation of
-that sentence from standard NF. To the best of our knowledge, the headline
-result `NF ⊢ ¬WPP` is novel. In 2023, Thomas Forster publicly described the
-corresponding partition-principle question for NF as open
-([MathOverflow](https://mathoverflow.net/a/449571/109573)). The formal theorem
-therefore settles a specific question that was not resolved merely by the
-classical fact that full choice fails in NF. Its natural audience includes
-researchers in axiomatic set theory, New Foundations, formal logic, and proof
-translation.
+that sentence from standard NF. A documented search of the publicly accessible
+literature, completed on 26 August 2026, located no proof of the exact result
+`NF ⊢ ¬WPP` independent of this project; see the
+[literature-search record](LITERATURE_SEARCH.md). On this bounded evidence, we
+believe the headline result to be novel. This is not a claim that unpublished,
+private, or unindexed work cannot exist.
+
+Thomas Forster's 2023 MathOverflow answer concerned whether the stronger
+Partition Principle (PP) is consistent with NF, rather than WPP by name
+([MathOverflow](https://mathoverflow.net/a/449571/109573)). Since PP implies
+WPP under the standard definitions, the mathematical result also rules out PP
+in NF; the compared Lean declaration itself states only not-WPP. The
+MathOverflow answer is used as historical context, not as the sole evidence for
+novelty. The formal theorem therefore settles a specific question that was not
+resolved merely by the classical fact that full choice fails in NF. Its natural
+audience includes researchers in axiomatic set theory, New Foundations, formal
+logic, and proof translation.
 For context, Specker's 1953 paper established the classical failure-of-choice
 phenomenon in NF ([doi:10.1073/pnas.39.9.972](https://doi.org/10.1073/pnas.39.9.972)),
 while the standard “Weak Partition Principle” terminology and its
